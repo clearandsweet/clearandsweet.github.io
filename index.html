@@ -1,0 +1,38 @@
+<htmL>
+<video id="video" style="height: 100%; width: 100%; z-index: 1;" controls loop>
+  <source src="witchspinfull14sec.mp4" type="video/mp4">
+</video>
+<!-- <audio id="audio" style="display:none" autoplay loop>
+  <source src="witchspinsong.mp3">
+</audio> -->
+<div id="timer" style="z-index: 2; background-color: purple; z-index: 2;
+  background-color: purple;
+  position: absolute;
+  right: 37%;
+  top: 5%;
+  font-size: 24px;"></div>
+<script>
+  // self executing function here
+  (function () {
+    // your page initialization code here
+    // the DOM will be available here
+    var seconds = 0;
+    var vid = document.getElementById("video");
+    var currentInterval;
+    vid.addEventListener("play", function() { 
+
+      currentInterval = setInterval(function () {
+        seconds += 1;
+        document.getElementById("timer").innerHTML = `You've been spinning for ${seconds} seconds.` 
+      }, 900);
+    });
+
+    vid.addEventListener("pause", function() {
+      clearInterval(currentInterval);
+    });
+
+
+  })();
+</script>
+
+</htmL>
