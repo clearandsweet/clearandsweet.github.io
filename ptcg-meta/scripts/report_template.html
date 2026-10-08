@@ -1,0 +1,670 @@
+<title>H Rotation Meta Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long analytical ledger. Sticky section index on wide screens, chip rail on phones;
+   regulation-mark badges (H rotates / I-J stay / K unknown) are the recurring status marker. */
+:root {
+  --paper: #f4f5f2;
+  --sheet: #fbfbf9;
+  --ink: #16191d;
+  --ink-2: #4a5058;
+  --ink-3: #6f767e;
+  --rule: #d8dbd4;
+  --rule-2: #e7e9e3;
+  --accent: #2b5f91;
+  --accent-soft: #dfe9f3;
+  --rotate: #b13a2f;
+  --rotate-soft: #f5dfdb;
+  --keep: #2c7656;
+  --keep-soft: #dcefe5;
+  --caution: #a8701a;
+  --bar: #2a78d6;
+  --bar-2: #eb6834;
+  --sev-1: #8f2a22; --sev-2: #c4513f; --sev-3: #de8b6f; --sev-4: #ecc0ac; --sev-5: #c9cec6;
+  --f-display: "Saira Semi Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --step--1: 0.84rem; --step-0: 1rem; --step-1: 1.2rem; --step-2: 1.5rem; --step-3: 2.1rem; --step-4: 2.9rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #121417; --sheet: #181b1f; --ink: #e8eae5; --ink-2: #b4bab3; --ink-3: #8d949b;
+    --rule: #2c3137; --rule-2: #23282d; --accent: #78a9db; --accent-soft: #1f2e3d;
+    --rotate: #e2715f; --rotate-soft: #3a2220; --keep: #63c08f; --keep-soft: #1c3027; --caution: #d9a54a;
+    --bar: #3987e5; --bar-2: #d95926;
+    --sev-1: #f08a76; --sev-2: #d4624e; --sev-3: #a5493a; --sev-4: #6e3a31; --sev-5: #3a3f3b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #121417; --sheet: #181b1f; --ink: #e8eae5; --ink-2: #b4bab3; --ink-3: #8d949b;
+  --rule: #2c3137; --rule-2: #23282d; --accent: #78a9db; --accent-soft: #1f2e3d;
+  --rotate: #e2715f; --rotate-soft: #3a2220; --keep: #63c08f; --keep-soft: #1c3027; --caution: #d9a54a;
+  --bar: #3987e5; --bar-2: #d95926;
+  --sev-1: #f08a76; --sev-2: #d4624e; --sev-3: #a5493a; --sev-4: #6e3a31; --sev-5: #3a3f3b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: var(--step-0); line-height: 1.55; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 80px; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; }
+@media (max-width: 900px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-inline: 16px; } }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 700; line-height: 1.12; text-wrap: balance; margin: 0; letter-spacing: 0.005em; }
+h1 { font-size: var(--step-4); }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-1); font-weight: 600; }
+p { margin: 0; max-width: 68ch; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, th:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.mono, .num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font-family: var(--f-display); text-transform: uppercase; letter-spacing: 0.12em; font-size: var(--step--1); color: var(--ink-3); font-weight: 600; }
+.muted { color: var(--ink-2); }
+.small { font-size: var(--step--1); }
+
+/* nav */
+nav.index { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px); align-self: start; display: flex; flex-direction: column; gap: 2px; }
+nav.index a { text-decoration: none; color: var(--ink-2); font-family: var(--f-display); font-weight: 500; font-size: 0.98rem; padding: 4px 10px; border-left: 2px solid var(--rule); }
+nav.index a:hover { color: var(--ink); border-left-color: var(--ink-3); }
+nav.index a.on { color: var(--ink); border-left-color: var(--accent); }
+@media (max-width: 900px) {
+  nav.index { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; flex-direction: row; overflow-x: auto; background: var(--paper); padding-block: 8px; gap: 6px; border-bottom: 1px solid var(--rule); }
+  nav.index a { border: 1px solid var(--rule); border-radius: 999px; white-space: nowrap; padding: 3px 12px; }
+  nav.index a.on { border-color: var(--accent); }
+}
+main { min-width: 0; display: flex; flex-direction: column; gap: 64px; }
+section { display: flex; flex-direction: column; gap: 18px; min-width: 0; scroll-margin-top: 70px; }
+.head { display: flex; flex-direction: column; gap: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+.head .scope { color: var(--ink-2); max-width: 80ch; }
+
+/* regulation mark badge */
+.mk { display: inline-flex; align-items: center; justify-content: center; min-width: 1.35em; height: 1.35em; padding: 0 0.2em; border-radius: 3px; font-family: var(--f-display); font-weight: 700; font-size: 0.82em; line-height: 1; vertical-align: 0.08em; background: var(--ink); color: var(--sheet); }
+.mk.h { background: var(--rotate); color: #fff; }
+.mk.k { background: transparent; color: var(--ink-2); border: 1.5px dashed var(--ink-3); }
+.mk.ok { background: var(--keep); color: #fff; }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
+.pill.dies { background: var(--rotate-soft); color: var(--rotate); }
+.pill.loses, .pill.gutted { background: var(--rotate-soft); color: var(--ink-2); }
+.pill.wounded { background: var(--rule-2); color: var(--caution); }
+.pill.intact { background: var(--keep-soft); color: var(--keep); }
+
+/* key figures */
+.figs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.fig { padding: 16px 18px 16px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.fig + .fig { padding-left: 18px; border-left: 1px solid var(--rule); }
+.fig .v { font-family: var(--f-display); font-weight: 700; font-size: var(--step-3); line-height: 1; }
+.fig .v.r { color: var(--rotate); }
+.fig .l { font-size: 0.92rem; color: var(--ink-2); }
+@media (max-width: 760px) { .figs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fig:nth-child(3) { border-left: 0; padding-left: 0; } .fig:nth-child(n+3) { border-top: 1px solid var(--rule); } }
+
+.callout { background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.callout.warn { border-left: 3px solid var(--caution); }
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 820px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+.cols > * { min-width: 0; }
+.cols { align-items: start; }
+ul.tight { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; max-width: 72ch; }
+
+/* tables */
+.tbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.tbar input, .tbar select { font: inherit; font-size: 0.92rem; padding: 5px 10px; border: 1px solid var(--rule); border-radius: 5px; background: var(--sheet); color: var(--ink); }
+.tbar input { min-width: 0; width: 220px; max-width: 100%; }
+.tbar .count { color: var(--ink-3); font-size: var(--step--1); }
+.tscroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--sheet); max-height: 640px; overflow-y: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+th, td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--rule-2); vertical-align: top; }
+th { position: sticky; top: 0; background: var(--sheet); font-family: var(--f-display); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.02em; color: var(--ink-2); border-bottom: 1px solid var(--rule); cursor: pointer; white-space: nowrap; user-select: none; z-index: 1; }
+th[aria-sort="ascending"]::after { content: " ▲"; font-size: 0.7em; }
+th[aria-sort="descending"]::after { content: " ▼"; font-size: 0.7em; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+td.n { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+td.nm { white-space: nowrap; }
+td.w { min-width: 220px; max-width: 420px; color: var(--ink-2); font-size: 0.84rem; }
+tr:hover td { background: var(--rule-2); }
+.ib { display: inline-block; height: 8px; border-radius: 0 4px 4px 0; background: var(--bar); vertical-align: middle; margin-right: 6px; }
+.ib.r { background: var(--rotate); }
+td.bar { white-space: nowrap; font-family: var(--f-mono); font-variant-numeric: tabular-nums; text-align: left; }
+
+/* charts */
+.chart { background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 14px; position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--ink-2); font-family: var(--f-body); font-size: 12px; }
+.chart .lab { fill: var(--ink); }
+.chart .grid { stroke: var(--rule-2); stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: var(--step--1); color: var(--ink-2); }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -1px; margin-right: 5px; }
+.legend i.dot { border-radius: 50%; }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--paper); font-size: 0.82rem; padding: 6px 9px; border-radius: 4px; max-width: 260px; z-index: 4; line-height: 1.35; }
+.stack { display: flex; height: 34px; border-radius: 4px; overflow: hidden; gap: 2px; background: var(--sheet); }
+.stack div { height: 100%; }
+.stack-labels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; font-size: 0.86rem; }
+.stack-labels b { font-family: var(--f-display); font-size: 1.15rem; display: block; }
+@media (max-width: 700px) { .stack-labels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* idea list */
+.ideas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.ideas > div { padding: 14px 0; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.ideas h3 { font-size: 1.12rem; }
+@media (max-width: 820px) { .ideas { grid-template-columns: minmax(0, 1fr); } }
+.q { display: grid; grid-template-columns: 2.2em minmax(0, 1fr); gap: 4px 10px; padding: 10px 0; border-top: 1px solid var(--rule-2); }
+.q .qn { font-family: var(--f-display); font-weight: 700; color: var(--accent); font-size: 1.1rem; }
+code { font-family: var(--f-mono); font-size: 0.86em; background: var(--rule-2); padding: 1px 4px; border-radius: 3px; }
+footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid var(--rule); padding-top: 14px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+  <nav class="index" aria-label="Sections">
+    <a href="#top">Overview</a>
+    <a href="#meta">Metagame</a>
+    <a href="#rotation">Rotation</a>
+    <a href="#staples">Rotating staples</a>
+    <a href="#budew">Budew &amp; item lock</a>
+    <a href="#support">Support play-down</a>
+    <a href="#advantage">Advantage stat</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#damage">Damage value</a>
+    <a href="#japan">Japan preview</a>
+    <a href="#cards">Card inventory</a>
+    <a href="#ideas">Next: methods</a>
+    <a href="#eyetest">Eye test</a>
+    <a href="#notes">Data notes</a>
+  </nav>
+  <main>
+    <section id="top" class="head">
+      <div class="eyebrow">Pokémon TCG Standard · data through Regional Recife, 3–4 Oct 2026</div>
+      <h1>H Rotation Meta Ledger</h1>
+      <p class="scope" id="scope"></p>
+      <div class="figs" id="figs"></div>
+      <div class="callout warn">
+        <h3>What "rotation" means here</h3>
+        <p>Every card whose <em>only</em> legal printings carry the <span class="mk h">H</span> mark leaves Standard. Cards with an <span class="mk">I</span> or <span class="mk">J</span> print stay. <span class="mk k">K</span> cards have not been revealed beyond three Aura Seeker (M7) cards: Mega Lucario Z ex, Sigilyph ex and Riolu. No date is announced; the pattern points to late January 2027 in Japan and roughly April 2027 internationally. I checked all <span id="nJpRe">289</span> Japanese Mega-era reprints of rotating cards, including the "Battle Collection" starter reprints. Every one is still <span class="mk h">H</span>, so nothing that rotates has an I/J lifeline yet.</p>
+      </div>
+    </section>
+
+    <section id="meta">
+      <div class="eyebrow">01 · Current metagame</div>
+      <h2>Who is playing what, and who converts</h2>
+      <p class="muted">The current window is the four 2027-season Regionals (Baltimore, Brisbane, Frankfurt, Recife). Day 2 lift is an archetype's Day 2 rate divided by the field's. The shrunk lift pulls small samples toward 1.0 (30 pseudo-players), so a 9-player deck can't top the chart on luck. Win rate counts ties as ⅓ of a win and excludes mirrors.</p>
+      <div class="chart" id="metaChart"></div>
+      <div class="tbar"><input id="archQ" type="search" placeholder="Filter archetypes" aria-label="Filter archetypes"><select id="archWin" aria-label="Window"><option value="cur">Current format (top 100)</option><option value="worlds">Worlds 2026</option><option value="sup">Current, grouped by core Pokémon</option><option value="all">All events since the G rotation</option></select><span class="count" id="archCount"></span></div>
+      <div class="tscroll" id="archTable"></div>
+    </section>
+
+    <section id="rotation">
+      <div class="eyebrow">02 · Rotation by archetype</div>
+      <h2>How much of the field survives</h2>
+      <p class="muted">Each current archetype is tiered by what rotates. "Dies" means every namesake Pokémon is H-only. "Loses a partner" means one of the two named Pokémon rotates (Dragapult Dusknoir loses both). Gutted, Wounded and Intact count the average number of rotating cards per 60.</p>
+      <div id="tierStack"></div>
+      <div class="tbar"><input id="survQ" type="search" placeholder="Filter archetypes" aria-label="Filter survivability table"><span class="count" id="survCount"></span></div>
+      <div class="tscroll" id="survTable"></div>
+      <div class="cols">
+        <div class="callout"><h3>A naive survivor projection</h3><p class="small muted">Survivors only, re-weighted by current share × shrunk Day 2 lift. This is a starting prior to argue with. It knows nothing about new K cards or decks that don't exist yet.</p><div class="tscroll" id="projTable" style="max-height:420px"></div></div>
+        <div class="callout"><h3>Reading this</h3><ul class="tight small"><li>The top deck by a wide margin, Dragapult ex, is H-only, along with Dreepy, Drakloak and every Dusknoir variant partner.</li><li>The universal engine package (Fezandipiti ex, Budew, Munkidori, Buddy-Buddy Poffin, Night Stretcher, Crispin, Unfair Stamp) rotates together, so even "Intact" archetypes lose consistency cards.</li><li>Teal Mask Ogerpon ex rotates, which takes the Basic Box and Ogerpon Grass engines with it.</li><li>Decks built on I/J Megas (Kangaskhan, Excadrill, Lucario, Lopunny, Greninja, Starmie) and N's Zoroark keep their attackers.</li></ul></div>
+      </div>
+    </section>
+
+    <section id="staples">
+      <div class="eyebrow">03 · Rotating staples</div>
+      <h2>Rotating Trainers and the legal cards that do the same job</h2>
+      <p class="muted">Alternatives come from matching each rotating card's function tags (draw, search, recovery, gust, acceleration…) against every I/J Trainer in the card pool, ranked by current usage. Treat them as leads, not verdicts.</p>
+      <div class="tscroll" id="replTable"></div>
+    </section>
+
+    <section id="budew">
+      <div class="eyebrow">04 · Budew &amp; item lock</div>
+      <h2>How often you'll be item-locked</h2>
+      <div class="figs" id="budewFigs"></div>
+      <div class="cols">
+        <div class="callout"><h3>How this is computed</h3><ul class="tight small" id="budewHow"></ul></div>
+        <div class="callout"><h3>Who brings the Budew</h3><div id="budewWho"></div><p class="small muted" id="budewPost"></p></div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="eyebrow">05 · Support Pokémon play-down</div>
+      <h2>How often support Pokémon hit the board</h2>
+      <p class="muted">For each list that runs the card, a Monte Carlo of 600 games deals a 7-card hand (mulligans included), sets 6 Prizes, then lets the player see draws plus extra digging from Supporters and Abilities, and use searchers such as Ultra Ball, Poffin, Poké Pad, Cyrano and Dawn. A searcher is assumed free for this card only part of the time, since it has other jobs. That gives the chance the card is reachable by the turn it matters. A desire factor (would you bench it?) is then applied against each opponent archetype, weighted by meta share. Desire is the judgment call I most want you to check.</p>
+      <div class="tbar"><select id="supPop" aria-label="Population"><option value="all">All players</option><option value="day2">Day 2 field</option></select></div>
+      <div class="tscroll" id="supTable"></div>
+      <h3>The same card in different decks</h3>
+      <div class="tbar"><select id="supCard" aria-label="Support card"></select><span class="count">Archetypes with 15+ simulated lists</span></div>
+      <div class="tscroll" id="supArchTable" style="max-height:420px"></div>
+    </section>
+
+    <section id="advantage">
+      <div class="eyebrow">06 · The Advantage stat</div>
+      <h2>Card-equivalents per game</h2>
+      <div class="cols">
+        <div class="callout"><h3>Definition</h3><p class="small">One unit, a <b>card-equivalent (CE)</b>, is the value of drawing one random card. Every benefit converts into it: search = 1.5 CE, look-2-keep-1 = 1.25, an extra Energy attachment = 1 CE of tempo (+1 if the Energy didn't come from your hand), each retreat Energy saved = 2 CE, each card discarded as a cost = −0.5. Damage and healing convert through Prizes: <span id="hpPrize"></span> HP of the current meta ≈ 1 Prize ≈ 3 CE. Item lock is valued as the opponent's held-back Items plus a setup-tempo penalty.</p><p class="small">Advantage per game = expected uses × CE per use. Expected uses come from the same simulation: when the card is reachable, how many copies are in play each turn (evolution lag, bench caps, survival), the chance the game is still going, and how often the trigger is live (Grass in hand for Teal Dance, a KO last turn for Flip the Script…).</p></div>
+        <div class="callout"><h3>Turns of acceleration</h3><div id="accelBox" class="small"></div></div>
+      </div>
+      <div class="tbar"><input id="pkQ" type="search" placeholder="Filter Pokémon" aria-label="Filter Pokémon"><select id="pkSort" aria-label="Rank by"><option value="advantage_ce_per_game">Rank by Advantage (CE/game)</option><option value="total_impact_ce_per_game">Rank by Advantage + damage</option><option value="meta_weighted_impact">Rank by meta-weighted impact</option></select><span class="count" id="pkCount"></span></div>
+      <div class="tscroll" id="pkTable"></div>
+    </section>
+
+    <section id="trainers">
+      <div class="eyebrow">07 · Supporters, Items, Tools, Stadiums</div>
+      <h2>Trainers on the same scale</h2>
+      <p class="muted">CE per play is set per card. Plays per game = copies × the share of the deck you see in a typical game (~68%). Supporters are scaled down when a list has more of them than the ~6.5 turns you can play them. "Meta impact" multiplies by field inclusion, giving CE added per 100 random games.</p>
+      <div class="tbar"><input id="trQ" type="search" placeholder="Filter Trainers" aria-label="Filter Trainers"><select id="trType" aria-label="Type"><option value="">All types</option><option>Supporter</option><option>Item</option><option>Tool</option><option>Stadium</option></select><span class="count" id="trCount"></span></div>
+      <div class="tscroll" id="trTable"></div>
+    </section>
+
+    <section id="damage">
+      <div class="eyebrow">08 · Damage value</div>
+      <h2>Prize progress per attack against the current field</h2>
+      <p class="muted">Each attacker's typical damage is run against a defender pool built from every archetype's real attackers, weighted by share, with Weakness and Resistance applied. Lillie's Clefairy ex gets Fairy Zone against Dragons. Prizes per attack = Σ share × min(1, damage ÷ HP) × Prizes the defender gives, plus bench damage at a discount. Prize efficiency divides that by the attacker's own Prize liability.</p>
+      <div class="tscroll" id="dmgTable"></div>
+    </section>
+
+    <section id="japan">
+      <div class="eyebrow">09 · Japan preview</div>
+      <h2>Storm Emeralda is already legal in Japan</h2>
+      <p class="muted">Japan has Standard sets through M6 (Storm Emeralda), whose English release is pending. City League top-16 lists from the current Japanese season show which incoming cards matter. Japan's rotation (expected late January 2027) will be the first real post-H data, about three months before international.</p>
+      <div class="cols"><div><h3>Most-played cards not yet in English</h3><div class="tscroll" id="jpNew" style="max-height:420px"></div></div><div><h3>City League archetypes</h3><div class="tscroll" id="jpArch" style="max-height:420px"></div></div></div>
+      <p class="small muted" id="jpNote"></p>
+    </section>
+
+    <section id="cards">
+      <div class="eyebrow">10 · Card inventory</div>
+      <h2>Every card in the current format, with its rotation status</h2>
+      <p class="muted">Inclusion is the share of lists playing at least one copy; Day 2 and top-cut columns use only those players. Pokémon are separated by functional print, so Dunsparce (Trading Places) and Dunsparce (Dig) are different rows. Showing the 400 most-played of <span id="nCards"></span>; the full table is in the data folder.</p>
+      <div class="tbar"><input id="cardQ" type="search" placeholder="Filter cards" aria-label="Filter cards"><select id="cardRot" aria-label="Rotation status"><option value="">All</option><option value="0">Rotating only</option><option value="1">Staying only</option></select><select id="cardCat" aria-label="Card type"><option value="">All types</option><option value="pokemon">Pokémon</option><option value="trainer">Trainer</option><option value="energy">Energy</option></select><span class="count" id="cardCount"></span></div>
+      <div class="tscroll" id="cardTable"></div>
+    </section>
+
+    <section id="ideas">
+      <div class="eyebrow">11 · Where to take this next</div>
+      <h2>Ways to calculate, arrange and use the data</h2>
+      <div class="ideas">
+        <div><h3>Skill-adjusted deck strength</h3><p class="small">Fit a Bradley–Terry / logistic model on all <span class="num" id="nMatches"></span> recorded matches with a term for each player and each archetype. Players recur across events, so this separates "good deck" from "good pilots". The output is a deck-strength number that won't be fooled by one strong team piloting a rogue list.</p></div>
+        <div><h3>Matchup engine and meta forecasting</h3><p class="small">Turn the pairings into a shrunk matchup matrix, compute expected win rate against any assumed field, then run replicator dynamics or a Nash solver to see where the meta drifts. Re-run on the survivor set (plus K decks as they appear) for a post-rotation forecast.</p></div>
+        <div><h3>Rotation-loss in CE, not card counts</h3><p class="small">Strip H cards from every list, refill each slot with the best legal replacement from the replacement map, then re-score with the Advantage model. The drop in CE per game is a sharper "how hurt is this deck" number than counting cards.</p></div>
+        <div><h3>Fit the exchange rates to results</h3><p class="small">I set the CE weights by hand. Regress Day 2 conversion (or match win rate) on each list's total CE by component (draw, search, accel, retreat, lock) and let the data set the weights. If Teal Dance CE predicts wins better than Recon Directive CE, the weights should show it.</p></div>
+        <div><h3>Card-level effects within an archetype</h3><p class="small">Inside one archetype, regress Day 2 on card counts (2 Budew vs 1, Latias vs none). Classify cards as core (≥90% inclusion, stable count), flex, or tech, and report each tech's lift with intervals. This turns "list optimization" into numbers.</p></div>
+        <div><h3>Calibrate play-down with real logs</h3><p class="small">TCG Live battle logs (your own, or exports like Trainer Hill's battle journal) record which Pokémon were benched on which turn. A few hundred logs would replace my dig-rate and desire guesses with measured rates per archetype and matchup.</p></div>
+        <div><h3>Recency, region and Day 2 weighting</h3><p class="small">Weight events with a half-life (newer counts more), split NA / EU / LATAM / OCE, and offer a "quality share" weighted to Day 2. These views differ a lot here: Japan's City League field is already a different shape from the international one.</p></div>
+        <div><h3>K-block drop-in</h3><p class="small">Card text is the only input the replacement finder and Advantage model need. As Aura Seeker and later K cards are revealed, add their JSON and they get scored against today's staples automatically, e.g. Mega Lucario Z ex's Supporter search vs Meowth ex.</p></div>
+        <div><h3>Arrangement: deck pages and card pages</h3><p class="small">Every number here can be pivoted two ways: one page per archetype (share trend, conversion, matchups, rotation loss, key cards, replacements) and one page per card (usage trend, by archetype, Day 2 lift, legality, CE). That is how this turns into a dashboard you keep using.</p></div>
+        <div><h3>Uncertainty everywhere</h3><p class="small">Shares and conversions carry Wilson intervals, win rates carry standard errors, and the simulations can bootstrap lists. Showing a band on every number keeps a 9-player deck with a 3/9 Day 2 rate from reading like a top-tier result.</p></div>
+      </div>
+    </section>
+
+    <section id="eyetest">
+      <div class="eyebrow">12 · Eye test</div>
+      <h2>Initial numbers to check against your read</h2>
+      <p class="muted">For each, tell me whether it feels high, low or right. Each maps to one knob in <code>model_config.py</code>.</p>
+      <div id="eyeQs"></div>
+    </section>
+
+    <section id="notes">
+      <div class="eyebrow">13 · Data notes</div>
+      <h2>Sources, coverage and caveats</h2>
+      <div class="cols">
+        <div><ul class="tight small" id="sourceList"></ul></div>
+        <div><ul class="tight small">
+          <li>Archetype labels are Limitless Labs' own. "Other" groups rogue lists.</li>
+          <li>Top cut flags cover few players (top 8 to 16 per event), so top-cut columns are directional only.</li>
+          <li>Labs standings are computed outside the official software and can contain small errors. A few players have no published list.</li>
+          <li>Trainer Hill's multi-deck matchup endpoint returned server errors, so matchups come from Labs pairings. Trainer Hill's archetype counts (17,292 decks from in-person and online events with 50+ players since 17 Sep, all divisions) were used as a cross-check. They show the same top six archetypes, with Dragapult at 12.1% there vs 17.4% at Masters Regionals.</li>
+          <li>The Advantage and play-down numbers are model outputs with hand-set assumptions. Use them to rank and compare, not as measured frequencies.</li>
+        </ul></div>
+      </div>
+      <h3>Events in the dataset</h3>
+      <div class="tscroll" id="evTable" style="max-height:360px"></div>
+    </section>
+    <footer>Built from Limitless Labs (RK9 standings, pairings and decklists), Limitless TCG (card database, Japanese events), the pokemon-tcg-data card repository and Trainer Hill. Generated <span id="gen"></span>. Not affiliated with The Pokémon Company.</footer>
+  </main>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pct = (v, d = 1) => v == null ? "–" : (v * 100).toFixed(d) + "%";
+const fx = (v, d = 2) => v == null ? "–" : Number(v).toFixed(d);
+const int = v => v == null ? "–" : Math.round(v).toLocaleString("en-US");
+let MARKS = {};
+const mark = (legal, marks, name) => {
+  if (legal === 0 || legal === "0") return '<span class="mk h" title="Rotates: only H prints">H</span>';
+  if (!marks && name) marks = MARKS[name] || "";
+  const m = String(marks || "").split("/").filter(x => x && "IJK".includes(x));
+  const last = m.length ? m[m.length - 1] : "I/J";
+  return `<span class="mk ok" title="Stays: has a legal ${esc(last)} print">${esc(last)}</span>`;
+};
+const tierPill = t => {
+  if (!t) return "";
+  const k = t.split(" ")[0].toLowerCase();
+  return `<span class="pill ${k}">${esc(t)}</span>`;
+};
+const barCell = (v, max, d = 1, cls = "", asPct = true) => {
+  if (v == null) return "–";
+  const w = Math.max(1, Math.round(70 * v / (max || 1)));
+  return `<span class="ib ${cls}" style="width:${w}px"></span>${asPct ? pct(v, d) : fx(v, d)}`;
+};
+
+// generic sortable table
+function table(el, rows, cols, opts = {}) {
+  let sortKey = opts.sort || null, dir = opts.dir || -1;
+  const render = () => {
+    let r = rows.slice();
+    if (opts.filter) r = r.filter(opts.filter);
+    if (sortKey) r.sort((a, b) => {
+      const x = a[sortKey], y = b[sortKey];
+      if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
+      return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * dir;
+    });
+    if (opts.limit) r = r.slice(0, opts.limit);
+    const maxes = {};
+    cols.forEach(c => { if (c.bar) maxes[c.k] = Math.max(...r.map(x => x[c.k] ?? 0), 1e-9); });
+    const head = "<tr>" + cols.map(c => `<th class="${c.n ? "n" : ""}" data-k="${c.k}" tabindex="0" ${sortKey === c.k ? `aria-sort="${dir > 0 ? "ascending" : "descending"}"` : ""} title="${esc(c.t || "")}">${esc(c.l)}</th>`).join("") + "</tr>";
+    const body = r.map((row, i) => "<tr>" + cols.map(c => {
+      const v = c.k === "#" ? i + 1 : row[c.k];
+      const html = c.f ? c.f(v, row, maxes[c.k]) : esc(v ?? "–");
+      return `<td class="${c.n ? "n" : ""} ${c.bar ? "bar" : ""} ${c.w ? "w" : ""} ${c.nm ? "nm" : ""}">${html}</td>`;
+    }).join("") + "</tr>").join("");
+    el.innerHTML = `<table><thead>${head}</thead><tbody>${body}</tbody></table>`;
+    el.querySelectorAll("th").forEach(th => {
+      const go = () => { const k = th.dataset.k; if (k === "#") return; if (sortKey === k) dir = -dir; else { sortKey = k; dir = -1; } render(); };
+      th.addEventListener("click", go);
+      th.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+    });
+    if (opts.onCount) opts.onCount(r.length);
+  };
+  render();
+  return { render, set(o) { Object.assign(opts, o); render(); }, rows(v) { rows = v; render(); } };
+}
+
+// tooltip
+const tip = $("#tip");
+function showTip(e, html, host) {
+  tip.innerHTML = html; tip.hidden = false;
+  const r = host.getBoundingClientRect();
+  const x = Math.min(e.clientX - r.left + 12, r.width - 270);
+  tip.style.left = (r.left + window.scrollX + Math.max(0, x)) + "px";
+  tip.style.top = (e.clientY + window.scrollY + 14) + "px";
+}
+document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: true });
+
+(function init() {
+  const D = DATA, W = D.windows;
+  MARKS = D.marks_by_name || {};
+  const cur = W.CUR || {};
+  const nLists = D.archetypes.reduce((s, a) => s + (a.players || 0), 0);
+  $("#gen").textContent = D.generated;
+  $("#nJpRe").textContent = int(D.jp_reprints_H);
+  $("#scope").innerHTML = `Current format: ${int(cur.players)} players across ${cur.events.map(e => esc(e.city)).join(", ")}, with ${int(cur.day2)} Day 2 runs and ${cur.archetypes} labeled archetypes. Context: Worlds 2026 (${int((W.WORLDS || {}).players)}) and ${int(((W.POR || {}).players || 0) + ((W.CRI || {}).players || 0))} players from the earlier post-G-rotation Regionals, plus ${int(((D.jp.cityleague || {}).lists || 0) + ((D.jp.major || {}).lists || 0))} Japanese lists. Every list is checked card by card against every international print for rotation.`;
+  const tiers = Object.fromEntries((D.tiers || []).map(t => [t.tier, t]));
+  const dies = (tiers.Dies || {}).share || 0, loses = (tiers.Loses || {}).share || 0;
+  const bud = (D.budew_CUR || {}), bm = bud.model || {};
+  const rotAvg = D.archetypes.length ? D.archetypes.reduce((s, a) => s + (a.avg_rotating_cards || 0) * a.players, 0) / D.archetypes.reduce((s, a) => s + (a.avg_rotating_cards != null ? a.players : 0), 0) : null;
+  $("#figs").innerHTML = [
+    [fx(rotAvg, 1), "of 60 cards in the average current list rotate", true],
+    [pct(dies, 0), "of the field plays an archetype whose namesake Pokémon rotates", true],
+    [pct(dies + loses, 0), "lose either their namesake or a named partner", true],
+    [pct((bud.all || {}).p_opp_has_budew, 0), "of opponents run Budew today. It rotates", false],
+  ].map(([v, l, r]) => `<div class="fig"><div class="v ${r ? "r" : ""}">${v}</div><div class="l">${l}</div></div>`).join("");
+
+  // ---- meta chart
+  (function metaChart() {
+    const host = $("#metaChart");
+    const rows = D.archetypes.slice(0, 20);
+    const totD2 = cur.day2 || 1;
+    const max = Math.max(...rows.map(r => Math.max(r.share, r.day2 / totD2)));
+    const rowH = 24, left = 168, right = 64, top = 26, Wd = 760, H = top + rows.length * rowH + 10;
+    const sx = v => left + (Wd - left - right) * v / max;
+    let s = `<svg viewBox="0 0 ${Wd} ${H}" role="img" aria-label="Top 20 archetypes by share of players and share of Day 2">`;
+    [0, 0.05, 0.1, 0.15, 0.2, 0.25].filter(t => t <= max + 1e-9).forEach(t => { s += `<line class="grid" x1="${sx(t)}" x2="${sx(t)}" y1="${top - 6}" y2="${H - 6}"/><text x="${sx(t)}" y="${top - 10}" text-anchor="middle">${Math.round(t * 100)}%</text>`; });
+    rows.forEach((r, i) => {
+      const y = top + i * rowH, d2 = r.day2 / totD2;
+      s += `<text class="lab" x="${left - 8}" y="${y + 15}" text-anchor="end">${esc(r.name)}</text>`;
+      s += `<path d="M${left},${y + 6} h${Math.max(2, sx(r.share) - left - 4)} a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-${Math.max(2, sx(r.share) - left - 4)} z" fill="var(--bar)"/>`;
+      s += `<circle cx="${sx(d2)}" cy="${y + 12}" r="5" fill="var(--bar-2)" stroke="var(--sheet)" stroke-width="2"/>`;
+      s += `<text x="${Math.max(sx(r.share), sx(d2)) + 10}" y="${y + 16}">${pct(r.share)}</text>`;
+      s += `<rect x="0" y="${y}" width="${Wd}" height="${rowH}" fill="transparent" data-i="${i}"/>`;
+    });
+    s += "</svg>";
+    host.innerHTML = `<div class="legend"><span><i style="background:var(--bar)"></i>Share of players</span><span><i class="dot" style="background:var(--bar-2)"></i>Share of Day 2 spots</span></div>` + s;
+    host.querySelectorAll("rect[data-i]").forEach(el => {
+      el.addEventListener("mousemove", e => { const r = rows[+el.dataset.i]; showTip(e, `<b>${esc(r.name)}</b><br>${int(r.players)} players · ${pct(r.share)} of field<br>Day 2: ${r.day2} (${pct(r.day2_rate)}; lift ${fx(r.day2_lift)})<br>Win rate (non-mirror): ${pct(r.wr_nonmirror)}`, host); });
+      el.addEventListener("mouseleave", () => { tip.hidden = true; });
+    });
+  })();
+
+  // ---- archetype table
+  const archCols = [
+    { k: "#", l: "#", n: 1 },
+    { k: "name", l: "Archetype", nm: 1 },
+    { k: "players", l: "Players", n: 1, f: int },
+    { k: "share", l: "Share", bar: 1, f: (v, r, m) => barCell(v, m) },
+    { k: "day2", l: "Day 2", n: 1, f: int },
+    { k: "day2_rate", l: "Day 2 rate", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">${r.day2_rate_lo != null ? pct(r.day2_rate_lo, 0) + "–" + pct(r.day2_rate_hi, 0) : ""}</span>` },
+    { k: "day2_lift_shrunk", l: "Day 2 lift (shrunk)", n: 1, f: v => fx(v), t: "Day 2 rate ÷ field Day 2 rate, shrunk toward 1.0" },
+    { k: "topcut", l: "Top cut", n: 1, f: int },
+    { k: "wr_nonmirror", l: "Win % (non-mirror)", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">±${r.wr_nonmirror_se != null ? (r.wr_nonmirror_se * 196).toFixed(1) : "–"}</span>` },
+    { k: "avg_rotating_cards", l: "Rotating cards /60", n: 1, f: v => fx(v, 1) },
+    { k: "tier", l: "Rotation tier", f: v => tierPill(v) },
+  ];
+  const simpleCols = [
+    { k: "#", l: "#", n: 1 }, { k: "name", l: "Archetype", nm: 1 }, { k: "players", l: "Players", n: 1, f: int },
+    { k: "share", l: "Share", bar: 1, f: (v, r, m) => barCell(v, m) }, { k: "day2_rate", l: "Day 2 rate", n: 1, f: v => pct(v) },
+    { k: "day2_lift", l: "Day 2 lift", n: 1, f: v => fx(v) }, { k: "wr_nonmirror", l: "Win % (non-mirror)", n: 1, f: v => pct(v) },
+  ];
+  let archQ = "", archT;
+  const archFilter = r => !archQ || String(r.name).toLowerCase().includes(archQ);
+  const makeArch = (src, cols) => table($("#archTable"), src, cols, { sort: "players", filter: archFilter, onCount: n => $("#archCount").textContent = `${n} rows` });
+  archT = makeArch(D.archetypes, archCols);
+  $("#archQ").addEventListener("input", e => { archQ = e.target.value.toLowerCase(); archT.render(); });
+  $("#archWin").addEventListener("change", e => {
+    const v = e.target.value;
+    archT = v === "cur" ? makeArch(D.archetypes, archCols) : makeArch(v === "worlds" ? D.archetypes_worlds : v === "sup" ? D.superarchetypes : D.archetypes_post_g_all, simpleCols);
+  });
+
+  // ---- tiers stack
+  (function () {
+    const order = [["Dies", "Dies (namesake rotates)", "var(--sev-1)"], ["Loses", "Loses a named partner", "var(--sev-2)"], ["Gutted", "Gutted (15+ cards)", "var(--sev-3)"], ["Wounded", "Wounded (8–15)", "var(--sev-4)"], ["Intact", "Intact (<8)", "var(--sev-5)"]];
+    const tot = order.reduce((s, o) => s + ((tiers[o[0]] || {}).share || 0), 0) || 1;
+    const bar = order.map(o => `<div style="width:${100 * ((tiers[o[0]] || {}).share || 0) / tot}%;background:${o[2]}" title="${o[1]}: ${pct(((tiers[o[0]] || {}).share || 0) / tot)}"></div>`).join("");
+    const labs = order.map(o => `<div><b>${pct(((tiers[o[0]] || {}).share || 0) / tot, 0)}</b><span class="legend"><span><i style="background:${o[2]}"></i>${o[1]}</span></span><span class="small muted">${(tiers[o[0]] || {}).archetypes || 0} archetypes</span></div>`).join("");
+    $("#tierStack").innerHTML = `<div class="stack" role="img" aria-label="Share of current field by rotation tier">${bar}</div><div class="stack-labels">${labs}</div>`;
+  })();
+  let survQ = "";
+  const survT = table($("#survTable"), D.archetypes.filter(a => a.tier), [
+    { k: "#", l: "#", n: 1 }, { k: "name", l: "Archetype", nm: 1 }, { k: "share", l: "Share", bar: 1, f: (v, r, m) => barCell(v, m) },
+    { k: "tier", l: "Tier", f: v => tierPill(v) }, { k: "avg_rotating_cards", l: "Rotating /60", n: 1, f: v => fx(v, 1) },
+    { k: "namesake", l: "Named Pokémon" }, { k: "core_rotating_cards", l: "Core cards that rotate (≥75% inclusion, avg copies)", w: 1 },
+  ], { sort: "share", filter: r => !survQ || String(r.name).toLowerCase().includes(survQ), onCount: n => $("#survCount").textContent = `${n} rows` });
+  $("#survQ").addEventListener("input", e => { survQ = e.target.value.toLowerCase(); survT.render(); });
+  table($("#projTable"), D.projection, [
+    { k: "#", l: "#", n: 1 }, { k: "name", l: "Archetype", nm: 1 }, { k: "share", l: "Now", n: 1, f: v => pct(v) },
+    { k: "proj_share_naive", l: "Projected among survivors", bar: 1, f: (v, r, m) => barCell(v, m) }, { k: "tier", l: "Tier", f: v => tierPill(v) },
+  ], { sort: "proj_share_naive" });
+
+  // ---- replacements
+  table($("#replTable"), D.replacements, [
+    { k: "rotating_card", l: "Rotating card", nm: 1, f: v => `<span class="mk h">H</span> ${esc(v)}` }, { k: "type", l: "Type" },
+    { k: "inclusion_now", l: "Played in", bar: 1, f: (v, r, m) => barCell(v, m, 1, "r") }, { k: "avg_copies", l: "Avg copies", n: 1, f: v => fx(v) },
+    { k: "day2_inclusion", l: "Day 2 inclusion", n: 1, f: v => pct(v) }, { k: "function_tags", l: "Function" },
+    { k: "legal_alternatives", l: "Legal I/J alternatives (current usage)", w: 1 },
+  ], { sort: "inclusion_now" });
+
+  // ---- Budew
+  (function () {
+    const a = bud.all || {}, d2 = (D.budew_CUR_day2 || {}).model || {}, d2a = (D.budew_CUR_day2 || {}).all || {};
+    $("#budewFigs").innerHTML = [
+      [pct(a.p_opp_has_budew, 0), `of current lists run Budew (avg ${fx(a.avg_budew_copies_when_played, 1)} copies). Day 2 field: ${pct(d2a.p_opp_has_budew, 0)}`],
+      [pct(bm.p_item_locked_T2_any_order, 0), `chance a random opponent item-locks your turn 2 (Day 2 field: ${pct(d2.p_item_locked_T2_any_order, 0)})`],
+      [fx(bm.expected_item_locked_turns_per_game, 2), `expected item-locked turns per game against a random opponent`],
+      [pct(bm.p_budew_prized_all_copies, 1), "chance a Budew player has every copy prized"],
+    ].map(([v, l]) => `<div class="fig"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+    $("#budewHow").innerHTML = [
+      `Budew's Itchy Pollen costs nothing, so whoever has Budew in play attacks with it. Going second they lock from their turn 1, going first from their turn 2. Either way, the first turn of yours it can lock is your turn 2.`,
+      `P(Budew reachable for its first attack): ${pct(bm["p_budew_ready_first_attack_when_going_second(T1)"])} going second (by their T1), ${pct(bm["p_budew_ready_first_attack_when_going_first(T2)"])} going first (by their T2). This comes from simulating ${"every"} Budew list's opening hand, Prizes, Poffin, Nest-style and Ultra Ball searches.`,
+      `Desire to use it against the actual field: ${pct(bm.desire_vs_field, 0)}. It drops when the opponent plays fewer than 12 Items.`,
+      `Lock turns per game once Budew is attacking: ${fx(D.knobs.BUDEW_LOCK_TURNS.second, 1)} going second, ${fx(D.knobs.BUDEW_LOCK_TURNS.first, 1)} going first (knob). The field averages ${fx(bm.field_avg_items_per_list, 1)} Items per list.`,
+      `Other Item lock in the format: ${Object.entries(a.other_item_lock_inclusion || {}).map(([k, v]) => `${esc(k)} ${pct(v, 1)}`).join(", ")}.`,
+    ].map(x => `<li>${x}</li>`).join("");
+    const who = Object.entries(bm.share_of_field_running_budew_by_archetype || {});
+    const mx = Math.max(...who.map(w => w[1]), 1e-9);
+    $("#budewWho").innerHTML = `<div style="overflow-x:auto"><table><tbody>${who.map(([k, v]) => `<tr><td>${esc((D.archetypes.find(a => a.deck_id === k) || {}).name || k)}</td><td class="bar"><span class="ib" style="width:${Math.round(70 * v / mx)}px"></span>${pct(v, 1)} of the field</td></tr>`).join("")}</tbody></table></div>`;
+    $("#budewPost").innerHTML = `After rotation Budew is gone (all prints <span class="mk h">H</span>). The remaining Item lock is Tyranitar (Daunting Gaze, while Active), Jellicent ex (Oceanic Curse), Frillish and Flaaffy (paid attacks). None is a free turn-1 lock, so expect Stage 2 and Item-heavy setups to get much safer.`;
+  })();
+
+  // ---- support table
+  const supCols = [
+    { k: "card", l: "Card", nm: 1, f: (v, r) => `${esc(v)}` },
+    { k: "field_inclusion", l: "In field's lists", bar: 1, f: (v, r, m) => barCell(v, m) },
+    { k: "avg_copies", l: "Copies", n: 1, f: v => fx(v, 2) },
+    { k: "p_all_copies_prized", l: "All copies prized", n: 1, f: v => pct(v) },
+    { k: "horizon_turn", l: "By turn", n: 1, f: v => esc(String(v).replace(/[{}']/g, "").replace("first: ", "1st ").replace("second: ", "2nd ")) },
+    { k: "p_accessible_if_not_prized", l: "Reachable (not prized)", n: 1, f: v => pct(v) },
+    { k: "desire_vs_field", l: "Desire vs field", n: 1, f: v => pct(v, 0) },
+    { k: "p_played_if_in_deck", l: "Played | in deck", n: 1, f: v => `<b>${pct(v, 0)}</b>` },
+    { k: "p_played_if_in_deck_not_prized", l: "Played | not prized", n: 1, f: v => pct(v, 0) },
+    { k: "p_opponent_plays_it_random_round", l: "You see it in a random round", bar: 1, f: (v, r, m) => barCell(v, m) },
+    { k: "top_archetypes", l: "Main homes (inclusion)", w: 1 },
+  ];
+  const supT = table($("#supTable"), D.support, supCols, { sort: "p_opponent_plays_it_random_round" });
+  $("#supPop").addEventListener("change", e => supT.rows(e.target.value === "day2" ? D.support_day2 : D.support));
+  const sba = D.support_by_arch || [];
+  const supNames = [...new Set(sba.map(r => r.card))].sort((a, b) => sba.filter(r => r.card === b).length - sba.filter(r => r.card === a).length);
+  $("#supCard").innerHTML = supNames.map(n => `<option>${esc(n)}</option>`).join("");
+  if (supNames.includes("Latias ex")) $("#supCard").value = "Latias ex";
+  const supArchCols = [
+    { k: "archetype", l: "Archetype", nm: 1 }, { k: "archetype_share", l: "Deck share", n: 1, f: v => pct(v) },
+    { k: "inclusion_in_archetype", l: "Runs the card", n: 1, f: v => pct(v, 0) }, { k: "avg_copies", l: "Copies", n: 1, f: v => fx(v, 2) },
+    { k: "p_all_copies_prized", l: "All prized", n: 1, f: v => pct(v) }, { k: "p_accessible", l: "Reachable", n: 1, f: v => pct(v, 0) },
+    { k: "desire", l: "Desire", n: 1, f: v => pct(v, 0) }, { k: "p_played_if_in_deck", l: "Played | in deck", bar: 1, f: (v, r, m) => barCell(v, 1) },
+    { k: "p_played_if_not_prized", l: "Played | not prized", n: 1, f: v => pct(v, 0) },
+  ];
+  const supAT = table($("#supArchTable"), sba, supArchCols, { sort: "archetype_share", filter: r => r.card === $("#supCard").value });
+  $("#supCard").addEventListener("change", () => supAT.render());
+
+  // ---- pokemon advantage
+  $("#hpPrize").textContent = Math.round((D.damage_meta || {}).hp_per_prize_meta || 134);
+  let pkQ = "", pkT_sortAll = false;
+  const pkCols = [
+    { k: "#", l: "#", n: 1 },
+    { k: "card", l: "Pokémon", nm: 1, f: (v, r) => `${mark(r.legal_post, "", v)} ${esc(v)}` },
+    { k: "uses_per_game", l: "Uses / game", n: 1, f: v => fx(v, 1) },
+    { k: "ce_per_use", l: "CE / use", n: 1, f: v => fx(v, 2) },
+    { k: "extra_cards_per_game", l: "+Cards / game", n: 1, f: v => v ? fx(v, 1) : "–", t: "Net cards drawn or searched per game" },
+    { k: "extra_energy_per_game", l: "+Energy / game", n: 1, f: v => v ? fx(v, 1) : "–", t: "Extra Energy attachments per game" },
+    { k: "retreat_energy_saved_per_game", l: "Retreat saved", n: 1, f: v => v ? fx(v, 1) : "–", t: "Retreat Energy not discarded per game" },
+    { k: "advantage_ce_per_game", l: "Advantage CE / game", bar: 1, f: (v, r, m) => barCell(v, m, 1, "", false) },
+    { k: "damage_value_ce_per_game", l: "Damage CE / game", n: 1, f: v => fx(v, 1) },
+    { k: "total_impact_ce_per_game", l: "Total CE / game", n: 1, f: v => `<b>${fx(v, 1)}</b>` },
+    { k: "field_inclusion", l: "Field inclusion", n: 1, f: v => pct(v) },
+    { k: "meta_weighted_impact", l: "Meta-weighted", n: 1, f: v => fx(v, 2), t: "Total CE/game × field inclusion" },
+  ];
+  const pkT = table($("#pkTable"), D.pokemon_rank, pkCols, { sort: "advantage_ce_per_game", limit: 50, filter: r => (!pkQ || String(r.card).toLowerCase().includes(pkQ)) && (r.advantage_ce_per_game > 0 || pkT_sortAll), onCount: n => $("#pkCount").textContent = `top ${n}` });
+  $("#pkQ").addEventListener("input", e => { pkQ = e.target.value.toLowerCase(); pkT.render(); });
+  $("#pkSort").addEventListener("change", e => { pkT_sortAll = e.target.value !== "advantage_ce_per_game"; pkT.set({ sort: e.target.value }); });
+  (function accel() {
+    const E = Object.fromEntries((D.engines || []).map(e => [e.name, e]));
+    const acc = [["Teal Mask Ogerpon ex", "Teal Dance: +1 Grass attach and +1 card each use"], ["Metang", "Metal Maker: Metal Energy from the top 4"], ["Blaziken ex", "Seething Spirit: 1 Energy from discard each turn"], ["Team Rocket's Spidops", "Charging Up"], ["Marnie's Grimmsnarl ex", "Punk Up: up to 5 Darkness on evolve (×3 assumed)"], ["Toxtricity", "Sinister Surge"], ["Drakloak", "Recon Directive: look 2, keep 1"], ["N's Zoroark ex", "Trade: discard 1, draw 2"], ["Lunatone", "Lunar Cycle: draw 3"]];
+    $("#accelBox").innerHTML = `<table><tbody>${acc.filter(a => E[a[0]]).map(([n, d]) => `<tr><td><b>${esc(n)}</b><br><span class="muted">${esc(d)}</span></td><td class="n">${fx(E[n].uses_per_game, 1)} uses/game</td></tr>`).join("")}</tbody></table><p class="small muted" style="margin-top:8px">For Energy engines, uses/game equals extra Energy attached per game. Divide by the main attacker's cost for "attack turns gained": e.g. Teal Dance's ~${fx((E["Teal Mask Ogerpon ex"] || {}).uses_per_game, 1)} attachments ≈ ${fx(((E["Teal Mask Ogerpon ex"] || {}).uses_per_game || 0) / 3, 1)} fully powered Myriad Leaf Showers' worth of Energy.</p>`;
+  })();
+
+  // ---- trainers
+  let trQ = "", trType = "";
+  const trT = table($("#trTable"), D.trainers, [
+    { k: "#", l: "#", n: 1 },
+    { k: "name", l: "Card", nm: 1, f: (v, r) => `${mark(r.legal_post_rotation, "", v)} ${esc(v)}` },
+    { k: "type", l: "Type" },
+    { k: "field_inclusion", l: "Inclusion", n: 1, f: v => pct(v) },
+    { k: "avg_copies", l: "Copies", n: 1, f: v => fx(v, 2) },
+    { k: "plays_per_game", l: "Plays / game", n: 1, f: v => fx(v, 2) },
+    { k: "ce_per_play", l: "CE / play", n: 1, f: v => fx(v, 2) },
+    { k: "advantage_ce_per_game", l: "CE / game (in its deck)", bar: 1, f: (v, r, m) => barCell(v, m, 1, "", false) },
+    { k: "meta_advantage_ce_per_100_games", l: "Meta impact (CE / 100 games)", n: 1, f: v => fx(v, 0) },
+    { k: "why", l: "Valued as", w: 1 },
+  ], { sort: "meta_advantage_ce_per_100_games", filter: r => (!trQ || r.name.toLowerCase().includes(trQ)) && (!trType || r.type === trType), onCount: n => $("#trCount").textContent = `${n} cards` });
+  $("#trQ").addEventListener("input", e => { trQ = e.target.value.toLowerCase(); trT.render(); });
+  $("#trType").addEventListener("change", e => { trType = e.target.value; trT.render(); });
+
+  // ---- damage
+  table($("#dmgTable"), D.damage.filter(r => r.field_inclusion >= 0.003), [
+    { k: "#", l: "#", n: 1 },
+    { k: "attacker", l: "Attacker", nm: 1, f: (v, r) => `${mark(r.legal_post_rotation, "", v)} ${esc(v)}` },
+    { k: "base_assumption", l: "Assumed attack", w: 1 },
+    { k: "exp_damage_vs_meta", l: "Avg damage vs field", n: 1, f: v => int(v) },
+    { k: "p_OHKO_meta_defender", l: "OHKO rate", n: 1, f: v => pct(v, 0) },
+    { k: "prizes_per_attack", l: "Prizes / attack", bar: 1, f: (v, r, m) => barCell(v, m, 2, "", false) },
+    { k: "attacks_per_game", l: "Attacks / game", n: 1, f: v => fx(v, 1) },
+    { k: "prizes_per_game", l: "Prizes / game", n: 1, f: v => fx(v, 1) },
+    { k: "prize_liability", l: "Gives up", n: 1, f: v => int(v) },
+    { k: "prize_efficiency", l: "Prize efficiency", n: 1, f: v => fx(v, 2), t: "Prizes per attack ÷ Prizes it gives up" },
+    { k: "field_inclusion", l: "Inclusion", n: 1, f: v => pct(v) },
+  ], { sort: "prizes_per_attack" });
+
+  // ---- Japan
+  table($("#jpNew"), D.jp_new_cards, [
+    { k: "name", l: "Card" }, { k: "set", l: "Set" }, { k: "inclusion", l: "City League inclusion", bar: 1, f: (v, r, m) => barCell(v, m) }, { k: "avg_copies", l: "Copies", n: 1, f: v => fx(v, 2) },
+  ], { sort: "inclusion" });
+  const cl = (D.jp.cityleague || {});
+  table($("#jpArch"), Object.entries(cl.archetypes || {}).map(([k, v]) => ({ deck: k, ...v })), [
+    { k: "deck", l: "Archetype (by icons)" }, { k: "lists", l: "Lists", n: 1, f: int }, { k: "share", l: "Share", bar: 1, f: (v, r, m) => barCell(v, m) },
+  ], { sort: "lists" });
+  $("#jpNote").textContent = `${int(cl.lists)} City League top lists from ${int(cl.events)} events (top 16 each); Budew is in ${pct(cl.budew_inclusion, 0)} of them, and the average Japanese list has ${fx(cl.avg_rotating_cards_per_list, 1)} rotating cards. Champions League Yokohama, JCS 2026 and CL Aichi top lists are included in the data folder.`;
+
+  // ---- cards
+  $("#nCards").textContent = int(D.n_cards_seen);
+  let cq = "", crot = "", ccat = "";
+  const cardT = table($("#cardTable"), D.cards, [
+    { k: "#", l: "#", n: 1 },
+    { k: "card_key", l: "Card", nm: 1, f: (v, r) => `${mark(r.legal_post, r.marks)} ${esc(v)}` },
+    { k: "cat", l: "Type" },
+    { k: "inclusion", l: "Inclusion", bar: 1, f: (v, r, m) => barCell(v, m, 1, r.legal_post === 0 ? "r" : "") },
+    { k: "avg_copies", l: "Avg copies", n: 1, f: v => fx(v, 2) },
+    { k: "inclusion_day2", l: "Day 2 incl.", n: 1, f: v => pct(v) },
+    { k: "inclusion_topcut", l: "Top cut incl.", n: 1, f: v => pct(v) },
+    { k: "day2_lift", l: "Day 2 lift", n: 1, f: v => fx(v, 2) },
+    { k: "marks", l: "Marks" },
+  ], { sort: "inclusion", filter: r => (!cq || r.card_key.toLowerCase().includes(cq)) && (crot === "" || String(r.legal_post) === crot) && (!ccat || r.cat === ccat), onCount: n => $("#cardCount").textContent = `${n} cards` });
+  $("#cardQ").addEventListener("input", e => { cq = e.target.value.toLowerCase(); cardT.render(); });
+  $("#cardRot").addEventListener("change", e => { crot = e.target.value; cardT.render(); });
+  $("#cardCat").addEventListener("change", e => { ccat = e.target.value; cardT.render(); });
+
+  // ---- eye test
+  const S = Object.fromEntries((D.support || []).map(s => [s.card, s]));
+  const PK = Object.fromEntries((D.pokemon_rank || []).map(s => [s.card, s]));
+  const TR = Object.fromEntries((D.trainers || []).map(s => [s.name, s]));
+  const DM = Object.fromEntries((D.damage || []).map(s => [s.attacker, s]));
+  const top = D.archetypes[0] || {};
+  const big = D.archetypes.slice(0, 8).slice().sort((a, b) => (b.day2_lift_shrunk || 0) - (a.day2_lift_shrunk || 0));
+  const best = big[0] || {}, second = big[1] || {};
+  const qs = [
+    [`${esc(top.name)} is ${pct(top.share)} of the current field with a shrunk Day 2 lift of ${fx(top.day2_lift_shrunk)} and ${pct(top.wr_nonmirror)} non-mirror win rate. Among the eight biggest decks, ${esc(best.name)} converts best (shrunk lift ${fx(best.day2_lift_shrunk)}), then ${esc(second.name)} (${fx(second.day2_lift_shrunk)}).`, "None. This is measured; flag a mislabeled archetype if you see one."],
+    [`You're item-locked on your turn 2 in ${pct(bm.p_item_locked_T2_any_order, 0)} of games, about ${fx(bm.expected_item_locked_turns_per_game, 2)} locked turns per game.`, "BUDEW_LOCK_TURNS, Budew desire, searcher α"],
+    [`Fezandipiti ex reaches the board in ${pct((S["Fezandipiti ex"] || {}).p_played_if_in_deck, 0)} of games when it's in the deck. You'll see an opponent's Fez in ${pct((S["Fezandipiti ex"] || {}).p_opponent_plays_it_random_round, 0)} of rounds.`, "Fez desire (0.80), horizon turn 5"],
+    [`Meowth ex gets played in only ${pct((S["Meowth ex"] || {}).p_played_if_in_deck, 0)} of games where it's listed. It's a 1-of Basic ex that Poffin can't fetch, and it's only reachable by turn 2 ${pct((S["Meowth ex"] || {}).p_accessible_by_horizon, 0)} of the time. Too low?`, "Ultra Ball α (0.5), Meowth horizon / desire"],
+    [`Latias ex hits the board in ${pct((S["Latias ex"] || {}).p_played_if_in_deck, 0)} of its games (mostly Basic Box and Slowking) and is worth ~${fx((PK["Latias ex"] || {}).advantage_ce_per_game, 1)} CE per game in free retreat.`, "Latias desire, retreat-events per turn"],
+    [`Teal Dance fires ~${fx((PK["Teal Mask Ogerpon ex"] || {}).uses_per_game, 1)} times per game in Ogerpon decks. Drakloak's Recon Directive fires ~${fx((PK["Drakloak"] || {}).uses_per_game, 1)} times in Dragapult.`, "Grass-in-hand model, Drakloak decay"],
+    [`Shaymin hits the board in ${pct((S["Shaymin"] || {}).p_played_if_in_deck, 0)} of its games. Lillie's Clefairy ex: ${pct((S["Lillie's Clefairy ex"] || {}).p_played_if_in_deck, 0)}, much higher against Dragapult.`, "Matchup modifiers (bench snipe, Dragon share)"],
+    [`Trainer value per game: Lillie's Determination ~${fx((TR["Lillie's Determination"] || {}).advantage_ce_per_game, 1)} CE, Buddy-Buddy Poffin ~${fx((TR["Buddy-Buddy Poffin"] || {}).advantage_ce_per_game, 1)}, Boss's Orders ~${fx((TR["Boss's Orders"] || {}).advantage_ce_per_game, 1)}, Ultra Ball ~${fx((TR["Ultra Ball"] || {}).advantage_ce_per_game, 1)}. Is Ultra Ball undervalued because of its discard cost?`, "TRAINER_CE table, discard_cost"],
+    [`Dragapult ex takes ~${fx((DM["Dragapult ex"] || {}).prizes_per_attack, 2)} Prizes per attack against this field (OHKO ${pct((DM["Dragapult ex"] || {}).p_OHKO_meta_defender, 0)}), counting the 6 spread counters. Mega Kangaskhan ex: ${fx((DM["Mega Kangaskhan ex"] || {}).prizes_per_attack, 2)}. Alakazam: ${fx((DM["Alakazam"] || {}).prizes_per_attack, 2)}.`, "ATTACKERS dmg/spread assumptions"],
+    [`Engines that survive rotation and rank highest: ${(D.pokemon_rank || []).filter(p => p.legal_post === 1 && p.advantage_ce_per_game > 0).sort((a, b) => b.advantage_ce_per_game - a.advantage_ce_per_game).slice(0, 6).map(p => esc(p.card)).join(", ")}. Do these feel like the post-rotation engines to build around?`, "Engine table"],
+  ];
+  $("#eyeQs").innerHTML = qs.map((q, i) => `<div class="q"><span class="qn">${i + 1}</span><div><p>${q[0]}</p><p class="small muted">Knob: ${q[1]}</p></div></div>`).join("");
+
+  // ---- sources & events
+  $("#sourceList").innerHTML = [
+    `<b>Limitless Labs</b> (labs.limitlesstcg.com): standings, Day 2 / top-cut flags, round-by-round pairings and full decklists for ${D.events.length} events (${int(D.events.reduce((s, e) => s + (e.n_lists || 0), 0))} lists, ${int(D.n_matches)} matches).`,
+    `<b>Limitless TCG</b>: card pages and every international and Japanese print of ${int(D.n_cards_seen)}+ cards for regulation marks; Champions League Yokohama, JCS 2026, CL Aichi and current Japanese City League top lists.`,
+    `<b>pokemon-tcg-data</b>: structured card text (HP, attacks, abilities, Weakness, retreat) through 30th Celebration.`,
+    `<b>Trainer Hill</b>: archetype counts across in-person and online events (50+ players) as a cross-check.`,
+  ].map(x => `<li>${x}</li>`).join("");
+  table($("#evTable"), D.events, [
+    { k: "tid", l: "Labs id" }, { k: "city", l: "Event" }, { k: "type", l: "Type" }, { k: "date", l: "Date" }, { k: "players", l: "Players", n: 1, f: int }, { k: "n_lists", l: "Lists", n: 1, f: int }, { k: "window", l: "Window" },
+  ], { sort: "tid" });
+  $("#nMatches").textContent = int(D.n_matches || 0);
+
+  // nav highlight
+  const links = [...document.querySelectorAll("nav.index a")];
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id)); } }), { rootMargin: "-30% 0px -65% 0px" });
+  document.querySelectorAll("main section").forEach(s => io.observe(s));
+})();
+</script>

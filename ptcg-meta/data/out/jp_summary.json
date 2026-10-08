@@ -1,0 +1,692 @@
+{
+ "cityleague": {
+  "lists": 2389,
+  "events": 102,
+  "archetypes": {
+   "dragapult dusknoir": {
+    "lists": 225,
+    "share": 0.09418166596902469
+   },
+   "dragapult dudunsparce": {
+    "lists": 194,
+    "share": 0.08120552532440352
+   },
+   "dragapult blaziken": {
+    "lists": 106,
+    "share": 0.044370029300962746
+   },
+   "metagross excadrill-mega": {
+    "lists": 90,
+    "share": 0.037672666387609875
+   },
+   "zoroark pecharunt": {
+    "lists": 84,
+    "share": 0.03516115529510255
+   },
+   "slowking kangaskhan-mega": {
+    "lists": 83,
+    "share": 0.034742570113018
+   },
+   "zoroark": {
+    "lists": 80,
+    "share": 0.033486814566764334
+   },
+   "alakazam dudunsparce": {
+    "lists": 74,
+    "share": 0.03097530347425701
+   },
+   "ogerpon kangaskhan-mega": {
+    "lists": 67,
+    "share": 0.02804520719966513
+   },
+   "banette dudunsparce": {
+    "lists": 66,
+    "share": 0.02762662201758058
+   },
+   "kangaskhan-mega ogerpon": {
+    "lists": 65,
+    "share": 0.027208036835496024
+   },
+   "lucario-mega dudunsparce": {
+    "lists": 62,
+    "share": 0.02595228128924236
+   },
+   "dipplin thwackey": {
+    "lists": 61,
+    "share": 0.025533696107157805
+   },
+   "ogerpon hydrapple": {
+    "lists": 58,
+    "share": 0.024277940560904144
+   },
+   "garchomp roserade": {
+    "lists": 48,
+    "share": 0.020092088740058602
+   },
+   "dragapult": {
+    "lists": 44,
+    "share": 0.018417748011720386
+   },
+   "kangaskhan-mega rayquaza-mega": {
+    "lists": 43,
+    "share": 0.01799916282963583
+   },
+   "thwackey dipplin": {
+    "lists": 38,
+    "share": 0.01590623691921306
+   },
+   "lucario-mega hariyama": {
+    "lists": 37,
+    "share": 0.015487651737128506
+   },
+   "dudunsparce lopunny-mega": {
+    "lists": 33,
+    "share": 0.01381331100879029
+   },
+   "lucario-mega solrock": {
+    "lists": 32,
+    "share": 0.013394725826705735
+   },
+   "meganium-mega ogerpon": {
+    "lists": 28,
+    "share": 0.011720385098367517
+   },
+   "grimmsnarl munkidori": {
+    "lists": 28,
+    "share": 0.011720385098367517
+   },
+   "ogerpon arboliva": {
+    "lists": 27,
+    "share": 0.011301799916282964
+   },
+   "kangaskhan-mega slowking": {
+    "lists": 27,
+    "share": 0.011301799916282964
+   }
+  },
+  "new_jp_only_cards_top": [
+   {
+    "name": "Talonflame ex",
+    "set": "M6",
+    "inclusion": 0.10799497697781499,
+    "avg_copies": 1.7868217054263567
+   },
+   {
+    "name": "Legendary Lava Cave",
+    "set": "M6",
+    "inclusion": 0.032231059020510676,
+    "avg_copies": 3.792207792207792
+   },
+   {
+    "name": "Mega Rayquaza ex",
+    "set": "M6",
+    "inclusion": 0.029300962745918795,
+    "avg_copies": 2.085714285714286
+   },
+   {
+    "name": "Adventuring Lantern",
+    "set": "M6",
+    "inclusion": 0.02804520719966513,
+    "avg_copies": 2.1044776119402986
+   },
+   {
+    "name": "Zinnia's Trust",
+    "set": "M6",
+    "inclusion": 0.019254918375889492,
+    "avg_copies": 1.0
+   },
+   {
+    "name": "Special Vest",
+    "set": "M6",
+    "inclusion": 0.015487651737128506,
+    "avg_copies": 1.027027027027027
+   },
+   {
+    "name": "Dolliv",
+    "set": "MEM",
+    "inclusion": 0.009208874005860193,
+    "avg_copies": 1.8636363636363635
+   },
+   {
+    "name": "Smoliv",
+    "set": "MEM",
+    "inclusion": 0.008790288823775638,
+    "avg_copies": 1.9047619047619047
+   },
+   {
+    "name": "Aarune",
+    "set": "M6",
+    "inclusion": 0.007534533277521975,
+    "avg_copies": 1.1666666666666667
+   },
+   {
+    "name": "Giratina",
+    "set": "M6",
+    "inclusion": 0.007115948095437421,
+    "avg_copies": 1.0
+   },
+   {
+    "name": "Azurill",
+    "set": "M6",
+    "inclusion": 0.0054416073670992045,
+    "avg_copies": 1.0769230769230769
+   },
+   {
+    "name": "Cacnea",
+    "set": "M6",
+    "inclusion": 0.0054416073670992045,
+    "avg_copies": 1.9230769230769231
+   },
+   {
+    "name": "Cacturne",
+    "set": "M6",
+    "inclusion": 0.0054416073670992045,
+    "avg_copies": 1.9230769230769231
+   },
+   {
+    "name": "Delicious Onigiri",
+    "set": "M6",
+    "inclusion": 0.0037672666387609877,
+    "avg_copies": 4.0
+   },
+   {
+    "name": "Jellicent",
+    "set": "M6",
+    "inclusion": 0.0012557555462536626,
+    "avg_copies": 2.0
+   },
+   {
+    "name": "Lida",
+    "set": "MP",
+    "inclusion": 0.0008371703641691084,
+    "avg_copies": 1.0
+   },
+   {
+    "name": "Grisham",
+    "set": "MP",
+    "inclusion": 0.0008371703641691084,
+    "avg_copies": 1.0
+   },
+   {
+    "name": "Wimpod",
+    "set": "M6",
+    "inclusion": 0.0008371703641691084,
+    "avg_copies": 2.0
+   },
+   {
+    "name": "Pincurchin",
+    "set": "M6",
+    "inclusion": 0.0008371703641691084,
+    "avg_copies": 1.0
+   },
+   {
+    "name": "Mega Golisopod ex",
+    "set": "M6",
+    "inclusion": 0.0008371703641691084,
+    "avg_copies": 2.0
+   }
+  ],
+  "avg_rotating_cards_per_list": 19.534533277521977,
+  "biggest_jp_overindex": [
+   {
+    "name": "Dudunsparce ex",
+    "inclusion": 0.183,
+    "intl_inclusion": 0.063
+   },
+   {
+    "name": "Talonflame ex",
+    "inclusion": 0.108,
+    "intl_inclusion": 0.0
+   },
+   {
+    "name": "Team Rocket's Watchtower",
+    "inclusion": 0.296,
+    "intl_inclusion": 0.208
+   },
+   {
+    "name": "Gravity Mountain",
+    "inclusion": 0.148,
+    "intl_inclusion": 0.077
+   },
+   {
+    "name": "Jamming Tower",
+    "inclusion": 0.174,
+    "intl_inclusion": 0.117
+   },
+   {
+    "name": "Latias ex",
+    "inclusion": 0.238,
+    "intl_inclusion": 0.183
+   },
+   {
+    "name": "Unfair Stamp",
+    "inclusion": 0.425,
+    "intl_inclusion": 0.373
+   },
+   {
+    "name": "Rare Candy",
+    "inclusion": 0.29,
+    "intl_inclusion": 0.239
+   },
+   {
+    "name": "Bug Catching Set",
+    "inclusion": 0.132,
+    "intl_inclusion": 0.081
+   },
+   {
+    "name": "Lillie's Determination",
+    "inclusion": 0.871,
+    "intl_inclusion": 0.823
+   },
+   {
+    "name": "Mew ex",
+    "inclusion": 0.095,
+    "intl_inclusion": 0.047
+   },
+   {
+    "name": "Judge",
+    "inclusion": 0.438,
+    "intl_inclusion": 0.392
+   },
+   {
+    "name": "Duskull",
+    "inclusion": 0.152,
+    "intl_inclusion": 0.106
+   },
+   {
+    "name": "Ultra Ball",
+    "inclusion": 0.894,
+    "intl_inclusion": 0.848
+   },
+   {
+    "name": "Dusknoir",
+    "inclusion": 0.151,
+    "intl_inclusion": 0.106
+   }
+  ],
+  "biggest_jp_underindex": [
+   {
+    "name": "Xerosic's Machinations",
+    "inclusion": 0.028,
+    "intl_inclusion": 0.128
+   },
+   {
+    "name": "Crushing Hammer",
+    "inclusion": 0.1,
+    "intl_inclusion": 0.198
+   },
+   {
+    "name": "Psychic Energy",
+    "inclusion": 0.476,
+    "intl_inclusion": 0.569
+   },
+   {
+    "name": "Risky Ruins",
+    "inclusion": 0.141,
+    "intl_inclusion": 0.213
+   },
+   {
+    "name": "Eri",
+    "inclusion": 0.028,
+    "intl_inclusion": 0.091
+   },
+   {
+    "name": "Team Rocket's Petrel",
+    "inclusion": 0.161,
+    "intl_inclusion": 0.218
+   },
+   {
+    "name": "Budew",
+    "inclusion": 0.349,
+    "intl_inclusion": 0.403
+   },
+   {
+    "name": "Handheld Fan",
+    "inclusion": 0.021,
+    "intl_inclusion": 0.072
+   },
+   {
+    "name": "Secret Box",
+    "inclusion": 0.132,
+    "intl_inclusion": 0.183
+   },
+   {
+    "name": "Lucky Helmet",
+    "inclusion": 0.012,
+    "intl_inclusion": 0.06
+   },
+   {
+    "name": "Air Balloon",
+    "inclusion": 0.211,
+    "intl_inclusion": 0.254
+   },
+   {
+    "name": "Telepathic Psychic Energy",
+    "inclusion": 0.163,
+    "intl_inclusion": 0.206
+   },
+   {
+    "name": "Jumbo Ice Cream",
+    "inclusion": 0.05,
+    "intl_inclusion": 0.093
+   },
+   {
+    "name": "Hero's Cape",
+    "inclusion": 0.074,
+    "intl_inclusion": 0.116
+   },
+   {
+    "name": "Hilda",
+    "inclusion": 0.18,
+    "intl_inclusion": 0.221
+   }
+  ],
+  "budew_inclusion": 0.34910004185851823
+ },
+ "major": {
+  "lists": 72,
+  "events": 3,
+  "archetypes": {
+   "Dragapult Dusknoir": {
+    "lists": 9,
+    "share": 0.125
+   },
+   "Basic Box": {
+    "lists": 9,
+    "share": 0.125
+   },
+   "Dragapult Blaziken": {
+    "lists": 8,
+    "share": 0.1111111111111111
+   },
+   "Dragapult": {
+    "lists": 7,
+    "share": 0.09722222222222222
+   },
+   "Dragapult Dudunsparce": {
+    "lists": 6,
+    "share": 0.08333333333333333
+   },
+   "N's Zoroark": {
+    "lists": 4,
+    "share": 0.05555555555555555
+   },
+   "Slowking": {
+    "lists": 4,
+    "share": 0.05555555555555555
+   },
+   "Festival Lead": {
+    "lists": 3,
+    "share": 0.041666666666666664
+   },
+   "Ogerpon Meganium": {
+    "lists": 2,
+    "share": 0.027777777777777776
+   },
+   "Dhelmise": {
+    "lists": 2,
+    "share": 0.027777777777777776
+   },
+   "Mega Venusaur": {
+    "lists": 2,
+    "share": 0.027777777777777776
+   },
+   "Raging Bolt Ogerpon": {
+    "lists": 2,
+    "share": 0.027777777777777776
+   },
+   "Mega Rayquaza": {
+    "lists": 2,
+    "share": 0.027777777777777776
+   },
+   "Rocket's Honchkrow": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Lopunny Dudunsparce": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Cynthia's Garchomp": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Crustle": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Toxtricity Box": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Mega Greninja": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Mega Excadrill": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Clefairy Ogerpon": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Starmie Froslass": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Grimmsnarl Froslass": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Alakazam Dudunsparce": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   },
+   "Hydrapple": {
+    "lists": 1,
+    "share": 0.013888888888888888
+   }
+  },
+  "new_jp_only_cards_top": [
+   {
+    "name": "Talonflame ex",
+    "set": "M6",
+    "inclusion": 0.05555555555555555,
+    "avg_copies": 1.75
+   },
+   {
+    "name": "Mega Rayquaza ex",
+    "set": "M6",
+    "inclusion": 0.027777777777777776,
+    "avg_copies": 2.0
+   },
+   {
+    "name": "Adventuring Lantern",
+    "set": "M6",
+    "inclusion": 0.027777777777777776,
+    "avg_copies": 1.5
+   },
+   {
+    "name": "Special Vest",
+    "set": "M6",
+    "inclusion": 0.027777777777777776,
+    "avg_copies": 1.0
+   },
+   {
+    "name": "Giratina",
+    "set": "M6",
+    "inclusion": 0.013888888888888888,
+    "avg_copies": 1.0
+   },
+   {
+    "name": "Legendary Lava Cave",
+    "set": "M6",
+    "inclusion": 0.013888888888888888,
+    "avg_copies": 4.0
+   },
+   {
+    "name": "Zinnia's Trust",
+    "set": "M6",
+    "inclusion": 0.013888888888888888,
+    "avg_copies": 1.0
+   }
+  ],
+  "avg_rotating_cards_per_list": 22.916666666666668,
+  "biggest_jp_overindex": [
+   {
+    "name": "Unfair Stamp",
+    "inclusion": 0.681,
+    "intl_inclusion": 0.373
+   },
+   {
+    "name": "Munkidori",
+    "inclusion": 0.639,
+    "intl_inclusion": 0.395
+   },
+   {
+    "name": "Meowth ex",
+    "inclusion": 0.792,
+    "intl_inclusion": 0.577
+   },
+   {
+    "name": "Crispin",
+    "inclusion": 0.597,
+    "intl_inclusion": 0.393
+   },
+   {
+    "name": "Darkness Energy",
+    "inclusion": 0.597,
+    "intl_inclusion": 0.397
+   },
+   {
+    "name": "Fire Energy",
+    "inclusion": 0.514,
+    "intl_inclusion": 0.334
+   },
+   {
+    "name": "Prism Energy",
+    "inclusion": 0.167,
+    "intl_inclusion": 0.022
+   },
+   {
+    "name": "Fezandipiti ex",
+    "inclusion": 0.833,
+    "intl_inclusion": 0.692
+   },
+   {
+    "name": "Dragapult ex",
+    "inclusion": 0.431,
+    "intl_inclusion": 0.294
+   },
+   {
+    "name": "Dawn",
+    "inclusion": 0.347,
+    "intl_inclusion": 0.216
+   },
+   {
+    "name": "Drakloak",
+    "inclusion": 0.431,
+    "intl_inclusion": 0.301
+   },
+   {
+    "name": "Dreepy",
+    "inclusion": 0.431,
+    "intl_inclusion": 0.301
+   },
+   {
+    "name": "Teal Mask Ogerpon ex",
+    "inclusion": 0.236,
+    "intl_inclusion": 0.112
+   },
+   {
+    "name": "Moltres",
+    "inclusion": 0.264,
+    "intl_inclusion": 0.143
+   },
+   {
+    "name": "Area Zero Underdepths",
+    "inclusion": 0.208,
+    "intl_inclusion": 0.095
+   }
+  ],
+  "biggest_jp_underindex": [
+   {
+    "name": "Judge",
+    "inclusion": 0.222,
+    "intl_inclusion": 0.392
+   },
+   {
+    "name": "Hilda",
+    "inclusion": 0.056,
+    "intl_inclusion": 0.221
+   },
+   {
+    "name": "Shaymin",
+    "inclusion": 0.125,
+    "intl_inclusion": 0.275
+   },
+   {
+    "name": "Switch",
+    "inclusion": 0.111,
+    "intl_inclusion": 0.257
+   },
+   {
+    "name": "Crushing Hammer",
+    "inclusion": 0.056,
+    "intl_inclusion": 0.198
+   },
+   {
+    "name": "Air Balloon",
+    "inclusion": 0.125,
+    "intl_inclusion": 0.254
+   },
+   {
+    "name": "Secret Box",
+    "inclusion": 0.083,
+    "intl_inclusion": 0.183
+   },
+   {
+    "name": "Telepathic Psychic Energy",
+    "inclusion": 0.111,
+    "intl_inclusion": 0.206
+   },
+   {
+    "name": "Sacred Ash",
+    "inclusion": 0.028,
+    "intl_inclusion": 0.123
+   },
+   {
+    "name": "Special Red Card",
+    "inclusion": 0.472,
+    "intl_inclusion": 0.561
+   },
+   {
+    "name": "Battle Cage",
+    "inclusion": 0.028,
+    "intl_inclusion": 0.11
+   },
+   {
+    "name": "Eri",
+    "inclusion": 0.014,
+    "intl_inclusion": 0.091
+   },
+   {
+    "name": "Enriching Energy",
+    "inclusion": 0.014,
+    "intl_inclusion": 0.089
+   },
+   {
+    "name": "Team Rocket's Petrel",
+    "inclusion": 0.153,
+    "intl_inclusion": 0.218
+   },
+   {
+    "name": "Jumbo Ice Cream",
+    "inclusion": 0.028,
+    "intl_inclusion": 0.093
+   }
+  ],
+  "budew_inclusion": 0.4861111111111111
+ }
+}

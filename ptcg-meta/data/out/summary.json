@@ -1,0 +1,125 @@
+{
+ "windows": {
+  "CUR": {
+   "label": "Current format: 2027-season Regionals",
+   "events": [
+    {
+     "tid": "0072",
+     "city": "Baltimore",
+     "date": "September 18\u201320, 2026",
+     "players": 3122
+    },
+    {
+     "tid": "0073",
+     "city": "Brisbane",
+     "date": "September 26\u201327, 2026",
+     "players": 817
+    },
+    {
+     "tid": "0074",
+     "city": "Frankfurt",
+     "date": "September 26\u201327, 2026",
+     "players": 2793
+    },
+    {
+     "tid": "0075",
+     "city": "Recife",
+     "date": "October 3\u20134, 2026",
+     "players": 1074
+    }
+   ],
+   "players": 7806,
+   "day2": 1410,
+   "topcut": 42,
+   "archetypes": 106
+  },
+  "WORLDS": {
+   "label": "World Championship 2026",
+   "events": [
+    {
+     "tid": "0071",
+     "city": "San Francisco",
+     "date": "August 28\u201330, 2026",
+     "players": 797
+    }
+   ],
+   "players": 797,
+   "day2": 143,
+   "topcut": 10,
+   "archetypes": 46
+  },
+  "CRI": {
+   "label": "Chaos Rising (Turin, NAIC)",
+   "events": [
+    {
+     "tid": "0069",
+     "city": "Turin",
+     "date": "June 6\u20137, 2026",
+     "players": 2033
+    },
+    {
+     "tid": "0070",
+     "city": "New Orleans",
+     "date": "June 12\u201314, 2026",
+     "players": 3752
+    }
+   ],
+   "players": 5785,
+   "day2": 1059,
+   "topcut": 19,
+   "archetypes": 89
+  },
+  "POR": {
+   "label": "Perfect Order (post-G rotation)",
+   "events": [
+    {
+     "tid": "0062",
+     "city": "Prague",
+     "date": "April 25\u201326, 2026",
+     "players": 1370
+    },
+    {
+     "tid": "0063",
+     "city": "Los Angeles",
+     "date": "May 8\u201310, 2026",
+     "players": 1849
+    },
+    {
+     "tid": "0064",
+     "city": "Utrecht",
+     "date": "May 16\u201317, 2026",
+     "players": 2150
+    },
+    {
+     "tid": "0065",
+     "city": "Campinas",
+     "date": "May 16\u201317, 2026",
+     "players": 1725
+    },
+    {
+     "tid": "0066",
+     "city": "Melbourne",
+     "date": "May 23\u201324, 2026",
+     "players": 959
+    },
+    {
+     "tid": "0067",
+     "city": "Lima",
+     "date": "May 23\u201324, 2026",
+     "players": 499
+    },
+    {
+     "tid": "0068",
+     "city": "Indianapolis",
+     "date": "May 29\u201331, 2026",
+     "players": 1974
+    }
+   ],
+   "players": 10526,
+   "day2": 1926,
+   "topcut": 82,
+   "archetypes": 99
+  }
+ },
+ "field_rotating_copies_avg": 20.15948717948718
+}

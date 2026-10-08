@@ -1,0 +1,58 @@
+{
+ "all": {
+  "p_opp_has_budew": 0.40294871794871795,
+  "avg_budew_copies_when_played": 1.5367483296213809,
+  "other_item_lock_inclusion": {
+   "Frillish": 0.007307692307692308,
+   "Flaaffy": 0.0,
+   "Galvantula ex": 0.0003846153846153846,
+   "Tyranitar": 0.0001282051282051282,
+   "Jellicent ex": 0.002307692307692308
+  }
+ },
+ "day2": {
+  "p_opp_has_budew": 0.424822695035461,
+  "avg_budew_copies_when_played": 1.6026711185308848,
+  "other_item_lock_inclusion": {
+   "Frillish": 0.007801418439716312,
+   "Flaaffy": 0.0,
+   "Galvantula ex": 0.0,
+   "Tyranitar": 0.0,
+   "Jellicent ex": 0.004964539007092199
+  }
+ },
+ "topcut": {
+  "p_opp_has_budew": 0.5714285714285714,
+  "avg_budew_copies_when_played": 1.6666666666666667,
+  "other_item_lock_inclusion": {
+   "Frillish": 0.023809523809523808,
+   "Flaaffy": 0.0,
+   "Galvantula ex": 0.0,
+   "Tyranitar": 0.0,
+   "Jellicent ex": 0.0
+  }
+ },
+ "model": {
+  "p_budew_ready_first_attack_when_going_second(T1)": 0.7156687559778421,
+  "p_budew_ready_first_attack_when_going_first(T2)": 0.7961226629260749,
+  "p_budew_prized_all_copies": 0.07412925422190449,
+  "desire_vs_field": 0.8572557973229584,
+  "p_you_are_item_locked_on_your_T2_if_you_go_first": 0.24721354746773166,
+  "p_you_are_item_locked_on_your_T2_if_you_go_second": 0.2750047505601959,
+  "p_item_locked_T2_any_order": 0.26110914901396376,
+  "expected_item_locked_turns_per_game": 0.44110643301449204,
+  "field_avg_items_per_list": 15.888076923076921,
+  "share_of_field_running_budew_by_archetype": {
+   "dragapult-ex": 0.17397435897435898,
+   "dragapult-dusknoir": 0.06512820512820514,
+   "dragapult-blaziken": 0.0458974358974359,
+   "n-zoroark": 0.03333333333333333,
+   "grimmsnarl-froslass": 0.012564102564102564,
+   "alakazam-dusknoir": 0.011410256410256411,
+   "lopunny-dusknoir": 0.008846153846153846,
+   "slowking-scr": 0.008589743589743591,
+   "mega-greninja-ex": 0.004743589743589744,
+   "dragapult-dudunsparce": 0.004615384615384616
+  }
+ }
+}
