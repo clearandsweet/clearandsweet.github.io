@@ -164,6 +164,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     <a href="#advantage">Advantage stat</a>
     <a href="#trainers">Trainers</a>
     <a href="#calib">Calibration</a>
+    <a href="#power">Card &amp; Deck Power</a>
     <a href="#damage">Damage value</a>
     <a href="#japan">Japan preview</a>
     <a href="#cards">Card inventory</a>
@@ -266,8 +267,21 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
         <div class="callout"><h3>Headline</h3><div id="cHead" class="small"></div></div>
       </div>
       <div class="tscroll" id="ceTable"></div>
+      <h3>Reading the data-only column</h3>
+      <div class="cols">
+        <div class="callout"><h3>What a negative number means</h3><ul class="tight small">
+          <li>Each card's measurement compares lists with one more copy against otherwise-similar lists of the same archetype at the same event. A deck is always 60 cards, so the extra copy replaced something, usually a basic Energy or a one-of tech.</li>
+          <li>The data-only weight is the slope through those measurements. A negative weight says that <b>at the counts people already play, the next unit did worse than the card it pushed out</b>. It does not say acceleration is bad.</li>
+          <li>Think water and diamonds. Water is priceless when you have none and nearly worthless per extra glass when you have plenty. Every Raging Bolt plays its Teal Masks and every Stage 2 deck plays its Candies. The archetype term absorbs that baseline, and the regression only sees the 3rd copy against the 4th.</li>
+        </ul></div>
+        <div class="callout"><h3>How much of it is noise</h3><ul class="tight small" id="dnHow"></ul></div>
+      </div>
+      <div class="tscroll" id="dnTable"></div>
+      <h3>Which weights answer which question</h3>
+      <p class="small muted">Both tests are out of sample. "Next copy" leaves each card out of the stage-2 fit and predicts its measured value. "Whole deck" leaves each archetype out and predicts its win rate and Day 2 rate from Deck Power (section 08). The score is the reduction in squared error compared with predicting the average; 0% is no better than guessing the average, and negative is worse.</p>
+      <div class="tscroll" id="wtTest"></div>
       <h3>Measured value of one more copy</h3>
-      <p class="small muted">Within-archetype, skill- and event-controlled. Values are relative to the average card a slot would otherwise hold, so 0 means "as good as a typical flex card". ±1.96 SE shown. ACE SPECs are compared against the other ACE SPECs players chose.</p>
+      <p class="small muted">Within-archetype, skill- and event-controlled. Values are relative to the card the slot would otherwise hold (usually a basic Energy or a one-of tech), so 0 means "as good as what it replaced". ±1.96 SE shown.</p>
       <div class="tbar"><input id="cvQ" type="search" placeholder="Filter cards" aria-label="Filter measured card values"><select id="cvType" aria-label="Card type"><option value="">All cards</option><option value="Trainer/Energy">Trainers &amp; Energy</option><option value="Pokémon">Pokémon</option></select><span class="count" id="cvCount"></span></div>
       <div class="tscroll" id="cvTable" style="max-height:520px"></div>
       <h3>Copy counts inside an archetype</h3>
@@ -279,15 +293,38 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
       <div class="tscroll" id="curveTable" style="max-height:420px"></div>
     </section>
 
+    <section id="power">
+      <div class="eyebrow">08 · Card and Deck Power</div>
+      <h2>One number per card, summed over the 60</h2>
+      <p class="muted">Power puts everything a card does in a game on one scale. It counts the resources its Ability or Trainer effect produces, plus the Prizes its attacks take, minus the Prizes the opponent takes through it. A deck's Power is the sum over its 60 cards. It is computed for every list from all 14 events, then averaged by archetype.</p>
+      <div class="figs" id="powFigs"></div>
+      <div class="cols">
+        <div class="callout"><h3>Definition</h3><ul class="tight small" id="powDef"></ul></div>
+        <div class="callout"><h3>Does it predict results?</h3><ul class="tight small" id="powVal"></ul></div>
+      </div>
+      <div class="chart" id="powChart"></div>
+      <h3>Decks</h3>
+      <p class="small muted">Current format, archetypes with 15+ lists. "From H cards" is the Power carried by cards that rotate, a rough measure of how much of the deck leaves; it can be negative when the rotating cards are net Prize liabilities. Predicted win rate uses the cross-archetype slope; the gap is matchups, pilots and everything the model can't see.</p>
+      <div class="tbar"><input id="pdQ" type="search" placeholder="Filter archetypes" aria-label="Filter archetypes by name"><span class="count" id="pdCount"></span></div>
+      <div class="tscroll" id="pdTable"></div>
+      <h3>Cards</h3>
+      <p class="small muted">Per game, for all copies a list plays, averaged over current-format lists that run the card (30+ lists). Power per copy divides by average copies. A support Pokémon's Prizes given up are attributed accounting, not a marginal cost: a Budew KO often replaces a hit on something else, so read the deck total as the real number.</p>
+      <div class="tbar"><input id="pcQ" type="search" placeholder="Filter cards" aria-label="Filter cards by name"><select id="pcCat" aria-label="Card type"><option value="">All cards</option><option value="pokemon">Pokémon</option><option value="trainer">Trainers</option><option value="energy">Energy</option></select><select id="pcSort" aria-label="Rank by"><option value="power_hand">Rank by Power / game</option><option value="power_per_copy">Rank by Power / copy</option><option value="offense">Rank by Prizes taken</option><option value="liability">Rank by Prizes given up</option><option value="power_fitted">Rank by Power (fitted weights)</option></select><span class="count" id="pcCount"></span></div>
+      <div class="tscroll" id="pcTable"></div>
+      <h3>Validation detail</h3>
+      <p class="small muted">Each archetype × format pair with 30+ lists and 300+ non-mirror games, with format averages removed. Leave-one-archetype-out score versus predicting the average, under three weightings (by games, games capped at 2,000, capped at 500) so Dragapult's sample doesn't decide everything. The exchange-rate rows show how 10 CE per Prize was picked.</p>
+      <div class="tscroll" id="pvTable"></div>
+    </section>
+
     <section id="damage">
-      <div class="eyebrow">08 · Damage value</div>
+      <div class="eyebrow">09 · Damage value</div>
       <h2>Prize progress per attack against the current field</h2>
       <p class="muted">Each attacker's typical damage is run against a defender pool built from every archetype's real attackers, weighted by share, with Weakness and Resistance applied. Lillie's Clefairy ex gets Fairy Zone against Dragons. Prizes per attack = Σ share × min(1, damage ÷ HP) × Prizes the defender gives, plus bench damage at a discount. Prize efficiency divides that by the attacker's own Prize liability.</p>
       <div class="tscroll" id="dmgTable"></div>
     </section>
 
     <section id="japan">
-      <div class="eyebrow">09 · Japan preview</div>
+      <div class="eyebrow">10 · Japan preview</div>
       <h2>Storm Emeralda is already legal in Japan</h2>
       <p class="muted">Japan has Standard sets through M6 (Storm Emeralda), whose English release is pending. City League top-16 lists from the current Japanese season show which incoming cards matter. Japan's rotation (expected late January 2027) will be the first real post-H data, about three months before international.</p>
       <div class="cols"><div><h3>Most-played cards not yet in English</h3><div class="tscroll" id="jpNew" style="max-height:420px"></div></div><div><h3>City League archetypes</h3><div class="tscroll" id="jpArch" style="max-height:420px"></div></div></div>
@@ -295,7 +332,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     </section>
 
     <section id="cards">
-      <div class="eyebrow">10 · Card inventory</div>
+      <div class="eyebrow">11 · Card inventory</div>
       <h2>Every card in the current format, with its rotation status</h2>
       <p class="muted">Inclusion is the share of lists playing at least one copy; Day 2 and top-cut columns use only those players. Pokémon are separated by functional print, so Dunsparce (Trading Places) and Dunsparce (Dig) are different rows. Showing the 400 most-played of <span id="nCards"></span>; the full table is in the data folder.</p>
       <div class="tbar"><input id="cardQ" type="search" placeholder="Filter cards" aria-label="Filter cards"><select id="cardRot" aria-label="Rotation status"><option value="">All</option><option value="0">Rotating only</option><option value="1">Staying only</option></select><select id="cardCat" aria-label="Card type"><option value="">All types</option><option value="pokemon">Pokémon</option><option value="trainer">Trainer</option><option value="energy">Energy</option></select><span class="count" id="cardCount"></span></div>
@@ -303,13 +340,13 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     </section>
 
     <section id="ideas">
-      <div class="eyebrow">11 · Where to take this next</div>
+      <div class="eyebrow">12 · Where to take this next</div>
       <h2>Ways to calculate, arrange and use the data</h2>
       <div class="ideas">
         <div><h3>Skill-adjusted deck strength</h3><p class="small">Fit a Bradley–Terry / logistic model on all <span class="num" id="nMatches"></span> recorded matches with a term for each player and each archetype. Players recur across events, so this separates "good deck" from "good pilots". The output is a deck-strength number that won't be fooled by one strong team piloting a rogue list.</p></div>
         <div><h3>Matchup engine and meta forecasting</h3><p class="small">Turn the pairings into a shrunk matchup matrix, compute expected win rate against any assumed field, then run replicator dynamics or a Nash solver to see where the meta drifts. Re-run on the survivor set (plus K decks as they appear) for a post-rotation forecast.</p></div>
-        <div><h3>Rotation-loss in CE, not card counts</h3><p class="small">Strip H cards from every list, refill each slot with the best legal replacement from the replacement map, then re-score with the Advantage model. The drop in CE per game is a sharper "how hurt is this deck" number than counting cards.</p></div>
-        <div><h3>Fit the exchange rates to results</h3><p class="small">I set the CE weights by hand. Regress Day 2 conversion (or match win rate) on each list's total CE by component (draw, search, accel, retreat, lock) and let the data set the weights. If Teal Dance CE predicts wins better than Recon Directive CE, the weights should show it.</p></div>
+        <div><h3>Rotation-loss in CE, not card counts</h3><p class="small">Started: section 08 shows the Power each deck carries in H cards. Next, refill each rotating slot with the best legal replacement from the replacement map and re-score, so the drop measures what a rebuilt deck loses rather than an empty slot.</p></div>
+        <div><h3>Fit the exchange rates to results</h3><p class="small">Done in 07b and tested in 08. The marginal fit beats the hand-set weights for "one more copy"; the hand-set weights win for summing a deck. Next: let retreat and acceleration vary by archetype, since Basic Box's Latias result contradicts the single pooled retreat weight.</p></div>
         <div><h3>Card-level effects within an archetype</h3><p class="small">Inside one archetype, regress Day 2 on card counts (2 Budew vs 1, Latias vs none). Classify cards as core (≥90% inclusion, stable count), flex, or tech, and report each tech's lift with intervals. This turns "list optimization" into numbers.</p></div>
         <div><h3>Calibrate play-down with real logs</h3><p class="small">TCG Live battle logs (your own, or exports like Trainer Hill's battle journal) record which Pokémon were benched on which turn. A few hundred logs would replace my dig-rate and desire guesses with measured rates per archetype and matchup.</p></div>
         <div><h3>Recency, region and Day 2 weighting</h3><p class="small">Weight events with a half-life (newer counts more), split NA / EU / LATAM / OCE, and offer a "quality share" weighted to Day 2. These views differ a lot here: Japan's City League field is already a different shape from the international one.</p></div>
@@ -320,14 +357,14 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     </section>
 
     <section id="eyetest">
-      <div class="eyebrow">12 · Eye test</div>
+      <div class="eyebrow">13 · Eye test</div>
       <h2>Initial numbers to check against your read</h2>
       <p class="muted">For each, tell me whether it feels high, low or right. Each maps to one knob in <code>model_config.py</code>.</p>
       <div id="eyeQs"></div>
     </section>
 
     <section id="notes">
-      <div class="eyebrow">13 · Data notes</div>
+      <div class="eyebrow">14 · Data notes</div>
       <h2>Sources, coverage and caveats</h2>
       <div class="cols">
         <div><ul class="tight small" id="sourceList"></ul></div>
@@ -688,6 +725,182 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
     ], { sort: "u1" });
   })();
 
+  // ---- data-only explainer + which weights for which question
+  (function dataOnly() {
+    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per attachment)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Disruption (per card / Energy removed)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)" };
+    const drv = {};
+    (D.ce_drivers || []).forEach(r => (drv[r.group] = drv[r.group] || []).push(r));
+    const rows = (D.ce_weights || []).filter(r => r.group !== "ace").map(r => {
+      const lo = r.wr_points_per_unit - 1.96 * r.wr_points_per_unit_se, hi = r.wr_points_per_unit + 1.96 * r.wr_points_per_unit_se;
+      return { ...r, sig: lo > 0 ? "above 0" : hi < 0 ? "below 0" : "no", drivers: (drv[r.group] || []).length };
+    });
+    const sig = rows.filter(r => r.sig !== "no");
+    const d = g => (drv[g] || []).map(x => `${esc(x.name)} ${x.measured_pts_per_copy >= 0 ? "+" : ""}${fx(x.measured_pts_per_copy, 1)}`).slice(0, 3).join(", ");
+    $("#dnHow").innerHTML = [
+      `Only <b>${sig.length} of ${rows.length}</b> resources are clear of zero at 95%: ${sig.map(r => `${esc((LBL[r.group] || r.group).split(" (")[0].toLowerCase())} (${r.sig === "above 0" ? "+" : "−"})`).join(", ")}. The rest are noise around zero, not evidence of a cost.`,
+      `Evolution tempo rests on two cards (${d("evo_tempo")}) and item lock on one (${d("item_lock")}). Those "weights" are really those cards' own measurements.`,
+      `Acceleration: ${d("accel")}. Crispin and Rosa's pull it below zero, Janine's and Glass Trumpet pull it up. Net: indistinguishable from zero.`,
+      `Retreat is the one resource that is clearly negative: ${d("retreat")}. Decks already have enough ways to switch, so another one loses to whatever it replaced.`,
+      `Healing and damage are set mostly by one-of matchup techs (${d("heal_100hp")}; ${d("damage_100hp")}). They're measured against the whole field, so they look weak on average.`,
+    ].map(x => `<li>${x}</li>`).join("");
+    table($("#dnTable"), rows, [
+      { k: "group", l: "Resource", nm: 1, f: v => esc(LBL[v] || v) },
+      { k: "data_only_wr", l: "Data-only CE", n: 1, f: v => fx(v, 2) },
+      { k: "wr_points_per_unit", l: "Win pts per unit", n: 1, f: (v, r) => `${v >= 0 ? "+" : ""}${fx(v, 2)} <span class="muted small">±${fx(1.96 * r.wr_points_per_unit_se, 2)}</span>` },
+      { k: "sig", l: "Clear of zero?", f: v => v === "no" ? '<span class="muted">no</span>' : `<b>${v}</b>` },
+      { k: "drivers", l: "Cards that set it: win pts per copy (share of the evidence)", w: 1, f: (v, r) => (drv[r.group] || []).map(x => `${esc(x.name)} ${x.measured_pts_per_copy >= 0 ? "+" : ""}${fx(x.measured_pts_per_copy, 1)} (${pct(x.info_share, 0)})`).join(", ") || "–" },
+    ], { sort: "wr_points_per_unit" });
+    const cv = Object.fromEntries((D.ce_cv || []).map(r => [r.outcome + "|" + r.model, r.skill_vs_null]));
+    const pv = Object.fromEntries((D.power_valid || []).map(r => [r.model, r]));
+    const g = (m, k) => (pv[m] || {})[k];
+    const sk = v => v == null ? "–" : `${v >= 0 ? "+" : "−"}${Math.abs(v * 100).toFixed(0)}%`;
+    const best = r => { const xs = [r.hand, r.fit, r.data]; const m = Math.max(...xs.map(x => x ?? -9)); return k => (r[k] === m ? `<b>${sk(r[k])}</b>` : sk(r[k])); };
+    const tRows = [
+      { q: "Next copy of a card (within archetype)", o: "Win rate", hand: cv["wr|hand"], fit: cv["wr|1.0"], data: cv["wr|data"] },
+      { q: "Next copy of a card (within archetype)", o: "Day 2", hand: cv["d2|hand"], fit: cv["d2|1.0"], data: cv["d2|data"] },
+      { q: "Whole deck, summed over 60 (between archetypes)", o: "Win rate", hand: g("Power, hand-set weights", "skill_wr_cap2000"), fit: g("Power, fitted weights", "skill_wr_cap2000"), data: g("Power, data-only weights", "skill_wr_cap2000") },
+      { q: "Whole deck, summed over 60 (between archetypes)", o: "Day 2", hand: g("Power, hand-set weights", "skill_day2_cap2000"), fit: g("Power, fitted weights", "skill_day2_cap2000"), data: g("Power, data-only weights", "skill_day2_cap2000") },
+    ];
+    table($("#wtTest"), tRows, [
+      { k: "q", l: "Question", nm: 1 }, { k: "o", l: "Outcome" },
+      { k: "hand", l: "Hand-set", n: 1, f: (v, r) => best(r)("hand") },
+      { k: "fit", l: "Fitted (published)", n: 1, f: (v, r) => best(r)("fit") },
+      { k: "data", l: "Data-only", n: 1, f: (v, r) => best(r)("data") },
+    ]);
+  })();
+
+  // ---- power
+  (function power() {
+    const PM = D.power_meta || {}, PC = D.power_cal || {}, cm = PM.CUR || {};
+    const PA = D.power_arch || [], PCd = D.power_cards || [];
+    const PV = Object.fromEntries((D.power_valid || []).map(r => [r.model, r]));
+    const hp = PV["Power, hand-set weights"] || {}, fp = PV["Power, fitted weights"] || {}, dp = PV["Power, data-only weights"] || {};
+    const big = PA.filter(a => a.lists >= 30);
+    const byP = big.slice().sort((a, b) => b.power_hand - a.power_hand);
+    const wsum = big.reduce((s, a) => s + a.lists, 0) || 1;
+    const avgEff = big.reduce((s, a) => s + a.effect_hand * a.lists, 0) / wsum;
+    const skills = k => ["games", "cap2000", "cap500"].map(c => hp[`skill_${k}_${c}`]).filter(x => x != null);
+    const rng = k => { const xs = skills(k); return xs.length ? `${Math.round(Math.min(...xs) * 100)}–${Math.round(Math.max(...xs) * 100)}%` : "–"; };
+    const sk = v => v == null ? "–" : `${v >= 0 ? "+" : "−"}${Math.abs(v * 100).toFixed(0)}%`;
+    $("#powFigs").innerHTML = [
+      [`${fx(PC.ce_per_prize, 0)} CE`, "per Prize, picked by cross-validation (I had 3)"],
+      [fx(hp.spearman_wr, 2), "rank correlation of Deck Power with archetype win rate"],
+      [`+${fx(PC.wr_per_power_ce * 1000, 1)}`, "win-rate points per 10 CE of Deck Power"],
+      [fx((byP[0] || {}).power_hand, 0), `Deck Power of ${esc((byP[0] || {}).name || "")}, the highest with 30+ lists`],
+    ].map(([v, l]) => `<div class="fig"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+    $("#powDef").innerHTML = [
+      `<b>Effect</b>: uses or plays per game × CE per use, at the hand-set weights (they won the deck-level test). Damage and healing convert through Prizes at the same rate as attacks: 100 HP ≈ 0.71 Prize ≈ 7.1 CE.`,
+      `<b>Prizes taken</b>: the card's share of its deck's attacks × attacks per game × Prizes per attack. Prizes per attack is measured against 1,500 real lists from the same format. Each attack hits the Active (Weakness and Resistance applied), or the best gust target on the field's ${pct(cm.p_gust, 0)} of gusted attacks, plus spread and snipe KOs.`,
+      `<b>Prizes given up</b>: the field's attack pool (${fx(cm.attacks_per_game, 1)} attacks per game) hitting the card as the Active, as the best gust target (sure KOs first), or with spread. Self-KOs such as Cursed Blast count too. A copy can only be KO'd once, and a deck gives up at most 6 Prizes.`,
+      `Raw Prize progress counts 2-hit damage that never cashes in (heals, retreats, games ending), so it is scaled by ${fx(cm.kappa, 2)}. That makes the average deck take ${fx(PC.prizes_taken_per_game, 1)} Prizes per game.`,
+      `<b>Power = Effect + ${fx(PC.ce_per_prize, 0)} × (Prizes taken − Prizes given up)</b>. A deck generates about ${fx(avgEff, 0)} CE of resources per game to take ${fx(PC.prizes_taken_per_game, 1)} Prizes, so 3 CE per Prize was far too cheap.`,
+    ].map(x => `<li>${x}</li>`).join("");
+    $("#powVal").innerHTML = [
+      `Across ${int(PC.n_units)} archetype × format pairs (${int(PC.n_archetypes)} archetypes), Deck Power ranks win rate at Spearman <b>${fx(hp.spearman_wr, 2)}</b> and Day 2 rate at <b>${fx(hp.spearman_day2, 2)}</b>.`,
+      `Leaving each archetype out, it cuts prediction error by <b>${rng("wr")}</b> for win rate and ${rng("day2")} for Day 2. Power built on the fitted weights scores ${sk(fp.skill_wr_cap2000)} and on data-only weights ${sk(dp.skill_wr_cap2000)}: the marginal prices don't add up to a deck.`,
+      `Each 10 CE of Deck Power ≈ ${fx(PC.wr_per_power_ce * 1000, 1)} win-rate points and ${fx(PC.day2_per_power_ce * 1000, 1)} Day 2 points. The highest and lowest current decks are ${fx(((byP[0] || {}).power_hand || 0) - ((byP[byP.length - 1] || {}).power_hand || 0), 0)} CE apart.`,
+      `That is a real but modest signal. Most of an archetype's result comes from matchups against the actual field, pilots, and consistency the card text can't see. Prizes taken and given up carry more per unit than resources do.`,
+    ].map(x => `<li>${x}</li>`).join("");
+
+    // scatter: Power vs win rate
+    (function chart() {
+      const host = $("#powChart");
+      const pts = big.filter(a => a.wr != null);
+      if (!pts.length) return;
+      const Wd = 760, H = 430, L = 54, R = 20, T = 18, B = 44;
+      const xs = pts.map(a => a.power_hand), ys = pts.map(a => a.wr);
+      const x0 = Math.floor((Math.min(...xs) - 4) / 10) * 10, x1 = Math.ceil((Math.max(...xs) + 4) / 10) * 10;
+      const y0 = Math.floor((Math.min(...ys) - 0.01) * 50) / 50, y1 = Math.ceil((Math.max(...ys) + 0.01) * 50) / 50;
+      const sx = v => L + (Wd - L - R) * (v - x0) / (x1 - x0), sy = v => T + (H - T - B) * (1 - (v - y0) / (y1 - y0));
+      let s = `<svg viewBox="0 0 ${Wd} ${H}" role="img" aria-label="Deck Power against non-mirror win rate, current-format archetypes with 30 or more lists">`;
+      for (let v = x0; v <= x1 + 1e-9; v += 10) s += `<line class="grid" x1="${sx(v)}" x2="${sx(v)}" y1="${T}" y2="${H - B}"/><text x="${sx(v)}" y="${H - B + 16}" text-anchor="middle">${v}</text>`;
+      for (let v = y0; v <= y1 + 1e-9; v += 0.02) s += `<line class="grid" x1="${L}" x2="${Wd - R}" y1="${sy(v)}" y2="${sy(v)}"/><text x="${L - 8}" y="${sy(v) + 4}" text-anchor="end">${Math.round(v * 100)}%</text>`;
+      s += `<text x="${(L + Wd - R) / 2}" y="${H - 6}" text-anchor="middle">Deck Power (CE per game)</text>`;
+      s += `<text transform="translate(14 ${(T + H - B) / 2}) rotate(-90)" text-anchor="middle">Win rate, non-mirror</text>`;
+      const lo = pts.reduce((a, b) => (a.power_hand < b.power_hand ? a : b)), hi = pts.reduce((a, b) => (a.power_hand > b.power_hand ? a : b));
+      s += `<line x1="${sx(lo.power_hand)}" y1="${sy(lo.pred_wr)}" x2="${sx(hi.power_hand)}" y2="${sy(hi.pred_wr)}" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="5 4"/>`;
+      const ord = pts.slice().sort((a, b) => b.lists - a.lists);
+      ord.forEach(a => {
+        const r = 3 + Math.sqrt(a.lists) / 2.6;
+        s += `<circle cx="${sx(a.power_hand)}" cy="${sy(a.wr)}" r="${r.toFixed(1)}" fill="var(--bar)" fill-opacity="0.35" stroke="var(--bar)" stroke-width="1.2" data-id="${esc(a.deck_id)}"/>`;
+      });
+      const lab = new Set([...ord.slice(0, 9), byP[0], byP[1], byP[byP.length - 1], byP[byP.length - 2]].filter(Boolean).map(a => a.deck_id));
+      // greedy label placement: right, left, above, below; skip a label that would collide with one already placed
+      const placed = [], circ = ord.map(a => ({ x: sx(a.power_hand), y: sy(a.wr), r: 3 + Math.sqrt(a.lists) / 2.6 }));
+      const hit = (b, c) => !(b.x1 < c.x0 || b.x0 > c.x1 || b.y1 < c.y0 || b.y0 > c.y1);
+      ord.filter(a => lab.has(a.deck_id)).forEach(a => {
+        const cx = sx(a.power_hand), cy = sy(a.wr), r = 3 + Math.sqrt(a.lists) / 2.6, w = 6.4 * a.name.length, h = 14;
+        const cands = [[cx + r + 4, cy + 4, "start"], [cx - r - 4, cy + 4, "end"], [cx, cy - r - 5, "middle"], [cx, cy + r + 14, "middle"]];
+        for (const [x, y, anc] of cands) {
+          const x0 = anc === "start" ? x : anc === "end" ? x - w : x - w / 2, box = { x0, x1: x0 + w, y0: y - h + 3, y1: y + 3 };
+          if (box.x0 < L || box.x1 > Wd - R || box.y0 < T || box.y1 > H - B) continue;
+          if (placed.some(b => hit(b, box))) continue;
+          if (circ.some(c => !(c.x === cx && c.y === cy) && c.r > 6 && hit(box, { x0: c.x - c.r, x1: c.x + c.r, y0: c.y - c.r, y1: c.y + c.r }))) continue;
+          placed.push(box);
+          s += `<text class="lab" x="${x}" y="${y}" text-anchor="${anc}">${esc(a.name)}</text>`;
+          break;
+        }
+      });
+      s += "</svg>";
+      host.innerHTML = `<div class="legend"><span><i class="dot" style="background:var(--bar);opacity:.6"></i>Archetype (area = lists)</span><span><i style="background:var(--ink-3);height:2px;vertical-align:3px"></i>Cross-archetype fit</span></div>` + s;
+      const byId = Object.fromEntries(pts.map(a => [a.deck_id, a]));
+      host.querySelectorAll("circle[data-id]").forEach(el => {
+        el.addEventListener("mousemove", e => { const a = byId[el.dataset.id]; showTip(e, `<b>${esc(a.name)}</b><br>${int(a.lists)} lists · Power ${fx(a.power_hand, 1)}<br>Effect ${fx(a.effect_hand, 1)} · Prizes ${fx(a.offense_prizes, 2)} taken / ${fx(a.liability_prizes, 2)} given<br>Win rate ${pct(a.wr)} (predicted ${pct(a.pred_wr)})<br>Day 2 rate ${pct(a.day2_rate)}`, host); });
+        el.addEventListener("mouseleave", () => { tip.hidden = true; });
+      });
+    })();
+
+    const sgn = (v, d = 1) => v == null ? "–" : `${v >= 0 ? "+" : "−"}${Math.abs(v).toFixed(d)}`;
+    let pdQ = "";
+    const pdT = table($("#pdTable"), PA, [
+      { k: "#", l: "#", n: 1 },
+      { k: "name", l: "Archetype", nm: 1 },
+      { k: "lists", l: "Lists", n: 1, f: int },
+      { k: "effect_hand", l: "Effect", n: 1, f: v => fx(v, 1), t: "CE per game from Abilities and Trainer effects" },
+      { k: "offense_prizes", l: "Prizes taken", n: 1, f: v => fx(v, 2) },
+      { k: "liability_prizes", l: "Prizes given", n: 1, f: v => fx(v, 2) },
+      { k: "power_hand", l: "Power", bar: 1, f: (v, r, m) => barCell(v, m, 1, "", false) },
+      { k: "power_H_hand", l: "From H cards", n: 1, f: (v, r) => `${fx(v, 0)} <span class="muted small">${pct(r.H_share_of_power, 0)}</span>`, t: "Power carried by cards that rotate" },
+      { k: "wr", l: "Win %", n: 1, f: v => pct(v) },
+      { k: "pred_wr", l: "Predicted", n: 1, f: v => pct(v) },
+      { k: "wr_vs_pred", l: "Gap (pts)", n: 1, f: v => v == null ? "–" : sgn(v * 100) },
+      { k: "day2_rate", l: "Day 2 rate", n: 1, f: v => pct(v) },
+    ], { sort: "power_hand", filter: r => !pdQ || String(r.name).toLowerCase().includes(pdQ), onCount: n => $("#pdCount").textContent = `${n} archetypes` });
+    $("#pdQ").addEventListener("input", e => { pdQ = e.target.value.toLowerCase(); pdT.render(); });
+    let pcQ = "", pcCat = "";
+    const catL = { pokemon: "Pokémon", trainer: "Trainer", energy: "Energy" };
+    const pcT = table($("#pcTable"), PCd, [
+      { k: "#", l: "#", n: 1 },
+      { k: "name", l: "Card", nm: 1, f: (v, r) => `${mark(r.legal_post, "", v)} ${esc(v)}` },
+      { k: "cat", l: "Type", f: v => catL[v] || esc(v) },
+      { k: "top_archetype", l: "Most-played in", nm: 1 },
+      { k: "inclusion", l: "Inclusion", n: 1, f: v => pct(v) },
+      { k: "copies", l: "Copies", n: 1, f: v => fx(v, 2) },
+      { k: "effect_hand", l: "Effect", n: 1, f: v => fx(v, 1) },
+      { k: "offense", l: "Prizes taken", n: 1, f: v => v ? fx(v, 2) : "–" },
+      { k: "liability", l: "Prizes given", n: 1, f: v => v ? fx(v, 2) : "–" },
+      { k: "hp", l: "HP", n: 1, f: v => v == null ? "–" : int(v) },
+      { k: "prizes", l: "Prize value", n: 1, f: v => v == null ? "–" : int(v) },
+      { k: "power_hand", l: "Power / game", bar: 1, f: (v, r, m) => barCell(v, m, 1, r.legal_post === 0 ? "r" : "", false) },
+      { k: "power_per_copy", l: "Per copy", n: 1, f: v => fx(v, 1) },
+      { k: "power_fitted", l: "Fitted weights", n: 1, f: v => fx(v, 1), t: "Same model with the fitted (marginal) CE weights" },
+    ], { sort: "power_hand", filter: r => (!pcQ || String(r.name).toLowerCase().includes(pcQ)) && (!pcCat || r.cat === pcCat), onCount: n => $("#pcCount").textContent = `${n} cards` });
+    $("#pcQ").addEventListener("input", e => { pcQ = e.target.value.toLowerCase(); pcT.render(); });
+    $("#pcCat").addEventListener("change", e => { pcCat = e.target.value; pcT.render(); });
+    $("#pcSort").addEventListener("change", e => pcT.set({ sort: e.target.value }));
+    table($("#pvTable"), D.power_valid || [], [
+      { k: "model", l: "Model", nm: 1 },
+      { k: "spearman_wr", l: "Spearman, win %", n: 1, f: v => fx(v, 2) },
+      { k: "spearman_day2", l: "Spearman, Day 2", n: 1, f: v => fx(v, 2) },
+      { k: "skill_wr_games", l: "Win %: by games", n: 1, f: sk },
+      { k: "skill_wr_cap2000", l: "cap 2,000", n: 1, f: sk },
+      { k: "skill_wr_cap500", l: "cap 500", n: 1, f: sk },
+      { k: "skill_day2_games", l: "Day 2: by games", n: 1, f: sk },
+      { k: "skill_day2_cap2000", l: "cap 2,000", n: 1, f: sk },
+      { k: "skill_day2_cap500", l: "cap 500", n: 1, f: sk },
+    ]);
+  })();
+
   // ---- damage
   table($("#dmgTable"), D.damage.filter(r => r.field_inclusion >= 0.003), [
     { k: "#", l: "#", n: 1 },
@@ -745,7 +958,16 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
   const ccTxt = (arch, cardStart) => cc(arch, cardStart).map(r => `${r.copies}: ${r.copies === r.baseline_copies ? "baseline" : (r.wr_effect >= 0 ? "+" : "") + fx(r.wr_effect * 100, 1) + " pts"}`).join(", ");
   const wpc = n => CV[n] ? `${CV[n].wr_per_copy >= 0 ? "+" : ""}${fx(CV[n].wr_per_copy * 100, 1)}` : "–";
   const TC = Object.fromEntries((D.copy_curves || []).filter(r => r.archetype === "basic-box-m" || r.archetype === "dragapult-ex").map(r => [r.card + "|" + r.copies, r.uses_per_game]));
+  const PWa = (D.power_arch || []).filter(a => a.lists >= 30);
+  const PWs = PWa.slice().sort((a, b) => b.power_hand - a.power_hand);
+  const PWg = PWa.filter(a => a.wr_vs_pred != null).sort((a, b) => a.wr_vs_pred - b.wr_vs_pred);
+  const PWc = Object.fromEntries((D.power_cards || []).map(c => [c.name, c]));
+  const pwc = n => PWc[n] ? fx(PWc[n].power_hand, 1) : "–";
+  const gap = a => `${esc(a.name)} ${a.wr_vs_pred >= 0 ? "+" : "−"}${Math.abs(a.wr_vs_pred * 100).toFixed(0)}`;
   const qs = [
+    [`Deck Power, highest with 30+ lists: ${PWs.slice(0, 5).map(a => `${esc(a.name)} ${fx(a.power_hand, 0)}`).join(", ")}. Lowest: ${PWs.slice(-4).reverse().map(a => `${esc(a.name)} ${fx(a.power_hand, 0)}`).join(", ")}. Does the top read like the decks with the most going on per turn?`, "Power model (section 08), 10 CE per Prize"],
+    [`Furthest below their Power (win-rate points vs predicted): ${PWg.slice(0, 5).map(gap).join(", ")}. Furthest above: ${PWg.slice(-3).reverse().map(gap).join(", ")}. Are the underperformers decks that look strong on paper but have bad matchups or brick, or is the model overrating something they share?`, "Gap = actual − predicted win rate"],
+    [`Card Power per game: Dragapult ex ${pwc("Dragapult ex")}, N's Zoroark ex ${pwc("N's Zoroark ex")}, Munkidori ${pwc("Munkidori")}, Teal Mask Ogerpon ex ${pwc("Teal Mask Ogerpon ex")}, Lillie's Determination ${pwc("Lillie's Determination")}. Support Pokémon that give up more than they produce: Meowth ex ${pwc("Meowth ex")}, Budew ${pwc("Budew")}, Mew ex ${pwc("Mew ex")}, Pecharunt ex ${pwc("Pecharunt ex")}. Budew's cost is mostly Phantom Dive sniping it for a Prize. Does that match how often it actually happens?`, "Liability targeting: Active / best gust target / spread"],
     [`Fitted exchange rates: one card searched ≈ <b>${fx((Wt.tutor || {}).fitted_weight, 2)}</b> CE, one card drawn ≈ <b>${fx((Wt.draw || {}).fitted_weight, 2)}</b>, one extra Energy attachment ≈ <b>${fx((Wt.accel || {}).fitted_weight, 2)}</b>, one retreat Energy saved ≈ <b>${fx((Wt.retreat || {}).fitted_weight, 2)}</b>, one gust ≈ <b>${fx((Wt.gust || {}).fitted_weight, 2)}</b>. Does searching beating drawing at the margin match how these decks feel?`, "Regression (section 07b); prior width τ = 1 CE"],
     [`Measured value of one more copy (win-rate points): Gwynn ${wpc("Gwynn")}, Lillie's Determination ${wpc("Lillie's Determination")}, Judge ${wpc("Judge")}, Dawn ${wpc("Dawn")}, Hilda ${wpc("Hilda")}. Dawn trails Lillie's and Gwynn, in line with your read.`, "Measured, not modeled"],
     [`Search Items measure strongly: Ultra Ball ${wpc("Ultra Ball")}, Buddy-Buddy Poffin ${wpc("Buddy-Buddy Poffin")}, Poké Pad ${wpc("Poké Pad")} per copy. Rare Candy ${wpc("Rare Candy")} and Switch ${wpc("Switch")} come out negative at current counts.`, "Measured; negative means the marginal copy underperforms a typical flex card"],

@@ -417,3 +417,27 @@ HAND_WEIGHTS = {  # current hand-set CE per unit of each group (for comparison w
     "disruption": 0.7, "item_lock": 1.8, "evo_tempo": 2.5, "damage_100hp": 100 / HP_PER_PRIZE * PRIZE_TO_CE,
     "heal_100hp": 100 / HP_PER_PRIZE * PRIZE_TO_CE, "cost": -0.55,
 }
+
+# ---------------- Power model (power.py) ----------------
+# Special Energy with a resource effect when attached (per attachment; ~0.6 attachments per copy per game).
+ENERGY_COMPONENTS = {
+    "Telepathic Psychic Energy": {"tutor": 2},     # 2 Basic Psychic Pokémon to the Bench
+    "Enriching Energy": {"draw": 4},
+}
+ENERGY_PLAYS_PER_COPY = 0.6
+# Probability a non-support Pokémon is on the board mid-game, by copies (1, 2, 3, 4+).
+P_ON_BOARD = [0.0, 0.6, 0.84, 0.94, 0.97]
+SPREAD_CONVERSION = 0.65     # bench damage that does not KO converts to Prize progress at this rate
+BUDEW_ACTIVE_SHARE = 0.5     # share of Budew's Itchy Pollen turns on which it takes the opponent's hit
+# Bench damage that is aimed, not spread: (damage per target, number of Benched targets).
+SNIPE = {"Kyurem": (110, 2), "Wellspring Mask Ogerpon ex": (120, 1), "Fezandipiti ex": (100, 1), "Marnie's Grimmsnarl ex": (30, 1)}
+# Average Prizes a player takes per game (winner ~5.6 incl. games not ended by Prizes, loser ~3.4). The raw
+# Prize-progress model counts 2HKO progress that is never cashed in (heals, retreats, the game ending), so the
+# window's mean offense is scaled to this figure (the same factor applies to liability).
+PRIZES_TAKEN_PER_GAME = 4.5
+# Exchange rate between Prizes and card-equivalents in the Power model. Chosen by leave-one-archetype-out
+# cross-validation of Deck Power against archetype win rate (grid 3/6/10/15/20; 10 was best). Damage and healing
+# effects use the same rate, so 100 HP of damage = 100 / HP_PER_PRIZE Prizes = 7.1 CE.
+POWER_CE_PER_PRIZE = 10.0
+# Engine damage that the ATTACKERS entry already counts (Festival Lead's second attack, Mortal Shuriken): skipped in Power.
+POWER_SKIP_ENGINE_DMG = {"Dipplin", "Mega Greninja ex"}

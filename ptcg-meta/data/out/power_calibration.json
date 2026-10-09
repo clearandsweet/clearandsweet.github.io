@@ -1,0 +1,8 @@
+{
+ "wr_per_power_ce": 0.0009615446649309912,
+ "day2_per_power_ce": 0.0013540634892815428,
+ "n_units": 97,
+ "n_archetypes": 45,
+ "ce_per_prize": 10.0,
+ "prizes_taken_per_game": 4.5
+}

@@ -20,7 +20,7 @@ def recs(df, cols=None, n=None, rnd=4):
 summary = json.load(open(os.path.join(O, "summary.json")))
 ev = rd("events_windows.csv", dtype={"tid": str})
 P = {}
-P["generated"] = "2026-10-08"
+P["generated"] = "2026-10-09"
 P["windows"] = summary["windows"]
 P["events"] = recs(ev, ["tid", "type", "city", "date", "players", "n_lists", "window"])
 arch = rd("archetypes_CUR.csv")
@@ -88,6 +88,24 @@ P["ce_listlevel"] = recs(rd("ce_fit_listlevel.csv"))
 P["card_value_fit"] = recs(cvf)
 fm = os.path.join(O, "ce_fit_meta.json")
 P["ce_meta"] = json.load(open(fm)) if os.path.exists(fm) else {}
+# round 3: CE cross-validation, weight drivers, Power
+cvx = rd("ce_cv.csv", keep_default_na=False, dtype={"model": str})
+if not cvx.empty:
+    nul = cvx[cvx["model"] == "null"].set_index("outcome")["oos_mse"]
+    cvx["skill_vs_null"] = 1 - cvx["oos_mse"] / cvx["outcome"].map(nul)
+P["ce_cv"] = recs(cvx)
+drv = rd("ce_weight_drivers.csv")
+P["ce_drivers"] = recs(drv[drv["outcome"] == "wr"].groupby("group").head(4)) if not drv.empty else []
+pc = rd("power_cards_CUR.csv")
+P["power_cards"] = recs(pc[pc["lists"] >= 30] if not pc.empty else pc, ["cat", "name", "top_archetype", "lists", "inclusion", "copies", "legal_post", "hp", "prizes",
+                                                                        "effect_hand", "effect_fitted", "offense", "liability", "power_hand", "power_fitted", "power_per_copy"])
+pa = rd("power_archetypes_CUR.csv")
+P["power_arch"] = recs(pa[pa["lists"] >= 15] if not pa.empty else pa, ["deck_id", "name", "lists", "effect_hand", "offense_prizes", "liability_prizes", "power_hand",
+                                                                       "power_fitted", "power_data", "power_H_hand", "H_share_of_power", "wr", "games", "pred_wr", "wr_vs_pred", "day2_rate"])
+P["power_valid"] = recs(rd("power_validation.csv"))
+for f, k in (("power_meta.json", "power_meta"), ("power_calibration.json", "power_cal")):
+    fp = os.path.join(O, f)
+    P[k] = json.load(open(fp)) if os.path.exists(fp) else {}
 jp = os.path.join(O, "jp_summary.json")
 P["jp"] = json.load(open(jp)) if os.path.exists(jp) else {}
 P["jp_new_cards"] = recs(rd("jp_cityleague_new_cards.csv"), n=25)
