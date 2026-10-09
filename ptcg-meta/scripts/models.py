@@ -6,6 +6,8 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from cardattrs import load_attrs
 from access_sim import simulate
+from engine_model import sim_list_rows, engine_uses
+import ce_weights
 import model_config as C
 
 D = sys.argv[1]; WIN = sys.argv[2] if len(sys.argv) > 2 else "CUR"
@@ -83,48 +85,8 @@ sample = pl.sample(frac=1, random_state=1).groupby("deck_id").head(CAP)
 SUP_NAMES = set(C.SUPPORT) | set(C.ENGINES)
 sim_rows = []
 for _, p in sample.iterrows():
-    g = lists[p["uid"]]
-    rows = list(zip(g["card_key"], g["count"]))
-    targets = [k for k in g["card_key"].unique() if attrs.get(k, {}).get("name") in SUP_NAMES]
-    # pre-evolutions of engine targets (for evolution timing)
-    pre = set()
-    for k in targets:
-        a = attrs[k]
-        if a.get("stage") in (1, 2):
-            pre |= {kk for kk in g["card_key"] if attrs.get(kk, {}).get("is_pokemon") and attrs[kk]["stage"] < a["stage"]}
-    res = simulate(rows, attrs, targets + list(pre), rng, max_turn=8)
-    gnames = set(g["name"])
-    grass = int(g.loc[g["name"] == "Grass Energy", "count"].sum())
-    metal = int(g.loc[g["name"] == "Metal Energy", "count"].sum())
-    candy = int(g.loc[g["name"] == "Rare Candy", "count"].sum())
-    for k in targets:
-        r = res.get(k)
-        if not r: continue
-        a = attrs[k]
-        # evolution lag: in play at t needs pre-evolution accessible earlier
-        lag_cnt = {}
-        for side in ("first", "second"):
-            cnt = np.array(r[f"count_{side}"])
-            if a.get("stage") in (1, 2):
-                basics = [kk for kk in res if attrs[kk]["stage"] == 0 and kk not in targets]
-                need = 1 if (a["stage"] == 1 or candy) else 2
-                prev = np.zeros_like(cnt)
-                if basics:
-                    bc = np.array(res[basics[0]][f"count_{side}"]) if len(basics) == 1 else np.max([res[b][f"count_{side}"] for b in basics], axis=0)
-                    prev = np.concatenate([np.zeros(need), bc[:-need]])
-                    cnt = np.minimum(cnt, prev)
-                else:
-                    cnt = np.concatenate([np.zeros(need), cnt[:-need]])
-            lag_cnt[side] = cnt.round(3).tolist()
-        sim_rows.append({"uid": p["uid"], "deck_id": p["deck_id"], "day2": p["day2"], "topcut": p["topcut"],
-                         "card_key": k, "name": a["name"], "copies": r["copies"], "prized_all": r["prized_all"],
-                         **{f"acc_first_{t+1}": v for t, v in enumerate(r["acc_first"])},
-                         **{f"acc_second_{t+1}": v for t, v in enumerate(r["acc_second"])},
-                         **{f"accnp_first_{t+1}": v for t, v in enumerate(r["acc_np_first"])},
-                         **{f"accnp_second_{t+1}": v for t, v in enumerate(r["acc_np_second"])},
-                         **{f"inplay_first_{t+1}": v for t, v in enumerate(lag_cnt["first"])},
-                         **{f"inplay_second_{t+1}": v for t, v in enumerate(lag_cnt["second"])},
-                         "grass": grass, "metal": metal})
+    for row in sim_list_rows(lists[p["uid"]], attrs, rng, SUP_NAMES):
+        sim_rows.append({"uid": p["uid"], "deck_id": p["deck_id"], "day2": p["day2"], "topcut": p["topcut"], **row})
 S = pd.DataFrame(sim_rows)
 S.to_csv(os.path.join(O, f"sim_support_{TAG}.csv.gz"), index=False, compression="gzip")
 print("simulated", sample.shape[0], "lists;", len(S), "support rows", flush=True)
@@ -210,21 +172,6 @@ bud["model"] = {"p_budew_ready_first_attack_when_going_second(T1)": b_second, "p
 json.dump(bud, open(os.path.join(O, f"budew_itemlock_{TAG}.json"), "w"), indent=1)
 
 # ---------- engine usage & Advantage stat (CE per game) ----------
-alive = np.array(C.P_ALIVE[:8])
-def trigger_vec(eng, row, opp_feat_avg):
-    t = eng["trigger"]; T = np.arange(1, 9)
-    if isinstance(t, (int, float)): return np.full(8, float(t))
-    if t == "grass_in_hand":
-        g = max(row["grass"], 0); return np.full(8, 1 - (1 - min(g, 30) / 45) ** 6)
-    if t == "metal_top4":
-        m = max(row["metal"], 0); return np.full(8, 4 * m / 45)        # expected Metal Energy attached per use
-    if t == "ko_last_turn":
-        return np.array([0, 0, 0.35, 0.55, 0.6, 0.6, 0.6, 0.6])
-    if t == "dragon_opp": return np.full(8, opp_feat_avg["dragon_deck"])
-    if t == "cursed_blast_opp": return np.full(8, opp_feat_avg["cursed_blast"])
-    if t == "munkidori_opp": return np.full(8, opp_feat_avg["munkidori"])
-    if t == "ex_opp": return np.full(8, opp_feat_avg["ex_attackers"] * 0.5)
-    return np.full(8, 0.5)
 opp_avg = {"dragon_deck": float((share * (featdf["dragon"] >= 0.3).astype(float)).sum()),
            "cursed_blast": float((share * featdf["cursed_blast"]).sum()),
            "munkidori": float((share * featdf["munkidori"]).sum()),
@@ -240,36 +187,18 @@ def value_ce(v, opp_items=field_items):
         elif k == "item_lock":
             ce += x * (C.ITEM_LOCK_CE_PER_ITEM * min(opp_items, 25) / 60 * 6 + C.ITEM_LOCK_SETUP_PENALTY)
     return ce
+FIT = ce_weights.load(D)
 eng_rows = []
 for _, r in S.iterrows():
     eng = C.ENGINES.get(r["name"])
     if not eng: continue
-    trig = trigger_vec(eng, r, opp_avg)
-    vals = []
-    for side in ("first", "second"):
-        inplay = np.array([r[f"inplay_{side}_{t}"] for t in range(1, 9)])
-        surv = eng.get("surv", 0.92) ** np.maximum(0, np.arange(1, 9) - 2)
-        decay = np.maximum(0, 1 - eng.get("decay", 0) * np.maximum(0, np.arange(1, 9) - 2))
-        n_on = np.minimum(inplay, eng["cap"]) * surv * decay
-        kind = eng["kind"]
-        if kind == "turn" and eng["trigger"] == "grass_in_hand":
-            eg = max(6 * min(r["grass"], 30) / 45, trig[0])          # expected basic Grass in hand
-            uses = (alive * np.minimum(n_on, eg)).sum()
-        elif kind == "turn":
-            uses = (alive * n_on * trig).sum()
-        elif kind in ("turn1", "passive", "attack"):
-            uses = (alive * np.minimum(n_on, 1) * trig).sum()
-            if kind == "attack":
-                uses = min(uses, C.BUDEW_LOCK_TURNS[side]) if r["name"] == "Budew" else min(uses, 2)
-        elif kind == "play":
-            uses = float(np.max(np.minimum(inplay, eng["cap"]))) * trig[0]
-        elif kind == "first":
-            uses = float(min(inplay[0], 1)) * trig[0]
-        vals.append(uses)
-    uses = min(float(np.mean(vals)), eng.get("max_uses", 99))
+    uses = engine_uses(eng, r, opp_avg)
+
     v = eng["value"]
     eng_rows.append({"uid": r["uid"], "deck_id": r["deck_id"], "name": r["name"], "copies": r["copies"], "uses_per_game": uses,
                      "ce_per_use": value_ce(v), "ce_per_game": uses * value_ce(v),
+                     "ce_per_use_fitted": ce_weights.price(v, FIT) if FIT else np.nan,
+                     "ce_per_game_fitted": uses * ce_weights.price(v, FIT) if FIT else np.nan,
                      "extra_cards_per_game": uses * (v.get("draw", 0) + v.get("tutor", 0) + v.get("select2", 0) - v.get("discard", 0)),
                      "extra_energy_per_game": uses * v.get("accel", 0),
                      "retreat_energy_saved_per_game": uses * v.get("retreat_energy", 0),
@@ -283,6 +212,8 @@ eng_sum = E.groupby("name").apply(lambda g: pd.Series({
     "lists_simulated": len(g), "avg_copies": np.average(g["copies"], weights=g["w"]),
     "uses_per_game": np.average(g["uses_per_game"], weights=g["w"]), "ce_per_use": g["ce_per_use"].iloc[0],
     "advantage_ce_per_game": np.average(g["ce_per_game"], weights=g["w"]),
+    "ce_per_use_fitted": g["ce_per_use_fitted"].iloc[0],
+    "advantage_fitted_ce_per_game": np.average(g["ce_per_game_fitted"], weights=g["w"]) if g["ce_per_game_fitted"].notna().all() else np.nan,
     "extra_cards_per_game": np.average(g["extra_cards_per_game"], weights=g["w"]),
     "extra_energy_per_game": np.average(g["extra_energy_per_game"], weights=g["w"]),
     "retreat_energy_saved_per_game": np.average(g["retreat_energy_saved_per_game"], weights=g["w"]),
@@ -310,6 +241,16 @@ trs["plays_per_game"] = trs["plays"] / trs["lists"]
 trs["ce_per_play"] = [C.TRAINER_CE.get(n, (np.nan, ""))[0] for n in trs.index]
 trs["why"] = [C.TRAINER_CE.get(n, (np.nan, ""))[1] for n in trs.index]
 trs["advantage_ce_per_game"] = trs["ce_per_play"] * trs["plays_per_game"]
+def _fit_play(n):
+    comp = C.TRAINER_COMPONENTS.get(n)
+    if not (FIT and comp): return np.nan
+    return ce_weights.price(comp, FIT)
+AVG_SUP_FIT = sum(FIT["w"].get(g, 0) * x for g, x in FIT["avg_sup"].items()) if FIT else np.nan
+trs["ce_per_play_fitted"] = [_fit_play(n) for n in trs.index]
+_is_sup = [any(attrs[k]["is_supporter"] for k in attrs if attrs[k]["name"] == n) for n in trs.index]
+trs["vs_avg_supporter"] = np.where(_is_sup, trs["ce_per_play_fitted"] - AVG_SUP_FIT, np.nan)
+trs["advantage_fitted_ce_per_game"] = trs["ce_per_play_fitted"] * trs["plays_per_game"]
+trs["meta_fitted_ce_per_100_games"] = trs["advantage_fitted_ce_per_game"] * trs["field_inclusion"] * 100
 trs["meta_advantage_ce_per_100_games"] = trs["advantage_ce_per_game"] * trs["field_inclusion"] * 100
 trs["type"] = [next((("Supporter" if attrs[k]["is_supporter"] else "Item" if attrs[k]["is_item"] else "Tool" if attrs[k]["is_tool"] else "Stadium" if attrs[k]["is_stadium"] else "") for k in attrs if attrs[k]["name"] == n), "") for n in trs.index]
 trs["legal_post_rotation"] = [int(attrs.get(top_key.get(n), {}).get("legal_post", 0)) for n in trs.index]

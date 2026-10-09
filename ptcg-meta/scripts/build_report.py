@@ -55,8 +55,13 @@ P["support_by_arch"] = recs(sba)
 P["pokemon_rank"] = recs(rd("pokemon_rankings_CUR.csv"))
 P["engines"] = recs(rd("advantage_pokemon_CUR.csv"))
 tr = rd("advantage_trainers_CUR.csv")
+cvf = rd("card_value_fit.csv")
+if not tr.empty and not cvf.empty:
+    tr = tr.merge(cvf[["name", "measured_wr", "predicted_wr", "residual_wr"]].drop_duplicates("name"), on="name", how="left")
 P["trainers"] = recs(tr[tr["ce_per_play"].notna()] if not tr.empty else tr, ["name", "type", "field_inclusion", "avg_copies", "plays_per_game", "ce_per_play", "why",
-                                                                            "advantage_ce_per_game", "meta_advantage_ce_per_100_games", "legal_post_rotation"], n=80)
+                                                                            "advantage_ce_per_game", "meta_advantage_ce_per_100_games", "ce_per_play_fitted",
+                                                                            "vs_avg_supporter", "advantage_fitted_ce_per_game", "meta_fitted_ce_per_100_games",
+                                                                            "measured_wr", "predicted_wr", "residual_wr", "legal_post_rotation"], n=90)
 P["damage"] = recs(rd("damage_value_CUR.csv"))
 P["defenders"] = recs(rd("defender_pool_CUR.csv"), ["deck_id", "defender", "hp", "prizes", "share"], n=30)
 dm = os.path.join(O, "damage_meta_CUR.json")
@@ -68,6 +73,21 @@ P["n_matches"] = int(sum(1 for _ in open(os.path.join(D, "processed", "matches.c
 mu = rd("matchups_CUR.csv")
 P["matchups"] = recs(mu)
 P["opp_features"] = recs(rd("opponent_features_CUR.csv").rename(columns={"Unnamed: 0": "deck_id"}), n=30)
+cv = rd("card_value_per_copy.csv")
+if not cv.empty:
+    cv = cv[cv["within_arch_sd"] > 0.12].copy()
+    cv["type"] = [("Pokémon" if "[" in str(c) else "Trainer/Energy") for c in cv["card"]]
+P["card_values"] = recs(cv, ["card", "name", "type", "merged_with", "lists", "avg_copies", "within_arch_sd", "wr_per_copy", "wr_per_copy_se",
+                             "d2_pp_per_copy", "d2_se", "legal_post"])
+cnt = rd("card_count_effects.csv")
+P["count_effects"] = recs(cnt, ["deck_id", "archetype", "card", "copies", "baseline_copies", "lists", "share_of_archetype", "raw_wr", "raw_day2",
+                                "wr_effect", "wr_se", "wr_q", "d2_effect", "d2_se", "d2_q"])
+P["copy_curves"] = recs(rd("engine_copy_curves.csv"))
+P["ce_weights"] = recs(rd("ce_weights_fitted.csv"))
+P["ce_listlevel"] = recs(rd("ce_fit_listlevel.csv"))
+P["card_value_fit"] = recs(cvf)
+fm = os.path.join(O, "ce_fit_meta.json")
+P["ce_meta"] = json.load(open(fm)) if os.path.exists(fm) else {}
 jp = os.path.join(O, "jp_summary.json")
 P["jp"] = json.load(open(jp)) if os.path.exists(jp) else {}
 P["jp_new_cards"] = recs(rd("jp_cityleague_new_cards.csv"), n=25)

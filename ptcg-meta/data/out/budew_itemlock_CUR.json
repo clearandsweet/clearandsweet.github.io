@@ -33,14 +33,14 @@
   }
  },
  "model": {
-  "p_budew_ready_first_attack_when_going_second(T1)": 0.7156687559778421,
-  "p_budew_ready_first_attack_when_going_first(T2)": 0.7961226629260749,
-  "p_budew_prized_all_copies": 0.07412925422190449,
+  "p_budew_ready_first_attack_when_going_second(T1)": 0.7170331130842565,
+  "p_budew_ready_first_attack_when_going_first(T2)": 0.7972050068507187,
+  "p_budew_prized_all_copies": 0.07292748100251162,
   "desire_vs_field": 0.8572557973229584,
-  "p_you_are_item_locked_on_your_T2_if_you_go_first": 0.24721354746773166,
-  "p_you_are_item_locked_on_your_T2_if_you_go_second": 0.2750047505601959,
-  "p_item_locked_T2_any_order": 0.26110914901396376,
-  "expected_item_locked_turns_per_game": 0.44110643301449204,
+  "p_you_are_item_locked_on_your_T2_if_you_go_first": 0.24768483751284298,
+  "p_you_are_item_locked_on_your_T2_if_you_go_second": 0.2753786247568216,
+  "p_item_locked_T2_any_order": 0.2615317311348323,
+  "expected_item_locked_turns_per_game": 0.44183456420481704,
   "field_avg_items_per_list": 15.888076923076921,
   "share_of_field_running_budew_by_archetype": {
    "dragapult-ex": 0.17397435897435898,

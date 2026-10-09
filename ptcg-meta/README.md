@@ -61,6 +61,24 @@ The tables in `data/processed/` are stored gzipped; `gunzip -k data/processed/*.
 
 The card pool JSON (`data/cards/*.json`) comes from `raw.githubusercontent.com/PokemonTCG/pokemon-tcg-data/master/cards/en/<set>.json`.
 
+## Calibration from results (round 2)
+
+* `features.py` builds every list's per-game resource vector (draw, search, recovery, acceleration, retreat, gust,
+  disruption, item lock, evolution tempo, damage, healing, costs) from simulated engine uses and decomposed Trainers
+  (`TRAINER_COMPONENTS` in `model_config.py`).
+* `regress.py`: stage 1 estimates the win-rate and Day 2 change per extra copy of each common card within its archetype
+  (archetype × format and event fixed effects, leave-one-event-out pilot skill, player-clustered SEs, collinear
+  evolution lines merged). Stage 2 explains those per-copy effects by what one more copy adds (Supporters net of the
+  Supporter they displace; engines via simulated marginal uses), with a ±1 CE prior around the hand-set weights.
+  Output: `data/out/ce_weights_fitted.csv`, `card_value_per_copy.csv`.
+* `cardcount.py`: copy-count effects (e.g. 3 vs 4 Teal Mask) inside every archetype with Benjamini-Hochberg q-values
+  → `card_count_effects.csv`.
+* `dimret.py`: simulated uses at 1–4 copies of each engine in real lists → `engine_copy_curves.csv`.
+* `tcgl_logs.py`: parser for TCG Live battle logs (drop `.txt` exports in `data/logs/`) to calibrate the simulations.
+  Trainer Hill exposes no public battle-log data (its Battle Journal / Battle Journal+ are personal, login-gated trackers).
+
+"Uses per game" for an engine counts every copy in the list together; the copy curves give the per-copy split.
+
 ## Units
 
 * **CE (card-equivalent)**: the value of drawing one random card. Searches, Energy acceleration, retreat savings,

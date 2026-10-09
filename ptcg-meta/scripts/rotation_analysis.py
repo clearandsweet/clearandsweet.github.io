@@ -20,7 +20,7 @@ TAGS = [
     ("bench_from_deck", r"put (them|it) onto your Bench"),
     ("search_trainer", r"search your deck for (a|an|up to \d) (Trainer|Item|Supporter|Stadium|Pokémon Tool)"),
     ("search_energy", r"search your deck for .*Energy"),
-    ("recover", r"from your discard pile into your hand|from your discard pile .* into your deck"),
+    ("recover", r"from your discard pile\s+(in)?to your (hand|deck)|from your discard pile.{0,40}into your (hand|deck)|discard pile into your deck"),
     ("gust", r"Switch in 1 of your opponent's Benched Pokémon"),
     ("switch", r"Switch your Active Pokémon with 1 of your Benched"),
     ("accel_discard", r"attach .*Energy.* from your discard pile"),
@@ -59,6 +59,17 @@ for _, r in rot_tr.iterrows():
     rows.append({"rotating_card": r["name"], "type": ",".join(sorted(sub - {"Trainer"})), "inclusion_now": r["inclusion"],
                  "avg_copies": r["avg_copies"], "day2_inclusion": r["inclusion_day2"], "function_tags": ",".join(sorted(t)),
                  "legal_alternatives": "; ".join(f"{nm} ({u:.0%} now)" for _, nm, u in cands[:4]) or "none found in I/J pool"})
+CURATED = {"Night Stretcher": ["Sacred Ash", "Energy Retrieval"]}
+legal_aces = sorted([n for n, p in pool.items() if "ACE SPEC" in p["subtypes"]], key=lambda n: -usage.get(n, 0))
+for r in rows:
+    if "ACE SPEC" in r["type"]:
+        r["legal_alternatives"] = ("Legal ACE SPECs: " + "; ".join(f"{n} ({usage.get(n, 0):.0%} now)" for n in legal_aces[:5])) if legal_aces \
+            else "No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones"
+        continue
+    extra = [n for n in CURATED.get(r["rotating_card"], []) if n not in r["legal_alternatives"]]
+    if extra:
+        lead = "; ".join(f"{n} ({usage.get(n, 0):.0%} now)" for n in extra)
+        r["legal_alternatives"] = lead + ("; " + r["legal_alternatives"] if r["legal_alternatives"] != "none found in I/J pool" else "")
 R = pd.DataFrame(rows).sort_values("inclusion_now", ascending=False)
 R.to_csv(os.path.join(O, f"rotation_replacements_{WIN}.csv"), index=False)
 

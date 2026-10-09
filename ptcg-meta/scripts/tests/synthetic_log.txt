@@ -1,0 +1,30 @@
+Setup
+PlayerA chose heads for the opening coin flip.
+PlayerB won the coin toss.
+PlayerB decided to go first.
+PlayerA drew 7 cards for the opening hand.
+PlayerA played Dreepy to the Active Spot.
+PlayerB played Budew to the Active Spot.
+PlayerB played Dreepy to the Bench.
+
+Turn # 1 - PlayerB's Turn
+PlayerB drew a card.
+PlayerB played Buddy-Buddy Poffin.
+PlayerB played Dreepy and Munkidori to the Bench.
+PlayerB ended their turn.
+
+Turn # 2 - PlayerA's Turn
+PlayerA drew a card.
+PlayerA played Buddy-Buddy Poffin.
+PlayerA played Budew to the Bench.
+PlayerA played Meowth ex to the Bench.
+PlayerA's Meowth ex used Last-Ditch Catch.
+PlayerA's Budew used Itchy Pollen on PlayerB's Budew for 10 damage.
+
+Turn # 3 - PlayerB's Turn
+PlayerB drew a card.
+PlayerB evolved Dreepy to Drakloak on the Bench.
+PlayerB's Drakloak used Recon Directive.
+PlayerB's Budew used Itchy Pollen on PlayerA's Budew for 10 damage.
+PlayerA's Budew was Knocked Out!
+PlayerB took a Prize card.

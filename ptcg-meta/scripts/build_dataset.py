@@ -54,7 +54,7 @@ for tdir in sorted(glob.glob(os.path.join(D, "labs", "0*"))):
     for p in st:
         dk = decks.get(p.get("deck_id") or "", {})
         dl = lists.get(str(p["tp_id"]))
-        players.append({"tid": tid, "tp_id": p["tp_id"], "name": p["name"], "country": p.get("country"),
+        players.append({"tid": tid, "tp_id": p["tp_id"], "player_id": p.get("player_id"), "name": p["name"], "country": p.get("country"),
                         "placement": p["placement"], "wins": p["wins"], "losses": p["losses"], "ties": p["ties"],
                         "points": p["points"], "day2": p.get("day2") or 0, "topcut": p.get("topcut") or 0,
                         "dropped": p.get("dropped") or 0, "drop_round": p.get("drop_round"),

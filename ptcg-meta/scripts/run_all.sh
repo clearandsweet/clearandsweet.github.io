@@ -5,6 +5,10 @@ D=${1:-data}; TPL=${2:-$(dirname "$0")/report_template.html}; OUT=${3:-index.htm
 S=$(dirname "$0")
 python3 -I "$S/build_dataset.py" "$D"
 python3 -I "$S/meta_analysis.py" "$D" > /dev/null
+python3 -I "$S/features.py" "$D" 300 > "$D/out/features.log"          # per-list resource vectors (all events)
+python3 -I "$S/dimret.py" "$D" 40 500 > "$D/out/dimret.log"           # simulated uses at 1-4 copies
+python3 "$S/regress.py" "$D" > "$D/out/regress.log"                   # fitted CE weights (needs statsmodels)
+python3 "$S/cardcount.py" "$D" 40 > "$D/out/cardcount.log"            # copy-count effects within archetypes
 python3 -I "$S/models.py" "$D" CUR 250 all > "$D/out/models_CUR.log"
 python3 -I "$S/models.py" "$D" CUR 250 day2 > "$D/out/models_CUR_day2.log"
 python3 -I "$S/damage_model.py" "$D" CUR > "$D/out/damage_CUR.log"

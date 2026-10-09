@@ -12,11 +12,19 @@ dmg = pd.read_csv(os.path.join(O, f"damage_value_{WIN}.csv")).rename(columns={"a
 inv = pd.read_csv(os.path.join(O, f"card_inventory_{WIN}.csv"))
 pk = inv[inv["cat"] == "pokemon"].sort_values("lists", ascending=False).drop_duplicates("name")
 inc = pk.set_index("name")[["inclusion", "inclusion_day2", "legal_post"]].rename(columns={"inclusion": "field_inclusion", "inclusion_day2": "day2_inclusion"})
-m = pd.merge(adv[["card", "uses_per_game", "ce_per_use", "advantage_ce_per_game", "extra_cards_per_game", "extra_energy_per_game",
+for c in ("ce_per_use_fitted", "advantage_fitted_ce_per_game"):
+    if c not in adv.columns: adv[c] = np.nan
+m = pd.merge(adv[["card", "uses_per_game", "ce_per_use", "advantage_ce_per_game", "ce_per_use_fitted", "advantage_fitted_ce_per_game", "extra_cards_per_game", "extra_energy_per_game",
                   "retreat_energy_saved_per_game", "item_lock_turns_per_game", "damage_hp_per_game", "heal_hp_per_game"]],
              dmg[["card", "exp_damage_vs_meta", "p_OHKO_meta_defender", "prizes_per_attack", "attacks_per_game", "prizes_per_game",
                   "damage_value_ce_per_game", "prize_liability", "prize_efficiency"]], on="card", how="outer")
 m = m.join(inc, on="card")
+cp = os.path.join(O, "engine_copy_curves.csv")
+if os.path.exists(cp):
+    cc = pd.read_csv(cp).groupby(["card", "copies"])["uses_per_game"].mean().unstack()
+    m["uses_by_copies"] = m["card"].map(lambda n: "/".join(f"{cc.loc[n, k]:.1f}" for k in cc.columns) if n in cc.index else "")
+else:
+    m["uses_by_copies"] = ""
 m[["advantage_ce_per_game", "damage_value_ce_per_game"]] = m[["advantage_ce_per_game", "damage_value_ce_per_game"]].fillna(0)
 m["total_impact_ce_per_game"] = m["advantage_ce_per_game"] + m["damage_value_ce_per_game"]
 m["meta_weighted_impact"] = m["total_impact_ce_per_game"] * m["field_inclusion"].fillna(0)

@@ -163,6 +163,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     <a href="#support">Support play-down</a>
     <a href="#advantage">Advantage stat</a>
     <a href="#trainers">Trainers</a>
+    <a href="#calib">Calibration</a>
     <a href="#damage">Damage value</a>
     <a href="#japan">Japan preview</a>
     <a href="#cards">Card inventory</a>
@@ -200,7 +201,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
       <div class="tscroll" id="survTable"></div>
       <div class="cols">
         <div class="callout"><h3>A naive survivor projection</h3><p class="small muted">Survivors only, re-weighted by current share × shrunk Day 2 lift. This is a starting prior to argue with. It knows nothing about new K cards or decks that don't exist yet.</p><div class="tscroll" id="projTable" style="max-height:420px"></div></div>
-        <div class="callout"><h3>Reading this</h3><ul class="tight small"><li>The top deck by a wide margin, Dragapult ex, is H-only, along with Dreepy, Drakloak and every Dusknoir variant partner.</li><li>The universal engine package (Fezandipiti ex, Budew, Munkidori, Buddy-Buddy Poffin, Night Stretcher, Crispin, Unfair Stamp) rotates together, so even "Intact" archetypes lose consistency cards.</li><li>Teal Mask Ogerpon ex rotates, which takes the Basic Box and Ogerpon Grass engines with it.</li><li>Decks built on I/J Megas (Kangaskhan, Excadrill, Lucario, Lopunny, Greninja, Starmie) and N's Zoroark keep their attackers.</li></ul></div>
+        <div class="callout"><h3>Reading this</h3><ul class="tight small"><li>The top deck by a wide margin, Dragapult ex, is H-only, along with Dreepy, Drakloak and every Dusknoir variant partner.</li><li>The universal engine package (Fezandipiti ex, Budew, Munkidori, Buddy-Buddy Poffin, Night Stretcher, Crispin, Unfair Stamp) rotates together, so even "Intact" archetypes lose consistency cards.</li><li>Teal Mask Ogerpon ex rotates, which takes the Basic Box and Ogerpon Grass engines with it.</li><li>Decks built on I/J Megas (Kangaskhan, Excadrill, Lucario, Lopunny, Greninja, Starmie) and N's Zoroark keep their attackers.</li><li><b>Every ACE SPEC in Standard is <span class="mk h">H</span>.</b> After rotation the ACE SPEC slot is empty unless K adds new ones. The regression values the best of them (Secret Box, Unfair Stamp) at about +3 match-win points over an average card.</li></ul></div>
       </div>
     </section>
 
@@ -239,16 +240,43 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
         <div class="callout"><h3>Definition</h3><p class="small">One unit, a <b>card-equivalent (CE)</b>, is the value of drawing one random card. Every benefit converts into it: search = 1.5 CE, look-2-keep-1 = 1.25, an extra Energy attachment = 1 CE of tempo (+1 if the Energy didn't come from your hand), each retreat Energy saved = 2 CE, each card discarded as a cost = −0.5. Damage and healing convert through Prizes: <span id="hpPrize"></span> HP of the current meta ≈ 1 Prize ≈ 3 CE. Item lock is valued as the opponent's held-back Items plus a setup-tempo penalty.</p><p class="small">Advantage per game = expected uses × CE per use. Expected uses come from the same simulation: when the card is reachable, how many copies are in play each turn (evolution lag, bench caps, survival), the chance the game is still going, and how often the trigger is live (Grass in hand for Teal Dance, a KO last turn for Flip the Script…).</p></div>
         <div class="callout"><h3>Turns of acceleration</h3><div id="accelBox" class="small"></div></div>
       </div>
-      <div class="tbar"><input id="pkQ" type="search" placeholder="Filter Pokémon" aria-label="Filter Pokémon"><select id="pkSort" aria-label="Rank by"><option value="advantage_ce_per_game">Rank by Advantage (CE/game)</option><option value="total_impact_ce_per_game">Rank by Advantage + damage</option><option value="meta_weighted_impact">Rank by meta-weighted impact</option></select><span class="count" id="pkCount"></span></div>
+      <div class="tbar"><input id="pkQ" type="search" placeholder="Filter Pokémon" aria-label="Filter Pokémon"><select id="pkSort" aria-label="Rank by"><option value="advantage_ce_per_game">Rank by Advantage (CE/game)</option><option value="advantage_fitted_ce_per_game">Rank by fitted CE/game</option><option value="total_impact_ce_per_game">Rank by Advantage + damage</option><option value="meta_weighted_impact">Rank by meta-weighted impact</option></select><span class="count" id="pkCount"></span></div>
       <div class="tscroll" id="pkTable"></div>
     </section>
 
     <section id="trainers">
       <div class="eyebrow">07 · Supporters, Items, Tools, Stadiums</div>
       <h2>Trainers on the same scale</h2>
-      <p class="muted">CE per play is set per card. Plays per game = copies × the share of the deck you see in a typical game (~68%). Supporters are scaled down when a list has more of them than the ~6.5 turns you can play them. "Meta impact" multiplies by field inclusion, giving CE added per 100 random games.</p>
-      <div class="tbar"><input id="trQ" type="search" placeholder="Filter Trainers" aria-label="Filter Trainers"><select id="trType" aria-label="Type"><option value="">All types</option><option>Supporter</option><option>Item</option><option>Tool</option><option>Stadium</option></select><span class="count" id="trCount"></span></div>
+      <p class="muted">Two pricings sit side by side. The hand-set CE per play is my original value. The fitted CE per play prices the same resources at the exchange rates the results support (section 07b). The measured column is the regression's direct estimate of what one more copy does, and the residual is the part the resource model can't explain. Plays per game = copies × the share of the deck you see in a typical game (~68%). Supporters are scaled down when a list has more of them than the ~6.5 turns you can play them. "Meta impact" multiplies by field inclusion, giving CE added per 100 random games.</p>
+      <div class="tbar"><input id="trQ" type="search" placeholder="Filter Trainers" aria-label="Filter Trainers"><select id="trSort" aria-label="Rank by"><option value="meta_advantage_ce_per_100_games">Rank by meta impact (hand-set)</option><option value="advantage_fitted_ce_per_game">Rank by fitted CE / game</option><option value="ce_per_play_fitted">Rank by fitted CE / play</option><option value="measured_wr">Rank by measured value per copy</option><option value="residual_wr">Rank by residual</option></select><select id="trType" aria-label="Type"><option value="">All types</option><option>Supporter</option><option>Item</option><option>Tool</option><option>Stadium</option></select><span class="count" id="trCount"></span></div>
       <div class="tscroll" id="trTable"></div>
+    </section>
+
+
+    <section id="calib">
+      <div class="eyebrow">07b · Calibration from results</div>
+      <h2>What the results say each resource is worth</h2>
+      <p class="muted">Every list from all 14 events (<span class="num" id="cNlists"></span> lists with 3+ recorded games) was regressed on its contents. Match win rate (ties = ⅓) and Day 2 were both used as outcomes. Controls are archetype × format and event fixed effects, plus a pilot-skill term: each player's record relative to their deck at their <em>other</em> events, available for <span id="cSkill"></span> of entries. Standard errors are clustered by player.</p>
+      <div class="cols">
+        <div class="callout"><h3>How the weights are fit</h3><ul class="tight small">
+          <li><b>Stage 1:</b> the win-rate and Day 2 change per extra copy of each common card, within its archetype. Evolution lines that always move together are merged.</li>
+          <li><b>Stage 2:</b> those per-copy effects are explained by what <em>one more copy</em> adds. For Items that's its draw, search, acceleration and so on, with mild diminishing returns. For Supporters it's the same <em>minus the Supporter it displaces</em>, because you play one per turn. For engines it's the simulated marginal uses of the last copy.</li>
+          <li>Search, the best-measured resource, anchors the scale at 1.5 CE per card. A prior centred on my hand-set weights (±1 CE) keeps thinly identified components (look-and-pick, item lock, evolution tempo) from swinging wildly. The "data only" column drops the prior.</li>
+          <li>Marginal is not average. These weights price the next copy at the counts people actually play, so they come out lower for resources decks already have plenty of.</li></ul></div>
+        <div class="callout"><h3>Headline</h3><div id="cHead" class="small"></div></div>
+      </div>
+      <div class="tscroll" id="ceTable"></div>
+      <h3>Measured value of one more copy</h3>
+      <p class="small muted">Within-archetype, skill- and event-controlled. Values are relative to the average card a slot would otherwise hold, so 0 means "as good as a typical flex card". ±1.96 SE shown. ACE SPECs are compared against the other ACE SPECs players chose.</p>
+      <div class="tbar"><input id="cvQ" type="search" placeholder="Filter cards" aria-label="Filter measured card values"><select id="cvType" aria-label="Card type"><option value="">All cards</option><option value="Trainer/Energy">Trainers &amp; Energy</option><option value="Pokémon">Pokémon</option></select><span class="count" id="cvCount"></span></div>
+      <div class="tscroll" id="cvTable" style="max-height:520px"></div>
+      <h3>Copy counts inside an archetype</h3>
+      <p class="small muted">Each row compares lists running that many copies with lists running the archetype's most common count (the baseline row), controlling for event and pilot skill. q is the false-discovery-adjusted p-value across all 695 archetype-card pairs. Big effects for cards that define a sub-variant (for example a Slowking list with no Metagross) are build differences, not the card itself.</p>
+      <div class="tbar"><select id="ccArch" aria-label="Archetype"></select><select id="ccCard" aria-label="Card"></select></div>
+      <div class="tscroll" id="ccTable" style="max-height:360px"></div>
+      <h3>Diminishing returns by simulation</h3>
+      <p class="small muted">The same lists re-simulated at 1–4 copies of the engine; when copies are added, the most-played non-search Trainer is cut. Uses are per game for all copies combined; "+next" is what that copy adds.</p>
+      <div class="tscroll" id="curveTable" style="max-height:420px"></div>
     </section>
 
     <section id="damage">
@@ -308,7 +336,8 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
           <li>Top cut flags cover few players (top 8 to 16 per event), so top-cut columns are directional only.</li>
           <li>Labs standings are computed outside the official software and can contain small errors. A few players have no published list.</li>
           <li>Trainer Hill's multi-deck matchup endpoint returned server errors, so matchups come from Labs pairings. Trainer Hill's archetype counts (17,292 decks from in-person and online events with 50+ players since 17 Sep, all divisions) were used as a cross-check. They show the same top six archetypes, with Dragapult at 12.1% there vs 17.4% at Masters Regionals.</li>
-          <li>The Advantage and play-down numbers are model outputs with hand-set assumptions. Use them to rank and compare, not as measured frequencies.</li>
+          <li>The Advantage and play-down numbers are model outputs. The CE weights are now partly fitted to results (section 07b), but the uses-per-game side is still simulated.</li>
+          <li><b>Battle logs:</b> Trainer Hill publishes no battle-log data. Its Battle Journal (free, stored in your browser) and Battle Journal+ (Patreon, login) are personal match trackers. They record deck, opponent, result, turn order and tags, not turn-by-turn logs, and nothing is shared publicly. TCG Live's own Battle Log text is the right source. <code>scripts/tcgl_logs.py</code> parses it (first turn each Pokémon hits the board, Abilities used, attacks, Items per turn, item-locked turns) and outputs the same quantities the simulations predict. Drop exported logs in <code>data/logs/</code> to calibrate.</li>
         </ul></div>
       </div>
       <h3>Events in the dataset</h3>
@@ -548,12 +577,14 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
   const pkCols = [
     { k: "#", l: "#", n: 1 },
     { k: "card", l: "Pokémon", nm: 1, f: (v, r) => `${mark(r.legal_post, "", v)} ${esc(v)}` },
-    { k: "uses_per_game", l: "Uses / game", n: 1, f: v => fx(v, 1) },
+    { k: "uses_per_game", l: "Uses / game (all copies)", n: 1, f: v => fx(v, 1), t: "Expected uses per game from every copy in the list combined" },
+    { k: "uses_by_copies", l: "Uses at 1/2/3/4 copies", n: 1, f: v => v ? esc(v) : "–", t: "Simulated uses per game if the list ran 1, 2, 3 or 4 copies" },
     { k: "ce_per_use", l: "CE / use", n: 1, f: v => fx(v, 2) },
     { k: "extra_cards_per_game", l: "+Cards / game", n: 1, f: v => v ? fx(v, 1) : "–", t: "Net cards drawn or searched per game" },
     { k: "extra_energy_per_game", l: "+Energy / game", n: 1, f: v => v ? fx(v, 1) : "–", t: "Extra Energy attachments per game" },
     { k: "retreat_energy_saved_per_game", l: "Retreat saved", n: 1, f: v => v ? fx(v, 1) : "–", t: "Retreat Energy not discarded per game" },
     { k: "advantage_ce_per_game", l: "Advantage CE / game", bar: 1, f: (v, r, m) => barCell(v, m, 1, "", false) },
+    { k: "advantage_fitted_ce_per_game", l: "Fitted CE / game", n: 1, f: v => fx(v, 1), t: "Same uses, priced with the regression-fitted weights" },
     { k: "damage_value_ce_per_game", l: "Damage CE / game", n: 1, f: v => fx(v, 1) },
     { k: "total_impact_ce_per_game", l: "Total CE / game", n: 1, f: v => `<b>${fx(v, 1)}</b>` },
     { k: "field_inclusion", l: "Field inclusion", n: 1, f: v => pct(v) },
@@ -580,10 +611,82 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
     { k: "ce_per_play", l: "CE / play", n: 1, f: v => fx(v, 2) },
     { k: "advantage_ce_per_game", l: "CE / game (in its deck)", bar: 1, f: (v, r, m) => barCell(v, m, 1, "", false) },
     { k: "meta_advantage_ce_per_100_games", l: "Meta impact (CE / 100 games)", n: 1, f: v => fx(v, 0) },
+    { k: "ce_per_play_fitted", l: "Fitted CE / play", n: 1, f: v => fx(v, 2), t: "Its resources priced at the regression-fitted exchange rates" },
+    { k: "vs_avg_supporter", l: "vs avg Supporter", n: 1, f: v => v == null ? "–" : (v >= 0 ? "+" : "") + fx(v, 2), t: "Fitted CE per play minus the average Supporter play (the alternative you give up that turn)" },
+    { k: "advantage_fitted_ce_per_game", l: "Fitted CE / game", bar: 1, f: (v, r, m) => barCell(v, m, 1, "", false) },
+    { k: "measured_wr", l: "Measured win pts / copy", n: 1, f: v => v == null ? "–" : `<b>${v >= 0 ? "+" : ""}${fx(v * 100, 2)}</b>`, t: "Within-archetype regression, section 07b" },
+    { k: "residual_wr", l: "Residual", n: 1, f: v => v == null ? "–" : (v >= 0 ? "+" : "") + fx(v * 100, 2), t: "Measured minus what its resources predict: positive = synergy the components miss" },
     { k: "why", l: "Valued as", w: 1 },
   ], { sort: "meta_advantage_ce_per_100_games", filter: r => (!trQ || r.name.toLowerCase().includes(trQ)) && (!trType || r.type === trType), onCount: n => $("#trCount").textContent = `${n} cards` });
   $("#trQ").addEventListener("input", e => { trQ = e.target.value.toLowerCase(); trT.render(); });
   $("#trType").addEventListener("change", e => { trType = e.target.value; trT.render(); });
+  $("#trSort").addEventListener("change", e => trT.set({ sort: e.target.value }));
+
+
+  // ---- calibration
+  (function calib() {
+    const M = D.ce_meta || {};
+    $("#cNlists").textContent = int(M.n_lists);
+    $("#cSkill").textContent = pct(M.skill_coverage, 0);
+    const W = Object.fromEntries((D.ce_weights || []).map(r => [r.group, r]));
+    const wrPerCe = M.wr_points_per_ce_per_game, d2PerCe = M.day2_points_per_ce_per_game;
+    $("#cHead").innerHTML = `<ul class="tight">
+      <li>Scale: one CE per game from one more copy is worth about <b>${(wrPerCe * 100).toFixed(2)}</b> match-win points and <b>${(d2PerCe * 100).toFixed(2)}</b> Day 2 points. The scale is anchored on search (1 card searched = 1.5 CE, the best-identified resource).</li>
+      <li>Fit quality (weighted correlation with measured per-copy value): hand-set weights ${fx(M.corr_hand_wr, 2)} → fitted ${fx(M.corr_fit_wr, 2)} on win rate; ${fx(M.corr_hand_d2, 2)} → ${fx(M.corr_fit_d2, 2)} on Day 2.</li>
+      <li>Search: <b>${fx((W.tutor || {}).fitted_weight, 2)}</b> CE per card searched (hand-set 1.5). Draw: <b>${fx((W.draw || {}).fitted_weight, 2)}</b> (hand-set 1.0). Acceleration: <b>${fx((W.accel || {}).fitted_weight, 2)}</b> per extra attachment (hand-set 2.0).</li>
+      <li>The average Supporter play is worth <b>${fx(Object.entries(M.avg_supporter_components || {}).reduce((s, [g, x]) => s + x * ((W[g] || {}).fitted_weight || 0), 0), 2)}</b> fitted CE. That's the bar a Supporter has to clear on the turn you play it.</li>
+      <li>Discards and hand shuffles come out <em>positive</em> at the margin, not as costs. Ultra Ball fodder fuels recursion, and Lillie's / Unfair Stamp reshuffles refresh dead hands.</li></ul>`;
+    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per attachment)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Disruption (per card / Energy removed)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)", ace: "Being an ACE SPEC (vs average card)" };
+    table($("#ceTable"), D.ce_weights || [], [
+      { k: "group", l: "Resource", nm: 1, f: v => esc(LBL[v] || v) },
+      { k: "hand_weight", l: "Hand-set CE", n: 1, f: v => fx(v, 2) },
+      { k: "fitted_wr", l: "Fitted (win rate)", n: 1, f: v => fx(v, 2) },
+      { k: "fitted_d2", l: "Fitted (Day 2)", n: 1, f: v => fx(v, 2) },
+      { k: "fitted_weight", l: "Fitted, combined", n: 1, f: (v, r) => `<b>${fx(v, 2)}</b> <span class="muted small">±${fx(1.96 * r.fitted_se, 2)}</span>` },
+      { k: "data_only_wr", l: "Data only (WR)", n: 1, f: v => fx(v, 2), t: "No prior: noisy where few cards carry the component" },
+    ]);
+    let cvQ = "", cvType = "";
+    const cvT = table($("#cvTable"), D.card_values || [], [
+      { k: "#", l: "#", n: 1 },
+      { k: "card", l: "Card", nm: 1, f: (v, r) => `${mark(r.legal_post, "", r.name)} ${esc(v)}${r.merged_with ? ` <span class="muted small">(+ ${esc(r.merged_with)})</span>` : ""}` },
+      { k: "lists", l: "Lists", n: 1, f: int }, { k: "avg_copies", l: "Avg copies", n: 1, f: v => fx(v, 2) },
+      { k: "wr_per_copy", l: "Win pts / copy", n: 1, f: (v, r) => `<b>${v >= 0 ? "+" : ""}${fx(v * 100, 2)}</b> <span class="muted small">±${fx(196 * r.wr_per_copy_se, 2)}</span>` },
+      { k: "d2_pp_per_copy", l: "Day 2 pts / copy", n: 1, f: (v, r) => `${v >= 0 ? "+" : ""}${fx(v * 100, 2)} <span class="muted small">±${fx(196 * r.d2_se, 2)}</span>` },
+    ], { sort: "wr_per_copy", filter: r => (!cvQ || String(r.card).toLowerCase().includes(cvQ)) && (!cvType || r.type === cvType), onCount: n => $("#cvCount").textContent = `${n} cards` });
+    $("#cvQ").addEventListener("input", e => { cvQ = e.target.value.toLowerCase(); cvT.render(); });
+    $("#cvType").addEventListener("change", e => { cvType = e.target.value; cvT.render(); });
+    const CE_ = D.count_effects || [];
+    const archs = [...new Set(CE_.map(r => r.archetype))].sort();
+    $("#ccArch").innerHTML = archs.map(a => `<option>${esc(a)}</option>`).join("");
+    const fillCards = () => {
+      const a = $("#ccArch").value;
+      const cards = [...new Set(CE_.filter(r => r.archetype === a).map(r => r.card))].sort();
+      $("#ccCard").innerHTML = cards.map(c => `<option>${esc(c)}</option>`).join("");
+    };
+    if (archs.includes("Basic Box")) $("#ccArch").value = "Basic Box";
+    fillCards();
+    const tm = [...$("#ccCard").options].find(o => o.value.startsWith("Teal Mask")); if (tm) $("#ccCard").value = tm.value;
+    const ccT = table($("#ccTable"), CE_, [
+      { k: "copies", l: "Copies", n: 1, f: (v, r) => v === r.baseline_copies ? `${v} <span class="muted small">baseline</span>` : String(v) },
+      { k: "lists", l: "Lists", n: 1, f: int }, { k: "share_of_archetype", l: "Share of archetype", n: 1, f: v => pct(v, 0) },
+      { k: "raw_wr", l: "Raw win %", n: 1, f: v => pct(v) }, { k: "raw_day2", l: "Raw Day 2 %", n: 1, f: v => pct(v) },
+      { k: "wr_effect", l: "Win pts vs baseline", n: 1, f: (v, r) => v === 0 && r.copies === r.baseline_copies ? "–" : `<b>${v >= 0 ? "+" : ""}${fx(v * 100, 1)}</b> <span class="muted small">±${fx(196 * r.wr_se, 1)}</span>` },
+      { k: "wr_q", l: "q", n: 1, f: v => v == null ? "–" : fx(v, 3) },
+      { k: "d2_effect", l: "Day 2 pts vs baseline", n: 1, f: (v, r) => v === 0 && r.copies === r.baseline_copies ? "–" : `${v >= 0 ? "+" : ""}${fx(v * 100, 1)} <span class="muted small">±${fx(196 * r.d2_se, 1)}</span>` },
+      { k: "d2_q", l: "q", n: 1, f: v => v == null ? "–" : fx(v, 3) },
+    ], { sort: "copies", dir: 1, filter: r => r.archetype === $("#ccArch").value && r.card === $("#ccCard").value });
+    $("#ccArch").addEventListener("change", () => { fillCards(); ccT.render(); });
+    $("#ccCard").addEventListener("change", () => ccT.render());
+    const curves = {};
+    (D.copy_curves || []).forEach(r => { const k = r.card + "|" + r.archetype; (curves[k] = curves[k] || { card: r.card, archetype: r.archetype })["u" + r.copies] = r.uses_per_game; });
+    const rowsC = Object.values(curves).map(r => ({ ...r, archetype_name: (D.archetypes.find(a => a.deck_id === r.archetype) || {}).name || r.archetype }));
+    const cell = k => (v, r) => { const prev = r["u" + (+k.slice(1) - 1)]; return `${fx(v, 2)}${prev != null ? ` <span class="muted small">+${fx(v - prev, 2)}</span>` : ""}`; };
+    table($("#curveTable"), rowsC, [
+      { k: "card", l: "Engine", nm: 1 }, { k: "archetype_name", l: "In archetype", nm: 1 },
+      { k: "u1", l: "1 copy", n: 1, f: cell("u1") }, { k: "u2", l: "2 copies (+next)", n: 1, f: cell("u2") },
+      { k: "u3", l: "3 copies (+next)", n: 1, f: cell("u3") }, { k: "u4", l: "4 copies (+next)", n: 1, f: cell("u4") },
+    ], { sort: "u1" });
+  })();
 
   // ---- damage
   table($("#dmgTable"), D.damage.filter(r => r.field_inclusion >= 0.003), [
@@ -636,17 +739,21 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
   const top = D.archetypes[0] || {};
   const big = D.archetypes.slice(0, 8).slice().sort((a, b) => (b.day2_lift_shrunk || 0) - (a.day2_lift_shrunk || 0));
   const best = big[0] || {}, second = big[1] || {};
+  const CV = Object.fromEntries((D.card_values || []).map(r => [r.name, r]));
+  const Wt = Object.fromEntries((D.ce_weights || []).map(r => [r.group, r]));
+  const cc = (arch, cardStart) => (D.count_effects || []).filter(r => r.archetype === arch && String(r.card).startsWith(cardStart));
+  const ccTxt = (arch, cardStart) => cc(arch, cardStart).map(r => `${r.copies}: ${r.copies === r.baseline_copies ? "baseline" : (r.wr_effect >= 0 ? "+" : "") + fx(r.wr_effect * 100, 1) + " pts"}`).join(", ");
+  const wpc = n => CV[n] ? `${CV[n].wr_per_copy >= 0 ? "+" : ""}${fx(CV[n].wr_per_copy * 100, 1)}` : "–";
+  const TC = Object.fromEntries((D.copy_curves || []).filter(r => r.archetype === "basic-box-m" || r.archetype === "dragapult-ex").map(r => [r.card + "|" + r.copies, r.uses_per_game]));
   const qs = [
-    [`${esc(top.name)} is ${pct(top.share)} of the current field with a shrunk Day 2 lift of ${fx(top.day2_lift_shrunk)} and ${pct(top.wr_nonmirror)} non-mirror win rate. Among the eight biggest decks, ${esc(best.name)} converts best (shrunk lift ${fx(best.day2_lift_shrunk)}), then ${esc(second.name)} (${fx(second.day2_lift_shrunk)}).`, "None. This is measured; flag a mislabeled archetype if you see one."],
-    [`You're item-locked on your turn 2 in ${pct(bm.p_item_locked_T2_any_order, 0)} of games, about ${fx(bm.expected_item_locked_turns_per_game, 2)} locked turns per game.`, "BUDEW_LOCK_TURNS, Budew desire, searcher α"],
-    [`Fezandipiti ex reaches the board in ${pct((S["Fezandipiti ex"] || {}).p_played_if_in_deck, 0)} of games when it's in the deck. You'll see an opponent's Fez in ${pct((S["Fezandipiti ex"] || {}).p_opponent_plays_it_random_round, 0)} of rounds.`, "Fez desire (0.80), horizon turn 5"],
-    [`Meowth ex gets played in only ${pct((S["Meowth ex"] || {}).p_played_if_in_deck, 0)} of games where it's listed. It's a 1-of Basic ex that Poffin can't fetch, and it's only reachable by turn 2 ${pct((S["Meowth ex"] || {}).p_accessible_by_horizon, 0)} of the time. Too low?`, "Ultra Ball α (0.5), Meowth horizon / desire"],
-    [`Latias ex hits the board in ${pct((S["Latias ex"] || {}).p_played_if_in_deck, 0)} of its games (mostly Basic Box and Slowking) and is worth ~${fx((PK["Latias ex"] || {}).advantage_ce_per_game, 1)} CE per game in free retreat.`, "Latias desire, retreat-events per turn"],
-    [`Teal Dance fires ~${fx((PK["Teal Mask Ogerpon ex"] || {}).uses_per_game, 1)} times per game in Ogerpon decks. Drakloak's Recon Directive fires ~${fx((PK["Drakloak"] || {}).uses_per_game, 1)} times in Dragapult.`, "Grass-in-hand model, Drakloak decay"],
-    [`Shaymin hits the board in ${pct((S["Shaymin"] || {}).p_played_if_in_deck, 0)} of its games. Lillie's Clefairy ex: ${pct((S["Lillie's Clefairy ex"] || {}).p_played_if_in_deck, 0)}, much higher against Dragapult.`, "Matchup modifiers (bench snipe, Dragon share)"],
-    [`Trainer value per game: Lillie's Determination ~${fx((TR["Lillie's Determination"] || {}).advantage_ce_per_game, 1)} CE, Buddy-Buddy Poffin ~${fx((TR["Buddy-Buddy Poffin"] || {}).advantage_ce_per_game, 1)}, Boss's Orders ~${fx((TR["Boss's Orders"] || {}).advantage_ce_per_game, 1)}, Ultra Ball ~${fx((TR["Ultra Ball"] || {}).advantage_ce_per_game, 1)}. Is Ultra Ball undervalued because of its discard cost?`, "TRAINER_CE table, discard_cost"],
-    [`Dragapult ex takes ~${fx((DM["Dragapult ex"] || {}).prizes_per_attack, 2)} Prizes per attack against this field (OHKO ${pct((DM["Dragapult ex"] || {}).p_OHKO_meta_defender, 0)}), counting the 6 spread counters. Mega Kangaskhan ex: ${fx((DM["Mega Kangaskhan ex"] || {}).prizes_per_attack, 2)}. Alakazam: ${fx((DM["Alakazam"] || {}).prizes_per_attack, 2)}.`, "ATTACKERS dmg/spread assumptions"],
-    [`Engines that survive rotation and rank highest: ${(D.pokemon_rank || []).filter(p => p.legal_post === 1 && p.advantage_ce_per_game > 0).sort((a, b) => b.advantage_ce_per_game - a.advantage_ce_per_game).slice(0, 6).map(p => esc(p.card)).join(", ")}. Do these feel like the post-rotation engines to build around?`, "Engine table"],
+    [`Fitted exchange rates: one card searched ≈ <b>${fx((Wt.tutor || {}).fitted_weight, 2)}</b> CE, one card drawn ≈ <b>${fx((Wt.draw || {}).fitted_weight, 2)}</b>, one extra Energy attachment ≈ <b>${fx((Wt.accel || {}).fitted_weight, 2)}</b>, one retreat Energy saved ≈ <b>${fx((Wt.retreat || {}).fitted_weight, 2)}</b>, one gust ≈ <b>${fx((Wt.gust || {}).fitted_weight, 2)}</b>. Does searching beating drawing at the margin match how these decks feel?`, "Regression (section 07b); prior width τ = 1 CE"],
+    [`Measured value of one more copy (win-rate points): Gwynn ${wpc("Gwynn")}, Lillie's Determination ${wpc("Lillie's Determination")}, Judge ${wpc("Judge")}, Dawn ${wpc("Dawn")}, Hilda ${wpc("Hilda")}. Dawn trails Lillie's and Gwynn, in line with your read.`, "Measured, not modeled"],
+    [`Search Items measure strongly: Ultra Ball ${wpc("Ultra Ball")}, Buddy-Buddy Poffin ${wpc("Buddy-Buddy Poffin")}, Poké Pad ${wpc("Poké Pad")} per copy. Rare Candy ${wpc("Rare Candy")} and Switch ${wpc("Switch")} come out negative at current counts.`, "Measured; negative means the marginal copy underperforms a typical flex card"],
+    [`Teal Mask Ogerpon ex copies. Simulated Teal Dances per game in Basic Box at 1/2/3/4 copies: ${[1, 2, 3, 4].map(k => fx(TC["Teal Mask Ogerpon ex|" + k], 1)).join(" / ")}, so the 3rd and 4th copies add almost nothing once Grass in hand binds. Measured: Raging Bolt Ogerpon ${ccTxt("Raging Bolt Ogerpon", "Teal Mask")}; Basic Box ${ccTxt("Basic Box", "Teal Mask")}.`, "Grass-in-hand cap; copy curves"],
+    [`Latias ex: the simulation says the 2nd copy adds ~${fx((TC["Latias ex|2"] || 0) - (TC["Latias ex|1"] || 0), 1)} uses (Prize insurance). Measured: Basic Box ${ccTxt("Basic Box", "Latias")}; Slowking ${ccTxt("Slowking", "Latias")}.`, "Copy curves; count effects"],
+    [`Budew in Dragapult: ${ccTxt("Dragapult", "Budew")}. The simulation now credits the 2nd Budew through better turn-1 access (${fx(TC["Budew|1"], 2)} → ${fx(TC["Budew|2"], 2)} lock turns per game).`, "Budew early-turn weights [0.95, 0.6, 0.25]"],
+    [`ACE SPECs measure at Secret Box ${wpc("Secret Box")}, Unfair Stamp ${wpc("Unfair Stamp")}, Enriching Energy ${wpc("Enriching Energy")}, Prime Catcher ${wpc("Prime Catcher")}, Hero's Cape ${wpc("Hero's Cape")}, and every one of them rotates. Does losing the ACE slot feel like the biggest single change?`, "Measured"],
+    [`Fezandipiti ex reaches the board in ${pct((S["Fezandipiti ex"] || {}).p_played_if_in_deck, 0)} of games when listed; Latias ex ${pct((S["Latias ex"] || {}).p_played_if_in_deck, 0)}; Meowth ex ${pct((S["Meowth ex"] || {}).p_played_if_in_deck, 0)}. Unchanged from round 1 except the prized-search fix.`, "Play-down model"],
   ];
   $("#eyeQs").innerHTML = qs.map((q, i) => `<div class="q"><span class="qn">${i + 1}</span><div><p>${q[0]}</p><p class="small muted">Knob: ${q[1]}</p></div></div>`).join("");
 
