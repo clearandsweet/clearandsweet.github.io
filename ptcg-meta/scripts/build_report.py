@@ -20,7 +20,7 @@ def recs(df, cols=None, n=None, rnd=4):
 summary = json.load(open(os.path.join(O, "summary.json")))
 ev = rd("events_windows.csv", dtype={"tid": str})
 P = {}
-P["generated"] = "2026-10-09"
+P["generated"] = "2026-10-13"
 P["windows"] = summary["windows"]
 P["events"] = recs(ev, ["tid", "type", "city", "date", "players", "n_lists", "window"])
 arch = rd("archetypes_CUR.csv")
@@ -106,6 +106,20 @@ P["power_valid"] = recs(rd("power_validation.csv"))
 for f, k in (("power_meta.json", "power_meta"), ("power_calibration.json", "power_cal")):
     fp = os.path.join(O, f)
     P[k] = json.load(open(fp)) if os.path.exists(fp) else {}
+# event breakdown (event_compare.py)
+ecj = os.path.join(O, "event_compare.json")
+if os.path.exists(ecj):
+    es = json.load(open(ecj))
+    phs = rd("event_phase_shares.csv", dtype={"tid": str})
+    phs = phs[(phs["level"] == "family") & (phs["key"] == es["family"])]
+    conv = rd("event_conversion.csv").rename(columns={"Unnamed: 0": "deck_id"})
+    lch = rd("event_list_changes.csv").rename(columns={"Unnamed: 0": "name"})
+    lch = lch.reindex(lch["d_copies"].abs().sort_values(ascending=False).index)
+    P["event_cmp"] = {"summary": es, "phase": recs(phs[["tid", "event", "phase", "count", "share"]]),
+                      "fam_by_event": recs(rd("event_family_by_event.csv", dtype={"tid": str})),
+                      "conversion": recs(conv[conv["players"] >= 10]), "progress": recs(rd("event_round_progress.csv", dtype={"tid": str})),
+                      "matchups": recs(rd("event_family_matchups.csv").rename(columns={"Unnamed: 0": "opp_deck"})),
+                      "skill": recs(rd("event_pilot_skill.csv", dtype={"tid": str})), "list_changes": recs(lch, n=40)}
 jp = os.path.join(O, "jp_summary.json")
 P["jp"] = json.load(open(jp)) if os.path.exists(jp) else {}
 P["jp_new_cards"] = recs(rd("jp_cityleague_new_cards.csv"), n=25)

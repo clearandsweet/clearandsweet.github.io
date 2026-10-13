@@ -26,12 +26,18 @@
      "city": "Recife",
      "date": "October 3\u20134, 2026",
      "players": 1074
+    },
+    {
+     "tid": "0076",
+     "city": "Louisville",
+     "date": "October 9\u201311, 2026",
+     "players": 2927
     }
    ],
-   "players": 7806,
-   "day2": 1410,
-   "topcut": 42,
-   "archetypes": 106
+   "players": 10733,
+   "day2": 1958,
+   "topcut": 51,
+   "archetypes": 110
   },
   "WORLDS": {
    "label": "World Championship 2026",
@@ -121,5 +127,5 @@
    "archetypes": 99
   }
  },
- "field_rotating_copies_avg": 20.15948717948718
+ "field_rotating_copies_avg": 20.17783168501586
 }

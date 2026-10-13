@@ -231,7 +231,7 @@
    {
     "name": "Dudunsparce ex",
     "inclusion": 0.183,
-    "intl_inclusion": 0.063
+    "intl_inclusion": 0.069
    },
    {
     "name": "Talonflame ex",
@@ -241,32 +241,32 @@
    {
     "name": "Team Rocket's Watchtower",
     "inclusion": 0.296,
-    "intl_inclusion": 0.208
+    "intl_inclusion": 0.203
    },
    {
     "name": "Gravity Mountain",
     "inclusion": 0.148,
-    "intl_inclusion": 0.077
+    "intl_inclusion": 0.076
    },
    {
     "name": "Jamming Tower",
     "inclusion": 0.174,
-    "intl_inclusion": 0.117
+    "intl_inclusion": 0.111
    },
    {
-    "name": "Latias ex",
-    "inclusion": 0.238,
-    "intl_inclusion": 0.183
+    "name": "Lillie's Determination",
+    "inclusion": 0.871,
+    "intl_inclusion": 0.811
    },
    {
     "name": "Unfair Stamp",
     "inclusion": 0.425,
-    "intl_inclusion": 0.373
+    "intl_inclusion": 0.371
    },
    {
     "name": "Rare Candy",
     "inclusion": 0.29,
-    "intl_inclusion": 0.239
+    "intl_inclusion": 0.238
    },
    {
     "name": "Bug Catching Set",
@@ -274,101 +274,91 @@
     "intl_inclusion": 0.081
    },
    {
-    "name": "Lillie's Determination",
-    "inclusion": 0.871,
-    "intl_inclusion": 0.823
-   },
-   {
-    "name": "Mew ex",
-    "inclusion": 0.095,
-    "intl_inclusion": 0.047
-   },
-   {
-    "name": "Judge",
-    "inclusion": 0.438,
-    "intl_inclusion": 0.392
-   },
-   {
     "name": "Duskull",
     "inclusion": 0.152,
-    "intl_inclusion": 0.106
-   },
-   {
-    "name": "Ultra Ball",
-    "inclusion": 0.894,
-    "intl_inclusion": 0.848
+    "intl_inclusion": 0.104
    },
    {
     "name": "Dusknoir",
     "inclusion": 0.151,
-    "intl_inclusion": 0.106
+    "intl_inclusion": 0.103
+   },
+   {
+    "name": "Ultra Ball",
+    "inclusion": 0.894,
+    "intl_inclusion": 0.847
+   },
+   {
+    "name": "Yveltal",
+    "inclusion": 0.114,
+    "intl_inclusion": 0.069
+   },
+   {
+    "name": "Dunsparce",
+    "inclusion": 0.251,
+    "intl_inclusion": 0.206
+   },
+   {
+    "name": "Latias ex",
+    "inclusion": 0.238,
+    "intl_inclusion": 0.195
    }
   ],
   "biggest_jp_underindex": [
    {
-    "name": "Xerosic's Machinations",
-    "inclusion": 0.028,
-    "intl_inclusion": 0.128
-   },
-   {
     "name": "Crushing Hammer",
     "inclusion": 0.1,
-    "intl_inclusion": 0.198
+    "intl_inclusion": 0.2
    },
    {
     "name": "Psychic Energy",
     "inclusion": 0.476,
-    "intl_inclusion": 0.569
+    "intl_inclusion": 0.575
+   },
+   {
+    "name": "Xerosic's Machinations",
+    "inclusion": 0.028,
+    "intl_inclusion": 0.117
    },
    {
     "name": "Risky Ruins",
     "inclusion": 0.141,
-    "intl_inclusion": 0.213
+    "intl_inclusion": 0.211
    },
    {
     "name": "Eri",
     "inclusion": 0.028,
-    "intl_inclusion": 0.091
-   },
-   {
-    "name": "Team Rocket's Petrel",
-    "inclusion": 0.161,
-    "intl_inclusion": 0.218
-   },
-   {
-    "name": "Budew",
-    "inclusion": 0.349,
-    "intl_inclusion": 0.403
-   },
-   {
-    "name": "Handheld Fan",
-    "inclusion": 0.021,
-    "intl_inclusion": 0.072
-   },
-   {
-    "name": "Secret Box",
-    "inclusion": 0.132,
-    "intl_inclusion": 0.183
-   },
-   {
-    "name": "Lucky Helmet",
-    "inclusion": 0.012,
-    "intl_inclusion": 0.06
-   },
-   {
-    "name": "Air Balloon",
-    "inclusion": 0.211,
-    "intl_inclusion": 0.254
+    "intl_inclusion": 0.085
    },
    {
     "name": "Telepathic Psychic Energy",
     "inclusion": 0.163,
-    "intl_inclusion": 0.206
+    "intl_inclusion": 0.219
    },
    {
-    "name": "Jumbo Ice Cream",
-    "inclusion": 0.05,
-    "intl_inclusion": 0.093
+    "name": "Team Rocket's Petrel",
+    "inclusion": 0.161,
+    "intl_inclusion": 0.213
+   },
+   {
+    "name": "Iron Crown ex",
+    "inclusion": 0.002,
+    "intl_inclusion": 0.053
+   },
+   {
+    "name": "Budew",
+    "inclusion": 0.349,
+    "intl_inclusion": 0.398
+   },
+   {
+    "name": "Handheld Fan",
+    "inclusion": 0.021,
+    "intl_inclusion": 0.068
+   },
+   {
+    "name": "Lucky Helmet",
+    "inclusion": 0.012,
+    "intl_inclusion": 0.058
    },
    {
     "name": "Hero's Cape",
@@ -376,9 +366,19 @@
     "intl_inclusion": 0.116
    },
    {
+    "name": "Secret Box",
+    "inclusion": 0.132,
+    "intl_inclusion": 0.174
+   },
+   {
     "name": "Hilda",
     "inclusion": 0.18,
     "intl_inclusion": 0.221
+   },
+   {
+    "name": "Enriching Energy",
+    "inclusion": 0.051,
+    "intl_inclusion": 0.092
    }
   ],
   "budew_inclusion": 0.34910004185851823
@@ -537,84 +537,84 @@
    {
     "name": "Unfair Stamp",
     "inclusion": 0.681,
-    "intl_inclusion": 0.373
+    "intl_inclusion": 0.371
    },
    {
     "name": "Munkidori",
     "inclusion": 0.639,
-    "intl_inclusion": 0.395
+    "intl_inclusion": 0.385
    },
    {
     "name": "Meowth ex",
     "inclusion": 0.792,
-    "intl_inclusion": 0.577
-   },
-   {
-    "name": "Crispin",
-    "inclusion": 0.597,
-    "intl_inclusion": 0.393
+    "intl_inclusion": 0.58
    },
    {
     "name": "Darkness Energy",
     "inclusion": 0.597,
-    "intl_inclusion": 0.397
+    "intl_inclusion": 0.388
+   },
+   {
+    "name": "Crispin",
+    "inclusion": 0.597,
+    "intl_inclusion": 0.392
    },
    {
     "name": "Fire Energy",
     "inclusion": 0.514,
-    "intl_inclusion": 0.334
+    "intl_inclusion": 0.33
    },
    {
     "name": "Prism Energy",
     "inclusion": 0.167,
-    "intl_inclusion": 0.022
-   },
-   {
-    "name": "Fezandipiti ex",
-    "inclusion": 0.833,
-    "intl_inclusion": 0.692
+    "intl_inclusion": 0.024
    },
    {
     "name": "Dragapult ex",
     "inclusion": 0.431,
-    "intl_inclusion": 0.294
-   },
-   {
-    "name": "Dawn",
-    "inclusion": 0.347,
-    "intl_inclusion": 0.216
+    "intl_inclusion": 0.288
    },
    {
     "name": "Drakloak",
     "inclusion": 0.431,
-    "intl_inclusion": 0.301
+    "intl_inclusion": 0.295
    },
    {
     "name": "Dreepy",
     "inclusion": 0.431,
-    "intl_inclusion": 0.301
+    "intl_inclusion": 0.295
    },
    {
-    "name": "Teal Mask Ogerpon ex",
-    "inclusion": 0.236,
-    "intl_inclusion": 0.112
+    "name": "Fezandipiti ex",
+    "inclusion": 0.833,
+    "intl_inclusion": 0.699
+   },
+   {
+    "name": "Dawn",
+    "inclusion": 0.347,
+    "intl_inclusion": 0.214
    },
    {
     "name": "Moltres",
     "inclusion": 0.264,
-    "intl_inclusion": 0.143
+    "intl_inclusion": 0.14
+   },
+   {
+    "name": "Teal Mask Ogerpon ex",
+    "inclusion": 0.236,
+    "intl_inclusion": 0.12
    },
    {
     "name": "Area Zero Underdepths",
     "inclusion": 0.208,
-    "intl_inclusion": 0.095
+    "intl_inclusion": 0.099
    }
   ],
   "biggest_jp_underindex": [
    {
     "name": "Judge",
     "inclusion": 0.222,
-    "intl_inclusion": 0.392
+    "intl_inclusion": 0.405
    },
    {
     "name": "Hilda",
@@ -622,34 +622,29 @@
     "intl_inclusion": 0.221
    },
    {
-    "name": "Shaymin",
-    "inclusion": 0.125,
-    "intl_inclusion": 0.275
-   },
-   {
     "name": "Switch",
     "inclusion": 0.111,
-    "intl_inclusion": 0.257
+    "intl_inclusion": 0.258
+   },
+   {
+    "name": "Shaymin",
+    "inclusion": 0.125,
+    "intl_inclusion": 0.27
    },
    {
     "name": "Crushing Hammer",
     "inclusion": 0.056,
-    "intl_inclusion": 0.198
+    "intl_inclusion": 0.2
    },
    {
     "name": "Air Balloon",
     "inclusion": 0.125,
-    "intl_inclusion": 0.254
-   },
-   {
-    "name": "Secret Box",
-    "inclusion": 0.083,
-    "intl_inclusion": 0.183
+    "intl_inclusion": 0.243
    },
    {
     "name": "Telepathic Psychic Energy",
     "inclusion": 0.111,
-    "intl_inclusion": 0.206
+    "intl_inclusion": 0.219
    },
    {
     "name": "Sacred Ash",
@@ -657,34 +652,39 @@
     "intl_inclusion": 0.123
    },
    {
-    "name": "Special Red Card",
-    "inclusion": 0.472,
-    "intl_inclusion": 0.561
+    "name": "Secret Box",
+    "inclusion": 0.083,
+    "intl_inclusion": 0.174
    },
    {
     "name": "Battle Cage",
     "inclusion": 0.028,
-    "intl_inclusion": 0.11
-   },
-   {
-    "name": "Eri",
-    "inclusion": 0.014,
-    "intl_inclusion": 0.091
+    "intl_inclusion": 0.111
    },
    {
     "name": "Enriching Energy",
     "inclusion": 0.014,
-    "intl_inclusion": 0.089
+    "intl_inclusion": 0.092
    },
    {
-    "name": "Team Rocket's Petrel",
-    "inclusion": 0.153,
-    "intl_inclusion": 0.218
+    "name": "Eri",
+    "inclusion": 0.014,
+    "intl_inclusion": 0.085
    },
    {
-    "name": "Jumbo Ice Cream",
-    "inclusion": 0.028,
-    "intl_inclusion": 0.093
+    "name": "Special Red Card",
+    "inclusion": 0.472,
+    "intl_inclusion": 0.542
+   },
+   {
+    "name": "Alakazam",
+    "inclusion": 0.014,
+    "intl_inclusion": 0.079
+   },
+   {
+    "name": "Kadabra",
+    "inclusion": 0.014,
+    "intl_inclusion": 0.079
    }
   ],
   "budew_inclusion": 0.4861111111111111

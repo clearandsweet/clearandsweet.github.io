@@ -165,6 +165,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     <a href="#trainers">Trainers</a>
     <a href="#calib">Calibration</a>
     <a href="#power">Card &amp; Deck Power</a>
+    <a href="#event" id="navEvent">Event breakdown</a>
     <a href="#damage">Damage value</a>
     <a href="#japan">Japan preview</a>
     <a href="#cards">Card inventory</a>
@@ -174,7 +175,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
   </nav>
   <main>
     <section id="top" class="head">
-      <div class="eyebrow">Pokémon TCG Standard · data through Regional Recife, 3–4 Oct 2026</div>
+      <div class="eyebrow" id="thru">Pokémon TCG Standard</div>
       <h1>H Rotation Meta Ledger</h1>
       <p class="scope" id="scope"></p>
       <div class="figs" id="figs"></div>
@@ -187,7 +188,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     <section id="meta">
       <div class="eyebrow">01 · Current metagame</div>
       <h2>Who is playing what, and who converts</h2>
-      <p class="muted">The current window is the four 2027-season Regionals (Baltimore, Brisbane, Frankfurt, Recife). Day 2 lift is an archetype's Day 2 rate divided by the field's. The shrunk lift pulls small samples toward 1.0 (30 pseudo-players), so a 9-player deck can't top the chart on luck. Win rate counts ties as ⅓ of a win and excludes mirrors.</p>
+      <p class="muted">The current window is the <span id="curEvents"></span>. Day 2 lift is an archetype's Day 2 rate divided by the field's. The shrunk lift pulls small samples toward 1.0 (30 pseudo-players), so a 9-player deck can't top the chart on luck. Win rate counts ties as ⅓ of a win and excludes mirrors.</p>
       <div class="chart" id="metaChart"></div>
       <div class="tbar"><input id="archQ" type="search" placeholder="Filter archetypes" aria-label="Filter archetypes"><select id="archWin" aria-label="Window"><option value="cur">Current format (top 100)</option><option value="worlds">Worlds 2026</option><option value="sup">Current, grouped by core Pokémon</option><option value="all">All events since the G rotation</option></select><span class="count" id="archCount"></span></div>
       <div class="tscroll" id="archTable"></div>
@@ -202,7 +203,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
       <div class="tscroll" id="survTable"></div>
       <div class="cols">
         <div class="callout"><h3>A naive survivor projection</h3><p class="small muted">Survivors only, re-weighted by current share × shrunk Day 2 lift. This is a starting prior to argue with. It knows nothing about new K cards or decks that don't exist yet.</p><div class="tscroll" id="projTable" style="max-height:420px"></div></div>
-        <div class="callout"><h3>Reading this</h3><ul class="tight small"><li>The top deck by a wide margin, Dragapult ex, is H-only, along with Dreepy, Drakloak and every Dusknoir variant partner.</li><li>The universal engine package (Fezandipiti ex, Budew, Munkidori, Buddy-Buddy Poffin, Night Stretcher, Crispin, Unfair Stamp) rotates together, so even "Intact" archetypes lose consistency cards.</li><li>Teal Mask Ogerpon ex rotates, which takes the Basic Box and Ogerpon Grass engines with it.</li><li>Decks built on I/J Megas (Kangaskhan, Excadrill, Lucario, Lopunny, Greninja, Starmie) and N's Zoroark keep their attackers.</li><li><b>Every ACE SPEC in Standard is <span class="mk h">H</span>.</b> After rotation the ACE SPEC slot is empty unless K adds new ones. The regression values the best of them (Secret Box, Unfair Stamp) at about +3 match-win points over an average card.</li></ul></div>
+        <div class="callout"><h3>Reading this</h3><ul class="tight small"><li>The top deck by a wide margin, Dragapult ex, is H-only, along with Dreepy, Drakloak and every Dusknoir variant partner.</li><li>The universal engine package (Fezandipiti ex, Budew, Munkidori, Buddy-Buddy Poffin, Night Stretcher, Crispin, Unfair Stamp) rotates together, so even "Intact" archetypes lose consistency cards.</li><li>Teal Mask Ogerpon ex rotates, which takes the Basic Box and Ogerpon Grass engines with it.</li><li>Decks built on I/J Megas (Kangaskhan, Excadrill, Lucario, Lopunny, Greninja, Starmie) and N's Zoroark keep their attackers.</li><li><b>Every ACE SPEC in Standard is <span class="mk h">H</span>.</b> After rotation the ACE SPEC slot is empty unless K adds new ones. Among ACE SPECs the regression ranks Secret Box, Precious Trolley and Unfair Stamp highest. How much an ACE SPEC is worth compared with any other card is poorly measured, because almost every list plays exactly one.</li></ul></div>
       </div>
     </section>
 
@@ -257,7 +258,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     <section id="calib">
       <div class="eyebrow">07b · Calibration from results</div>
       <h2>What the results say each resource is worth</h2>
-      <p class="muted">Every list from all 14 events (<span class="num" id="cNlists"></span> lists with 3+ recorded games) was regressed on its contents. Match win rate (ties = ⅓) and Day 2 were both used as outcomes. Controls are archetype × format and event fixed effects, plus a pilot-skill term: each player's record relative to their deck at their <em>other</em> events, available for <span id="cSkill"></span> of entries. Standard errors are clustered by player.</p>
+      <p class="muted">Every list from all <span class="nEv"></span> events (<span class="num" id="cNlists"></span> lists with 3+ recorded games) was regressed on its contents. Match win rate (ties = ⅓) and Day 2 were both used as outcomes. Controls are archetype × format and event fixed effects, plus a pilot-skill term: each player's record relative to their deck at their <em>other</em> events, available for <span id="cSkill"></span> of entries. Standard errors are clustered by player.</p>
       <div class="cols">
         <div class="callout"><h3>How the weights are fit</h3><ul class="tight small">
           <li><b>Stage 1:</b> the win-rate and Day 2 change per extra copy of each common card, within its archetype. Evolution lines that always move together are merged.</li>
@@ -281,7 +282,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
       <p class="small muted">Both tests are out of sample. "Next copy" leaves each card out of the stage-2 fit and predicts its measured value. "Whole deck" leaves each archetype out and predicts its win rate and Day 2 rate from Deck Power (section 08). The score is the reduction in squared error compared with predicting the average; 0% is no better than guessing the average, and negative is worse.</p>
       <div class="tscroll" id="wtTest"></div>
       <h3>Measured value of one more copy</h3>
-      <p class="small muted">Within-archetype, skill- and event-controlled. Values are relative to the card the slot would otherwise hold (usually a basic Energy or a one-of tech), so 0 means "as good as what it replaced". ±1.96 SE shown.</p>
+      <p class="small muted">Within-archetype, skill- and event-controlled. Values are relative to the card the slot would otherwise hold (usually a basic Energy or a one-of tech), so 0 means "as good as what it replaced". ±1.96 SE shown. ACE SPEC rows share a common level that is barely identified, since nearly every list plays exactly one; compare them with each other, not with other cards. That level moved by about 3 points when Louisville was added.</p>
       <div class="tbar"><input id="cvQ" type="search" placeholder="Filter cards" aria-label="Filter measured card values"><select id="cvType" aria-label="Card type"><option value="">All cards</option><option value="Trainer/Energy">Trainers &amp; Energy</option><option value="Pokémon">Pokémon</option></select><span class="count" id="cvCount"></span></div>
       <div class="tscroll" id="cvTable" style="max-height:520px"></div>
       <h3>Copy counts inside an archetype</h3>
@@ -296,7 +297,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     <section id="power">
       <div class="eyebrow">08 · Card and Deck Power</div>
       <h2>One number per card, summed over the 60</h2>
-      <p class="muted">Power puts everything a card does in a game on one scale. It counts the resources its Ability or Trainer effect produces, plus the Prizes its attacks take, minus the Prizes the opponent takes through it. A deck's Power is the sum over its 60 cards. It is computed for every list from all 14 events, then averaged by archetype.</p>
+      <p class="muted">Power puts everything a card does in a game on one scale. It counts the resources its Ability or Trainer effect produces, plus the Prizes its attacks take, minus the Prizes the opponent takes through it. A deck's Power is the sum over its 60 cards. It is computed for every list from all <span class="nEv"></span> events, then averaged by archetype.</p>
       <div class="figs" id="powFigs"></div>
       <div class="cols">
         <div class="callout"><h3>Definition</h3><ul class="tight small" id="powDef"></ul></div>
@@ -316,15 +317,40 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
       <div class="tscroll" id="pvTable"></div>
     </section>
 
+    <section id="event">
+      <div class="eyebrow">09 · Event breakdown</div>
+      <h2 id="evH"></h2>
+      <p class="muted" id="evIntro"></p>
+      <div class="figs" id="evFigs"></div>
+      <div class="cols">
+        <div class="chart"><h3 class="small" id="evPhaseH" style="margin-bottom:6px"></h3><div id="evPhase"></div></div>
+        <div class="chart"><h3 class="small" id="evRoundH" style="margin-bottom:6px"></h3><div id="evRound"></div></div>
+      </div>
+      <div class="cols">
+        <div class="callout"><h3>The field it faced, or how it played?</h3><ul class="tight small" id="evWhy"></ul></div>
+        <div class="callout"><h3>Pilots and lists</h3><ul class="tight small" id="evWho"></ul></div>
+      </div>
+      <h3 id="evFamH"></h3>
+      <div class="tscroll" id="evFamTable"></div>
+      <h3 id="evConvH"></h3>
+      <p class="small muted">Top-64 O/E is the number of top-64 finishers divided by the number expected from field share (64 × share). Above 1 means the deck converted better than its numbers alone would predict. "Other events" pools the rest of the current format, with expectations computed event by event so small and large Regionals are comparable.</p>
+      <div class="tbar"><input id="evQ" type="search" placeholder="Filter archetypes" aria-label="Filter archetypes"><span class="count" id="evCount"></span></div>
+      <div class="tscroll" id="evConvTable" style="max-height:520px"></div>
+      <div class="cols">
+        <div><h3 id="evMuH"></h3><p class="small muted">Non-mirror games only (other variants of the same family count as mirrors). "Expected" re-weights the other events' win rates (shrunk toward the family average with 30 pseudo-games) to this event's opponent mix.</p><div class="tscroll" id="evMuTable" style="max-height:460px"></div></div>
+        <div><h3 id="evListH"></h3><p class="small muted">Average copies per list, the main archetype only. Sorted by the size of the change.</p><div class="tscroll" id="evListTable" style="max-height:460px"></div></div>
+      </div>
+    </section>
+
     <section id="damage">
-      <div class="eyebrow">09 · Damage value</div>
+      <div class="eyebrow">10 · Damage value</div>
       <h2>Prize progress per attack against the current field</h2>
       <p class="muted">Each attacker's typical damage is run against a defender pool built from every archetype's real attackers, weighted by share, with Weakness and Resistance applied. Lillie's Clefairy ex gets Fairy Zone against Dragons. Prizes per attack = Σ share × min(1, damage ÷ HP) × Prizes the defender gives, plus bench damage at a discount. Prize efficiency divides that by the attacker's own Prize liability.</p>
       <div class="tscroll" id="dmgTable"></div>
     </section>
 
     <section id="japan">
-      <div class="eyebrow">10 · Japan preview</div>
+      <div class="eyebrow">11 · Japan preview</div>
       <h2>Storm Emeralda is already legal in Japan</h2>
       <p class="muted">Japan has Standard sets through M6 (Storm Emeralda), whose English release is pending. City League top-16 lists from the current Japanese season show which incoming cards matter. Japan's rotation (expected late January 2027) will be the first real post-H data, about three months before international.</p>
       <div class="cols"><div><h3>Most-played cards not yet in English</h3><div class="tscroll" id="jpNew" style="max-height:420px"></div></div><div><h3>City League archetypes</h3><div class="tscroll" id="jpArch" style="max-height:420px"></div></div></div>
@@ -332,7 +358,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     </section>
 
     <section id="cards">
-      <div class="eyebrow">11 · Card inventory</div>
+      <div class="eyebrow">12 · Card inventory</div>
       <h2>Every card in the current format, with its rotation status</h2>
       <p class="muted">Inclusion is the share of lists playing at least one copy; Day 2 and top-cut columns use only those players. Pokémon are separated by functional print, so Dunsparce (Trading Places) and Dunsparce (Dig) are different rows. Showing the 400 most-played of <span id="nCards"></span>; the full table is in the data folder.</p>
       <div class="tbar"><input id="cardQ" type="search" placeholder="Filter cards" aria-label="Filter cards"><select id="cardRot" aria-label="Rotation status"><option value="">All</option><option value="0">Rotating only</option><option value="1">Staying only</option></select><select id="cardCat" aria-label="Card type"><option value="">All types</option><option value="pokemon">Pokémon</option><option value="trainer">Trainer</option><option value="energy">Energy</option></select><span class="count" id="cardCount"></span></div>
@@ -340,7 +366,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     </section>
 
     <section id="ideas">
-      <div class="eyebrow">12 · Where to take this next</div>
+      <div class="eyebrow">13 · Where to take this next</div>
       <h2>Ways to calculate, arrange and use the data</h2>
       <div class="ideas">
         <div><h3>Skill-adjusted deck strength</h3><p class="small">Fit a Bradley–Terry / logistic model on all <span class="num" id="nMatches"></span> recorded matches with a term for each player and each archetype. Players recur across events, so this separates "good deck" from "good pilots". The output is a deck-strength number that won't be fooled by one strong team piloting a rogue list.</p></div>
@@ -357,14 +383,14 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     </section>
 
     <section id="eyetest">
-      <div class="eyebrow">13 · Eye test</div>
+      <div class="eyebrow">14 · Eye test</div>
       <h2>Initial numbers to check against your read</h2>
       <p class="muted">For each, tell me whether it feels high, low or right. Each maps to one knob in <code>model_config.py</code>.</p>
       <div id="eyeQs"></div>
     </section>
 
     <section id="notes">
-      <div class="eyebrow">14 · Data notes</div>
+      <div class="eyebrow">15 · Data notes</div>
       <h2>Sources, coverage and caveats</h2>
       <div class="cols">
         <div><ul class="tight small" id="sourceList"></ul></div>
@@ -396,7 +422,9 @@ let MARKS = {};
 const mark = (legal, marks, name) => {
   if (legal === 0 || legal === "0") return '<span class="mk h" title="Rotates: only H prints">H</span>';
   if (!marks && name) marks = MARKS[name] || "";
-  const m = String(marks || "").split("/").filter(x => x && "IJK".includes(x));
+  const all = String(marks || "").split("/").filter(Boolean);
+  const m = all.filter(x => "IJK".includes(x));
+  if (legal == null && !m.length && all.includes("H")) return '<span class="mk h" title="Rotates: only H prints">H</span>';
   const last = m.length ? m[m.length - 1] : "I/J";
   return `<span class="mk ok" title="Stays: has a legal ${esc(last)} print">${esc(last)}</span>`;
 };
@@ -461,6 +489,10 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
   const nLists = D.archetypes.reduce((s, a) => s + (a.players || 0), 0);
   $("#gen").textContent = D.generated;
   $("#nJpRe").textContent = int(D.jp_reprints_H);
+  const lastEv = (cur.events || [])[cur.events.length - 1] || {};
+  $("#thru").textContent = `Pokémon TCG Standard · data through Regional ${lastEv.city || ""}, ${lastEv.date || ""}`;
+  $("#curEvents").textContent = `${cur.events.length} 2027-season Regionals (${cur.events.map(e => e.city).join(", ")})`;
+  document.querySelectorAll(".nEv").forEach(e => e.textContent = D.events.length);
   $("#scope").innerHTML = `Current format: ${int(cur.players)} players across ${cur.events.map(e => esc(e.city)).join(", ")}, with ${int(cur.day2)} Day 2 runs and ${cur.archetypes} labeled archetypes. Context: Worlds 2026 (${int((W.WORLDS || {}).players)}) and ${int(((W.POR || {}).players || 0) + ((W.CRI || {}).players || 0))} players from the earlier post-G-rotation Regionals, plus ${int(((D.jp.cityleague || {}).lists || 0) + ((D.jp.major || {}).lists || 0))} Japanese lists. Every list is checked card by card against every international print for rotation.`;
   const tiers = Object.fromEntries((D.tiers || []).map(t => [t.tier, t]));
   const dies = (tiers.Dies || {}).share || 0, loses = (tiers.Loses || {}).share || 0;
@@ -673,7 +705,7 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
       <li>Search: <b>${fx((W.tutor || {}).fitted_weight, 2)}</b> CE per card searched (hand-set 1.5). Draw: <b>${fx((W.draw || {}).fitted_weight, 2)}</b> (hand-set 1.0). Acceleration: <b>${fx((W.accel || {}).fitted_weight, 2)}</b> per extra attachment (hand-set 2.0).</li>
       <li>The average Supporter play is worth <b>${fx(Object.entries(M.avg_supporter_components || {}).reduce((s, [g, x]) => s + x * ((W[g] || {}).fitted_weight || 0), 0), 2)}</b> fitted CE. That's the bar a Supporter has to clear on the turn you play it.</li>
       <li>Discards and hand shuffles come out <em>positive</em> at the margin, not as costs. Ultra Ball fodder fuels recursion, and Lillie's / Unfair Stamp reshuffles refresh dead hands.</li></ul>`;
-    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per attachment)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Disruption (per card / Energy removed)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)", ace: "Being an ACE SPEC (vs average card)" };
+    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per attachment)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Disruption (per card / Energy removed)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)", ace: "Being an ACE SPEC (level poorly identified)" };
     table($("#ceTable"), D.ce_weights || [], [
       { k: "group", l: "Resource", nm: 1, f: v => esc(LBL[v] || v) },
       { k: "hand_weight", l: "Hand-set CE", n: 1, f: v => fx(v, 2) },
@@ -901,6 +933,135 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
     ]);
   })();
 
+  // ---- event breakdown
+  (function eventCmp() {
+    const E = D.event_cmp || {}, S = E.summary;
+    if (!S) { $("#event").hidden = true; $("#navEvent").hidden = true; return; }
+    const F = S.fam, fam = S.family_name, ev = S.event, M = S.matchups || {};
+    const sgn = (v, d = 1) => v == null ? "–" : `${v >= 0 ? "+" : "−"}${Math.abs(v).toFixed(d)}`;
+    $("#navEvent").textContent = ev;
+    const FE = E.fam_by_event || [], others = FE.filter(r => !r.focus);
+    $("#evH").textContent = `${ev} against the other ${S.window === "CUR" ? "2027-season Regionals" : "events in its format"}`;
+    $("#evIntro").innerHTML = `${int(S.players)} players and ${S.rounds} rounds including top cut. "${esc(fam)}" means the whole family: every archetype built on ${esc(fam)} ex (the plain build plus the Dusknoir, Blaziken and Dudunsparce variants). Top 64 is by final placement. The rest of the report now includes ${esc(ev)} in the current-format numbers.`;
+    const rng = k => `${pct(Math.min(...others.map(r => r[k])), 0)}–${pct(Math.max(...others.map(r => r[k])), 0)}`;
+    $("#evFigs").innerHTML = [
+      [pct(F.field_share, 0), `of the field played ${esc(fam)} (other events ${rng("field_share")})`],
+      [`${F.top64}<span class="small muted"> / 64</span>`, `top-64 finishers were ${esc(fam)}; field share alone predicts ${fx(F.top64_expected, 0)}`],
+      [`${fx(S.focus_top64_oe, 2)}×`, `top-64 conversion vs field share (other events combined ${fx(S.rest_top64_oe, 2)}×)`],
+      [`${F.top8}<span class="small muted"> / 8</span>`, `of the top 8 (top 16: ${F.top16})`],
+    ].map(([v, l]) => `<div class="fig"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+
+    function lineChart(host, series, xs, xlab, yfmt, ymax, aria) {
+      const Wd = 520, H = 300, L = 44, R = 104, T = 12, B = 34;
+      const sx = i => L + (Wd - L - R) * (xs.length > 1 ? (xs.indexOf(i)) / (xs.length - 1) : 0.5);
+      const sy = v => T + (H - T - B) * (1 - v / ymax);
+      let s = `<svg viewBox="0 0 ${Wd} ${H}" role="img" aria-label="${esc(aria)}">`;
+      const step = ymax > 0.5 ? 0.1 : 0.05;
+      for (let v = 0; v <= ymax + 1e-9; v += step) s += `<line class="grid" x1="${L}" x2="${Wd - R}" y1="${sy(v)}" y2="${sy(v)}"/><text x="${L - 6}" y="${sy(v) + 4}" text-anchor="end">${yfmt(v)}</text>`;
+      xs.forEach(x => { s += `<text x="${sx(x)}" y="${H - B + 16}" text-anchor="middle">${esc(xlab(x))}</text>`; });
+      const ends = [];
+      series.slice().sort((a, b) => (a.focus ? 1 : 0) - (b.focus ? 1 : 0)).forEach(se => {
+        const pts = se.pts.filter(p => xs.includes(p[0]));
+        if (!pts.length) return;
+        const d = pts.map((p, i) => `${i ? "L" : "M"}${sx(p[0]).toFixed(1)},${sy(p[1]).toFixed(1)}`).join(" ");
+        const col = se.focus ? "var(--bar-2)" : "var(--ink-3)";
+        s += `<path d="${d}" fill="none" stroke="${col}" stroke-width="${se.focus ? 2.6 : 1.3}" ${se.dash ? 'stroke-dasharray="4 4"' : ""} stroke-linejoin="round" stroke-linecap="round"/>`;
+        if (!se.dash) pts.forEach(p => { s += `<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="${se.focus ? 3.2 : 2.2}" fill="${col}"/>`; });
+        const last = pts[pts.length - 1];
+        ends.push({ y: sy(last[1]), x: sx(last[0]), name: se.name, focus: se.focus, col });
+      });
+      ends.sort((a, b) => a.y - b.y);
+      for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 13) ends[i].y = ends[i - 1].y + 13;
+      ends.forEach(e => { s += `<text x="${e.x + 8}" y="${e.y + 4}" style="fill:${e.col};${e.focus ? "font-weight:700" : ""}">${esc(e.name)}</text>`; });
+      host.innerHTML = s + "</svg>";
+    }
+    const PHS = ["field", "day2", "top64", "top16"], PHL = { field: "Field", day2: "Day 2", top64: "Top 64", top16: "Top 16" };
+    const ph = E.phase || [];
+    const evs = [...new Set(ph.filter(r => r.tid !== "rest").map(r => r.tid))];
+    const ser = evs.map(t => { const rr = ph.filter(r => r.tid === t); return { name: rr[0].event, focus: t === S.focus, pts: PHS.map(p => [p, (rr.find(r => r.phase === p) || { share: 0 }).share]) }; });
+    const ymax1 = Math.min(1, Math.ceil((Math.max(...ser.flatMap(x => x.pts.map(p => p[1]))) + 0.02) * 10) / 10);
+    $("#evPhaseH").textContent = `${fam} share at each stage, by event`;
+    lineChart($("#evPhase"), ser, PHS, x => PHL[x], v => Math.round(v * 100) + "%", ymax1, `${fam} share of the field, Day 2, top 64 and top 16 at each current-format event`);
+    const pr = E.progress || [];
+    const rounds = [...new Set(pr.map(r => r.round))].sort((a, b) => a - b);
+    const ser2 = evs.map(t => { const rr = pr.filter(r => r.tid === t); return { name: (rr[0] || {}).event || t, focus: t === S.focus, pts: rr.map(r => [r.round, r.share_top64]) }; });
+    const fa = pr.filter(r => r.tid === S.focus);
+    ser2.push({ name: "whole field", focus: true, dash: true, pts: fa.map(r => [r.round, r.share_active]) });
+    const ymax2 = Math.min(1, Math.ceil((Math.max(...ser2.flatMap(x => x.pts.map(p => p[1]))) + 0.02) * 10) / 10);
+    $("#evRoundH").textContent = `${fam} share of the top 64 by match points after each Swiss round (dashed: share of everyone still playing at ${ev})`;
+    lineChart($("#evRound"), ser2, rounds, x => x, v => Math.round(v * 100) + "%", ymax2, `${fam} share of the top 64 standings after each round`);
+
+    const MU = E.matchups || [];
+    const shifts = MU.filter(r => r.games_focus >= 40 && r.mix_rest != null).map(r => ({ ...r, dmix: r.mix_focus - r.mix_rest })).sort((a, b) => a.dmix - b.dmix);
+    const seF = Math.sqrt(M.actual_focus * (1 - M.actual_focus) / Math.max(1, M.games_focus));
+    const mtxt = r => `${esc(r.name)} (${pct(r.mix_focus, 0)} of its games vs ${pct(r.mix_rest, 0)}; ${esc(fam)} wins ${pct(r.wr_rest_shrunk, 0)} of those)`;
+    $("#evWhy").innerHTML = [
+      `${esc(fam)} won <b>${pct(M.actual_focus)}</b> of ${int(M.games_focus)} non-mirror games at ${esc(ev)} (±${fx(196 * seF, 1)}), against ${pct(M.actual_rest)} at the other events.`,
+      `Re-weighting the other events' matchups to the opponents it met at ${esc(ev)} predicts <b>${pct(M.expected_focus_from_rest)}</b>. The field mix accounts for ${sgn((M.expected_focus_from_rest - M.actual_rest) * 100)} points and the remaining ${sgn((M.actual_focus - M.expected_focus_from_rest) * 100)} points came from how the games went: lists, pilots or variance.`,
+      shifts.length ? `It saw more ${shifts.slice(-2).reverse().map(mtxt).join(" and ")}, and less ${shifts.slice(0, 2).map(mtxt).join(" and ")}.` : "",
+      `Day 2: ${pct(F.day2_rate)} of ${esc(fam)} players made it, against ${pct(F.field_day2_rate)} of the field.`,
+      S.by_day ? `Non-mirror win rate by day: Day 1 ${pct(S.by_day.focus_day1.wr)} (other events ${pct(S.by_day.rest_day1.wr)}), Day 2 ${pct(S.by_day.focus_day2.wr)} over ${int(S.by_day.focus_day2.games)} games (other events ${pct(S.by_day.rest_day2.wr)}). ${esc(fam)} usually gives ground in the stronger Day 2 field; at ${esc(ev)} it gave much less.` : "",
+    ].filter(Boolean).map(x => `<li>${x}</li>`).join("");
+    const SK = E.skill || [];
+    const skv = (t, g) => (SK.find(r => r.tid === t && r.group === g) || {});
+    const othSk = g => { const xs = others.map(r => skv(r.tid, g)).filter(r => r.with_history); const n = xs.reduce((s, r) => s + r.with_history, 0); return n ? xs.reduce((s, r) => s + r.mean_skill_pts * r.with_history, 0) / n : null; };
+    const fF = skv(S.focus, "family"), fR = skv(S.focus, "rest of field"), fT = skv(S.focus, "family, top 64"), rT = skv(S.focus, "rest, top 64");
+    const LCh = E.list_changes || [];
+    const ch = LCh.slice(0, 4).map(r => `${esc(r.name)} ${fx(r.copies_rest, 2)} → ${fx(r.copies_focus, 2)}`).join(", ");
+    const t64p = LCh.filter(r => r.d_incl_top64 >= 0.12).sort((a, b) => b.d_incl_top64 - a.d_incl_top64).slice(0, 3);
+    const t64n = LCh.filter(r => r.d_incl_top64 <= -0.12).sort((a, b) => a.d_incl_top64 - b.d_incl_top64).slice(0, 3);
+    const t64s = r => `${esc(r.name)} (${pct(r.incl_focus_top64, 0)} of top-64 lists vs ${pct(r.incl_focus_other, 0)} of the rest)`;
+    $("#evWho").innerHTML = [
+      `Pilot skill is each player's results at their <em>other</em> events, relative to their deck (win-rate points, shrunk). ${esc(fam)} players at ${esc(ev)} averaged <b>${sgn(fF.mean_skill_pts)}</b> (${int(fF.with_history)} with history) vs ${sgn(fR.mean_skill_pts)} for the rest of the field. At the other events the same gap was ${sgn(othSk("family"))} vs ${sgn(othSk("rest of field"))}.`,
+      `Among top-64 finishers: ${esc(fam)} ${sgn(fT.mean_skill_pts)} (${int(fT.with_history)}) vs others ${sgn(rT.mean_skill_pts)} (${int(rT.with_history)}).`,
+      ch ? `Biggest list changes in the main ${esc(fam)} build (average copies, other events → ${esc(ev)}): ${ch}.` : "",
+      (t64p.length || t64n.length) ? `Top-64 ${esc(fam)} lists against the rest at ${esc(ev)} (${int((LCh[0] || {}).n_focus_top64)} lists, so read loosely): ${[t64p.length ? "more " + t64p.map(t64s).join(", ") : "", t64n.length ? "fewer " + t64n.map(t64s).join(", ") : ""].filter(Boolean).join("; ")}.` : "",
+    ].filter(Boolean).map(x => `<li>${x}</li>`).join("");
+
+    $("#evFamH").textContent = `${fam} at every current-format event`;
+    table($("#evFamTable"), FE, [
+      { k: "event", l: "Event", nm: 1, f: (v, r) => r.focus ? `<b>${esc(v)}</b>` : esc(v) },
+      { k: "players", l: "Players", n: 1, f: int },
+      { k: "field_share", l: "Field share", n: 1, f: v => pct(v) },
+      { k: "day2_share", l: "Day 2 share", n: 1, f: v => pct(v) },
+      { k: "day2_rate", l: "Day 2 rate", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">field ${pct(r.field_day2_rate, 0)}</span>` },
+      { k: "top64", l: "Top 64", n: 1, f: (v, r) => `${v} <span class="muted small">exp ${fx(r.top64_expected, 1)}</span>` },
+      { k: "top64_p", l: "p", n: 1, f: v => v != null && v < 0.001 ? "<0.001" : fx(v, 3), t: "Binomial test of the top-64 count against field share" },
+      { k: "top16", l: "Top 16", n: 1 }, { k: "top8", l: "Top 8", n: 1 },
+      { k: "wr_nonmirror", l: "Win % (non-mirror)", n: 1, f: v => pct(v) },
+      { k: "winner_deck", l: "Winner" },
+    ], { sort: "tid", dir: 1 });
+    $("#evConvH").textContent = `Who converted at ${ev}`;
+    let evQ = "";
+    const cvT = table($("#evConvTable"), E.conversion || [], [
+      { k: "#", l: "#", n: 1 },
+      { k: "name", l: "Archetype", nm: 1, f: (v, r) => r.family ? `<b>${esc(v)}</b>` : esc(v) },
+      { k: "players", l: "Players", n: 1, f: int },
+      { k: "share", l: "Share", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">${pct(r.share_rest)}</span>`, t: "This event (other events in grey)" },
+      { k: "day2_rate", l: "Day 2 rate", n: 1, f: (v, r) => `${pct(v, 0)} <span class="muted small">${pct(r.day2_rate_rest, 0)}</span>` },
+      { k: "top64", l: "Top 64", n: 1, f: (v, r) => `${v} <span class="muted small">exp ${fx(r.top64_expected, 1)}</span>` },
+      { k: "top64_oe", l: "Top-64 O/E", n: 1, f: (v, r) => `${fx(v, 2)} <span class="muted small">${fx(r.top64_oe_rest, 2)}</span>` },
+      { k: "top64_p", l: "p", n: 1, f: v => v != null && v < 0.001 ? "<0.001" : fx(v, 3) },
+      { k: "wr_nonmirror", l: "Win % (non-mirror)", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">${pct(r.wr_nonmirror_rest)}</span>` },
+    ], { sort: "players", filter: r => !evQ || String(r.name).toLowerCase().includes(evQ), onCount: n => $("#evCount").textContent = `${n} archetypes` });
+    $("#evQ").addEventListener("input", e => { evQ = e.target.value.toLowerCase(); cvT.render(); });
+    $("#evMuH").textContent = `${fam}'s matchups: ${ev} vs other events`;
+    table($("#evMuTable"), MU.filter(r => r.games_focus >= 20), [
+      { k: "name", l: "Opponent", nm: 1 },
+      { k: "games_focus", l: "Games", n: 1, f: int },
+      { k: "mix_focus", l: "Share of games", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">${pct(r.mix_rest)}</span>` },
+      { k: "wr_focus", l: "Win %", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">${pct(r.wr_rest)}</span>` },
+    ], { sort: "games_focus" });
+    $("#evListH").textContent = `What changed in ${fam} lists`;
+    table($("#evListTable"), LCh.slice(0, 30), [
+      { k: "name", l: "Card", nm: 1, f: v => `${mark(null, "", v)} ${esc(v)}` },
+      { k: "copies_focus", l: ev, n: 1, f: v => fx(v, 2) },
+      { k: "copies_rest", l: "Other events", n: 1, f: v => fx(v, 2) },
+      { k: "d_copies", l: "Change", n: 1, f: v => sgn(v, 2) },
+      { k: "copies_focus_top64", l: "Top-64 lists", n: 1, f: v => fx(v, 2) },
+    ]);
+  })();
+
   // ---- damage
   table($("#dmgTable"), D.damage.filter(r => r.field_inclusion >= 0.003), [
     { k: "#", l: "#", n: 1 },
@@ -974,7 +1135,7 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
     [`Teal Mask Ogerpon ex copies. Simulated Teal Dances per game in Basic Box at 1/2/3/4 copies: ${[1, 2, 3, 4].map(k => fx(TC["Teal Mask Ogerpon ex|" + k], 1)).join(" / ")}, so the 3rd and 4th copies add almost nothing once Grass in hand binds. Measured: Raging Bolt Ogerpon ${ccTxt("Raging Bolt Ogerpon", "Teal Mask")}; Basic Box ${ccTxt("Basic Box", "Teal Mask")}.`, "Grass-in-hand cap; copy curves"],
     [`Latias ex: the simulation says the 2nd copy adds ~${fx((TC["Latias ex|2"] || 0) - (TC["Latias ex|1"] || 0), 1)} uses (Prize insurance). Measured: Basic Box ${ccTxt("Basic Box", "Latias")}; Slowking ${ccTxt("Slowking", "Latias")}.`, "Copy curves; count effects"],
     [`Budew in Dragapult: ${ccTxt("Dragapult", "Budew")}. The simulation now credits the 2nd Budew through better turn-1 access (${fx(TC["Budew|1"], 2)} → ${fx(TC["Budew|2"], 2)} lock turns per game).`, "Budew early-turn weights [0.95, 0.6, 0.25]"],
-    [`ACE SPECs measure at Secret Box ${wpc("Secret Box")}, Unfair Stamp ${wpc("Unfair Stamp")}, Enriching Energy ${wpc("Enriching Energy")}, Prime Catcher ${wpc("Prime Catcher")}, Hero's Cape ${wpc("Hero's Cape")}, and every one of them rotates. Does losing the ACE slot feel like the biggest single change?`, "Measured"],
+    [`ACE SPECs measure at Secret Box ${wpc("Secret Box")}, Unfair Stamp ${wpc("Unfair Stamp")}, Enriching Energy ${wpc("Enriching Energy")}, Prime Catcher ${wpc("Prime Catcher")}, Hero's Cape ${wpc("Hero's Cape")}, and every one of them rotates. Does losing the ACE slot feel like the biggest single change?`, "Measured; compare ACE SPECs with each other, since their shared level is poorly identified"],
     [`Fezandipiti ex reaches the board in ${pct((S["Fezandipiti ex"] || {}).p_played_if_in_deck, 0)} of games when listed; Latias ex ${pct((S["Latias ex"] || {}).p_played_if_in_deck, 0)}; Meowth ex ${pct((S["Meowth ex"] || {}).p_played_if_in_deck, 0)}. Unchanged from round 1 except the prized-search fix.`, "Play-down model"],
   ];
   $("#eyeQs").innerHTML = qs.map((q, i) => `<div class="q"><span class="qn">${i + 1}</span><div><p>${q[0]}</p><p class="small muted">Knob: ${q[1]}</p></div></div>`).join("");
