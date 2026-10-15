@@ -8,7 +8,7 @@ import sys
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from manifest import ITEMS  # noqa: E402
+from manifest import BACKDROPS, ITEMS  # noqa: E402
 
 W, H = 400, 600
 SIDE = 20           # horizontal text padding
@@ -31,10 +31,13 @@ def crop_to_ratio(im, fx, fy):
     return im.crop((x, y, x + cw, y + ch))
 
 
-def transparent_on_backdrop(im):
-    """Cut-out character art: place it large and top-aligned on a soft pink gradient."""
+DEFAULT_BACKDROP = ((253, 236, 243), (226, 120, 160))
+
+
+def transparent_on_backdrop(im, colors=DEFAULT_BACKDROP):
+    """Cut-out character art: place it large and top-aligned on a soft vertical gradient."""
     bg = Image.new("RGB", (W, H))
-    top, bottom = (253, 236, 243), (226, 120, 160)
+    top, bottom = colors
     px = bg.load()
     for y in range(H):
         t = y / (H - 1)
@@ -156,7 +159,7 @@ def build(src_dir, out_dir):
             fx, fy = focus
         if im.mode in ("RGBA", "LA", "P") and "A" in im.convert("RGBA").getbands() and \
                 im.convert("RGBA").getchannel("A").getextrema()[0] < 250:
-            card = transparent_on_backdrop(im.convert("RGBA"))
+            card = transparent_on_backdrop(im.convert("RGBA"), BACKDROPS.get(slug, DEFAULT_BACKDROP))
         else:
             card = crop_to_ratio(im.convert("RGB"), fx, fy).resize((W, H), Image.LANCZOS)
         card = lower_third(card, kicker, title)
