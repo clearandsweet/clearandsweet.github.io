@@ -25,7 +25,7 @@ wr = nm.groupby(["window", "deck"])[["w", "l", "t"]].sum()
 wr["games"] = wr.sum(axis=1); wr["wr"] = (wr["w"] + wr["t"] / 3) / wr["games"]
 wr.index.names = ["window", "deck_id"]
 DL["prize_race"] = DL["offense_prizes"] - DL["liability_prizes"]
-cols = [f"effect_{w}" for w in WS] + [f"power_{w}" for w in WS] + [f"power_H_{w}" for w in WS] + ["offense_prizes", "liability_prizes", "prize_race", "offense_H", "dmgheal_units"]
+cols = [f"effect_{w}" for w in WS] + [f"power_{w}" for w in WS] + [f"power_H_{w}" for w in WS] + ["offense_prizes", "liability_prizes", "prize_race", "offense_H", "dmgheal_units", "prize_units"]
 AW = DL.groupby(["window", "deck_id"]).agg(lists=("day2", "size"), day2_rate=("day2", "mean"), **{c: (c, "mean") for c in cols})
 AW = AW.join(wr[["wr", "games"]])
 AW["name"] = [names.get(d, d) for d in AW.index.get_level_values("deck_id")]
@@ -35,8 +35,9 @@ AW.to_csv(os.path.join(O, "power_archetypes_all.csv"))
 from scipy.stats import spearmanr
 V = AW[(AW["lists"] >= 30) & (AW["games"] >= 300)].copy().reset_index()
 X10 = C.POWER_CE_PER_PRIZE
-V["effect_hand_base"] = V["effect_hand"] - 100 / C.HP_PER_PRIZE * X10 * V["dmgheal_units"]
-for c in cols + ["wr", "day2_rate", "effect_hand_base", "dmgheal_units"]:
+DMG_PER_X = 100 * C.REALIZATION / C.HP_PER_PRIZE          # CE per 100-HP unit, per CE-per-Prize
+V["effect_hand_base"] = V["effect_hand"] - DMG_PER_X * X10 * V["dmgheal_units"] - X10 * V["prize_units"]
+for c in cols + ["wr", "day2_rate", "effect_hand_base", "dmgheal_units", "prize_units"]:
     V[c + "_dm"] = V[c] - V.groupby("window")[c].transform("mean")
 def wls(X, y, w):
     Wh = np.sqrt(w); b, *_ = np.linalg.lstsq(X * Wh[:, None], y * Wh, rcond=None); return b
@@ -50,7 +51,7 @@ def skill(x, ycol, cap):
     return 1 - np.average((y - pred) ** 2, weights=w) / np.average((y - pn) ** 2, weights=w)
 def hand_power(X):
     if X == "inf": return V["prize_race_dm"].values
-    return (V["effect_hand_base_dm"] + 100 / C.HP_PER_PRIZE * X * V["dmgheal_units_dm"] + X * V["prize_race_dm"]).values
+    return (V["effect_hand_base_dm"] + DMG_PER_X * X * V["dmgheal_units_dm"] + X * (V["prize_units_dm"] + V["prize_race_dm"])).values
 models = [("Power, hand-set weights", V["power_hand_dm"].values), ("Power, fitted weights", V["power_fitted_dm"].values),
           ("Power, data-only weights", V["power_data_dm"].values), ("Effect only (hand-set)", V["effect_hand_dm"].values),
           ("Prize race only", V["prize_race_dm"].values)]

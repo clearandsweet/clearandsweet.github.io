@@ -2,17 +2,8 @@
 import os, json
 import pandas as pd
 import model_config as C
-RAW2G = {raw: g for g, raws in C.COMPONENT_GROUPS.items() for raw in raws}
-
 def groups(comp):
-    v = {}
-    for k, x in comp.items():
-        g = RAW2G.get(k)
-        if g is None: continue
-        if g == "cost": x = abs(x)
-        if g in ("damage_100hp", "heal_100hp"): x = x / 100
-        v[g] = v.get(g, 0) + x
-    return v
+    return C.group_units(comp)
 
 def load(D):
     p = os.path.join(D, "out", "ce_weights_fitted.csv")

@@ -1,8 +1,8 @@
 {
  "CRI": {
   "attacks_per_game": 4.891447664949713,
-  "p_gust": 0.3394774526710497,
-  "kappa": 0.5807270938311889,
+  "p_gust": 0.3354005916310785,
+  "kappa": 0.5808652517820768,
   "attack_pool": {
    "Dragapult ex": 0.2784,
    "Alakazam": 0.0552,
@@ -44,12 +44,13 @@
    "Hariyama": 0.0041,
    "Arboliva ex": 0.0034,
    "Iron Leaves ex": 0.0024
-  }
+  },
+  "gust_gain_prizes": 0.051377516573638794
  },
  "CUR": {
   "attacks_per_game": 4.8581799334874844,
-  "p_gust": 0.32666605277380323,
-  "kappa": 0.5937362009257994,
+  "p_gust": 0.3243389112208395,
+  "kappa": 0.5938068470289349,
   "attack_pool": {
    "Dragapult ex": 0.2365,
    "Alakazam": 0.0687,
@@ -99,12 +100,13 @@
    "N's Reshiram": 0.0026,
    "Mega Venusaur ex": 0.0025,
    "Arboliva ex": 0.0024
-  }
+  },
+  "gust_gain_prizes": 0.048665053749046096
  },
  "POR": {
   "attacks_per_game": 4.916049693937902,
-  "p_gust": 0.35200338903003947,
-  "kappa": 0.5886911846124254,
+  "p_gust": 0.34858463134263035,
+  "kappa": 0.588760649639155,
   "attack_pool": {
    "Dragapult ex": 0.2371,
    "Teal Mask Ogerpon ex": 0.0545,
@@ -144,12 +146,13 @@
    "Hop's Trevenant": 0.0034,
    "Iron Leaves ex": 0.0031,
    "N's Reshiram": 0.0021
-  }
+  },
+  "gust_gain_prizes": 0.02921537722299348
  },
  "WORLDS": {
   "attacks_per_game": 4.930003056672921,
-  "p_gust": 0.34567825807385993,
-  "kappa": 0.5576084190954739,
+  "p_gust": 0.3437062432284977,
+  "kappa": 0.5576940464670807,
   "attack_pool": {
    "Dragapult ex": 0.3488,
    "Mega Kangaskhan ex": 0.0839,
@@ -185,6 +188,7 @@
    "Team Rocket's Mewtwo ex": 0.0025,
    "Mega Chandelure ex": 0.0024,
    "Toxtricity": 0.002
-  }
+  },
+  "gust_gain_prizes": 0.07124611435686402
  }
 }

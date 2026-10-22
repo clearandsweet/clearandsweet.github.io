@@ -3,22 +3,33 @@ Units: CE = 'card equivalent' (the value of drawing one random card from your de
 """
 # Probability the game is still running at the start of your own turn t (t = 1..10).
 P_ALIVE = [1.0, 1.0, 1.0, 1.0, 0.92, 0.78, 0.60, 0.40, 0.22, 0.10]
-PRIZE_TO_CE = 3.0          # 1 Prize card of progress ~ 3 CE
+PRIZE_TO_CE = 10.0         # 1 Prize ~ 10 CE: picked by cross-validating Deck Power against archetype results (power_eval.py)
 HP_PER_PRIZE = 140.0       # meta-weighted HP you must chew through per Prize (recomputed from data when possible)
+REALIZATION = 0.6          # share of raw damage progress that turns into Prizes (heals, retreats, games ending); measured in power.py
+# Price list: CE per unit of each resource. Every Ability, attack effect and Trainer is priced from these and nothing else.
 CE = {
     "draw": 1.0,           # draw 1 random card
-    "tutor": 1.5,          # search 1 specific card
     "select2": 1.25,       # look at 2, keep 1
-    "accel": 1.0,          # one extra Energy attachment action (tempo)
-    "energy_card": 1.0,    # an Energy card that didn't come from your hand
-    "retreat_energy": 2.0, # each Energy you didn't have to discard to retreat (card + attachment)
-    "discard_cost": 0.5,   # each card you must discard as a cost
-    "hand_reset": 0.6,     # each card shuffled away by your own shuffle-draw
-    "opp_card": 0.7,       # each card removed/disrupted from the opponent's hand
+    "tutor": 1.5,          # search 1 specific card
+    "recover": 1.25,       # 1 card back from the discard pile
+    "accel": 1.0,          # one Energy attachment beyond your one per turn (tempo)
+    "energy_card": 1.0,    # an Energy that went into play without coming from your hand (the card itself)
+    "retreat_energy": 2.0, # each Energy you didn't discard to retreat (= the card + re-attaching it)
+    "gust": 2.0,           # pick the opponent's Active (the regression prices a gust at ~1.4 searches)
+    "opp_card": 0.7,       # each card removed from / reset in the opponent's hand
+    "energy_denial": 2.0,  # each opposing Energy removed (their card + their attachment)
+    "item_lock": 1.8,      # each turn the opponent can't play Items
+    "evo_tempo": 2.5,      # an evolution turn skipped
+    "dmg": PRIZE_TO_CE * REALIZATION / HP_PER_PRIZE,    # per HP of damage (100 HP ~ 4.3 CE)
+    "heal": PRIZE_TO_CE * REALIZATION / HP_PER_PRIZE,   # per HP healed or added
+    "prize": PRIZE_TO_CE,  # an extra Prize taken (Briar)
+    "turn_end": -PRIZE_TO_CE,   # per expected Prize lost when an effect ends your turn
+    "discard": -0.5,       # each card you must discard as a cost
+    "hand_reset": -0.6,    # each of your cards shuffled away by your own shuffle-draw
 }
 def dmg_ce(hp):
-    """Convert damage (HP) into CE through Prize progress."""
-    return hp / HP_PER_PRIZE * PRIZE_TO_CE
+    """Convert damage (HP) into CE through realized Prize progress."""
+    return hp * CE["dmg"]
 
 # ---------------- support Pokémon play-down model ----------------
 # horizon: own turn by which the card 'should' hit the bench if wanted.
@@ -69,8 +80,7 @@ ITEM_LOCK = {
 }
 BUDEW_LOCK_TURNS = {"first": 1.5, "second": 1.9}   # expected Itchy Pollen uses per game once Budew is out (report figure)
 # engine model: Budew is used on own turns 1-3 with these weights when it is in play (sum = max lock turns per game)
-ITEM_LOCK_CE_PER_ITEM = 0.5                        # value of each opposing Item held back for a turn
-ITEM_LOCK_SETUP_PENALTY = 1.0                      # extra tempo lost by setup decks (Rare Candy / Poffin turns)
+# each locked turn is priced at CE["item_lock"] (~0.5 CE per held-back Item x ~1.5 Items + setup tempo)
 
 # ---------------- engines (per-turn / on-play abilities) ----------------
 # kind: turn (once per turn per copy), turn1 (once per turn total), play (once when played/evolved), passive (per turn),
@@ -141,110 +151,6 @@ ENGINES = {
     "Jellicent ex":         {"kind": "passive", "cap": 1, "trigger": 0.6, "value": {"item_lock": 1}, "surv": 0.9},
     "Yveltal":              {"kind": "attack", "cap": 1, "trigger": 0.5, "value": {"gust": 0.6, "dmg": 20}, "surv": 0.85},
 }
-GUST_CE = 2.0
-
-# ---------------- trainers: CE per play (before plays-per-game) ----------------
-TRAINER_CE = {
-    "Lillie's Determination": (4.6, "draw 6 (8 at 6 Prizes) minus ~3 cards shuffled away"),
-    "Judge": (3.0, "draw 4 minus own hand, plus opponent hand disruption"),
-    "Boss's Orders": (2.0 + 0.0, "gust: chooses the KO target (~0.65 Prize of extra value)"),
-    "Ultra Ball": (0.75, "tutor any Pokémon (1.75) minus 2 discards"),
-    "Poké Pad": (1.5, "tutor a non-Rule Box Pokémon"),
-    "Buddy-Buddy Poffin": (3.25, "two Basics straight to the Bench"),
-    "Nest Ball": (1.6, "Basic straight to the Bench"),
-    "Night Stretcher": (1.25, "recover a Pokémon or basic Energy"),
-    "Dawn": (3.0, "Basic + Stage 1 + Stage 2 tutor (~2 effective; the Basic is usually in play)"),
-    "Hilda": (3.0, "Evolution Pokémon + Energy tutor"),
-    "Cyrano": (3.75, "up to 3 Pokémon ex"),
-    "Crispin": (3.25, "1 Energy to hand + 1 attached (acceleration)"),
-    "Team Rocket's Petrel": (1.75, "tutor any Trainer"),
-    "Brock's Scouting": (2.5, "2 Basics or 1 Evolution"),
-    "Rosa's Encouragement": (3.0, "2 Energy from discard onto a Stage 2 (only when behind)"),
-    "Gwynn": (3.5, "discard up to 2 non-Rule Box Pokémon, draw 3 each"),
-    "Unfair Stamp": (5.5, "you draw 5 / opponent to 2, only after a KO"),
-    "Special Red Card": (1.6, "late-game hand disruption to 3"),
-    "Crushing Hammer": (1.0, "50%: remove an Energy"),
-    "Enhanced Hammer": (2.0, "remove a Special Energy"),
-    "Rare Candy": (2.5, "skip Stage 1: a full turn of evolution tempo"),
-    "Switch": (1.5, "free pivot"),
-    "Energy Switch": (1.0, "move a basic Energy"),
-    "Air Balloon": (2.0, "-2 retreat, reusable"),
-    "Secret Box": (4.5, "4 tutors minus 3 discards"),
-    "Pokégear 3.0": (1.2, "~80% to find a Supporter in top 7"),
-    "Fighting Gong": (1.5, "tutor Fighting Basic or Energy"),
-    "Sacred Ash": (1.5, "5 Pokémon back to deck"),
-    "Energy Recycler": (1.0, "5 basic Energy back to deck"),
-    "Wondrous Patch": (2.0, "Energy from discard to a benched Psychic"),
-    "N's PP Up": (2.0, "Energy from discard to a benched N's Pokémon"),
-    "Glass Trumpet": (4.0, "2 Energy from discard (needs Tera)"),
-    "Premium Power Pro": (0.65, "+30 damage this turn"),
-    "Black Belt's Training": (0.85, "+40 vs ex this turn"),
-    "Jumbo Ice Cream": (1.7, "heal 80"),
-    "Hero's Cape": (2.1, "+100 HP"),
-    "Bug Catching Set": (2.0, "~1.6 Grass Pokémon/Energy from top 7"),
-    "Xerosic's Machinations": (2.5, "opponent discards down to 3"),
-    "Eri": (1.4, "discard up to 2 opposing Items"),
-    "Lana's Aid": (3.0, "recover 3"),
-    "Ciphermaniac's Codebreaking": (2.5, "stack 2 chosen cards on top"),
-    "Kieran": (1.5, "switch or +30 vs ex"),
-    "Prime Catcher": (3.5, "gust + switch"),
-    "Tool Scrapper": (1.5, "remove 2 tools"),
-    "Team Rocket's Transceiver": (1.5, "tutor a TR Supporter"),
-    "Wally's Compassion": (3.0, "full heal of a Mega (returns Energy to hand)"),
-    "Pokémon Center Lady": (1.3, "heal 60"),
-    "Brave Bangle": (0.9, "+30 vs ex, persistent"),
-    "Binding Mochi": (1.2, "+40 while Poisoned"),
-    "Handheld Fan": (1.0, "moves an Energy off the attacker"),
-    "Lucky Helmet": (1.4, "draw 2 when hit"),
-    "Maximum Belt": (1.0, "+50 vs ex"),
-    "Briar": (2.0, "+1 Prize on a Tera KO at 2 Prizes left"),
-    "Gladion's Final Battle": (1.7, "+80 for non-Rule Box when it's the last card"),
-    "Janine's Secret Art": (3.7, "2 Darkness Energy from deck attached (Active gets Poisoned)"),
-    "Team Rocket's Giovanni": (2.8, "pivot + gust for Team Rocket's decks"),
-    "Team Rocket's Proton": (3.5, "3 Basic TR Pokémon, usable going first T1"),
-    "Team Rocket's Ariana": (3.5, "draw to 5 (8 if all TR)"),
-    "Team Rocket's Archer": (4.5, "you draw 5 / opponent 3, after a TR KO"),
-    "Surfer": (2.6, "pivot + draw to 5"),
-    "Ruffian": (2.2, "remove a Tool and a Special Energy"),
-    "Bianca's Devotion": (2.0, "full heal of a Pokémon at 30 HP or less"),
-    "Precious Trolley": (4.5, "any number of Basics to the Bench (ACE SPEC)"),
-    "Miracle Headset": (3.0, "2 Supporters back (ACE SPEC)"),
-    "Transformation Tome": (1.0, "pair: swap a Basic in play with one in discard"),
-    "Mega Signal": (1.5, "tutor a Mega Evolution ex"),
-    "Hop's Bag": (3.0, "2 Basic Hop's Pokémon to the Bench"),
-    "Energy Retrieval": (2.0, "2 basic Energy back to hand"),
-    "Iron Defender": (0.9, "-30 damage to Metal Pokémon for a turn"),
-    "Ethan's Adventure": (3.6, "3 Ethan's Pokémon / Fire Energy"),
-    "Misty's Vitality": (5.0, "up to 4 Water Energy attached, ends turn"),
-    "Firebreather": (3.5, "up to 7 Fire Energy to hand"),
-    "Tarragon": (3.2, "recover 4 Fighting Pokémon / Energy"),
-    "Harlequin": (2.5, "coin-flip hand reset"),
-    "AZ's Tranquility": (2.4, "pivot + heal 80 on an ex"),
-    "Emma": (1.5, "draw per Pokémon in opponent's hand"),
-    "Canari": (4.0, "4 Lightning Pokémon (discard 1)"),
-    "Super Potion": (1.2, "heal 60, discard an Energy"),
-    "Poké Ball": (0.8, "50%: tutor a Pokémon"),
-    "Pokémon Catcher": (1.0, "50%: gust"),
-    "Energy Swatter": (1.0, "an opposing Energy from hand to deck bottom"),
-    "Hop's Choice Band": (1.3, "-1 cost and +30 for Hop's Pokémon"),
-    "Cynthia's Power Weight": (1.4, "+70 HP on a Cynthia's Pokémon"),
-    "Adversity Policy": (0.8, "draw 3 when hit by your Weakness type"),
-    # Stadiums: value per stadium played (about 2 turns in play)
-    "Risky Ruins": (1.8, "2 damage counters on most opposing Basics benched"),
-    "Team Rocket's Watchtower": (1.5, "turns off Colorless Abilities (Meowth ex, Dudunsparce, Kangaskhan...)"),
-    "Jamming Tower": (1.0, "turns off all Tools"),
-    "Battle Cage": (1.5, "blocks bench counters (Phantom Dive, Munkidori)"),
-    "Area Zero Underdepths": (1.5, "8 Bench spots with a Tera in play"),
-    "Gravity Mountain": (1.3, "-30 HP on Stage 2s"),
-    "Team Rocket's Factory": (3.0, "draw 2 per TR Supporter"),
-    "Prism Tower": (0.6, "discard 2, draw 1 each turn"),
-    "Festival Grounds": (1.0, "enables Festival Lead double attacks"),
-    "Forest of Vitality": (2.0, "Grass evolutions the turn they're played"),
-    "Academy at Night": (0.8, "put a card on top each turn"),
-    "N's Castle": (2.0, "N's Pokémon retreat for free"),
-    "Lumiose City": (0.8, "Basic to Bench, ends your turn"),
-    "Nighttime Mine": (1.0, "Tera attacks cost 1 more"),
-}
 
 # ---------------- attackers: typical damage per attack ----------------
 # dmg: expected damage to the Active in a typical game state; spread: extra bench damage/counters per attack;
@@ -312,111 +218,280 @@ ATTACKERS = {
     "Munkidori":               dict(type="Psychic", dmg=60, first=2.5, cadence=0.1, note="Mind Bend 60"),
 }
 
-# ---------------- trainers decomposed into resource components (per play) ----------------
-# Same vocabulary as ENGINES values, plus: recover (cards back from discard), evo_tempo (an evolution turn skipped),
-# energy_denial (opposing Energy removed), hand_reset (own cards shuffled away), discard (cards paid as a cost).
+# ---------------- trainers: what one play does, in resource units ----------------
+# Units are what the card text does in a typical game, in the CE price-list vocabulary above. Rules:
+#  * count every card the text gives you (Dawn = 3 searches), discounted only by the chance a search or draw misses
+#    (Pokégear, Bug Catching Set) or by what the text caps (Cyrano finds ~2.5 of 3 ex in real lists);
+#  * costs the text imposes are negative units in the same vocabulary (discards, your hand shuffled away, Energy you
+#    lose, a turn that ends without an attack);
+#  * whether you can play it at all (Unfair Stamp needs a KO, Briar needs the opponent at 2 Prizes) is NOT in the
+#    per-play value; it lowers plays per game through TRAINER_PLAYABLE.
+# Whether the effect was *needed* (is the Basic Dawn finds already in play?) is left to the regression: the
+# measured value per copy and its residual against these units are reported next to them.
 TRAINER_COMPONENTS = {
+    # Supporters
     "Lillie's Determination": {"draw": 6.4, "hand_reset": 3},
     "Judge": {"draw": 4, "hand_reset": 3, "opp_card": 1.5},
     "Boss's Orders": {"gust": 1},
+    "Crispin": {"tutor": 1, "accel": 1, "energy_card": 1},
+    "Dawn": {"tutor": 3},
+    "Hilda": {"tutor": 2},
+    "Team Rocket's Petrel": {"tutor": 1},
+    "Ciphermaniac's Codebreaking": {"tutor": 1.5},
+    "Cyrano": {"tutor": 2.5},
+    "Lana's Aid": {"recover": 3},
+    "Xerosic's Machinations": {"opp_card": 2.5},
+    "Kieran": {"retreat_energy": 0.8, "dmg": 15},
+    "Black Belt's Training": {"dmg": 32},
+    "Eri": {"opp_card": 1.2},
+    "Gwynn": {"draw": 5.1, "discard": 1.7},
+    "Wally's Compassion": {"heal": 160, "accel": -2.5},
+    "Briar": {"prize": 0.7},
+    "Janine's Secret Art": {"accel": 2, "energy_card": 2},
+    "Team Rocket's Giovanni": {"gust": 1, "retreat_energy": 1},
+    "Team Rocket's Proton": {"tutor": 3},
+    "Team Rocket's Ariana": {"draw": 4.5},
+    "Team Rocket's Archer": {"draw": 5, "hand_reset": 2, "opp_card": 2},
+    "Surfer": {"retreat_energy": 1.2, "draw": 2.5},
+    "Pokémon Center Lady": {"heal": 60},
+    "Bianca's Devotion": {"heal": 120},
+    "AZ's Tranquility": {"retreat_energy": 1.2, "heal": 60},
+    "Ethan's Adventure": {"tutor": 3},
+    "Tarragon": {"recover": 4},
+    "Harlequin": {"draw": 4, "hand_reset": 3, "opp_card": 1.5},
+    "Canari": {"tutor": 3.5, "discard": 1},
+    "Misty's Vitality": {"accel": 3.5, "energy_card": 3.5, "turn_end": 0.33},
+    "Firebreather": {"tutor": 4},
+    "Emma": {"draw": 1.5},
+    "Gladion's Final Battle": {"dmg": 80},
+    "Ruffian": {"opp_card": 1, "energy_denial": 0.5},
+    "Rosa's Encouragement": {"accel": 1.8, "energy_card": 1.8},
+    # Items
+    "Night Stretcher": {"recover": 1},
     "Ultra Ball": {"tutor": 1, "discard": 2},
     "Poké Pad": {"tutor": 1},
     "Buddy-Buddy Poffin": {"tutor": 2},
     "Nest Ball": {"tutor": 1},
-    "Night Stretcher": {"recover": 1},
-    "Dawn": {"tutor": 2},          # 3 searches, but the Basic is usually already in play: ~2 effective
-    "Hilda": {"tutor": 2},
-    "Cyrano": {"tutor": 2.5},
-    "Crispin": {"tutor": 1, "accel": 1, "energy_card": 1},
-    "Team Rocket's Petrel": {"tutor": 1},
-    "Brock's Scouting": {"tutor": 1.7},
-    "Rosa's Encouragement": {"accel": 1.2, "energy_card": 1.2},
-    "Gwynn": {"draw": 5, "discard": 1.7},
-    "Unfair Stamp": {"draw": 5, "hand_reset": 2, "opp_card": 3},
     "Special Red Card": {"opp_card": 2.5},
-    "Crushing Hammer": {"energy_denial": 0.5},
-    "Enhanced Hammer": {"energy_denial": 1},
-    "Rare Candy": {"evo_tempo": 1},
+    "Unfair Stamp": {"draw": 5, "hand_reset": 2, "opp_card": 3},
     "Switch": {"retreat_energy": 1.2},
-    "Energy Switch": {"accel": 0.7},
-    "Air Balloon": {"retreat_energy": 2},
+    "Rare Candy": {"evo_tempo": 1},
+    "Crushing Hammer": {"energy_denial": 0.5},
+    "Enhanced Hammer": {"energy_denial": 0.8},
     "Secret Box": {"tutor": 4, "discard": 3},
     "Pokégear 3.0": {"tutor": 0.8},
-    "Fighting Gong": {"tutor": 1},
     "Sacred Ash": {"recover": 1.5},
+    "Energy Switch": {"accel": 0.7},
     "Energy Recycler": {"recover": 0.8},
+    "Energy Retrieval": {"recover": 2},
     "Wondrous Patch": {"accel": 1, "energy_card": 1},
     "N's PP Up": {"accel": 1, "energy_card": 1},
     "Glass Trumpet": {"accel": 2, "energy_card": 2},
-    "Premium Power Pro": {"dmg": 30},
-    "Black Belt's Training": {"dmg": 40},
-    "Jumbo Ice Cream": {"heal": 80},
-    "Hero's Cape": {"heal": 100},
-    "Bug Catching Set": {"tutor": 1.6},
-    "Xerosic's Machinations": {"opp_card": 2.5},
-    "Eri": {"opp_card": 1.2},
-    "Lana's Aid": {"recover": 3},
-    "Ciphermaniac's Codebreaking": {"tutor": 1.5},
-    "Kieran": {"retreat_energy": 0.8, "dmg": 15},
     "Prime Catcher": {"gust": 1, "retreat_energy": 1.2},
-    "Tool Scrapper": {"opp_card": 1},
-    "Team Rocket's Transceiver": {"tutor": 1},
-    "Wally's Compassion": {"heal": 200},
-    "Pokémon Center Lady": {"heal": 60},
-    "Brave Bangle": {"dmg": 45},
-    "Binding Mochi": {"dmg": 60},
-    "Handheld Fan": {"energy_denial": 0.6},
-    "Lucky Helmet": {"draw": 1.5},
-    "Maximum Belt": {"dmg": 75},
-    "Briar": {"gust": 0.5},
-    "Gladion's Final Battle": {"dmg": 80},
-    "Janine's Secret Art": {"accel": 2, "energy_card": 2},
-    "Team Rocket's Giovanni": {"gust": 1, "retreat_energy": 1},
-    "Team Rocket's Proton": {"tutor": 3},
-    "Team Rocket's Ariana": {"draw": 3.5},
-    "Team Rocket's Archer": {"draw": 5, "hand_reset": 2, "opp_card": 2},
-    "Surfer": {"retreat_energy": 1.2, "draw": 2},
-    "Ruffian": {"opp_card": 1, "energy_denial": 0.5},
-    "Bianca's Devotion": {"heal": 120},
-    "Precious Trolley": {"tutor": 4},
-    "Miracle Headset": {"recover": 2},
-    "Mega Signal": {"tutor": 1},
-    "Hop's Bag": {"tutor": 2},
-    "Energy Retrieval": {"recover": 2},
-    "Iron Defender": {"heal": 30},
-    "Ethan's Adventure": {"tutor": 3},
-    "Misty's Vitality": {"accel": 3, "energy_card": 4},
-    "Firebreather": {"tutor": 4},
-    "Tarragon": {"recover": 4},
-    "AZ's Tranquility": {"retreat_energy": 1.2, "heal": 60},
-    "Super Potion": {"heal": 60},
     "Pokémon Catcher": {"gust": 0.5},
     "Poké Ball": {"tutor": 0.5},
+    "Bug Catching Set": {"tutor": 1.6},
+    "Fighting Gong": {"tutor": 1},
+    "Tool Scrapper": {"opp_card": 1.5},
+    "Precious Trolley": {"tutor": 4},
+    "Miracle Headset": {"recover": 2},
+    "Transformation Tome": {"tutor": 0.7},
+    "Mega Signal": {"tutor": 1},
+    "Hop's Bag": {"tutor": 2},
+    "Super Potion": {"heal": 60, "accel": -1, "energy_card": -1},
+    "Iron Defender": {"heal": 30},
+    "Energy Swatter": {"opp_card": 1},
+    "Jumbo Ice Cream": {"heal": 80},
+    "Premium Power Pro": {"dmg": 30},
+    "Team Rocket's Transceiver": {"tutor": 1},
+    # Tools (value over the turns they stay attached)
+    "Hero's Cape": {"heal": 100},
+    "Brave Bangle": {"dmg": 45},
+    "Binding Mochi": {"dmg": 60},
+    "Maximum Belt": {"dmg": 75},
+    "Lucky Helmet": {"draw": 1.5},
+    "Handheld Fan": {"energy_denial": 0.6},
+    "Air Balloon": {"retreat_energy": 1.5},
+    "Cynthia's Power Weight": {"heal": 70},
+    "Hop's Choice Band": {"accel": 1, "dmg": 45},
+    "Adversity Policy": {"draw": 0.5},
+    # Stadiums (value per Stadium played, ~2 turns in play)
     "Risky Ruins": {"dmg": 40},
     "Team Rocket's Watchtower": {"opp_card": 1.5},
     "Jamming Tower": {"opp_card": 1},
     "Battle Cage": {"heal": 60},
+    "Area Zero Underdepths": {"tutor": 1},
     "Gravity Mountain": {"dmg": 60},
     "Team Rocket's Factory": {"draw": 3},
     "Prism Tower": {"select2": 1},
-    "Forest of Vitality": {"evo_tempo": 1.5},
+    "Forest of Vitality": {"evo_tempo": 1},
     "Academy at Night": {"select2": 1},
-    "N's Castle": {"retreat_energy": 2},
-    "Lumiose City": {"tutor": 0.8},
-    "Nighttime Mine": {"opp_card": 0.5},
+    "N's Castle": {"retreat_energy": 1.5},
+    "Lumiose City": {"tutor": 1, "turn_end": 0.1},
+    "Nighttime Mine": {"energy_denial": 0.5},
+    "Festival Grounds": {},
 }
-# Regression groups: each raw component maps to one fitted weight.
+# How each set of units was read from the card text (shown in the report next to the breakdown).
+TRAINER_NOTES = {
+    "Lillie's Determination": "draw 6 (8 at 6 Prizes, ~20% of plays); your ~3-card hand is shuffled away",
+    "Judge": "both players shuffle and draw 4: you draw 4 for ~3; the opponent's ~6-card hand drops to 4",
+    "Boss's Orders": "one gust",
+    "Crispin": "2 Basic Energy: 1 to hand (a search), 1 attached from the deck (extra attachment + the card)",
+    "Dawn": "Basic + Stage 1 + Stage 2: 3 searches",
+    "Hilda": "an Evolution Pokémon and an Energy: 2 searches",
+    "Team Rocket's Petrel": "any Trainer: 1 search",
+    "Ciphermaniac's Codebreaking": "2 chosen cards on top of the deck, drawn over the next turns: ~1.5 searches",
+    "Cyrano": "up to 3 Pokémon ex; lists find ~2.5 useful ones",
+    "Lana's Aid": "3 non-Rule Box Pokémon / Basic Energy back to hand",
+    "Xerosic's Machinations": "opponent discards down to 3 (~2.5 cards)",
+    "Kieran": "switch (~0.8 retreat saved) or +30 to an ex (~half the time)",
+    "Black Belt's Training": "+40 to an Active ex this turn (~80% of plays hit an ex)",
+    "Eri": "up to 2 opposing Items discarded (~1.2 found)",
+    "Gwynn": "discard ~1.7 non-Rule Box Pokémon, draw 3 each",
+    "Wally's Compassion": "heal a Mega ex (~160 damage); its Energy goes back to hand, ~2.5 attachments to redo",
+    "Briar": "+1 Prize on a Tera KO (~70% of plays get the KO)",
+    "Janine's Secret Art": "2 Darkness Energy from the deck attached (Active becomes Poisoned: synergy with Binding Mochi)",
+    "Team Rocket's Giovanni": "pivot + gust",
+    "Team Rocket's Proton": "3 Basic TR Pokémon; legal on turn 1 going first",
+    "Team Rocket's Ariana": "draw to 5, or to 8 when all your Pokémon are TR (usual): ~4.5 cards",
+    "Team Rocket's Archer": "after a TR KO: you draw 5 from ~2; opponent's ~5 cards drop to 3",
+    "Surfer": "pivot + draw to 5 (~2.5 cards)",
+    "Pokémon Center Lady": "heal 60",
+    "Bianca's Devotion": "full heal of a Pokémon at 30 HP or less (~120)",
+    "AZ's Tranquility": "pivot + heal 80 on an ex (~60 average)",
+    "Ethan's Adventure": "3 Ethan's Pokémon / Fire Energy",
+    "Tarragon": "4 Fighting Pokémon / Energy back to hand",
+    "Harlequin": "both shuffle; coin flip 5/3 or 3/5: on average like Judge",
+    "Canari": "discard 1, up to 4 Lightning Pokémon (~3.5)",
+    "Misty's Vitality": "up to 4 Water Energy attached (~3.5 used); the turn ends: ~60% of the time that costs an attack worth ~0.55 realized Prizes",
+    "Firebreather": "up to 7 Fire Energy to hand (~4 useful)",
+    "Emma": "draw 1 per Pokémon in the opponent's hand (~1.5)",
+    "Gladion's Final Battle": "+80 this turn",
+    "Ruffian": "a Tool and a Special Energy (when present) from one Pokémon",
+    "Rosa's Encouragement": "up to 2 Basic Energy from the discard onto a Stage 2 (~1.8)",
+    "Night Stretcher": "1 Pokémon or Basic Energy back to hand",
+    "Ultra Ball": "1 search, 2 discards (the regression says discards are fuel, not a cost, at the margin)",
+    "Poké Pad": "1 search (non-Rule Box)",
+    "Buddy-Buddy Poffin": "2 Basics with 70 HP or less to the Bench",
+    "Nest Ball": "1 Basic to the Bench",
+    "Special Red Card": "opponent's hand to 3 (~2.5 cards)",
+    "Unfair Stamp": "after a KO: you draw 5 from ~2; opponent's ~5 cards drop to 2",
+    "Switch": "pivot (~1.2 retreat Energy saved)",
+    "Rare Candy": "skip the Stage 1 turn",
+    "Crushing Hammer": "50%: remove an Energy",
+    "Enhanced Hammer": "remove a Special Energy (~80% of plays have a target)",
+    "Secret Box": "4 searches (Item, Tool, Supporter, Stadium), 3 discards",
+    "Pokégear 3.0": "~80% to find a Supporter in the top 7",
+    "Sacred Ash": "5 Pokémon back into the deck (~1.5 cards of value)",
+    "Energy Switch": "move a Basic Energy (~0.7 of an attachment)",
+    "Energy Recycler": "5 Basic Energy back into the deck",
+    "Energy Retrieval": "2 Basic Energy back to hand",
+    "Wondrous Patch": "1 Psychic Energy from the discard to a Benched Psychic Pokémon",
+    "N's PP Up": "1 Basic Energy from the discard to a Benched N's Pokémon",
+    "Glass Trumpet": "2 Basic Energy from the discard (needs a Tera in play)",
+    "Prime Catcher": "gust + pivot",
+    "Pokémon Catcher": "50%: gust",
+    "Poké Ball": "50%: a search",
+    "Bug Catching Set": "top 7: up to 2 Grass Pokémon / Energy (~1.6)",
+    "Fighting Gong": "a Fighting Basic or Energy",
+    "Tool Scrapper": "up to 2 Tools (usually the opponent's)",
+    "Precious Trolley": "any number of Basics to the Bench (~4)",
+    "Miracle Headset": "2 Supporters back to hand",
+    "Transformation Tome": "pair: swap a Basic in play for one in the discard",
+    "Mega Signal": "a Mega Evolution ex",
+    "Hop's Bag": "2 Basic Hop's Pokémon to the Bench",
+    "Super Potion": "heal 60, discard an attached Energy (the card + the attachment)",
+    "Iron Defender": "−30 damage to your Metal Pokémon for a turn",
+    "Energy Swatter": "an Energy from the opponent's hand to the bottom",
+    "Jumbo Ice Cream": "heal 80 (Active with 3+ Energy)",
+    "Premium Power Pro": "+30 this turn (Fighting)",
+    "Team Rocket's Transceiver": "a TR Supporter",
+    "Hero's Cape": "+100 HP",
+    "Brave Bangle": "+30 to an Active ex, ~1.5 attacks",
+    "Binding Mochi": "+40 while Poisoned, ~1.5 attacks",
+    "Maximum Belt": "+50 to an Active ex, ~1.5 attacks",
+    "Lucky Helmet": "draw 2 when hit as the Active (~0.75 triggers)",
+    "Handheld Fan": "moves an Energy off the attacker when hit",
+    "Air Balloon": "−2 retreat cost while attached (~1.5 Energy saved)",
+    "Cynthia's Power Weight": "+70 HP on a Cynthia's Pokémon",
+    "Hop's Choice Band": "−1 attack cost and +30 for Hop's Pokémon, ~1.5 attacks",
+    "Adversity Policy": "draw 3 when hit by your Weakness (rare)",
+    "Risky Ruins": "2 counters on each opposing non-Darkness Basic benched (~2)",
+    "Team Rocket's Watchtower": "turns off Colorless Abilities (Meowth ex, Dudunsparce, Kangaskhan…)",
+    "Jamming Tower": "turns off all Tools",
+    "Battle Cage": "blocks Bench counters (Phantom Dive, Munkidori)",
+    "Area Zero Underdepths": "8 Bench spots with a Tera in play (~one more benched engine)",
+    "Gravity Mountain": "−30 HP on Stage 2s",
+    "Team Rocket's Factory": "draw 2 per TR Supporter played (~1.5 turns)",
+    "Prism Tower": "discard 2, draw 1, each turn: a filter",
+    "Forest of Vitality": "Grass Pokémon evolve the turn they're played (~1 evolution turn skipped)",
+    "Academy at Night": "put a card on top each turn",
+    "N's Castle": "N's Pokémon retreat free (~1.5 Energy saved)",
+    "Lumiose City": "a Basic to the Bench, ends your turn (used when you weren't attacking)",
+    "Nighttime Mine": "Tera attacks cost 1 more",
+    "Festival Grounds": "enabler: its value is counted on Dipplin's double attack",
+}
+# Share of seen copies you can actually play (conditions in the card text). Lowers plays per game, not value per play.
+TRAINER_PLAYABLE = {
+    "Unfair Stamp": 0.8,            # one of your Pokémon was KO'd last turn
+    "Team Rocket's Archer": 0.7,    # a TR Pokémon was KO'd last turn
+    "Special Red Card": 0.6,        # opponent at 3 or fewer Prizes
+    "Rosa's Encouragement": 0.5,    # you're behind on Prizes
+    "Briar": 0.35,                  # opponent at exactly 2 Prizes
+    "Gladion's Final Battle": 0.6,  # last card in hand
+    "Glass Trumpet": 0.9,           # a Tera in play
+}
+# Regression groups: each raw unit maps to one fitted weight.
 COMPONENT_GROUPS = {
     "draw": ["draw"], "select": ["select2"], "tutor": ["tutor"], "recover": ["recover"],
-    "accel": ["accel"], "retreat": ["retreat_energy"], "gust": ["gust"],
-    "disruption": ["opp_card", "energy_denial"], "item_lock": ["item_lock"], "evo_tempo": ["evo_tempo"],
-    "damage_100hp": ["dmg"], "heal_100hp": ["heal"], "cost": ["hand_reset", "discard"],
+    "accel": ["accel"], "energy_card": ["energy_card"], "retreat": ["retreat_energy"], "gust": ["gust"],
+    "disruption": ["opp_card"], "energy_denial": ["energy_denial"], "item_lock": ["item_lock"], "evo_tempo": ["evo_tempo"],
+    "damage_100hp": ["dmg"], "heal_100hp": ["heal"], "prize": ["prize", "turn_end"], "cost": ["hand_reset", "discard"],
 }
-HAND_WEIGHTS = {  # current hand-set CE per unit of each group (for comparison with the fit)
-    "draw": 1.0, "select": 1.25, "tutor": 1.5, "recover": 1.25, "accel": 2.0, "retreat": 2.0, "gust": 2.0,
-    "disruption": 0.7, "item_lock": 1.8, "evo_tempo": 2.5, "damage_100hp": 100 / HP_PER_PRIZE * PRIZE_TO_CE,
-    "heal_100hp": 100 / HP_PER_PRIZE * PRIZE_TO_CE, "cost": -0.55,
+RAW2GROUP = {raw: g for g, raws in COMPONENT_GROUPS.items() for raw in raws}
+def group_units(comp, mult=1.0):
+    """Raw units -> regression-group units. Costs become positive 'cost' units (priced negative), damage/heal per
+    100 HP, turn_end becomes negative Prize units. Units outside the vocabulary (prize_given) are ignored."""
+    v = {}
+    for k, x in comp.items():
+        g = RAW2GROUP.get(k)
+        if g is None: continue
+        x = x * mult
+        if g == "cost": x = abs(x)
+        elif g in ("damage_100hp", "heal_100hp"): x = x / 100
+        elif k == "turn_end": x = -x
+        v[g] = v.get(g, 0.0) + x
+    return v
+HAND_WEIGHTS = {  # hand-set CE per group unit: the price list above, per group
+    "draw": CE["draw"], "select": CE["select2"], "tutor": CE["tutor"], "recover": CE["recover"], "accel": CE["accel"],
+    "energy_card": CE["energy_card"], "retreat": CE["retreat_energy"], "gust": CE["gust"], "disruption": CE["opp_card"],
+    "energy_denial": CE["energy_denial"], "item_lock": CE["item_lock"], "evo_tempo": CE["evo_tempo"],
+    "damage_100hp": 100 * CE["dmg"], "heal_100hp": 100 * CE["heal"], "prize": CE["prize"],
+    "cost": (CE["discard"] + CE["hand_reset"]) / 2,
 }
+def hand_price(comp, mult=1.0):
+    """CE of a component dict at the hand-set price list (exact discard / hand_reset prices)."""
+    ce = 0.0
+    for k, x in comp.items():
+        if k in ("discard", "hand_reset"): ce += CE[k] * abs(x) * mult
+        elif k in CE: ce += CE[k] * x * mult
+    return ce
+def breakdown(comp):
+    """'3 search × 1.5 = 4.5' style text for the report."""
+    lab = {"draw": "draw", "select2": "look-2-keep-1", "tutor": "search", "recover": "recover", "accel": "extra attachment",
+           "energy_card": "Energy not from hand", "retreat_energy": "retreat Energy saved", "gust": "gust", "opp_card": "opponent card",
+           "energy_denial": "opposing Energy removed", "item_lock": "Item-lock turn", "evo_tempo": "evolution turn",
+           "dmg": "HP damage", "heal": "HP healed", "prize": "Prize", "turn_end": "Prize lost (turn ends)", "discard": "discard",
+           "hand_reset": "card shuffled away"}
+    terms = []
+    for k, x in comp.items():
+        if k not in CE: continue
+        val = CE[k] * (abs(x) if k in ("discard", "hand_reset") else x)
+        per = f"{abs(CE[k]):.3f}" if k in ("dmg", "heal") else f"{abs(CE[k]):g}"
+        terms.append((val, f"{abs(x):g} {lab.get(k, k)} × {per}"))
+    out = "".join(("−" if v < 0 else "") + t if i == 0 else (" − " if v < 0 else " + ") + t for i, (v, t) in enumerate(terms))
+    return f"{out} = {hand_price(comp):.2f}" if terms else "0"
+TRAINER_CE = {n: (round(hand_price(c), 2), TRAINER_NOTES.get(n, "")) for n, c in TRAINER_COMPONENTS.items()}
 
 # ---------------- Power model (power.py) ----------------
 # Special Energy with a resource effect when attached (per attachment; ~0.6 attachments per copy per game).
@@ -438,6 +513,6 @@ PRIZES_TAKEN_PER_GAME = 4.5
 # Exchange rate between Prizes and card-equivalents in the Power model. Chosen by leave-one-archetype-out
 # cross-validation of Deck Power against archetype win rate (grid 3/6/10/15/20; 10 was best). Damage and healing
 # effects use the same rate, so 100 HP of damage = 100 / HP_PER_PRIZE Prizes = 7.1 CE.
-POWER_CE_PER_PRIZE = 10.0
+POWER_CE_PER_PRIZE = PRIZE_TO_CE
 # Engine damage that the ATTACKERS entry already counts (Festival Lead's second attack, Mortal Shuriken): skipped in Power.
 POWER_SKIP_ENGINE_DMG = {"Dipplin", "Mega Greninja ex"}

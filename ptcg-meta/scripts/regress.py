@@ -114,15 +114,9 @@ for col, cid in cmap.items():
 CB = pd.DataFrame(card_rows).sort_values("wr_per_copy", ascending=False)
 CB.to_csv(os.path.join(O, "card_value_per_copy.csv"), index=False)
 # stage 2 (marginal): per-copy value ~ what ONE MORE copy adds.
-RAW2G = {raw: g for g, raws in MC.COMPONENT_GROUPS.items() for raw in raws}
 def to_groups(comp):
     v = {g: 0.0 for g in G}
-    for k, x in comp.items():
-        g = RAW2G.get(k)
-        if g is None: continue
-        if g == "cost": x = abs(x)
-        if g in ("damage_100hp", "heal_100hp"): x = x / 100
-        v[g] += x
+    for g, x in MC.group_units(comp).items(): v[g] += x
     return v
 # average Supporter component vector, weighted by copies played across all lists (the displaced alternative)
 sup_tot, sup_n = {g: 0.0 for g in G}, 0.0

@@ -239,9 +239,11 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
       <div class="eyebrow">06 · The Advantage stat</div>
       <h2>Card-equivalents per game</h2>
       <div class="cols">
-        <div class="callout"><h3>Definition</h3><p class="small">One unit, a <b>card-equivalent (CE)</b>, is the value of drawing one random card. Every benefit converts into it: search = 1.5 CE, look-2-keep-1 = 1.25, an extra Energy attachment = 1 CE of tempo (+1 if the Energy didn't come from your hand), each retreat Energy saved = 2 CE, each card discarded as a cost = −0.5. Damage and healing convert through Prizes: <span id="hpPrize"></span> HP of the current meta ≈ 1 Prize ≈ 3 CE. Item lock is valued as the opponent's held-back Items plus a setup-tempo penalty.</p><p class="small">Advantage per game = expected uses × CE per use. Expected uses come from the same simulation: when the card is reachable, how many copies are in play each turn (evolution lag, bench caps, survival), the chance the game is still going, and how often the trigger is live (Grass in hand for Teal Dance, a KO last turn for Flip the Script…).</p></div>
+        <div class="callout"><h3>Definition</h3><p class="small">One unit, a <b>card-equivalent (CE)</b>, is the value of drawing one random card. Every Ability, attack effect and Trainer in this report is priced from one price list (below): count what the card does in units (cards drawn, cards searched, extra attachments…), multiply by the price, subtract the costs the text imposes. 1 Prize = 10 CE, the rate the deck-level test picked. Damage and healing convert through Prizes: <span id="hpPrize"></span> HP of the current meta ≈ 1 Prize, and about 60% of damage progress ever turns into a KO, so 100 HP ≈ 4.3 CE.</p><p class="small">Advantage per game = expected uses × CE per use. Expected uses come from the same simulation: when the card is reachable, how many copies are in play each turn (evolution lag, bench caps, survival), the chance the game is still going, and how often the trigger is live (Grass in hand for Teal Dance, a KO last turn for Flip the Script…).</p></div>
         <div class="callout"><h3>Turns of acceleration</h3><div id="accelBox" class="small"></div></div>
       </div>
+      <h3>The price list</h3>
+      <div class="tscroll" id="priceTable" style="max-height:none"></div>
       <div class="tbar"><input id="pkQ" type="search" placeholder="Filter Pokémon" aria-label="Filter Pokémon"><select id="pkSort" aria-label="Rank by"><option value="advantage_ce_per_game">Rank by Advantage (CE/game)</option><option value="advantage_fitted_ce_per_game">Rank by fitted CE/game</option><option value="total_impact_ce_per_game">Rank by Advantage + damage</option><option value="meta_weighted_impact">Rank by meta-weighted impact</option></select><span class="count" id="pkCount"></span></div>
       <div class="tscroll" id="pkTable"></div>
     </section>
@@ -249,7 +251,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
     <section id="trainers">
       <div class="eyebrow">07 · Supporters, Items, Tools, Stadiums</div>
       <h2>Trainers on the same scale</h2>
-      <p class="muted">Two pricings sit side by side. The hand-set CE per play is my original value. The fitted CE per play prices the same resources at the exchange rates the results support (section 07b). The measured column is the regression's direct estimate of what one more copy does, and the residual is the part the resource model can't explain. Plays per game = copies × the share of the deck you see in a typical game (~68%). Supporters are scaled down when a list has more of them than the ~6.5 turns you can play them. "Meta impact" multiplies by field inclusion, giving CE added per 100 random games.</p>
+      <p class="muted">CE per play is the card's units times the price list; the last column shows the arithmetic and how the units were read from the card text. Conditions on when a card can be played (Unfair Stamp after a KO, Special Red Card at 3 Prizes) lower plays per game, not the value of a play. The fitted CE per play prices the same units at the exchange rates the results support (section 07b). The measured column is the regression's direct estimate of what one more copy does, and the residual is the part the resource model can't explain. Plays per game = copies × the share of the deck you see in a typical game (~68%). Supporters are scaled down when a list has more of them than the ~6.5 turns you can play them. "Meta impact" multiplies by field inclusion, giving CE added per 100 random games.</p>
       <div class="tbar"><input id="trQ" type="search" placeholder="Filter Trainers" aria-label="Filter Trainers"><select id="trSort" aria-label="Rank by"><option value="meta_advantage_ce_per_100_games">Rank by meta impact (hand-set)</option><option value="advantage_fitted_ce_per_game">Rank by fitted CE / game</option><option value="ce_per_play_fitted">Rank by fitted CE / play</option><option value="measured_wr">Rank by measured value per copy</option><option value="residual_wr">Rank by residual</option></select><select id="trType" aria-label="Type"><option value="">All types</option><option>Supporter</option><option>Item</option><option>Tool</option><option>Stadium</option></select><span class="count" id="trCount"></span></div>
       <div class="tscroll" id="trTable"></div>
     </section>
@@ -643,6 +645,19 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
 
   // ---- pokemon advantage
   $("#hpPrize").textContent = Math.round((D.damage_meta || {}).hp_per_prize_meta || 134);
+  (function priceList() {
+    const K = (D.knobs || {}).CE || {};
+    const L = { draw: ["Draw a card", "per card"], select2: ["Look at 2, keep 1", "per pick"], tutor: ["Search a specific card", "per card"],
+      recover: ["Card back from the discard", "per card"], accel: ["Extra Energy attachment (tempo)", "per attachment beyond your one per turn"],
+      energy_card: ["Energy into play not from your hand", "per Energy (the card itself)"], retreat_energy: ["Retreat cost saved", "per Energy (card + re-attaching = 2)"],
+      gust: ["Gust", "per use (the regression prices it at ~1.4 searches)"], opp_card: ["Opponent's hand disrupted", "per card"],
+      energy_denial: ["Opposing Energy removed", "per Energy (their card + their attachment)"], item_lock: ["Item lock", "per locked turn"],
+      evo_tempo: ["Evolution turn skipped", "per Rare Candy-style skip"], dmg: ["Damage", "per 100 HP (0.71 Prize × 60% realized × 10)"],
+      heal: ["Healing / extra HP", "per 100 HP (same rate as damage)"], prize: ["Extra Prize", "per Prize"], turn_end: ["Your turn ends", "per expected Prize your skipped attack would have taken"],
+      discard: ["Discard as a cost", "per card"], hand_reset: ["Your hand shuffled away", "per card"] };
+    const rows = Object.entries(K).filter(([k]) => L[k]).map(([k, v]) => ({ k, what: L[k][0], unit: L[k][1], ce: (k === "dmg" || k === "heal") ? v * 100 : v }));
+    table($("#priceTable"), rows, [{ k: "what", l: "Resource", nm: 1 }, { k: "ce", l: "CE", n: 1, f: v => (v < 0 ? "−" : "") + fx(Math.abs(v), 2) }, { k: "unit", l: "Per", w: 1 }]);
+  })();
   let pkQ = "", pkT_sortAll = false;
   const pkCols = [
     { k: "#", l: "#", n: 1 },
@@ -686,7 +701,7 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
     { k: "advantage_fitted_ce_per_game", l: "Fitted CE / game", bar: 1, f: (v, r, m) => barCell(v, m, 1, "", false) },
     { k: "measured_wr", l: "Measured win pts / copy", n: 1, f: v => v == null ? "–" : `<b>${v >= 0 ? "+" : ""}${fx(v * 100, 2)}</b>`, t: "Within-archetype regression, section 07b" },
     { k: "residual_wr", l: "Residual", n: 1, f: v => v == null ? "–" : (v >= 0 ? "+" : "") + fx(v * 100, 2), t: "Measured minus what its resources predict: positive = synergy the components miss" },
-    { k: "why", l: "Valued as", w: 1 },
+    { k: "breakdown", l: "How it's priced", w: 1, f: (v, r) => `${esc(v)}${r.why ? `<br><span class="muted small">${esc(r.why)}</span>` : ""}${r.playable != null && r.playable < 1 ? `<br><span class="muted small">playable ${pct(r.playable, 0)} of the time it's drawn</span>` : ""}` },
   ], { sort: "meta_advantage_ce_per_100_games", filter: r => (!trQ || r.name.toLowerCase().includes(trQ)) && (!trType || r.type === trType), onCount: n => $("#trCount").textContent = `${n} cards` });
   $("#trQ").addEventListener("input", e => { trQ = e.target.value.toLowerCase(); trT.render(); });
   $("#trType").addEventListener("change", e => { trType = e.target.value; trT.render(); });
@@ -706,7 +721,7 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
       <li>Search: <b>${fx((W.tutor || {}).fitted_weight, 2)}</b> CE per card searched (hand-set 1.5). Draw: <b>${fx((W.draw || {}).fitted_weight, 2)}</b> (hand-set 1.0). Acceleration: <b>${fx((W.accel || {}).fitted_weight, 2)}</b> per extra attachment (hand-set 2.0).</li>
       <li>The average Supporter play is worth <b>${fx(Object.entries(M.avg_supporter_components || {}).reduce((s, [g, x]) => s + x * ((W[g] || {}).fitted_weight || 0), 0), 2)}</b> fitted CE. That's the bar a Supporter has to clear on the turn you play it.</li>
       <li>Discards and hand shuffles come out <em>positive</em> at the margin, not as costs. Ultra Ball fodder fuels recursion, and Lillie's / Unfair Stamp reshuffles refresh dead hands.</li></ul>`;
-    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per attachment)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Disruption (per card / Energy removed)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)", ace: "Being an ACE SPEC (level poorly identified)" };
+    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per extra attachment)", energy_card: "Energy into play not from hand (per card)", energy_denial: "Opposing Energy removed (per Energy)", prize: "Prizes (extra taken / lost to an ended turn)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Opponent hand disruption (per card)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)", ace: "Being an ACE SPEC (level poorly identified)" };
     table($("#ceTable"), D.ce_weights || [], [
       { k: "group", l: "Resource", nm: 1, f: v => esc(LBL[v] || v) },
       { k: "hand_weight", l: "Hand-set CE", n: 1, f: v => fx(v, 2) },
@@ -760,7 +775,7 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
 
   // ---- data-only explainer + which weights for which question
   (function dataOnly() {
-    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per attachment)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Disruption (per card / Energy removed)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)" };
+    const LBL = { draw: "Draw (per card)", select: "Look-and-pick (per pick)", tutor: "Search (per card)", recover: "Recover from discard (per card)", accel: "Energy acceleration (per extra attachment)", energy_card: "Energy into play not from hand (per card)", energy_denial: "Opposing Energy removed (per Energy)", prize: "Prizes (extra taken / lost to an ended turn)", retreat: "Retreat saved (per Energy)", gust: "Gust (per use)", disruption: "Opponent hand disruption (per card)", item_lock: "Item lock (per locked turn)", evo_tempo: "Evolution turn skipped", damage_100hp: "Damage (per 100 HP)", heal_100hp: "Healing / HP added (per 100 HP)", cost: "Costs (per card discarded or shuffled away)" };
     const drv = {};
     (D.ce_drivers || []).forEach(r => (drv[r.group] = drv[r.group] || []).push(r));
     const rows = (D.ce_weights || []).filter(r => r.group !== "ace").map(r => {
@@ -822,11 +837,11 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
       [fx((byP[0] || {}).power_hand, 0), `Deck Power of ${esc((byP[0] || {}).name || "")}, the highest with 30+ lists`],
     ].map(([v, l]) => `<div class="fig"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
     $("#powDef").innerHTML = [
-      `<b>Effect</b>: uses or plays per game × CE per use, at the hand-set weights (they won the deck-level test). Damage and healing convert through Prizes at the same rate as attacks: 100 HP ≈ 0.71 Prize ≈ 7.1 CE.`,
+      `<b>Effect</b>: uses or plays per game × CE per use, at the hand-set weights (they won the deck-level test). Damage and healing convert through Prizes the same way attacks do: 100 HP ≈ 0.71 Prize of progress, of which ~60% turns into KOs, so ≈ 4.3 CE.`,
       `<b>Prizes taken</b>: the card's share of its deck's attacks × attacks per game × Prizes per attack. Prizes per attack is measured against 1,500 real lists from the same format. Each attack hits the Active (Weakness and Resistance applied), or the best gust target on the field's ${pct(cm.p_gust, 0)} of gusted attacks, plus spread and snipe KOs.`,
       `<b>Prizes given up</b>: the field's attack pool (${fx(cm.attacks_per_game, 1)} attacks per game) hitting the card as the Active, as the best gust target (sure KOs first), or with spread. Self-KOs such as Cursed Blast count too. A copy can only be KO'd once, and a deck gives up at most 6 Prizes.`,
       `Raw Prize progress counts 2-hit damage that never cashes in (heals, retreats, games ending), so it is scaled by ${fx(cm.kappa, 2)}. That makes the average deck take ${fx(PC.prizes_taken_per_game, 1)} Prizes per game.`,
-      `<b>Power = Effect + ${fx(PC.ce_per_prize, 0)} × (Prizes taken − Prizes given up)</b>. A deck generates about ${fx(avgEff, 0)} CE of resources per game to take ${fx(PC.prizes_taken_per_game, 1)} Prizes, so 3 CE per Prize was far too cheap.`,
+      `<b>Power = Effect + ${fx(PC.ce_per_prize, 0)} × (Prizes taken − Prizes given up)</b>. A deck generates about ${fx(avgEff, 0)} CE of resources per game to take ${fx(PC.prizes_taken_per_game, 1)} Prizes, so the 3 CE per Prize I started with was far too cheap. Every table in the report now uses 10.`,
     ].map(x => `<li>${x}</li>`).join("");
     $("#powVal").innerHTML = [
       `Across ${int(PC.n_units)} archetype × format pairs (${int(PC.n_archetypes)} archetypes), Deck Power ranks win rate at Spearman <b>${fx(hp.spearman_wr, 2)}</b> and Day 2 rate at <b>${fx(hp.spearman_day2, 2)}</b>.`,

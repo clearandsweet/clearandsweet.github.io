@@ -176,17 +176,9 @@ opp_avg = {"dragon_deck": float((share * (featdf["dragon"] >= 0.3).astype(float)
            "cursed_blast": float((share * featdf["cursed_blast"]).sum()),
            "munkidori": float((share * featdf["munkidori"]).sum()),
            "ex_attackers": float((share * (featdf["ex_attackers"] >= 0.15).astype(float)).sum())}
-def value_ce(v, opp_items=field_items):
-    ce = 0.0
-    for k, x in v.items():
-        if k in C.CE: ce += C.CE[k] * x
-        elif k == "discard": ce -= C.CE["discard_cost"] * x
-        elif k in ("dmg", "heal"): ce += C.dmg_ce(x)
-        elif k == "prize_given": ce -= C.PRIZE_TO_CE * x * 0.5   # self-KO of a 1-Prize Pokémon (half the time it would die anyway)
-        elif k == "gust": ce += C.GUST_CE * x
-        elif k == "item_lock":
-            ce += x * (C.ITEM_LOCK_CE_PER_ITEM * min(opp_items, 25) / 60 * 6 + C.ITEM_LOCK_SETUP_PENALTY)
-    return ce
+def value_ce(v):
+    """Hand-set price list (model_config.CE); a self-KO costs half a Prize (half the time it would die anyway)."""
+    return C.hand_price(v) - C.PRIZE_TO_CE * 0.5 * v.get("prize_given", 0)
 FIT = ce_weights.load(D)
 eng_rows = []
 for _, r in S.iterrows():
@@ -231,7 +223,7 @@ seen_frac = 0.68
 tr = lc[lc["cat"] == "trainer"].copy()
 tr["is_sup"] = tr["card_key"].map(lambda k: attrs.get(k, {}).get("is_supporter", False))
 sup_tot = tr[tr["is_sup"]].groupby("uid")["count"].sum()
-tr["plays"] = tr["count"] * seen_frac
+tr["plays"] = tr["count"] * seen_frac * tr["name"].map(lambda n: C.TRAINER_PLAYABLE.get(n, 1.0))
 cap = (6.5 / (sup_tot * seen_frac)).clip(upper=1.0)
 tr.loc[tr["is_sup"], "plays"] *= tr.loc[tr["is_sup"], "uid"].map(cap).fillna(1)
 trs = tr.groupby("name").agg(lists=("uid", "nunique"), copies=("count", "sum"), plays=("plays", "sum"))
@@ -240,6 +232,8 @@ trs["avg_copies"] = trs["copies"] / trs["lists"]
 trs["plays_per_game"] = trs["plays"] / trs["lists"]
 trs["ce_per_play"] = [C.TRAINER_CE.get(n, (np.nan, ""))[0] for n in trs.index]
 trs["why"] = [C.TRAINER_CE.get(n, (np.nan, ""))[1] for n in trs.index]
+trs["breakdown"] = [C.breakdown(C.TRAINER_COMPONENTS[n]) if n in C.TRAINER_COMPONENTS else "" for n in trs.index]
+trs["playable"] = [C.TRAINER_PLAYABLE.get(n, 1.0) for n in trs.index]
 trs["advantage_ce_per_game"] = trs["ce_per_play"] * trs["plays_per_game"]
 def _fit_play(n):
     comp = C.TRAINER_COMPONENTS.get(n)

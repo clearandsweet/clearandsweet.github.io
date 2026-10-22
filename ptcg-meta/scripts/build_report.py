@@ -58,7 +58,7 @@ tr = rd("advantage_trainers_CUR.csv")
 cvf = rd("card_value_fit.csv")
 if not tr.empty and not cvf.empty:
     tr = tr.merge(cvf[["name", "measured_wr", "predicted_wr", "residual_wr"]].drop_duplicates("name"), on="name", how="left")
-P["trainers"] = recs(tr[tr["ce_per_play"].notna()] if not tr.empty else tr, ["name", "type", "field_inclusion", "avg_copies", "plays_per_game", "ce_per_play", "why",
+P["trainers"] = recs(tr[tr["ce_per_play"].notna()] if not tr.empty else tr, ["name", "type", "field_inclusion", "avg_copies", "plays_per_game", "ce_per_play", "why", "breakdown", "playable",
                                                                             "advantage_ce_per_game", "meta_advantage_ce_per_100_games", "ce_per_play_fitted",
                                                                             "vs_avg_supporter", "advantage_fitted_ce_per_game", "meta_fitted_ce_per_100_games",
                                                                             "measured_wr", "predicted_wr", "residual_wr", "legal_post_rotation"], n=90)
@@ -137,7 +137,7 @@ P["jp_new_cards"] = recs(rd("jp_cityleague_new_cards.csv"), n=25)
 P["share_by_event"] = recs(rd("archetype_share_by_event.csv").rename(columns={"Unnamed: 0": "deck_id", "deck_id": "deck_id"}), n=400)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import model_config as C
-P["knobs"] = {"P_ALIVE": C.P_ALIVE, "PRIZE_TO_CE": C.PRIZE_TO_CE, "CE": C.CE, "BUDEW_LOCK_TURNS": C.BUDEW_LOCK_TURNS,
+P["knobs"] = {"P_ALIVE": C.P_ALIVE, "PRIZE_TO_CE": C.PRIZE_TO_CE, "REALIZATION": C.REALIZATION, "CE": C.CE, "BUDEW_LOCK_TURNS": C.BUDEW_LOCK_TURNS,
               "SUPPORT": C.SUPPORT, "dig": __import__("access_sim").PARAMS["dig"]}
 tpl = open(TPL).read()
 html = tpl.replace("/*__DATA__*/null", json.dumps(P, ensure_ascii=False, default=float))

@@ -79,7 +79,7 @@ for nm, a in C.ATTACKERS.items():
                  "exp_damage_vs_meta": e_dmg, "p_OHKO_meta_defender": p_ohko, "spread_per_attack": a.get("spread", 0),
                  "prizes_per_attack": prize_per_attack, "first_attack_turn": first, "attacks_per_game": attacks,
                  "prizes_per_game": prize_per_attack * attacks,
-                 "damage_value_ce_per_game": prize_per_attack * attacks * C.PRIZE_TO_CE,
+                 "damage_value_ce_per_game": prize_per_attack * attacks * C.REALIZATION * C.PRIZE_TO_CE,
                  "prize_efficiency": prize_per_attack / facts[nm]["prizes"]})
 R = pd.DataFrame(rows)
 inc = pd.read_csv(os.path.join(O, f"card_inventory_{WIN}.csv")).groupby("name")["inclusion"].max()

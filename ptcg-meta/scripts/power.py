@@ -29,18 +29,12 @@ P2CE = C.POWER_CE_PER_PRIZE
 G = list(C.COMPONENT_GROUPS)
 RAW2G = {raw: g for g, raws in C.COMPONENT_GROUPS.items() for raw in raws}
 cw = pd.read_csv(os.path.join(O, "ce_weights_fitted.csv")).set_index("group")
-HW_POWER = dict(C.HAND_WEIGHTS, damage_100hp=100 / C.HP_PER_PRIZE * P2CE, heal_100hp=100 / C.HP_PER_PRIZE * P2CE)
-WSETS = {"hand": np.array([HW_POWER[g] for g in G]),
+WSETS = {"hand": np.array([C.HAND_WEIGHTS[g] for g in G]),
          "fitted": np.array([cw.loc[g, "fitted_weight"] for g in G]),
          "data": np.array([cw.loc[g, "data_only_wr"] for g in G])}
 def gvec(comp, mult=1.0):
     v = np.zeros(len(G))
-    for k, x in comp.items():
-        g = RAW2G.get(k)
-        if g is None: continue
-        x = abs(x) if g == "cost" else x
-        if g in ("damage_100hp", "heal_100hp"): x = x / 100
-        v[G.index(g)] += x * mult
+    for g, x in C.group_units(comp, mult).items(): v[G.index(g)] += x
     return v
 
 # ---------------- card facts ----------------
@@ -109,7 +103,7 @@ def build(uid, g, deck_id):
         res = np.zeros(len(G))
         if cat == "trainer" and nm in C.TRAINER_COMPONENTS:
             a = attrs.get(e["key"], {})
-            res = gvec(C.TRAINER_COMPONENTS[nm], e["copies"] * 0.68 * (sup_scale if a.get("is_supporter") else 1.0))
+            res = gvec(C.TRAINER_COMPONENTS[nm], e["copies"] * 0.68 * (sup_scale if a.get("is_supporter") else 1.0) * C.TRAINER_PLAYABLE.get(nm, 1.0))
         elif cat == "energy" and nm in C.ENERGY_COMPONENTS:
             res = gvec(C.ENERGY_COMPONENTS[nm], e["copies"] * C.ENERGY_PLAYS_PER_COPY)
         elif cat == "pokemon" and nm in C.ENGINES:
@@ -292,6 +286,7 @@ for uid, (cards, pk, act, bud) in PROF.items():
         for ws, W_ in WSETS.items():
             r[f"effect_{ws}"] = float(e["res"] @ W_)
         r["dmgheal_units"] = float(e["res"][G.index("damage_100hp")] + e["res"][G.index("heal_100hp")])
+        r["prize_units"] = float(e["res"][G.index("prize")])
         rows.append(r)
 CP = pd.DataFrame(rows)
 # realization: scale Prize progress so the window's mean offense per list equals PRIZES_TAKEN_PER_GAME
@@ -315,7 +310,7 @@ for ws in WSETS:
 CP.to_csv(os.path.join(O, "power_cards_all.csv.gz"), index=False, compression="gzip")
 
 # ---------------- deck totals ----------------
-agg = {f"effect_{ws}": "sum" for ws in WSETS} | {f"power_{ws}": "sum" for ws in WSETS} | {"offense_prizes": "sum", "liability_prizes": "sum", "dmgheal_units": "sum"}
+agg = {f"effect_{ws}": "sum" for ws in WSETS} | {f"power_{ws}": "sum" for ws in WSETS} | {"offense_prizes": "sum", "liability_prizes": "sum", "dmgheal_units": "sum", "prize_units": "sum"}
 DL = CP.groupby("uid").agg(agg)
 for ws in WSETS:
     DL[f"power_H_{ws}"] = CP[CP["legal_post"] == 0].groupby("uid")[f"power_{ws}"].sum().reindex(DL.index).fillna(0)
@@ -328,8 +323,14 @@ meta_out = {w: {"attacks_per_game": M["A_opp"], "p_gust": M["p_gust"], "kappa": 
                 "attack_pool": {ATK[i]: round(float(M["pool"][i]), 4) for i in np.argsort(-M["pool"]) if M["pool"][i] > 0.002}}
             for w, M in WIN.items()}
 PP = pd.DataFrame({w: PPA[w]["ppa"] for w in PPA}, index=ATK)
+for w in PPA:
+    PP[f"{w}_active"], PP[f"{w}_gust"], PP[f"{w}_spread"] = PPA[w]["active"], PPA[w]["gust"], PPA[w]["spread"]
 PP.index.name = "attacker"
 PP.to_csv(os.path.join(O, "power_prizes_per_attack.csv"))
+# what a gust is worth: Prize progress on the best gust target minus on the Active, field-weighted, after realization
+for w, M in WIN.items():
+    meta_out[w]["gust_gain_prizes"] = float((M["pool"] * (PPA[w]["gust"] - PPA[w]["active"])).sum() * KAPPA[w])
+json.dump(meta_out, open(os.path.join(O, "power_meta.json"), "w"), indent=1)
 json.dump(meta_out, open(os.path.join(O, "power_meta.json"), "w"), indent=1)
 print("cards rows", len(CP), "lists", len(DL))
 print(DL.groupby("window")[[f"power_{ws}" for ws in WSETS] + ["offense_prizes", "liability_prizes"]].mean().round(2).to_string())

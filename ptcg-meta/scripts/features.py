@@ -25,13 +25,8 @@ rec = gm.groupby(["tid", "player"])[["w", "l", "t"]].sum()
 GROUPS = C.COMPONENT_GROUPS
 RAW2G = {raw: g for g, raws in GROUPS.items() for raw in raws}
 def add(vec, comp, mult, prefix):
-    for k, x in comp.items():
-        g = RAW2G.get(k)
-        if g is None: continue
-        val = x * mult
-        if g == "cost": val = abs(val)
-        if g in ("damage_100hp", "heal_100hp"): val = val / 100
-        vec[f"{prefix}{g}"] = vec.get(f"{prefix}{g}", 0) + val
+    for g, x in C.group_units(comp, mult).items():
+        vec[f"{prefix}{g}"] = vec.get(f"{prefix}{g}", 0) + x
 # opponent context per window (for matchup-dependent triggers)
 DRAGON = {"Dragapult ex", "Dreepy", "Drakloak", "N's Zekrom", "N's Reshiram", "Raging Bolt ex", "Kyurem", "Mega Dragonite ex"}
 opp = {}
@@ -60,7 +55,7 @@ for i, p in enumerate(pl.itertuples()):
     for k, nm, c in zip(tr["card_key"], tr["name"], tr["count"]):
         comp = C.TRAINER_COMPONENTS.get(nm)
         if not comp: continue
-        plays = c * 0.68 * (sup_scale if attrs.get(k, {}).get("is_supporter") else 1.0)
+        plays = c * 0.68 * (sup_scale if attrs.get(k, {}).get("is_supporter") else 1.0) * C.TRAINER_PLAYABLE.get(nm, 1.0)
         add(vec, comp, plays, "tr_")
     w, l, t = rec.loc[(p.tid, p.tp_id)] if (p.tid, p.tp_id) in rec.index else (np.nan, np.nan, np.nan)
     rows.append({"uid": p.uid, "tid": p.tid, "tp_id": p.tp_id, "player_id": p.player_id, "deck_id": p.deck_id, "sup_id": p.sup_id,

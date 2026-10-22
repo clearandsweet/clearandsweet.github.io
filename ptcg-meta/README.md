@@ -115,8 +115,14 @@ The card pool JSON (`data/cards/*.json`) comes from `raw.githubusercontent.com/P
 
 ## Units
 
-* **CE (card-equivalent)**: the value of drawing one random card. Searches, Energy acceleration, retreat savings,
-  Item lock, damage and healing all convert into CE (see `model_config.py`). The Advantage tables use 1 Prize ≈ 3 CE;
-  the Power model uses 1 Prize = 10 CE, the rate cross-validation picked against results.
+* **CE (card-equivalent)**: the value of drawing one random card. One price list (`CE` in `model_config.py`) prices
+  every Ability, attack effect and Trainer: count what the card does in units (cards drawn or searched, extra
+  attachments, Energy that didn't come from hand, retreat Energy saved, gusts, opposing cards or Energy removed,
+  damage and healing, Prizes), multiply by the price, subtract the costs the text imposes (discards, your hand
+  shuffled away, Energy lost, a turn that ends without an attack). 1 Prize = 10 CE everywhere (picked by
+  cross-validation in `power_eval.py`); damage and healing count at the ~60% of progress that turns into KOs, so
+  100 HP ≈ 4.3 CE. Trainer units and how they were read from the card text are in `TRAINER_COMPONENTS` /
+  `TRAINER_NOTES`; play conditions (Unfair Stamp after a KO, Briar at 2 Prizes…) lower plays per game through
+  `TRAINER_PLAYABLE`, not the value of a play.
 * **Win rate**: ties count as ⅓ of a win; non-mirror unless stated.
 * **Day 2 lift**: archetype Day 2 rate ÷ field Day 2 rate. The "shrunk" version adds 30 pseudo-players at the field rate.
