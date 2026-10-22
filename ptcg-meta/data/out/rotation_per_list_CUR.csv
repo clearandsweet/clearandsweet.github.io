@@ -10717,3 +10717,2333 @@ tid,tp_id,rot_copies,rot_unique,rot_pokemon,rot_trainer,rot_energy,deck_id,deck_
 0076,2925,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
 0076,2926,24,14,15,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
 0076,2927,17,9,3,14,0,beedrill-ex-cri,Beedrill,0,0
+0077,1,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,2,23,14,13,10,0,basic-box-m,Basic Box,1,0
+0077,3,28,14,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,4,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,5,26,11,15,11,0,dragapult-ex,Dragapult,0,0
+0077,6,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,7,31,17,16,15,0,tera-box,Tera Box,0,0
+0077,8,12,6,2,10,0,dhelmise-pbl,Dhelmise,0,0
+0077,9,16,12,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,10,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,11,28,15,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,12,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,13,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,14,31,15,18,13,0,festival-lead,Festival Lead,0,0
+0077,15,20,12,6,14,0,n-zoroark,N's Zoroark,0,0
+0077,16,25,16,10,15,0,basic-box-m,Basic Box,0,0
+0077,17,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,18,22,12,6,16,0,lillie-clefairy,Lillie's Clefairy,0,0
+0077,19,18,12,5,13,0,n-zoroark,N's Zoroark,1,0
+0077,20,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,21,17,10,9,8,0,mega-camerupt-ex,Mega Camerupt,0,0
+0077,22,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,23,28,13,13,13,2,slowking-scr,Slowking,0,0
+0077,24,22,13,13,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,25,25,10,16,9,0,dragapult-ex,Dragapult,1,0
+0077,26,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,27,11,6,5,6,0,mega-lucario-ex,Mega Lucario,0,0
+0077,28,15,7,4,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,29,10,6,4,6,0,metagross-cri,Metagross,0,0
+0077,30,15,12,6,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,31,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,32,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,33,30,13,16,10,4,festival-lead,Festival Lead,0,0
+0077,34,8,5,2,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,35,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,36,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,37,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,38,23,14,10,13,0,basic-box-m,Basic Box,0,0
+0077,39,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,40,10,7,1,8,1,other,Other,0,0
+0077,41,25,15,12,13,0,basic-box-m,Basic Box,0,0
+0077,42,15,8,7,8,0,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,43,15,7,10,5,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,44,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,45,14,9,4,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,1,0
+0077,46,30,13,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,47,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,48,12,5,5,7,0,other,Other,0,0
+0077,49,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,50,22,14,13,9,0,greninja-ex,Greninja,0,0
+0077,51,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,52,19,9,17,1,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,53,28,13,18,10,0,dragapult-ex,Dragapult,1,0
+0077,54,18,10,10,7,1,starmie-dusknoir,Starmie Dusknoir,0,0
+0077,55,6,3,1,5,0,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,56,16,8,7,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,57,28,12,14,11,3,slowking-scr,Slowking,0,0
+0077,58,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,59,20,13,11,8,1,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,60,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,61,27,11,16,11,0,dragapult-ex,Dragapult,1,1
+0077,62,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,63,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,64,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,65,26,11,17,9,0,dragapult-ex,Dragapult,0,0
+0077,66,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,67,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,68,29,13,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,69,32,15,20,12,0,festival-lead,Festival Lead,0,0
+0077,70,14,6,6,3,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,71,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,72,20,11,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,73,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,74,22,13,14,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,75,15,9,4,11,0,n-zoroark,N's Zoroark,0,0
+0077,76,14,6,8,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,77,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,78,28,14,17,10,1,festival-lead,Festival Lead,1,0
+0077,79,14,9,5,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,80,16,8,8,7,1,mega-greninja-ex,Mega Greninja,0,0
+0077,81,24,15,9,15,0,basic-box-m,Basic Box,0,0
+0077,82,24,12,16,7,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,83,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,84,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,85,13,4,8,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,86,31,14,19,12,0,festival-lead,Festival Lead,1,0
+0077,87,18,10,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,88,25,10,15,10,0,dragapult-ex,Dragapult,0,0
+0077,89,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,90,13,9,7,6,0,other,Other,1,1
+0077,91,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,92,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,93,15,11,7,7,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,94,19,10,15,3,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,95,21,10,18,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,96,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,97,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,98,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,99,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,100,29,14,17,12,0,dragapult-ex,Dragapult,0,0
+0077,101,12,7,0,8,4,crustle-dri,Crustle,0,0
+0077,102,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,103,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,104,21,10,18,2,1,lopunny-dusknoir,Lopunny Dusknoir,1,0
+0077,105,4,3,0,4,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,106,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,107,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,108,9,6,4,5,0,dhelmise-pbl,Dhelmise,1,0
+0077,109,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,110,8,4,0,8,0,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,111,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,112,25,16,11,14,0,basic-box-m,Basic Box,1,0
+0077,113,25,15,10,15,0,basic-box-m,Basic Box,1,0
+0077,114,33,15,20,13,0,festival-lead,Festival Lead,1,0
+0077,115,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,116,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,117,33,14,20,12,1,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,118,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,119,24,14,10,14,0,basic-box-m,Basic Box,0,0
+0077,120,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,121,25,10,15,10,0,dragapult-ex,Dragapult,1,0
+0077,122,20,10,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,123,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,124,19,10,12,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,125,19,16,5,14,0,other,Other,0,0
+0077,126,11,6,4,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,127,17,10,6,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,128,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,129,28,11,17,11,0,dragapult-ex,Dragapult,0,0
+0077,130,12,7,5,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,131,15,10,4,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,132,29,14,14,13,2,slowking-scr,Slowking,0,0
+0077,133,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,134,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,135,25,11,16,9,0,dragapult-ex,Dragapult,0,0
+0077,136,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,137,30,13,18,12,0,dragapult-ex,Dragapult,0,0
+0077,138,9,6,2,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,139,26,14,11,13,2,slowking-scr,Slowking,0,0
+0077,140,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,141,19,11,12,7,0,other,Other,0,0
+0077,142,17,10,6,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,143,10,7,5,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,144,31,14,19,12,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,145,24,12,11,12,1,slowking-scr,Slowking,0,0
+0077,146,6,4,5,0,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,147,26,12,13,12,1,slowking-scr,Slowking,1,0
+0077,148,32,15,19,13,0,festival-lead,Festival Lead,1,0
+0077,149,15,7,5,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,150,26,12,16,10,0,dragapult-dudunsparce,Dragapult Dudunsparce,0,0
+0077,151,27,13,13,12,2,slowking-scr,Slowking,1,0
+0077,152,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,153,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,154,11,6,1,9,1,dhelmise-pbl,Dhelmise,0,0
+0077,155,26,12,12,12,2,slowking-scr,Slowking,0,0
+0077,156,17,10,7,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,157,29,12,19,10,0,dragapult-dudunsparce,Dragapult Dudunsparce,1,0
+0077,158,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,159,28,14,14,13,1,slowking-scr,Slowking,0,0
+0077,160,26,10,12,12,2,slowking-scr,Slowking,0,0
+0077,161,16,11,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,162,25,11,17,8,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,163,21,11,15,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,164,12,7,6,6,0,dhelmise-pbl,Dhelmise,0,0
+0077,165,21,12,17,3,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,166,8,4,0,8,0,rocket-mewtwo-ex,Rocket's Mewtwo,1,0
+0077,167,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,168,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,169,10,7,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,170,17,8,6,7,4,mega-lopunny-ex,Mega Lopunny,0,0
+0077,171,5,2,0,4,1,cynthia-garchomp-ex,Cynthia's Garchomp,1,0
+0077,172,26,16,11,15,0,basic-box-m,Basic Box,1,0
+0077,173,14,5,8,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,174,15,9,6,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,175,27,11,12,13,2,slowking-scr,Slowking,0,0
+0077,176,20,10,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,177,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,178,18,11,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,179,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,180,21,10,14,7,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,181,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,182,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,183,25,10,16,9,0,dragapult-ex,Dragapult,1,0
+0077,184,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,185,33,17,18,15,0,festival-lead,Festival Lead,0,0
+0077,186,8,4,0,8,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,187,13,8,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,188,17,10,12,5,0,palafin-ex,Palafin,0,0
+0077,189,21,14,10,11,0,beedrill-ex-cri,Beedrill,0,0
+0077,190,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,191,18,11,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,192,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,193,8,4,0,8,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,194,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,195,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,196,18,11,14,4,0,other,Other,0,0
+0077,197,16,9,6,10,0,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,198,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,199,24,14,9,15,0,basic-box-m,Basic Box,1,0
+0077,200,16,10,6,9,1,starmie-froslass,Starmie Froslass,0,0
+0077,201,16,9,0,12,4,crustle-dri,Crustle,0,0
+0077,202,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,203,5,4,0,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,204,20,11,14,6,0,hop-zacian,Hop's Zacian,0,0
+0077,205,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,206,15,11,7,7,1,mega-lopunny-ex,Mega Lopunny,0,0
+0077,207,31,15,18,13,0,dragapult-ex,Dragapult,0,0
+0077,208,14,6,9,5,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,209,30,13,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,210,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,211,16,9,6,10,0,beedrill-ex-cri,Beedrill,0,0
+0077,212,18,11,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,213,16,9,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,214,23,12,7,16,0,mew-ex-30c,Mew Box,1,0
+0077,215,20,9,13,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,216,23,11,11,11,1,slowking-scr,Slowking,0,0
+0077,217,12,6,5,7,0,mega-venusaur-ex,Mega Venusaur,0,0
+0077,218,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,219,16,10,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,220,11,7,5,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,221,31,16,19,12,0,festival-lead,Festival Lead,1,0
+0077,222,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,223,17,11,5,12,0,n-zoroark,N's Zoroark,0,0
+0077,224,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,225,17,10,3,14,0,n-zoroark,N's Zoroark,0,0
+0077,226,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,227,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,228,9,6,2,6,1,dhelmise-pbl,Dhelmise,1,0
+0077,229,9,6,5,4,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,230,26,10,12,12,2,slowking-scr,Slowking,0,0
+0077,231,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,232,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,233,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,234,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,235,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,236,24,11,11,11,2,slowking-scr,Slowking,0,0
+0077,237,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,238,9,7,4,5,0,dhelmise-pbl,Dhelmise,0,0
+0077,239,11,5,5,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,240,15,9,6,9,0,mega-venusaur-ex,Mega Venusaur,0,0
+0077,241,14,9,7,7,0,dhelmise-pbl,Dhelmise,0,0
+0077,242,25,10,16,9,0,dragapult-ex,Dragapult,1,0
+0077,243,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,244,31,14,19,12,0,festival-lead,Festival Lead,1,0
+0077,245,25,10,12,11,2,slowking-scr,Slowking,1,0
+0077,246,20,9,11,4,5,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,247,14,6,5,4,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,248,17,10,4,13,0,n-zoroark,N's Zoroark,1,0
+0077,249,29,14,18,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,250,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,251,26,17,11,15,0,basic-box-m,Basic Box,1,0
+0077,252,16,9,5,11,0,n-zoroark,N's Zoroark,0,0
+0077,253,11,5,1,6,4,hops-trevenant,Hop's Trevenant,0,0
+0077,254,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,255,12,9,6,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,256,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,257,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,258,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,259,9,5,2,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,260,24,11,13,11,0,slowking-scr,Slowking,0,0
+0077,261,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,262,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,263,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,264,29,15,20,9,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,265,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,266,20,11,17,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,267,8,5,5,2,1,okidogi-barbaracle,Okidogi Barbaracle,0,0
+0077,268,13,9,7,6,0,toxtricity-box,Toxtricity Box,0,0
+0077,269,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,270,22,13,11,11,0,toucannon-pbl,Toucannon,0,0
+0077,271,24,15,10,14,0,basic-box-m,Basic Box,1,0
+0077,272,11,7,3,7,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,273,17,10,7,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,274,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,275,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,276,14,9,4,9,1,mega-starmie-ex,Mega Starmie,0,0
+0077,277,24,11,16,8,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,278,18,9,10,7,1,starmie-froslass,Starmie Froslass,0,0
+0077,279,31,16,19,12,0,festival-lead,Festival Lead,0,0
+0077,280,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,281,31,15,18,13,0,festival-lead,Festival Lead,0,0
+0077,282,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,283,31,14,16,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,284,5,4,0,5,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,285,23,14,13,10,0,basic-box-m,Basic Box,0,0
+0077,286,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,287,9,6,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,288,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,289,31,15,18,13,0,festival-lead,Festival Lead,1,0
+0077,290,27,13,12,13,2,slowking-scr,Slowking,0,0
+0077,291,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,292,22,13,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,293,32,13,21,11,0,festival-lead,Festival Lead,0,0
+0077,294,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,295,11,7,5,6,0,dhelmise-pbl,Dhelmise,1,0
+0077,296,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,297,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,298,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,299,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,300,25,11,12,11,2,slowking-scr,Slowking,1,0
+0077,301,14,5,9,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,302,18,11,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,303,14,8,4,10,0,n-zoroark,N's Zoroark,0,0
+0077,304,25,11,11,12,2,slowking-scr,Slowking,0,0
+0077,305,13,7,6,6,1,mega-greninja-ex,Mega Greninja,0,0
+0077,306,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,307,27,13,13,12,2,slowking-scr,Slowking,1,0
+0077,308,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,309,14,8,5,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,310,25,11,15,10,0,dragapult-ex,Dragapult,0,0
+0077,311,14,5,8,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,312,19,13,7,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,313,14,9,4,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,1,0
+0077,314,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,315,15,7,9,6,0,grimmsnarl-froslass,Grimmsnarl Froslass,1,0
+0077,316,9,7,3,5,1,alakazam-meg,Alakazam,0,0
+0077,317,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,318,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,319,32,15,19,13,0,festival-lead,Festival Lead,1,0
+0077,320,15,9,4,11,0,n-zoroark,N's Zoroark,0,0
+0077,321,15,10,4,11,0,other,Other,0,0
+0077,322,27,14,16,11,0,dragapult-ex,Dragapult,0,0
+0077,323,31,17,17,12,2,slowking-scr,Slowking,0,0
+0077,324,15,9,3,12,0,n-zoroark,N's Zoroark,0,0
+0077,325,25,11,16,9,0,dragapult-ex,Dragapult,0,0
+0077,326,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,327,11,5,1,9,1,dhelmise-pbl,Dhelmise,0,0
+0077,328,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,329,32,15,17,15,0,festival-lead,Festival Lead,0,0
+0077,330,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,331,8,4,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,332,12,6,5,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,333,8,4,4,3,1,dhelmise-pbl,Dhelmise,0,0
+0077,334,31,14,20,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,335,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,336,33,14,20,13,0,festival-lead,Festival Lead,0,0
+0077,337,3,3,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,338,10,6,5,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,339,29,13,18,11,0,festival-lead,Festival Lead,0,0
+0077,340,16,8,5,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,341,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,342,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,343,25,15,9,16,0,basic-box-m,Basic Box,0,0
+0077,344,8,5,5,3,0,other,Other,0,0
+0077,345,5,2,0,5,0,mega-abomasnow-ex,Mega Abomasnow,0,0
+0077,346,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,347,11,5,0,7,4,hops-trevenant,Hop's Trevenant,0,0
+0077,348,32,12,17,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,349,28,13,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,350,17,10,10,6,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,351,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,352,28,14,12,12,4,slowking-scr,Slowking,0,0
+0077,353,14,8,6,8,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,354,28,15,18,9,1,slowking-scr,Slowking,0,0
+0077,355,28,13,19,9,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,356,21,13,5,16,0,n-zoroark,N's Zoroark,1,0
+0077,357,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,358,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,359,26,16,11,15,0,basic-box-m,Basic Box,1,1
+0077,360,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,361,10,6,4,5,1,mega-chandelure-ex,Mega Chandelure,1,0
+0077,362,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,363,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,364,15,9,8,7,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,365,34,15,18,16,0,festival-lead,Festival Lead,0,0
+0077,366,30,16,21,9,0,dragapult-dudunsparce,Dragapult Dudunsparce,0,0
+0077,367,20,8,8,11,1,ceruledge-ex,Ceruledge,0,0
+0077,368,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,1,0
+0077,369,25,15,10,15,0,basic-box-m,Basic Box,0,0
+0077,370,27,16,12,15,0,basic-box-m,Basic Box,0,0
+0077,371,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,372,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,373,11,6,0,7,4,crustle-dri,Crustle,0,0
+0077,374,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,375,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,376,11,6,0,7,4,crustle-dri,Crustle,1,0
+0077,377,26,12,17,9,0,dragapult-ex,Dragapult,0,0
+0077,378,26,18,11,15,0,basic-box-m,Basic Box,1,0
+0077,379,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,380,28,13,13,13,2,slowking-scr,Slowking,0,0
+0077,381,19,10,12,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,382,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,383,21,8,8,10,3,ceruledge-ex,Ceruledge,0,0
+0077,384,24,15,10,14,0,basic-box-m,Basic Box,1,0
+0077,385,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,386,10,5,2,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,387,26,12,16,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,388,25,13,12,12,1,slowking-scr,Slowking,0,0
+0077,389,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,390,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,391,27,9,18,9,0,dragapult-ex,Dragapult,0,0
+0077,392,11,6,6,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,393,12,9,2,8,2,manectric-eelektrik,Manectric Eelektrik,0,0
+0077,394,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,395,31,14,20,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,396,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,397,10,6,2,7,1,mega-greninja-ex,Mega Greninja,0,0
+0077,398,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,399,6,3,0,6,0,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,400,32,16,20,12,0,festival-lead,Festival Lead,0,0
+0077,401,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,402,26,17,12,14,0,basic-box-m,Basic Box,0,0
+0077,403,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,404,20,12,11,9,0,greninja-ex,Greninja,0,0
+0077,405,14,6,9,5,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,406,18,10,9,9,0,metagross-cri,Metagross,0,0
+0077,407,23,10,10,8,5,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,408,26,12,12,12,2,slowking-scr,Slowking,0,0
+0077,409,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,410,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,411,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,412,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,413,28,12,13,13,2,slowking-scr,Slowking,0,0
+0077,414,27,12,12,13,2,slowking-scr,Slowking,1,1
+0077,415,24,12,12,11,1,slowking-scr,Slowking,0,0
+0077,416,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,417,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,418,30,13,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,419,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,420,31,12,16,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,421,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,422,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,423,16,11,5,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,424,5,2,0,4,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,425,32,16,17,15,0,festival-lead,Festival Lead,0,0
+0077,426,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,427,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,428,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,429,11,5,4,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,430,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,431,13,8,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,432,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,433,28,14,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,434,12,7,0,8,4,crustle-dri,Crustle,1,0
+0077,435,24,13,11,11,2,slowking-scr,Slowking,0,0
+0077,436,26,11,15,11,0,dragapult-ex,Dragapult,0,0
+0077,437,17,11,10,6,1,alakazam-meg,Alakazam,0,0
+0077,438,10,6,3,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,439,19,11,5,14,0,n-zoroark,N's Zoroark,0,0
+0077,440,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,441,25,15,10,15,0,basic-box-m,Basic Box,1,0
+0077,442,26,9,13,13,0,dragapult-ex,Dragapult,0,0
+0077,443,26,11,13,11,2,slowking-scr,Slowking,0,0
+0077,444,16,8,6,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,445,25,11,15,10,0,dragapult-ex,Dragapult,0,0
+0077,446,12,7,4,7,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,447,20,13,6,14,0,n-zoroark,N's Zoroark,1,0
+0077,448,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,449,18,11,5,13,0,n-zoroark,N's Zoroark,1,0
+0077,450,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,451,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,452,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,453,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,454,27,16,10,17,0,basic-box-m,Basic Box,0,0
+0077,455,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,456,18,12,10,6,2,kangaskhan-bouffalant,Kangaskhan Bouffalant,0,0
+0077,457,31,15,19,12,0,festival-lead,Festival Lead,0,0
+0077,458,27,11,16,11,0,dragapult-ex,Dragapult,1,0
+0077,459,27,13,14,11,2,slowking-scr,Slowking,0,0
+0077,460,16,11,5,11,0,n-zoroark,N's Zoroark,0,0
+0077,461,22,11,15,6,1,starmie-dusknoir,Starmie Dusknoir,1,0
+0077,462,9,7,4,5,0,toxtricity-pfl,Toxtricity,0,0
+0077,463,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,464,30,10,15,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,465,26,16,12,14,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,466,30,23,18,12,0,other,Other,0,0
+0077,467,17,9,14,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,468,15,8,7,8,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,469,16,9,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,470,26,16,12,14,0,kangaskhan-bouffalant,Kangaskhan Bouffalant,0,0
+0077,471,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,472,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,473,28,14,13,13,2,slowking-scr,Slowking,0,0
+0077,474,26,11,13,11,2,slowking-scr,Slowking,0,0
+0077,475,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,476,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,477,14,6,4,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,478,32,16,18,14,0,festival-lead,Festival Lead,0,0
+0077,479,31,12,16,11,4,seaking-pre,Seaking Festival Lead,1,0
+0077,480,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,481,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,482,25,13,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,483,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,484,12,6,5,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,485,30,15,18,12,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,486,14,5,8,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,487,12,6,1,11,0,dhelmise-pbl,Dhelmise,0,0
+0077,488,29,13,19,10,0,dragapult-ex,Dragapult,0,0
+0077,489,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,490,21,12,7,14,0,mew-ex-30c,Mew Box,1,0
+0077,491,20,11,12,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,492,28,11,16,12,0,dragapult-ex,Dragapult,0,0
+0077,493,20,10,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,494,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,495,7,6,3,4,0,dhelmise-pbl,Dhelmise,0,0
+0077,496,21,11,9,10,2,ceruledge-ex,Ceruledge,0,0
+0077,497,20,10,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,498,19,8,8,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,499,9,4,0,5,4,hops-trevenant,Hop's Trevenant,0,0
+0077,500,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,501,15,9,5,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,502,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,1,0
+0077,503,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,504,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,505,25,14,9,16,0,basic-box-m,Basic Box,1,1
+0077,506,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,507,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,508,24,9,9,15,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,509,30,9,14,12,4,seaking-pre,Seaking Festival Lead,1,1
+0077,510,15,7,4,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,511,25,10,12,11,2,slowking-scr,Slowking,0,0
+0077,512,4,3,0,3,1,lucario-hariyama,Lucario Hariyama,0,0
+0077,513,17,11,7,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,514,21,11,15,5,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,515,23,10,15,8,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,516,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,517,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,518,17,10,4,13,0,n-zoroark,N's Zoroark,1,0
+0077,519,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,520,19,10,12,7,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,521,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,522,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,523,25,14,11,14,0,basic-box-m,Basic Box,0,0
+0077,524,14,9,3,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,525,21,12,4,17,0,n-zoroark,N's Zoroark,0,0
+0077,526,32,14,19,13,0,festival-lead,Festival Lead,1,0
+0077,527,27,13,16,11,0,festival-lead,Festival Lead,0,0
+0077,528,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,529,6,5,3,3,0,dhelmise-pbl,Dhelmise,1,0
+0077,530,14,7,5,4,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,531,14,8,7,7,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,532,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,533,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,534,19,10,14,4,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,535,17,7,6,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,536,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,537,8,4,2,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,538,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,539,15,7,5,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,540,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,541,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,542,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,543,32,13,21,11,0,festival-lead,Festival Lead,0,0
+0077,544,33,14,18,15,0,festival-lead,Festival Lead,0,0
+0077,545,16,9,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,546,26,13,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,547,16,10,8,8,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,548,18,10,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,549,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,550,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,551,27,16,12,15,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,552,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,553,18,11,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,554,16,10,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,555,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,556,19,13,11,8,0,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,557,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,558,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,559,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,560,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,561,28,12,13,13,2,slowking-scr,Slowking,0,0
+0077,562,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,563,18,10,8,9,1,ceruledge-ex,Ceruledge,0,0
+0077,564,27,11,12,13,2,slowking-scr,Slowking,0,0
+0077,565,29,13,19,10,0,dragapult-ex,Dragapult,0,0
+0077,566,32,13,20,12,0,festival-lead,Festival Lead,0,0
+0077,567,15,7,4,9,2,mega-starmie-ex,Mega Starmie,0,0
+0077,568,16,7,5,7,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,569,28,12,13,13,2,slowking-scr,Slowking,0,0
+0077,570,29,13,19,10,0,dragapult-ex,Dragapult,1,0
+0077,571,20,11,12,7,1,alakazam-meg,Alakazam,0,0
+0077,572,11,7,8,2,1,ceruledge-ex,Ceruledge,0,0
+0077,573,12,6,2,9,1,dhelmise-pbl,Dhelmise,0,0
+0077,574,7,4,0,7,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,575,27,10,16,11,0,hydrapple-ogerpon,Hydrapple Ogerpon,0,0
+0077,576,18,11,6,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,578,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,579,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,580,25,10,16,8,1,dragapult-ex,Dragapult,0,0
+0077,581,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,582,28,12,18,10,0,dragapult-ex,Dragapult,1,1
+0077,583,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,584,26,16,11,15,0,basic-box-m,Basic Box,1,0
+0077,585,26,11,16,10,0,dragapult-ex,Dragapult,0,0
+0077,586,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,587,20,10,18,1,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,588,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,589,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,590,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,591,20,10,11,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,1
+0077,592,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,593,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,594,15,8,7,8,0,mega-venusaur-ex,Mega Venusaur,0,0
+0077,595,28,17,11,17,0,basic-box-m,Basic Box,0,0
+0077,596,26,11,16,10,0,dragapult-ex,Dragapult,0,0
+0077,597,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,598,20,11,12,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,599,24,15,10,14,0,basic-box-m,Basic Box,1,0
+0077,600,17,10,11,0,6,other,Other,0,0
+0077,601,14,7,6,7,1,mega-lucario-ex,Mega Lucario,0,0
+0077,602,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,603,13,9,8,5,0,toxtricity-box,Toxtricity Box,0,0
+0077,604,15,10,8,7,0,bloodmoon-ursaluna-sfa,Bloodmoon Ursaluna,0,0
+0077,605,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,606,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,607,31,13,20,11,0,festival-lead,Festival Lead,1,0
+0077,608,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,609,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,610,23,14,13,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,611,23,11,11,11,1,slowking-scr,Slowking,0,0
+0077,612,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,613,18,10,9,4,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,614,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,615,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,616,14,6,6,8,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,617,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,618,13,4,8,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,620,29,12,19,10,0,dragapult-dudunsparce,Dragapult Dudunsparce,1,1
+0077,621,21,9,11,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,622,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,623,28,13,13,13,2,slowking-scr,Slowking,0,0
+0077,624,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,625,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,626,32,15,18,14,0,other,Other,0,0
+0077,627,29,13,20,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,628,24,12,12,12,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,629,25,10,15,10,0,dragapult-ex,Dragapult,0,0
+0077,630,13,7,4,9,0,n-zoroark,N's Zoroark,0,0
+0077,631,17,11,5,12,0,n-zoroark,N's Zoroark,0,0
+0077,632,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,633,32,12,18,11,3,festival-lead,Festival Lead,1,0
+0077,634,21,11,15,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,635,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,636,16,11,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,637,11,5,5,5,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,638,16,10,8,8,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,639,24,12,7,17,0,mew-ex-30c,Mew Box,1,0
+0077,640,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,641,6,3,0,6,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,642,28,14,16,12,0,festival-lead,Festival Lead,1,0
+0077,643,27,13,17,10,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,644,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,645,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,646,13,8,0,9,4,crustle-dri,Crustle,0,0
+0077,647,22,13,14,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,648,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,649,20,11,12,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,650,18,12,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,651,17,10,6,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,652,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,653,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,654,30,14,20,10,0,festival-lead,Festival Lead,0,0
+0077,655,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,656,31,16,19,12,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,657,20,11,12,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,658,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,659,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,660,12,6,7,4,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,661,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,662,29,14,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,663,17,10,5,12,0,n-zoroark,N's Zoroark,0,0
+0077,664,27,12,18,9,0,dragapult-ex,Dragapult,1,0
+0077,665,19,10,10,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,666,12,8,5,7,0,toxtricity-box,Toxtricity Box,0,0
+0077,667,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,668,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,669,11,5,4,5,2,other,Other,0,0
+0077,670,16,8,8,7,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,671,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,672,14,7,6,4,4,lopunny-dudunsparce,Lopunny Dudunsparce,1,0
+0077,673,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,674,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,675,14,8,4,10,0,n-zoroark,N's Zoroark,0,0
+0077,676,18,11,5,13,0,n-zoroark,N's Zoroark,1,0
+0077,677,16,8,5,11,0,other,Other,0,0
+0077,678,18,11,6,10,2,mega-absol-box,Mega Absol Box,1,0
+0077,679,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,1,0
+0077,680,20,10,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,681,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,682,16,11,5,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,683,33,14,19,14,0,festival-lead,Festival Lead,0,0
+0077,684,28,12,14,12,2,slowking-scr,Slowking,0,0
+0077,685,8,4,1,7,0,mega-abomasnow-ex,Mega Abomasnow,0,0
+0077,686,29,13,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,687,24,15,9,15,0,basic-box-m,Basic Box,0,0
+0077,688,15,6,9,6,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,689,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,690,20,11,12,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,691,16,9,7,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,692,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,693,5,4,0,5,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,694,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,695,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,696,10,5,3,6,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,697,11,7,4,6,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,698,23,11,12,11,0,dragapult-ex,Dragapult,0,0
+0077,699,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,700,13,6,1,12,0,other,Other,0,0
+0077,701,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,702,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,703,16,10,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,704,10,6,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,705,14,8,6,8,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,706,4,3,0,4,0,rocket-spidops,Rocket's Spidops,0,0
+0077,707,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,708,37,19,20,17,0,festival-lead,Festival Lead,0,0
+0077,709,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,710,24,14,9,15,0,basic-box-m,Basic Box,1,0
+0077,711,21,12,18,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,712,25,15,11,14,0,basic-box-m,Basic Box,0,0
+0077,713,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,714,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,715,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,716,9,5,3,6,0,dhelmise-pbl,Dhelmise,0,0
+0077,717,32,13,20,12,0,festival-lead,Festival Lead,0,0
+0077,718,6,3,0,6,0,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,719,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,720,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,721,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,722,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,723,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,724,14,9,5,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,725,20,10,18,1,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,726,12,8,5,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,727,26,13,11,13,2,kangaskhan-bouffalant,Kangaskhan Bouffalant,0,0
+0077,728,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,729,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,730,4,3,0,3,1,lucario-hariyama,Lucario Hariyama,0,0
+0077,731,19,8,14,5,0,starmie-dusknoir,Starmie Dusknoir,0,0
+0077,732,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,733,23,14,10,13,0,basic-box-m,Basic Box,0,0
+0077,734,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,735,28,13,14,12,2,slowking-scr,Slowking,0,0
+0077,736,6,5,1,5,0,lucario-hariyama,Lucario Hariyama,1,0
+0077,737,12,4,0,12,0,dhelmise-pbl,Dhelmise,0,0
+0077,738,6,3,0,6,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,739,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,740,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,741,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,742,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,743,11,7,4,6,1,alakazam-dudunsparce,Alakazam Dudunsparce,1,0
+0077,744,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,745,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,746,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,747,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,748,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,749,25,10,16,9,0,dragapult-ex,Dragapult,1,0
+0077,750,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,751,22,13,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,752,5,3,0,5,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,753,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,754,29,12,14,15,0,festival-lead,Festival Lead,0,0
+0077,755,11,6,5,5,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,756,4,3,0,4,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,757,29,14,13,14,2,slowking-scr,Slowking,0,0
+0077,758,29,13,18,11,0,dragapult-ex,Dragapult,0,0
+0077,759,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,1,0
+0077,760,14,7,5,7,2,mega-absol-box,Mega Absol Box,0,0
+0077,761,33,15,19,14,0,festival-lead,Festival Lead,0,0
+0077,762,26,15,11,15,0,basic-box-m,Basic Box,0,0
+0077,763,12,7,0,8,4,crustle-dri,Crustle,1,0
+0077,764,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,765,31,14,16,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,766,11,7,4,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,767,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,768,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,769,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,770,30,14,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,771,22,14,11,11,0,clefairy-ogerpon,Clefairy Ogerpon,0,0
+0077,772,27,10,16,11,0,hydrapple-ogerpon,Hydrapple Ogerpon,0,0
+0077,773,26,11,16,10,0,dragapult-ex,Dragapult,0,0
+0077,774,17,8,6,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,775,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,776,17,8,7,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,777,11,5,5,6,0,mega-lucario-ex,Mega Lucario,0,0
+0077,778,27,13,15,12,0,festival-lead,Festival Lead,1,0
+0077,779,14,10,5,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,780,32,15,19,13,0,festival-lead,Festival Lead,1,0
+0077,781,25,16,10,15,0,basic-box-m,Basic Box,0,0
+0077,782,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,783,29,14,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,784,31,14,19,12,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,785,25,11,15,10,0,dragapult-ex,Dragapult,0,0
+0077,786,10,4,5,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,787,24,12,9,13,2,slowking-scr,Slowking,0,0
+0077,788,12,5,0,9,3,other,Other,0,0
+0077,789,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,790,24,15,10,14,0,basic-box-m,Basic Box,0,0
+0077,791,34,15,23,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,792,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,793,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,794,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,795,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,796,31,14,18,13,0,festival-lead,Festival Lead,1,0
+0077,797,31,15,19,12,0,festival-lead,Festival Lead,1,0
+0077,798,13,9,5,6,2,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,799,22,13,10,12,0,basic-box-m,Basic Box,1,0
+0077,800,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,801,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,802,18,8,5,9,4,toucannon-pbl,Toucannon,0,0
+0077,803,21,10,16,5,0,starmie-dusknoir,Starmie Dusknoir,0,0
+0077,804,16,10,8,8,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,805,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,806,11,7,2,5,4,crustle-dri,Crustle,1,0
+0077,807,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,808,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,809,3,3,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,810,27,13,17,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,811,28,13,14,12,2,slowking-scr,Slowking,0,0
+0077,812,11,5,3,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,813,28,12,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,814,7,4,2,5,0,eelektrik-blk,Eelektrik,0,0
+0077,815,8,6,3,5,0,dhelmise-pbl,Dhelmise,0,0
+0077,816,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,817,21,10,18,2,1,other,Other,0,0
+0077,818,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,819,32,15,19,13,0,festival-lead,Festival Lead,1,0
+0077,820,33,14,18,12,3,seaking-pre,Seaking Festival Lead,0,0
+0077,821,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,822,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,823,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,824,28,14,13,13,2,slowking-scr,Slowking,0,0
+0077,825,20,13,12,7,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,826,12,4,0,12,0,dhelmise-pbl,Dhelmise,0,0
+0077,827,11,7,5,5,1,mega-greninja-ex,Mega Greninja,0,0
+0077,828,22,15,12,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,829,25,10,15,10,0,dragapult-ex,Dragapult,0,0
+0077,830,26,11,12,11,3,slowking-scr,Slowking,0,0
+0077,831,14,6,4,10,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,832,17,8,8,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,833,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,834,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,835,24,12,8,16,0,mew-ex-30c,Mew Box,0,0
+0077,836,18,12,5,13,0,n-zoroark,N's Zoroark,1,0
+0077,837,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,838,19,9,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,839,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,840,24,13,8,16,0,mew-ex-30c,Mew Box,0,0
+0077,841,10,6,4,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,842,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,843,12,6,7,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,844,11,7,5,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,845,26,12,12,12,2,slowking-scr,Slowking,0,0
+0077,846,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,847,28,13,13,13,2,slowking-scr,Slowking,0,0
+0077,848,5,4,0,5,0,lucario-hariyama,Lucario Hariyama,1,0
+0077,850,21,13,12,9,0,greninja-ex,Greninja,0,0
+0077,851,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,852,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,853,27,11,13,11,3,slowking-scr,Slowking,0,0
+0077,854,29,10,14,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,855,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,856,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,857,15,7,4,11,0,beedrill-ex-cri,Beedrill,1,0
+0077,858,6,5,2,4,0,stevens-metagross,Steven's Metagross,0,0
+0077,859,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,860,27,12,17,10,0,dragapult-dudunsparce,Dragapult Dudunsparce,0,0
+0077,861,24,15,10,14,0,basic-box-m,Basic Box,1,0
+0077,862,17,8,8,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,863,14,9,0,10,4,crustle-dri,Crustle,1,0
+0077,864,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,865,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,866,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,867,19,9,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,868,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,869,31,14,20,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,870,33,14,20,13,0,festival-lead,Festival Lead,0,0
+0077,871,24,12,12,11,1,slowking-scr,Slowking,0,0
+0077,872,29,13,20,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,873,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,874,19,10,8,11,0,beedrill-ex-cri,Beedrill,0,0
+0077,875,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,876,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,877,12,7,0,8,4,crustle-dri,Crustle,0,0
+0077,878,27,12,17,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,879,4,2,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,880,11,7,4,6,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,881,4,3,0,4,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,882,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,883,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,884,24,10,15,9,0,dragapult-ex,Dragapult,0,0
+0077,885,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,886,26,12,13,11,2,slowking-scr,Slowking,0,0
+0077,887,31,14,18,13,0,festival-lead,Festival Lead,0,0
+0077,888,15,8,6,8,1,ceruledge-ex,Ceruledge,0,0
+0077,889,14,7,6,3,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,890,33,16,19,14,0,hydreigon-ex,Hydreigon,0,0
+0077,891,28,13,14,12,2,slowking-scr,Slowking,0,0
+0077,892,16,9,5,11,0,n-zoroark,N's Zoroark,1,0
+0077,893,30,14,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,894,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,895,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,896,22,14,12,10,0,basic-box-m,Basic Box,0,0
+0077,897,28,13,19,9,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,898,27,12,12,13,2,slowking-scr,Slowking,1,0
+0077,899,11,5,1,6,4,hops-trevenant,Hop's Trevenant,0,0
+0077,900,10,5,2,7,1,dhelmise-pbl,Dhelmise,1,1
+0077,901,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,902,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,903,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,904,27,16,12,15,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,905,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,906,25,11,12,11,2,slowking-scr,Slowking,0,0
+0077,907,9,6,4,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,908,35,17,21,14,0,other,Other,0,0
+0077,909,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,910,16,7,5,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,1,0
+0077,911,32,16,19,12,1,festival-lead,Festival Lead,0,0
+0077,912,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,913,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,914,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,915,8,5,4,3,1,okidogi-barbaracle,Okidogi Barbaracle,0,0
+0077,916,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,917,15,9,5,9,1,starmie-froslass,Starmie Froslass,0,0
+0077,918,5,4,0,5,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,919,15,7,5,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,920,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,921,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,922,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,923,15,7,6,9,0,mega-froslass-ex,Mega Froslass,0,0
+0077,924,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,925,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,926,24,11,10,10,4,toucannon-pbl,Toucannon,0,0
+0077,927,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,928,14,8,5,9,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,929,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,930,29,14,18,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,931,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,932,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,933,17,11,14,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,934,9,5,1,8,0,dhelmise-pbl,Dhelmise,0,0
+0077,935,28,13,16,12,0,festival-lead,Festival Lead,0,0
+0077,936,30,16,17,13,0,festival-lead,Festival Lead,0,0
+0077,937,32,14,20,12,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,938,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,939,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,940,10,6,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,941,17,12,8,8,1,alakazam-meg,Alakazam,0,0
+0077,942,19,9,12,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,943,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,944,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,945,19,13,5,14,0,n-zoroark,N's Zoroark,0,0
+0077,946,6,4,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,947,23,13,7,16,0,mew-ex-30c,Mew Box,0,0
+0077,948,20,11,7,13,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,949,17,10,12,5,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,950,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,951,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,952,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,953,17,9,4,13,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,954,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,955,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,956,16,10,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,957,19,11,8,11,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,958,11,6,5,6,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,959,25,14,8,17,0,mew-ex-30c,Mew Box,1,0
+0077,960,21,7,9,12,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,961,23,12,7,16,0,mew-ex-30c,Mew Box,0,0
+0077,962,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,963,26,10,12,12,2,slowking-scr,Slowking,0,0
+0077,964,20,10,12,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,965,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,966,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,967,19,11,16,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,968,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,969,20,12,11,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,970,33,14,20,13,0,festival-lead,Festival Lead,0,0
+0077,971,14,9,3,9,2,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,972,17,8,8,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,973,29,13,13,14,2,slowking-scr,Slowking,0,0
+0077,974,12,7,6,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,975,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,976,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,977,25,14,14,11,0,slowking-scr,Slowking,0,0
+0077,978,12,8,6,6,0,dhelmise-pbl,Dhelmise,0,0
+0077,979,16,7,8,8,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,980,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,981,7,6,1,6,0,mega-lucario-ex,Mega Lucario,0,0
+0077,982,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,983,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,984,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,985,25,15,10,15,0,basic-box-m,Basic Box,0,0
+0077,986,31,14,20,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,987,11,6,5,6,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,988,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,989,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,990,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,991,28,14,12,14,2,slowking-scr,Slowking,1,0
+0077,992,29,14,13,14,2,slowking-scr,Slowking,0,0
+0077,993,16,11,5,11,0,n-zoroark,N's Zoroark,1,0
+0077,994,5,3,0,5,0,rocket-spidops,Rocket's Spidops,0,0
+0077,995,26,11,17,9,0,dragapult-ex,Dragapult,0,0
+0077,996,16,10,6,9,1,mega-venusaur-ex,Mega Venusaur,1,0
+0077,997,11,8,5,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,998,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,999,26,11,15,11,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1000,27,17,11,16,0,basic-box-m,Basic Box,0,0
+0077,1001,25,11,16,9,0,dragapult-ex,Dragapult,1,0
+0077,1002,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1003,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1004,31,15,22,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1005,3,3,1,2,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1006,11,5,0,7,4,hops-trevenant,Hop's Trevenant,0,0
+0077,1007,26,18,12,14,0,basic-box-m,Basic Box,0,0
+0077,1008,5,3,0,5,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,1009,22,13,14,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1010,22,13,14,8,0,other,Other,1,0
+0077,1011,12,10,6,5,1,mega-lucario-ex,Mega Lucario,0,0
+0077,1012,18,12,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,1013,29,13,17,12,0,festival-lead,Festival Lead,1,0
+0077,1014,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1015,34,14,21,13,0,festival-lead,Festival Lead,1,0
+0077,1016,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1017,19,12,6,13,0,n-zoroark,N's Zoroark,0,0
+0077,1018,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1019,9,5,2,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,1020,31,15,18,13,0,festival-lead,Festival Lead,0,0
+0077,1021,31,12,19,9,3,festival-lead,Festival Lead,0,0
+0077,1022,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1023,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,1024,20,10,18,1,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1025,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1026,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,1027,15,7,10,5,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,1028,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1029,12,6,8,4,0,metagross-cri,Metagross,0,0
+0077,1030,22,15,12,10,0,basic-box-m,Basic Box,1,0
+0077,1031,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1032,13,9,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1033,28,13,14,12,2,slowking-scr,Slowking,1,0
+0077,1034,18,12,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,1035,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1036,22,12,7,15,0,mew-ex-30c,Mew Box,0,0
+0077,1037,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1038,27,12,16,11,0,dragapult-ex,Dragapult,1,0
+0077,1039,25,15,15,9,1,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1040,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1041,17,9,6,11,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1042,22,12,17,4,1,other,Other,0,0
+0077,1043,16,10,4,12,0,n-zoroark,N's Zoroark,1,0
+0077,1044,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1045,2,2,0,2,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1046,17,8,5,7,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1047,19,14,8,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1048,21,9,13,8,0,archaludon-dudunsparce,Archaludon Dudunsparce,0,0
+0077,1049,17,9,9,8,0,archaludon-zoroark,Archaludon Zoroark,1,0
+0077,1050,14,6,7,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1051,26,17,12,14,0,basic-box-m,Basic Box,1,0
+0077,1052,19,9,8,11,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1053,16,9,6,10,0,greninja-ex,Greninja,0,0
+0077,1054,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1055,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,1056,16,7,5,7,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1057,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1058,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,1059,25,15,9,16,0,basic-box-m,Basic Box,0,0
+0077,1060,14,6,8,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1061,19,10,9,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,1,0
+0077,1062,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1063,26,16,11,15,0,basic-box-m,Basic Box,1,0
+0077,1064,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,1065,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1066,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1067,17,11,6,11,0,n-zoroark,N's Zoroark,1,0
+0077,1068,20,11,13,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1069,17,9,9,8,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,1070,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1071,16,7,8,8,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1072,31,18,20,11,0,tera-box,Tera Box,0,0
+0077,1073,17,11,5,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1074,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1075,17,8,6,11,0,beedrill-ex-cri,Beedrill,0,0
+0077,1076,14,8,4,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1077,11,5,1,9,1,dhelmise-pbl,Dhelmise,0,0
+0077,1078,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1079,23,15,11,12,0,basic-box-m,Basic Box,0,0
+0077,1080,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1081,17,8,7,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1082,12,4,7,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1083,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1084,18,7,8,10,0,ceruledge-ex,Ceruledge,0,0
+0077,1085,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1086,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1087,15,9,6,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,1,0
+0077,1088,26,11,16,10,0,dragapult-ex,Dragapult,1,0
+0077,1089,20,8,5,10,5,toucannon-pbl,Toucannon,0,0
+0077,1090,29,14,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,1091,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1092,25,10,12,11,2,slowking-scr,Slowking,0,0
+0077,1093,6,3,0,6,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1094,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1095,8,4,1,6,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1096,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1097,27,16,12,15,0,basic-box-m,Basic Box,0,0
+0077,1098,28,12,17,11,0,dragapult-ex,Dragapult,0,0
+0077,1099,21,13,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1100,12,8,0,9,3,crustle-dri,Crustle,0,0
+0077,1101,9,5,1,8,0,cynthia-garchomp-ex,Cynthia's Garchomp,1,0
+0077,1102,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1103,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1104,27,15,12,15,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,1,0
+0077,1105,17,10,6,11,0,n-zoroark,N's Zoroark,1,0
+0077,1106,17,8,10,6,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1107,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1108,31,15,19,12,0,festival-lead,Festival Lead,0,0
+0077,1109,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1110,15,10,4,11,0,n-zoroark,N's Zoroark,0,0
+0077,1111,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1112,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1113,13,5,4,4,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1114,24,12,8,16,0,mew-ex-30c,Mew Box,0,0
+0077,1115,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1116,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1117,16,10,4,12,0,n-zoroark,N's Zoroark,1,0
+0077,1118,12,7,4,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,1119,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1120,15,7,5,6,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1121,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,1122,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1123,10,4,0,6,4,hops-trevenant,Hop's Trevenant,0,0
+0077,1124,26,16,10,16,0,basic-box-m,Basic Box,0,0
+0077,1125,23,14,10,13,0,basic-box-m,Basic Box,1,0
+0077,1126,27,13,18,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1127,1,1,0,1,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1128,12,4,0,12,0,dhelmise-pbl,Dhelmise,0,0
+0077,1129,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1130,16,8,8,8,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1131,29,14,18,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1132,13,9,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1133,20,10,16,2,2,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1134,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1135,27,13,14,12,1,slowking-scr,Slowking,0,0
+0077,1136,26,17,12,14,0,basic-box-m,Basic Box,0,0
+0077,1137,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,1138,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1139,23,11,7,16,0,mew-ex-30c,Mew Box,0,0
+0077,1140,27,11,17,10,0,dragapult-ex,Dragapult,1,0
+0077,1141,30,13,21,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1142,27,12,17,10,0,dragapult-ex,Dragapult,1,0
+0077,1143,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1144,17,9,11,5,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1145,28,15,12,16,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,1146,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1147,21,12,15,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,1148,16,9,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1149,27,12,18,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1150,30,10,15,11,4,seaking-pre,Seaking Festival Lead,1,0
+0077,1151,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,1152,26,11,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1153,11,7,5,6,0,mega-lucario-ex,Mega Lucario,1,0
+0077,1154,13,6,0,9,4,crustle-dri,Crustle,1,0
+0077,1155,32,15,19,13,0,festival-lead,Festival Lead,1,0
+0077,1156,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1157,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,1158,16,8,9,6,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1159,15,7,5,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1160,29,13,18,11,0,dragapult-ex,Dragapult,0,0
+0077,1161,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,1162,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,1163,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1164,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1165,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,1166,17,12,7,10,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,1167,28,10,13,11,4,seaking-pre,Seaking Festival Lead,1,0
+0077,1168,3,2,0,3,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,1169,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1170,18,11,6,10,2,mega-absol-box,Mega Absol Box,0,0
+0077,1171,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1172,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1173,7,3,0,7,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1174,29,13,18,11,0,dragapult-ex,Dragapult,0,0
+0077,1175,25,12,17,8,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1176,27,11,12,13,2,slowking-scr,Slowking,1,0
+0077,1177,17,9,11,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,1178,23,14,10,13,0,basic-box-m,Basic Box,1,1
+0077,1179,25,17,11,14,0,basic-box-m,Basic Box,0,0
+0077,1180,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1181,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1182,22,11,5,15,2,mega-darkrai-ex,Mega Darkrai,0,0
+0077,1183,31,15,19,12,0,festival-lead,Festival Lead,1,0
+0077,1184,17,11,5,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1185,15,7,9,6,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,1186,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1187,25,12,15,10,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1188,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1189,15,11,4,11,0,n-zoroark,N's Zoroark,0,0
+0077,1190,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1191,19,10,8,11,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1192,18,8,11,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1193,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,1194,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1195,26,12,13,13,0,slowking-scr,Slowking,0,0
+0077,1196,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,1197,28,10,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1198,26,16,12,14,0,kangaskhan-bouffalant,Kangaskhan Bouffalant,0,0
+0077,1199,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,1200,26,13,9,17,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,1201,15,9,5,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,1,0
+0077,1202,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,1203,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1204,33,14,19,14,0,festival-lead,Festival Lead,0,0
+0077,1205,22,12,10,12,0,slowking-scr,Slowking,0,0
+0077,1206,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1207,29,13,17,12,0,dragapult-ex,Dragapult,1,0
+0077,1208,21,14,13,7,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1209,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1210,15,10,4,11,0,n-zoroark,N's Zoroark,0,0
+0077,1211,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1212,27,12,17,10,0,dragapult-dudunsparce,Dragapult Dudunsparce,0,0
+0077,1213,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,1214,26,17,11,15,0,basic-box-m,Basic Box,1,0
+0077,1215,19,8,8,9,2,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1216,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1217,24,16,11,13,0,basic-box-m,Basic Box,1,0
+0077,1218,27,12,18,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1219,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1220,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,1221,9,6,4,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,1222,23,12,7,16,0,mew-ex-30c,Mew Box,0,0
+0077,1223,26,10,12,12,2,slowking-scr,Slowking,0,0
+0077,1224,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1225,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1226,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1227,25,10,15,10,0,dragapult-ex,Dragapult,0,0
+0077,1228,11,5,5,6,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1229,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,1
+0077,1230,15,6,8,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1231,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,1232,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1233,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1234,22,12,17,4,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1235,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1236,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1237,25,14,11,14,0,basic-box-m,Basic Box,0,0
+0077,1238,27,13,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1239,24,11,16,8,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1240,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1241,31,14,19,12,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1242,27,14,16,11,0,slowking-scr,Slowking,0,0
+0077,1243,23,11,9,12,2,slowking-scr,Slowking,0,0
+0077,1244,13,8,5,8,0,mega-starmie-ex,Mega Starmie,0,0
+0077,1245,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,1246,31,13,19,12,0,festival-lead,Festival Lead,0,0
+0077,1247,24,15,9,15,0,basic-box-m,Basic Box,0,0
+0077,1248,21,10,18,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1249,25,13,16,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1250,8,6,4,4,0,dhelmise-pbl,Dhelmise,0,0
+0077,1251,15,9,3,12,0,n-zoroark,N's Zoroark,1,0
+0077,1252,27,12,18,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1253,16,10,8,8,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,1254,23,14,12,11,0,basic-box-m,Basic Box,0,0
+0077,1255,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1256,15,9,2,13,0,n-zoroark,N's Zoroark,0,0
+0077,1257,9,6,4,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,1258,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1259,13,9,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1260,19,10,9,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1261,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1262,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1263,19,9,9,10,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1264,13,8,5,8,0,mega-starmie-ex,Mega Starmie,0,0
+0077,1265,28,12,18,10,0,dragapult-dudunsparce,Dragapult Dudunsparce,0,0
+0077,1266,10,7,3,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,1267,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1268,28,13,19,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1269,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,1270,10,5,5,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,1271,15,10,5,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1272,26,16,10,16,0,basic-box-m,Basic Box,0,0
+0077,1273,26,13,13,11,2,slowking-scr,Slowking,0,0
+0077,1274,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1275,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1276,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1277,26,12,15,11,0,dragapult-ex,Dragapult,0,0
+0077,1278,23,14,9,14,0,basic-box-m,Basic Box,0,0
+0077,1279,20,11,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1280,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1281,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1282,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1283,26,13,12,14,0,slowking-scr,Slowking,0,0
+0077,1284,30,14,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1285,16,9,7,7,2,mega-absol-box,Mega Absol Box,0,0
+0077,1286,16,10,5,11,0,n-zoroark,N's Zoroark,0,0
+0077,1287,16,10,8,8,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,1288,11,6,5,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1289,27,17,11,16,0,basic-box-m,Basic Box,0,0
+0077,1290,12,6,5,7,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1291,28,14,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1292,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1293,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1294,27,12,18,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1295,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1296,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1297,33,15,19,14,0,festival-lead,Festival Lead,0,0
+0077,1298,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1299,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1300,12,6,6,6,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1301,18,13,5,13,0,n-zoroark,N's Zoroark,1,0
+0077,1302,11,7,3,7,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1303,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1304,23,12,8,15,0,basic-box-m,Basic Box,0,0
+0077,1305,14,9,5,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1306,17,9,11,5,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1307,26,17,12,14,0,basic-box-m,Basic Box,0,0
+0077,1308,14,7,7,6,1,starmie-froslass,Starmie Froslass,0,0
+0077,1309,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1310,31,15,19,12,0,festival-lead,Festival Lead,0,0
+0077,1311,21,13,10,11,0,clefairy-ogerpon,Clefairy Ogerpon,0,0
+0077,1312,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1313,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1314,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1315,31,18,19,12,0,tera-box,Tera Box,0,0
+0077,1316,21,11,15,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1317,11,5,0,7,4,crustle-dri,Crustle,0,0
+0077,1318,30,14,18,12,0,festival-lead,Festival Lead,1,0
+0077,1319,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1320,26,15,9,15,2,basic-box-m,Basic Box,0,0
+0077,1321,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,1322,14,8,4,10,0,n-zoroark,N's Zoroark,0,0
+0077,1323,14,9,2,8,4,crustle-dri,Crustle,1,0
+0077,1324,39,17,22,17,0,dragapult-ex,Dragapult,0,0
+0077,1325,22,13,15,6,1,lopunny-dusknoir,Lopunny Dusknoir,1,0
+0077,1326,13,7,2,10,1,dhelmise-pbl,Dhelmise,0,0
+0077,1327,26,11,13,11,2,slowking-scr,Slowking,0,0
+0077,1328,26,12,17,9,0,dragapult-ex,Dragapult,1,0
+0077,1329,7,4,0,7,0,mega-abomasnow-ex,Mega Abomasnow,0,0
+0077,1330,18,12,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,1331,32,15,19,13,0,festival-lead,Festival Lead,1,0
+0077,1332,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1333,23,12,3,18,2,mimikyu-ogerpon,Mimikyu Ogerpon,0,0
+0077,1334,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1335,15,8,9,5,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1336,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1337,27,13,17,10,0,dragapult-ex,Dragapult,1,0
+0077,1338,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,1339,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,1340,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1341,7,3,0,7,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1342,12,6,6,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1343,9,5,3,5,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1344,28,12,14,12,2,slowking-scr,Slowking,0,0
+0077,1345,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1346,14,8,9,5,0,other,Other,0,0
+0077,1347,7,3,0,7,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1348,22,11,11,10,1,froslass-munkidori,Froslass Munkidori,0,0
+0077,1349,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1350,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1351,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,1352,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1353,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1354,25,15,10,15,0,basic-box-m,Basic Box,0,0
+0077,1355,9,5,1,5,3,hops-trevenant,Hop's Trevenant,0,0
+0077,1356,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1357,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1358,21,11,19,1,1,lopunny-dusknoir,Lopunny Dusknoir,1,0
+0077,1359,10,5,5,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1360,7,4,3,4,0,dhelmise-pbl,Dhelmise,0,0
+0077,1361,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1362,24,12,11,12,1,slowking-scr,Slowking,0,0
+0077,1363,31,13,19,12,0,festival-lead,Festival Lead,1,0
+0077,1364,9,5,3,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,1365,13,8,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1366,30,13,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,1367,26,17,11,15,0,basic-box-m,Basic Box,1,0
+0077,1368,12,8,5,5,2,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1369,26,14,17,8,1,hydreigon-ex,Hydreigon,0,0
+0077,1370,23,15,13,10,0,basic-box-m,Basic Box,1,0
+0077,1371,27,18,12,15,0,basic-box-m,Basic Box,1,0
+0077,1372,17,9,14,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1373,27,13,18,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1374,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1375,16,11,5,11,0,n-zoroark,N's Zoroark,1,0
+0077,1376,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1377,16,8,6,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1378,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1379,16,8,8,8,0,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1380,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1381,19,9,11,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1382,13,7,6,7,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1383,14,7,5,5,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1384,7,6,3,4,0,dhelmise-pbl,Dhelmise,0,0
+0077,1385,25,17,11,14,0,basic-box-m,Basic Box,0,0
+0077,1386,30,13,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1387,27,13,15,12,0,slowking-scr,Slowking,0,0
+0077,1388,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1389,20,13,12,7,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1390,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1391,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1392,9,5,4,4,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,1393,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1394,7,3,0,7,0,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1395,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,1
+0077,1396,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,1397,27,12,18,9,0,dragapult-ex,Dragapult,1,0
+0077,1398,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,1399,25,15,9,16,0,basic-box-m,Basic Box,0,0
+0077,1400,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,1401,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1402,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,1403,15,8,5,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1404,31,15,19,12,0,festival-lead,Festival Lead,0,0
+0077,1405,8,6,2,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,1406,10,4,0,8,2,other,Other,0,0
+0077,1407,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1408,13,8,0,9,4,crustle-dri,Crustle,0,0
+0077,1409,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1410,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1411,28,13,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1412,23,11,9,12,2,slowking-scr,Slowking,0,0
+0077,1413,7,4,2,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,1414,22,12,7,15,0,mew-ex-30c,Mew Box,1,0
+0077,1415,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1416,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1417,11,7,4,6,1,dhelmise-pbl,Dhelmise,1,0
+0077,1418,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1419,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1420,27,13,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1421,6,4,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1422,14,6,9,5,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,1423,14,7,4,10,0,gengar-ex,Gengar,0,0
+0077,1424,32,13,19,10,3,seaking-pre,Seaking Festival Lead,1,0
+0077,1425,26,13,14,12,0,festival-lead,Festival Lead,0,0
+0077,1426,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1427,10,7,3,6,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1428,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,1429,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1430,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1431,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,1432,26,13,16,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1433,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1434,16,9,4,12,0,mega-starmie-ex,Mega Starmie,0,0
+0077,1435,23,13,9,14,0,basic-box-m,Basic Box,0,0
+0077,1436,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,1,0
+0077,1437,28,12,12,14,2,slowking-scr,Slowking,0,0
+0077,1438,18,10,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,1439,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1440,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1441,29,14,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1442,5,4,0,5,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1443,16,9,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1444,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1445,27,17,11,16,0,basic-box-m,Basic Box,0,0
+0077,1446,20,10,13,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1447,11,5,3,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,1448,17,9,7,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1449,27,16,13,14,0,basic-box-m,Basic Box,0,0
+0077,1450,20,11,10,10,0,greninja-ex,Greninja,0,0
+0077,1451,19,11,4,15,0,n-zoroark,N's Zoroark,0,0
+0077,1452,30,13,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,1453,28,12,13,13,2,slowking-scr,Slowking,1,0
+0077,1455,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1456,25,12,12,11,2,slowking-scr,Slowking,1,0
+0077,1457,18,10,9,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1458,17,9,7,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,1,0
+0077,1459,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1460,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1461,25,14,11,14,0,basic-box-m,Basic Box,0,0
+0077,1462,6,5,0,6,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1463,27,13,12,14,1,slowking-scr,Slowking,0,0
+0077,1464,20,11,14,5,1,other,Other,0,0
+0077,1465,18,10,5,13,0,n-zoroark,N's Zoroark,1,0
+0077,1466,27,18,12,15,0,basic-box-m,Basic Box,0,0
+0077,1467,25,10,12,12,1,slowking-scr,Slowking,0,0
+0077,1468,18,10,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1469,13,9,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,1,0
+0077,1470,26,11,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1471,18,10,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,1472,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1473,31,15,18,13,0,festival-lead,Festival Lead,0,0
+0077,1474,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1475,16,9,7,7,2,mega-absol-box,Mega Absol Box,0,0
+0077,1476,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1477,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1478,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1479,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1480,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1481,23,13,14,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1482,26,12,16,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1483,13,8,1,8,4,crustle-dri,Crustle,0,0
+0077,1484,30,13,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1485,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1486,29,9,15,10,4,seaking-pre,Seaking Festival Lead,0,0
+0077,1487,25,16,11,14,0,basic-box-m,Basic Box,1,0
+0077,1488,15,9,8,6,1,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1489,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1490,5,4,1,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1491,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1492,20,11,14,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1493,28,13,19,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1494,5,3,1,3,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,1495,19,11,5,14,0,n-zoroark,N's Zoroark,0,0
+0077,1496,28,14,18,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1497,11,7,4,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,1498,15,6,4,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,1,0
+0077,1499,15,11,10,5,0,dhelmise-pbl,Dhelmise,1,0
+0077,1500,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1501,23,12,7,16,0,mew-ex-30c,Mew Box,0,0
+0077,1502,10,5,1,9,0,dhelmise-pbl,Dhelmise,0,0
+0077,1503,20,8,5,10,5,toucannon-pbl,Toucannon,0,0
+0077,1504,6,4,2,3,1,dhelmise-pbl,Dhelmise,0,0
+0077,1505,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1506,7,3,0,7,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1507,12,5,1,11,0,dhelmise-pbl,Dhelmise,0,0
+0077,1508,26,12,13,11,2,slowking-scr,Slowking,0,0
+0077,1509,22,13,9,13,0,basic-box-m,Basic Box,0,0
+0077,1510,25,12,12,13,0,slowking-scr,Slowking,0,0
+0077,1511,7,4,0,6,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1512,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1513,4,4,2,2,0,other,Other,0,0
+0077,1514,27,12,16,11,0,dragapult-ex,Dragapult,0,0
+0077,1515,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1516,18,12,5,12,1,alakazam-dudunsparce,Alakazam Dudunsparce,1,0
+0077,1517,7,5,1,6,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1518,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1519,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1520,19,9,12,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1521,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1522,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1523,6,3,0,6,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1524,29,13,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1525,12,6,9,3,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1526,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,1527,21,12,10,11,0,greninja-ex,Greninja,0,0
+0077,1528,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1529,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,1530,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1531,16,9,6,6,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1532,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1533,25,15,10,15,0,basic-box-m,Basic Box,1,0
+0077,1534,31,16,17,14,0,festival-lead,Festival Lead,0,0
+0077,1535,19,11,11,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1536,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1537,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1538,28,12,19,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1539,14,9,5,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1540,30,14,18,12,0,festival-lead,Festival Lead,0,0
+0077,1541,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1542,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1543,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1544,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1545,8,5,2,6,0,manectric-eelektrik,Manectric Eelektrik,1,0
+0077,1546,25,16,10,15,0,basic-box-m,Basic Box,0,0
+0077,1547,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1548,11,6,2,8,1,dhelmise-pbl,Dhelmise,0,0
+0077,1549,27,13,20,7,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1550,18,10,3,15,0,n-zoroark,N's Zoroark,0,0
+0077,1551,19,9,8,11,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1552,26,11,17,9,0,dragapult-ex,Dragapult,0,0
+0077,1553,26,11,17,9,0,dragapult-ex,Dragapult,0,0
+0077,1554,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1555,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1556,11,6,2,6,3,hops-trevenant,Hop's Trevenant,0,0
+0077,1557,30,14,19,11,0,festival-lead,Festival Lead,0,0
+0077,1558,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1559,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1560,24,15,10,14,0,basic-box-m,Basic Box,0,0
+0077,1561,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1562,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1563,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1564,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1565,28,13,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1566,22,12,17,4,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1567,14,8,4,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1568,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1569,19,12,11,8,0,greninja-ex,Greninja,0,0
+0077,1570,19,12,13,5,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1571,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,1572,27,12,12,13,2,slowking-scr,Slowking,1,0
+0077,1573,25,10,12,12,1,slowking-scr,Slowking,0,0
+0077,1574,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1575,5,3,2,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1576,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1577,26,16,12,14,0,basic-box-m,Basic Box,0,0
+0077,1578,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1579,28,14,14,12,2,slowking-scr,Slowking,0,0
+0077,1580,24,12,12,11,1,slowking-scr,Slowking,0,0
+0077,1581,28,13,17,11,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1582,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1583,28,14,14,12,2,slowking-scr,Slowking,0,0
+0077,1584,22,13,14,7,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1585,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1586,21,13,13,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1587,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1588,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1589,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1590,13,8,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1591,11,7,4,7,0,dhelmise-pbl,Dhelmise,0,0
+0077,1592,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1593,27,18,12,15,0,basic-box-m,Basic Box,0,0
+0077,1594,18,10,12,5,1,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1595,4,2,0,4,0,lucario-hariyama,Lucario Hariyama,1,0
+0077,1596,17,9,7,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1597,29,12,18,11,0,dragapult-ex,Dragapult,0,0
+0077,1598,26,12,13,11,2,slowking-scr,Slowking,0,0
+0077,1599,20,11,15,4,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1600,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1601,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1602,31,14,20,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1603,25,15,10,15,0,basic-box-m,Basic Box,0,0
+0077,1604,27,11,12,13,2,slowking-scr,Slowking,0,0
+0077,1605,21,13,14,6,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1606,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1607,28,12,19,8,1,dragapult-ex,Dragapult,0,0
+0077,1608,3,3,1,2,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1609,30,17,16,14,0,festival-lead,Festival Lead,1,0
+0077,1610,24,15,10,14,0,basic-box-m,Basic Box,0,0
+0077,1611,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1612,19,9,4,15,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1613,16,7,9,7,0,cinccino-ex,Cinccino,0,0
+0077,1614,32,12,17,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,1615,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,1616,19,10,8,11,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1617,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,1618,16,9,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1619,27,12,18,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1620,16,10,3,13,0,mega-starmie-ex,Mega Starmie,0,0
+0077,1621,33,14,20,13,0,festival-lead,Festival Lead,0,0
+0077,1622,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1623,5,3,1,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1624,10,6,2,7,1,dhelmise-pbl,Dhelmise,1,0
+0077,1625,8,4,0,8,0,rockets-honchkrow,Rocket's Honchkrow,1,0
+0077,1626,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1627,37,17,18,19,0,festival-lead,Festival Lead,0,0
+0077,1628,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1629,15,9,6,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1630,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1631,28,13,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1632,12,9,6,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,1633,8,5,3,4,1,dhelmise-pbl,Dhelmise,1,0
+0077,1634,13,8,7,6,0,mega-dragonite-ex,Mega Dragonite,0,0
+0077,1635,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1636,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1637,12,7,5,6,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1638,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1639,32,13,20,12,0,festival-lead,Festival Lead,0,0
+0077,1640,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1641,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1642,8,6,4,4,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1643,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1644,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1645,12,7,4,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,1646,15,5,8,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1647,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1648,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,1649,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1650,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1651,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1652,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,1653,21,11,19,1,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1654,15,6,8,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1655,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,1656,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,1657,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1658,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1659,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1660,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1661,21,12,11,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1662,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1663,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1664,31,14,20,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1665,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1666,23,11,8,14,1,lillie-clefairy,Lillie's Clefairy,0,0
+0077,1667,18,10,7,11,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1668,11,5,1,10,0,dhelmise-pbl,Dhelmise,0,0
+0077,1669,11,6,8,3,0,archaludon-ex,Archaludon,0,0
+0077,1670,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1671,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1672,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,1673,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1674,4,2,0,4,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,1675,25,14,12,12,1,slowking-scr,Slowking,0,0
+0077,1676,7,4,4,2,1,dhelmise-pbl,Dhelmise,0,0
+0077,1677,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1678,24,16,11,13,0,basic-box-m,Basic Box,0,0
+0077,1679,28,14,14,12,2,slowking-scr,Slowking,1,0
+0077,1680,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1681,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,1682,29,12,13,13,3,slowking-scr,Slowking,0,0
+0077,1683,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1684,17,10,4,13,0,n-zoroark,N's Zoroark,1,0
+0077,1685,24,12,8,16,0,mew-ex-30c,Mew Box,1,0
+0077,1686,29,13,14,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,1687,25,14,11,14,0,basic-box-m,Basic Box,0,0
+0077,1688,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,1689,17,11,5,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1690,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1691,10,6,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1692,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1693,25,10,16,9,0,dragapult-ex,Dragapult,0,0
+0077,1694,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1695,10,6,3,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,1696,7,5,3,4,0,stevens-metagross,Steven's Metagross,0,0
+0077,1697,27,13,14,11,2,slowking-scr,Slowking,0,0
+0077,1698,13,8,1,8,4,crustle-dri,Crustle,0,0
+0077,1699,9,7,4,5,0,other,Other,0,0
+0077,1700,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1701,25,17,12,13,0,basic-box-m,Basic Box,0,0
+0077,1702,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1703,15,9,3,12,0,n-zoroark,N's Zoroark,0,0
+0077,1704,33,15,20,13,0,festival-lead,Festival Lead,0,0
+0077,1705,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1706,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1707,32,17,18,13,1,festival-lead,Festival Lead,0,0
+0077,1708,14,10,5,9,0,n-zoroark,N's Zoroark,0,0
+0077,1709,7,3,0,6,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1710,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1711,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1712,21,13,9,12,0,clefairy-ogerpon,Clefairy Ogerpon,0,0
+0077,1713,11,5,3,8,0,dhelmise-pbl,Dhelmise,0,0
+0077,1714,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1715,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1716,29,14,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1717,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1718,31,17,17,14,0,flareon-ex,Flareon,0,0
+0077,1719,13,7,6,7,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1720,27,13,12,14,1,slowking-scr,Slowking,0,0
+0077,1721,17,8,11,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1722,27,17,11,16,0,basic-box-m,Basic Box,0,0
+0077,1723,17,10,7,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1724,27,11,12,13,2,slowking-scr,Slowking,0,0
+0077,1725,7,5,2,5,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1726,13,9,5,7,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1727,20,10,14,6,0,archaludon-dudunsparce,Archaludon Dudunsparce,0,0
+0077,1728,28,13,14,13,1,slowking-scr,Slowking,0,0
+0077,1729,17,10,5,12,0,n-zoroark,N's Zoroark,0,0
+0077,1730,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1731,13,9,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1732,16,9,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,1733,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,1734,13,7,5,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,1735,3,2,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1736,27,10,16,11,0,dragapult-ex,Dragapult,0,0
+0077,1737,25,13,10,13,2,slowking-scr,Slowking,0,0
+0077,1738,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1739,4,2,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1740,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1741,18,12,10,8,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1742,4,3,0,4,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,1743,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1744,22,13,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1745,23,13,14,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1746,20,9,14,6,0,archaludon-dudunsparce,Archaludon Dudunsparce,1,0
+0077,1747,26,15,12,14,0,basic-box-m,Basic Box,0,0
+0077,1748,11,5,1,9,1,dhelmise-pbl,Dhelmise,0,0
+0077,1749,39,17,19,19,1,festival-lead,Festival Lead,0,0
+0077,1750,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,1751,24,14,10,14,0,basic-box-m,Basic Box,1,0
+0077,1752,8,6,2,6,0,dhelmise-pbl,Dhelmise,0,0
+0077,1753,8,5,3,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,1754,26,12,16,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1755,18,11,6,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1756,15,7,5,10,0,mega-venusaur-ex,Mega Venusaur,0,0
+0077,1757,17,10,6,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1758,17,10,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1759,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1760,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1761,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1762,15,9,4,11,0,n-zoroark,N's Zoroark,1,0
+0077,1763,12,7,6,6,0,mega-dragonite-ex,Mega Dragonite,0,0
+0077,1764,29,14,17,12,0,dragapult-ex,Dragapult,0,0
+0077,1765,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1766,16,9,2,14,0,yanmega-ex,Yanmega,1,0
+0077,1767,21,13,13,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1768,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1769,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1770,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,1771,17,8,8,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,1772,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1773,31,13,19,12,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1774,7,4,0,7,0,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1775,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1776,21,10,18,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1777,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1778,27,12,18,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1779,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1780,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1781,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1782,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1783,26,10,12,12,2,slowking-scr,Slowking,0,0
+0077,1784,17,10,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1785,17,11,4,13,0,n-zoroark,N's Zoroark,1,0
+0077,1786,10,4,5,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1787,22,13,14,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1788,24,14,10,14,0,basic-box-m,Basic Box,0,0
+0077,1789,12,9,6,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1790,6,4,1,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1791,24,14,9,15,0,basic-box-m,Basic Box,0,0
+0077,1792,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1793,13,5,8,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1794,16,11,5,11,0,n-zoroark,N's Zoroark,1,0
+0077,1795,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1796,18,11,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,1797,29,12,17,12,0,festival-lead,Festival Lead,0,0
+0077,1798,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1799,9,5,0,5,4,crustle-dri,Crustle,1,0
+0077,1800,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,1801,27,12,17,10,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1802,28,13,13,15,0,slowking-scr,Slowking,0,0
+0077,1803,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1804,6,3,0,6,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,1805,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1806,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1807,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1808,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1809,12,4,5,7,0,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,0,0
+0077,1810,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1811,26,16,12,14,0,basic-box-m,Basic Box,0,0
+0077,1813,27,13,14,11,2,slowking-scr,Slowking,0,0
+0077,1814,13,9,4,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1815,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1816,15,9,4,11,0,n-zoroark,N's Zoroark,0,0
+0077,1817,27,17,12,15,0,basic-box-m,Basic Box,0,0
+0077,1818,13,5,4,4,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1819,15,8,4,7,4,lopunny-dudunsparce,Lopunny Dudunsparce,1,0
+0077,1820,17,9,8,9,0,mega-froslass-dudunsparce,Froslass Dudunsparce,0,0
+0077,1821,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,1822,30,15,17,13,0,festival-lead,Festival Lead,0,0
+0077,1823,20,11,12,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1824,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1825,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1826,36,25,21,15,0,tera-box,Tera Box,0,0
+0077,1827,21,14,12,9,0,basic-box-m,Basic Box,1,0
+0077,1828,25,10,11,12,2,slowking-scr,Slowking,0,0
+0077,1829,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1830,26,11,12,12,2,slowking-scr,Slowking,1,0
+0077,1831,10,6,4,6,0,alakazam-meg,Alakazam,0,0
+0077,1832,18,12,7,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1833,16,10,3,13,0,n-zoroark,N's Zoroark,0,0
+0077,1834,36,17,19,17,0,festival-lead,Festival Lead,0,0
+0077,1835,26,17,12,14,0,basic-box-m,Basic Box,1,0
+0077,1836,10,6,2,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,1837,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1838,32,14,19,13,0,festival-lead,Festival Lead,0,0
+0077,1839,17,10,2,15,0,n-zoroark,N's Zoroark,0,0
+0077,1840,14,9,7,7,0,cinccino-ex,Cinccino,0,0
+0077,1841,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,1842,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1843,26,11,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1844,14,6,8,6,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,1845,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,1,0
+0077,1846,15,7,8,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1847,17,11,5,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1848,14,9,5,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1849,25,10,16,9,0,dragapult-ex,Dragapult,1,0
+0077,1850,10,6,5,5,0,doublade-por,Doublade,0,0
+0077,1851,25,14,10,15,0,basic-box-m,Basic Box,0,0
+0077,1852,28,13,19,9,0,dragapult-ex,Dragapult,0,0
+0077,1853,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1854,8,4,2,6,0,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,1855,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1856,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1857,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1858,23,15,10,13,0,basic-box-m,Basic Box,0,0
+0077,1859,30,10,15,11,4,seaking-pre,Seaking Festival Lead,1,0
+0077,1860,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1861,12,8,6,5,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,1862,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1863,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,1864,14,8,6,8,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1865,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,1866,26,16,11,15,0,basic-box-m,Basic Box,1,0
+0077,1867,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1868,28,13,13,13,2,slowking-scr,Slowking,0,0
+0077,1869,8,4,2,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1870,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1871,17,8,4,9,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1872,15,9,6,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,1873,21,12,5,16,0,n-zoroark,N's Zoroark,1,0
+0077,1874,15,9,7,8,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,1875,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,1876,30,14,20,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1877,18,11,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,1878,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1879,26,16,12,14,0,kangaskhan-bouffalant,Kangaskhan Bouffalant,0,0
+0077,1880,9,7,5,3,1,dhelmise-pbl,Dhelmise,0,0
+0077,1881,33,14,20,13,0,festival-lead,Festival Lead,0,0
+0077,1882,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1883,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1884,16,10,5,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1885,16,7,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,1886,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,1887,24,14,9,15,0,basic-box-m,Basic Box,0,0
+0077,1888,16,10,4,12,0,n-zoroark,N's Zoroark,1,0
+0077,1889,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1890,25,10,12,13,0,slowking-scr,Slowking,1,0
+0077,1891,18,11,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,1892,33,14,20,13,0,festival-lead,Festival Lead,0,0
+0077,1893,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1894,15,10,7,8,0,toxtricity-box,Toxtricity Box,0,0
+0077,1895,12,8,7,5,0,toxtricity-box,Toxtricity Box,0,0
+0077,1896,24,14,9,15,0,basic-box-m,Basic Box,0,0
+0077,1897,6,3,0,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,1,0
+0077,1898,18,12,5,13,0,n-zoroark,N's Zoroark,1,0
+0077,1899,21,10,18,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,1900,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1901,12,8,5,7,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,1902,35,14,20,15,0,festival-lead,Festival Lead,0,0
+0077,1903,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1904,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,1,0
+0077,1905,16,8,5,6,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1906,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1907,28,13,13,13,2,slowking-scr,Slowking,0,0
+0077,1908,14,6,8,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1909,5,3,0,5,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,1910,30,15,16,14,0,festival-lead,Festival Lead,0,0
+0077,1911,31,15,19,12,0,festival-lead,Festival Lead,0,0
+0077,1912,11,7,5,5,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,1913,30,13,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1914,23,14,12,11,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1915,13,7,5,8,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1916,19,11,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1917,17,8,7,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1918,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1919,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,1920,17,9,7,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1921,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1922,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,1923,31,16,19,12,0,festival-lead,Festival Lead,0,0
+0077,1924,14,8,4,10,0,n-zoroark,N's Zoroark,0,0
+0077,1925,27,17,11,16,0,basic-box-m,Basic Box,0,0
+0077,1926,31,15,17,14,0,festival-lead,Festival Lead,1,0
+0077,1927,10,6,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1928,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,1929,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,1930,6,5,2,4,0,stevens-metagross,Steven's Metagross,1,0
+0077,1931,14,6,9,5,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,1932,25,11,17,8,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1933,4,2,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,1934,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1935,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1936,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1937,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,1938,10,6,3,6,1,dhelmise-pbl,Dhelmise,1,0
+0077,1939,24,10,15,9,0,dragapult-ex,Dragapult,0,0
+0077,1940,16,10,4,12,0,n-zoroark,N's Zoroark,1,0
+0077,1941,27,13,17,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,1942,14,5,9,5,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,1943,6,3,0,6,0,paldean-tauros-pfl,Paldean Tauros,0,0
+0077,1944,12,8,5,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,1945,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1946,10,6,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1947,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1948,10,5,5,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,1949,9,7,3,6,0,other,Other,0,0
+0077,1950,6,3,0,6,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,1951,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1952,25,11,14,11,0,dragapult-ex,Dragapult,0,0
+0077,1953,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1954,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,1955,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,1956,25,11,12,11,2,slowking-scr,Slowking,1,0
+0077,1957,13,8,0,9,4,crustle-dri,Crustle,1,0
+0077,1958,17,11,6,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1959,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1960,19,12,4,15,0,n-zoroark,N's Zoroark,0,0
+0077,1961,12,8,5,7,0,mega-absol-box,Mega Absol Box,0,0
+0077,1962,16,11,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1963,17,8,8,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,1964,18,9,8,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,1965,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1966,15,12,6,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1967,21,11,14,7,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,1968,22,13,13,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,1969,34,15,20,13,1,festival-lead,Festival Lead,0,0
+0077,1970,15,7,3,12,0,n-zoroark,N's Zoroark,1,0
+0077,1971,14,8,0,10,4,crustle-dri,Crustle,0,0
+0077,1972,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1973,13,7,0,9,4,crustle-dri,Crustle,0,0
+0077,1974,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1975,12,8,5,6,1,mega-greninja-ex,Mega Greninja,0,0
+0077,1976,27,13,12,13,2,slowking-scr,Slowking,0,0
+0077,1977,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1978,28,13,19,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,1979,17,11,3,14,0,n-zoroark,N's Zoroark,0,0
+0077,1980,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1981,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1982,25,12,12,12,1,slowking-scr,Slowking,0,0
+0077,1983,17,10,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,1984,8,5,2,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,1985,5,2,0,4,1,cynthia-garchomp-ex,Cynthia's Garchomp,1,0
+0077,1986,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,1987,32,15,19,13,0,festival-lead,Festival Lead,1,0
+0077,1988,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,1989,18,11,7,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1990,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,1991,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,1992,16,9,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1993,26,18,12,14,0,basic-box-m,Basic Box,0,0
+0077,1994,31,13,19,12,0,festival-lead,Festival Lead,1,0
+0077,1995,27,16,11,16,0,basic-box-m,Basic Box,0,0
+0077,1996,18,8,9,9,0,mega-excadrill-ex,Mega Excadrill,1,0
+0077,1997,16,10,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,1998,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,1999,29,16,13,16,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,2000,17,9,5,8,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,2001,21,10,11,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2002,15,6,9,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2003,18,12,4,14,0,n-zoroark,N's Zoroark,0,0
+0077,2004,5,4,1,4,0,mega-lucario-ex,Mega Lucario,0,0
+0077,2005,26,11,17,9,0,dragapult-ex,Dragapult,0,0
+0077,2006,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2007,21,12,11,10,0,greninja-ex,Greninja,1,0
+0077,2008,23,12,7,16,0,mew-ex-30c,Mew Box,0,0
+0077,2009,29,13,18,11,0,dragapult-ex,Dragapult,0,0
+0077,2010,17,7,6,7,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,2011,39,18,22,17,0,festival-lead,Festival Lead,0,0
+0077,2012,19,10,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,2013,32,15,20,12,0,festival-lead,Festival Lead,0,0
+0077,2014,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2015,16,7,9,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2016,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2017,17,10,5,12,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,2018,14,6,4,10,0,other,Other,0,0
+0077,2019,25,15,10,15,0,basic-box-m,Basic Box,0,0
+0077,2020,30,13,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2021,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2022,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2023,30,13,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2024,25,11,12,11,2,slowking-scr,Slowking,0,0
+0077,2025,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2026,32,13,20,12,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2027,26,17,11,15,0,basic-box-m,Basic Box,1,0
+0077,2028,14,8,4,10,0,n-zoroark,N's Zoroark,0,0
+0077,2029,28,13,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2030,14,7,8,6,0,grimmsnarl-froslass,Grimmsnarl Froslass,0,0
+0077,2031,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2032,19,11,10,8,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2033,29,13,19,10,0,dragapult-ex,Dragapult,1,0
+0077,2034,20,12,11,9,0,greninja-ex,Greninja,0,0
+0077,2035,11,6,3,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,2036,18,8,0,15,3,other,Other,0,0
+0077,2037,7,4,0,7,0,rocket-mewtwo-ex,Rocket's Mewtwo,0,0
+0077,2038,7,6,2,5,0,stevens-metagross,Steven's Metagross,0,0
+0077,2039,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,2040,20,9,13,7,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,2041,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2042,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2043,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,2044,33,14,22,11,0,festival-lead,Festival Lead,0,0
+0077,2045,12,7,4,6,2,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,2046,13,8,0,9,4,crustle-dri,Crustle,1,0
+0077,2047,27,16,11,16,0,basic-box-m,Basic Box,0,0
+0077,2048,14,8,4,10,0,n-zoroark,N's Zoroark,1,0
+0077,2049,26,16,11,15,0,basic-box-m,Basic Box,1,0
+0077,2050,25,12,16,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,2051,19,12,6,13,0,n-zoroark,N's Zoroark,0,0
+0077,2052,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2053,26,11,13,13,0,slowking-scr,Slowking,0,0
+0077,2054,8,3,0,8,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,2055,29,13,20,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2056,15,8,8,6,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2057,31,11,18,10,3,festival-lead,Festival Lead,0,0
+0077,2058,20,12,11,9,0,greninja-ex,Greninja,1,0
+0077,2059,9,6,2,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,2060,16,11,6,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2061,22,12,17,4,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2062,12,8,6,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,2063,30,16,17,13,0,festival-lead,Festival Lead,0,0
+0077,2064,26,10,12,12,2,slowking-scr,Slowking,0,0
+0077,2065,23,14,10,13,0,basic-box-m,Basic Box,1,0
+0077,2066,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2067,10,6,4,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2068,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2069,28,16,13,15,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,2070,25,10,16,9,0,dragapult-ex,Dragapult,1,0
+0077,2071,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,2072,17,10,3,14,0,n-zoroark,N's Zoroark,0,0
+0077,2073,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,2074,16,8,7,9,0,toxtricity-pfl,Toxtricity,0,0
+0077,2075,18,10,5,13,0,n-zoroark,N's Zoroark,0,0
+0077,2076,21,12,17,3,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2077,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2078,24,14,10,14,0,basic-box-m,Basic Box,0,0
+0077,2079,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2080,21,11,14,6,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2081,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,2082,30,11,22,7,1,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2083,32,15,17,15,0,festival-lead,Festival Lead,0,0
+0077,2084,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,2085,33,16,20,12,1,festival-lead,Festival Lead,0,0
+0077,2086,28,12,17,11,0,dragapult-ex,Dragapult,1,0
+0077,2087,28,16,11,17,0,basic-box-m,Basic Box,1,0
+0077,2088,10,7,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,2089,21,12,18,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2090,14,9,4,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2091,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2092,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,2093,16,11,5,11,0,n-zoroark,N's Zoroark,0,0
+0077,2094,19,10,9,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,2095,32,15,19,13,0,festival-lead,Festival Lead,0,0
+0077,2096,14,9,9,5,0,mega-chandelure-ex,Mega Chandelure,0,0
+0077,2097,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2098,18,11,4,14,0,n-zoroark,N's Zoroark,1,0
+0077,2099,16,7,8,8,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,2100,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,2101,28,13,13,13,2,slowking-scr,Slowking,1,0
+0077,2102,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2103,26,13,14,11,1,slowking-scr,Slowking,0,0
+0077,2104,6,5,3,2,1,dhelmise-pbl,Dhelmise,0,0
+0077,2105,13,7,6,7,0,mega-lucario-ex,Mega Lucario,0,0
+0077,2106,29,13,19,10,0,dragapult-ex,Dragapult,0,0
+0077,2107,33,15,20,13,0,festival-lead,Festival Lead,0,0
+0077,2108,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,2109,9,4,1,7,1,dhelmise-pbl,Dhelmise,0,0
+0077,2110,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,2112,17,10,7,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2113,9,7,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,2114,20,10,18,1,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2115,26,16,12,14,0,basic-box-m,Basic Box,1,1
+0077,2116,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2117,12,8,6,5,1,mega-chandelure-ex,Mega Chandelure,0,0
+0077,2118,19,9,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,2119,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2120,4,3,0,4,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,2121,30,10,15,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,2122,17,9,11,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,2123,32,15,18,14,0,festival-lead,Festival Lead,1,0
+0077,2124,7,5,2,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,2125,24,14,12,12,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2126,30,14,17,13,0,festival-lead,Festival Lead,0,0
+0077,2127,23,12,7,16,0,mew-ex-30c,Mew Box,0,0
+0077,2128,27,13,12,13,2,slowking-scr,Slowking,0,0
+0077,2129,14,8,6,8,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,1,0
+0077,2130,29,13,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2131,18,11,6,11,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2132,30,12,15,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,2133,8,5,5,2,1,dhelmise-pbl,Dhelmise,0,0
+0077,2134,19,11,8,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2135,13,8,4,8,1,mega-starmie-ex,Mega Starmie,0,0
+0077,2136,15,8,7,8,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,1,0
+0077,2137,20,11,17,1,2,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2138,10,7,5,5,0,mega-lucario-ex,Mega Lucario,0,0
+0077,2139,15,9,5,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2140,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,2141,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,2142,9,5,3,6,0,dhelmise-pbl,Dhelmise,0,0
+0077,2143,26,12,14,11,1,slowking-scr,Slowking,0,0
+0077,2144,19,11,9,10,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,2145,26,17,11,15,0,basic-box-m,Basic Box,0,0
+0077,2146,9,3,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,2147,25,16,10,15,0,basic-box-m,Basic Box,0,0
+0077,2148,6,5,0,6,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,2149,15,6,6,5,4,mega-froslass-dudunsparce,Froslass Dudunsparce,0,0
+0077,2150,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2151,16,10,8,8,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,2152,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2153,17,10,7,8,2,mega-absol-box,Mega Absol Box,0,0
+0077,2154,26,11,16,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2155,27,11,12,13,2,slowking-scr,Slowking,0,0
+0077,2156,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,2157,29,14,16,11,2,slowking-scr,Slowking,0,0
+0077,2158,27,13,17,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2159,16,11,5,11,0,n-zoroark,N's Zoroark,0,0
+0077,2160,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2161,20,8,5,10,5,toucannon-pbl,Toucannon,0,0
+0077,2162,25,11,16,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2163,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2164,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,2165,25,12,13,12,0,slowking-scr,Slowking,1,0
+0077,2166,12,6,5,7,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2167,20,11,11,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,1,0
+0077,2168,30,13,19,11,0,festival-lead,Festival Lead,0,0
+0077,2169,19,10,16,2,1,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2170,8,6,3,5,0,dhelmise-pbl,Dhelmise,0,0
+0077,2171,14,8,4,10,0,n-zoroark,N's Zoroark,0,0
+0077,2172,16,8,7,9,0,toxtricity-pfl,Toxtricity,0,0
+0077,2173,13,7,6,7,0,mega-venusaur-ex,Mega Venusaur,0,0
+0077,2174,11,6,5,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,2175,13,6,7,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2176,3,2,0,2,1,dhelmise-pbl,Dhelmise,0,0
+0077,2177,18,10,7,11,0,azumarill-ssp,Azumarill,0,0
+0077,2178,29,13,18,11,0,dragapult-ex,Dragapult,0,0
+0077,2179,14,9,4,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2180,27,13,13,12,2,slowking-scr,Slowking,0,0
+0077,2181,29,13,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2182,27,13,17,10,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2183,29,14,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2184,27,11,16,11,0,dragapult-ex,Dragapult,1,0
+0077,2185,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2186,33,14,20,13,0,festival-lead,Festival Lead,0,0
+0077,2187,28,13,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2188,22,13,14,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2189,7,4,1,5,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,2190,19,9,13,5,1,mega-greninja-ex,Mega Greninja,0,0
+0077,2191,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2192,7,4,3,3,1,dhelmise-pbl,Dhelmise,0,0
+0077,2193,18,11,7,10,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2194,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2195,26,13,12,12,2,slowking-scr,Slowking,1,0
+0077,2196,28,13,19,9,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2197,25,15,9,16,0,basic-box-m,Basic Box,0,0
+0077,2198,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2199,14,6,4,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,2200,29,13,19,10,0,dragapult-dusknoir,Dragapult Dusknoir,1,0
+0077,2201,22,12,12,10,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2202,18,10,10,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2203,37,19,20,17,0,festival-lead,Festival Lead,0,0
+0077,2204,17,8,8,9,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,2205,28,14,16,12,0,festival-lead,Festival Lead,0,0
+0077,2206,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2207,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,2208,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,1,0
+0077,2209,27,11,12,13,2,slowking-scr,Slowking,1,0
+0077,2210,24,11,10,10,4,toucannon-pbl,Toucannon,0,0
+0077,2211,27,12,17,10,0,dragapult-ex,Dragapult,0,0
+0077,2212,14,10,6,7,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2213,16,11,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,2214,31,18,17,12,2,tera-box,Tera Box,0,0
+0077,2215,9,4,0,9,0,rockets-honchkrow,Rocket's Honchkrow,0,0
+0077,2216,23,11,10,13,0,other,Other,0,0
+0077,2217,27,16,10,17,0,basic-box-m,Basic Box,0,0
+0077,2218,25,13,12,12,1,slowking-scr,Slowking,0,0
+0077,2219,19,9,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,2220,2,2,0,2,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,2221,6,6,2,4,0,mega-lucario-ex,Mega Lucario,0,0
+0077,2222,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2223,25,16,11,14,0,basic-box-m,Basic Box,1,0
+0077,2224,19,9,7,12,0,sharpedo-toxtricity,Sharpedo Toxtricity,0,0
+0077,2225,27,11,13,12,2,slowking-scr,Slowking,0,0
+0077,2226,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2227,13,7,0,9,4,crustle-dri,Crustle,1,0
+0077,2228,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2229,28,12,12,14,2,slowking-scr,Slowking,0,0
+0077,2230,27,12,18,9,0,dragapult-ex,Dragapult,0,0
+0077,2231,24,12,12,12,0,slowking-scr,Slowking,1,0
+0077,2232,7,4,4,3,0,cinccino-ex,Cinccino,0,0
+0077,2233,15,8,7,8,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2234,27,12,13,12,2,slowking-scr,Slowking,0,0
+0077,2235,30,14,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2236,31,15,19,12,0,festival-lead,Festival Lead,0,0
+0077,2237,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2238,29,15,13,14,2,slowking-scr,Slowking,0,0
+0077,2239,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2240,8,5,0,7,1,cynthia-garchomp-ex,Cynthia's Garchomp,0,0
+0077,2241,26,17,11,15,0,basic-box-m,Basic Box,1,0
+0077,2242,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,2243,15,9,5,9,1,alakazam-dudunsparce,Alakazam Dudunsparce,0,0
+0077,2244,30,12,15,11,4,seaking-pre,Seaking Festival Lead,0,0
+0077,2245,26,10,16,10,0,dragapult-ex,Dragapult,0,0
+0077,2246,9,5,3,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,2247,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2248,16,10,6,10,0,ethan-typhlosion,Ethan's Typhlosion,0,0
+0077,2249,11,6,2,6,3,hops-trevenant,Hop's Trevenant,1,0
+0077,2250,30,14,18,12,0,festival-lead,Festival Lead,0,0
+0077,2251,26,13,12,13,1,slowking-scr,Slowking,0,0
+0077,2252,19,9,13,6,0,alakazam-dusknoir,Alakazam Dusknoir,1,0
+0077,2253,28,13,18,10,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2254,22,13,14,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2255,13,8,4,8,1,dhelmise-pbl,Dhelmise,0,0
+0077,2256,24,14,10,14,0,basic-box-m,Basic Box,0,0
+0077,2257,20,10,9,8,3,ceruledge-ex,Ceruledge,0,0
+0077,2258,16,10,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,2259,12,7,0,8,4,crustle-dri,Crustle,1,0
+0077,2260,31,15,19,12,0,festival-lead,Festival Lead,1,0
+0077,2261,11,5,5,6,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2262,21,11,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2263,34,15,21,13,0,festival-lead,Festival Lead,1,0
+0077,2264,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2265,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,2266,27,13,12,14,1,slowking-scr,Slowking,0,0
+0077,2267,18,9,12,6,0,alakazam-dusknoir,Alakazam Dusknoir,0,0
+0077,2268,11,7,4,6,1,dhelmise-pbl,Dhelmise,0,0
+0077,2269,30,15,19,11,0,dragapult-dusknoir,Dragapult Dusknoir,0,0
+0077,2270,26,11,17,9,0,dragapult-ex,Dragapult,0,0
+0077,2271,26,16,11,15,0,basic-box-m,Basic Box,0,0
+0077,2272,26,11,13,11,2,slowking-scr,Slowking,0,0
+0077,2273,26,12,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2274,22,13,14,8,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2275,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2276,16,9,3,13,0,n-zoroark,N's Zoroark,1,0
+0077,2277,27,15,12,15,0,raging-bolt-ogerpon,Raging Bolt Ogerpon,0,0
+0077,2278,31,16,18,13,0,festival-lead,Festival Lead,0,0
+0077,2279,28,9,14,10,4,seaking-pre,Seaking Festival Lead,1,0
+0077,2280,27,12,18,9,0,dragapult-ex,Dragapult,1,0
+0077,2281,21,12,12,9,0,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,0,0
+0077,2282,6,3,4,2,0,cinccino-ex,Cinccino,0,0
+0077,2283,3,3,0,3,0,lucario-hariyama,Lucario Hariyama,0,0
+0077,2284,29,12,19,10,0,dragapult-dudunsparce,Dragapult Dudunsparce,0,0
+0077,2285,24,14,9,15,0,basic-box-m,Basic Box,0,0
+0077,2286,26,11,17,9,0,dragapult-blaziken,Dragapult Blaziken,0,0
+0077,2287,26,10,16,10,0,dragapult-ex,Dragapult,1,0
+0077,2288,33,15,19,14,0,festival-lead,Festival Lead,0,0
+0077,2289,26,16,11,15,0,basic-box-m,Basic Box,1,0
+0077,2290,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,2291,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2292,30,15,18,12,0,festival-lead,Festival Lead,0,0
+0077,2293,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2294,30,14,19,11,0,festival-lead,Festival Lead,0,0
+0077,2295,26,13,12,13,1,slowking-scr,Slowking,0,0
+0077,2296,16,11,5,11,0,n-zoroark,N's Zoroark,1,0
+0077,2297,14,5,9,5,0,mega-excadrill-ex,Mega Excadrill,0,0
+0077,2298,22,10,12,9,1,alakazam-meg,Alakazam,0,0
+0077,2299,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2300,30,14,17,13,0,dragapult-ex,Dragapult,0,0
+0077,2301,28,13,17,11,0,dragapult-ex,Dragapult,0,0
+0077,2302,15,7,6,5,4,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,2303,18,8,5,10,3,toucannon-pbl,Toucannon,0,0
+0077,2304,4,1,0,4,0,mega-abomasnow-ex,Mega Abomasnow,0,0
+0077,2305,19,12,4,15,0,n-zoroark,N's Zoroark,0,0
+0077,2306,17,8,7,5,5,lopunny-dudunsparce,Lopunny Dudunsparce,0,0
+0077,2307,28,12,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2308,26,11,12,12,2,slowking-scr,Slowking,0,0
+0077,2309,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2310,23,14,10,13,0,basic-box-m,Basic Box,1,0
+0077,2311,9,5,3,5,1,dhelmise-pbl,Dhelmise,1,0
+0077,2312,28,12,18,10,0,dragapult-ex,Dragapult,1,0
+0077,2313,10,6,4,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,2314,13,8,5,8,0,mega-starmie-ex,Mega Starmie,0,0
+0077,2315,11,5,3,7,1,dhelmise-pbl,Dhelmise,1,0
+0077,2316,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,2317,27,12,17,10,0,dragapult-ex,Dragapult,1,0
+0077,2318,14,10,2,8,4,crustle-dri,Crustle,0,0
+0077,2319,27,11,16,11,0,dragapult-ex,Dragapult,0,0
+0077,2320,17,10,8,9,0,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,0,0
+0077,2321,28,12,19,9,0,dragapult-dudunsparce,Dragapult Dudunsparce,0,0
+0077,2322,25,16,11,14,0,basic-box-m,Basic Box,0,0
+0077,2323,9,5,3,5,1,dhelmise-pbl,Dhelmise,0,0
+0077,2324,9,6,4,4,1,dhelmise-pbl,Dhelmise,0,0
+0077,2325,16,10,4,12,0,n-zoroark,N's Zoroark,0,0
+0077,2326,22,12,11,11,0,lopunny-dusknoir,Lopunny Dusknoir,0,0
+0077,2327,28,13,18,10,0,dragapult-ex,Dragapult,0,0
+0077,2328,17,11,4,13,0,n-zoroark,N's Zoroark,0,0
+0077,2329,27,12,16,11,0,dragapult-ex,Dragapult,0,0
+0077,2330,18,8,6,12,0,beedrill-ex-cri,Beedrill,0,0
+0077,2331,24,15,10,14,0,basic-box-m,Basic Box,0,0
+0077,2332,18,9,8,10,0,sharpedo-toxtricity,Sharpedo Toxtricity,1,0
+0077,2333,27,11,17,10,0,dragapult-ex,Dragapult,0,0
+0077,2334,27,13,17,10,0,dragapult-ex,Dragapult,0,0
+0077,2335,24,15,10,14,0,basic-box-m,Basic Box,0,0
+0077,2336,8,5,5,2,1,okidogi-barbaracle,Okidogi Barbaracle,0,0

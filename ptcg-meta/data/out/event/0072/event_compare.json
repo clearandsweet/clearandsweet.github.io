@@ -1,0 +1,60 @@
+{
+ "focus": "0072",
+ "event": "Baltimore",
+ "window": "CUR",
+ "family": "dragapult-ex",
+ "family_name": "Dragapult",
+ "players": 3122,
+ "rounds": 17,
+ "fam": {
+  "tid": "0072",
+  "event": "Baltimore",
+  "players": 3122,
+  "fam_players": 954,
+  "field_share": 0.30557335041639977,
+  "day2_share": 0.3631484794275492,
+  "day2_rate": 0.21278825995807127,
+  "field_day2_rate": 0.17905188981422165,
+  "top64": 20,
+  "top64_expected": 19.556694426649585,
+  "top64_share": 0.3125,
+  "top64_p": 0.8926278820282292,
+  "top16": 5,
+  "top8": 2,
+  "wr_nonmirror": 0.50480109739369,
+  "games_nonmirror": 5346,
+  "winner_deck": "Basic Box",
+  "focus": 1
+ },
+ "rest_top64": 122,
+ "rest_top64_expected": 89.95703175636417,
+ "rest_top64_oe": 1.3562030406963588,
+ "focus_top64_oe": 1.0226677148846959,
+ "focus_top64_if_rest_conversion": 26.5228484473917,
+ "matchups": {
+  "actual_focus": 0.5048064918851436,
+  "expected_focus_from_rest": 0.49697170850672756,
+  "actual_rest": 0.5073096754625417,
+  "games_focus": 5340,
+  "games_rest": 16485
+ },
+ "by_day": {
+  "focus_day1": {
+   "wr": 0.5109509679242616,
+   "games": 4718
+  },
+  "focus_day2": {
+   "wr": 0.4592,
+   "games": 625
+  },
+  "rest_day1": {
+   "wr": 0.5089973121953442,
+   "games": 14634
+  },
+  "rest_day2": {
+   "wr": 0.4939329050678087,
+   "games": 1868
+  }
+ },
+ "top64_ratio_p": 0.27357797601943484
+}

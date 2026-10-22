@@ -1,218 +1,221 @@
 deck_id,defender,share,hp,types,mark,weak,res,prizes,dragon
-dragapult-ex,Dragapult ex,0.1726430575331295,320,['Dragon'],H,[],[],2,True
-dragapult-ex,Munkidori,0.006716037660085063,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-n-zoroark,Munkidori,0.0012348968904662605,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-n-zoroark,N's Zekrom,0.00337465141336771,130,['Dragon'],I,[],[],1,True
-n-zoroark,N's Zoroark ex,0.0626854564087016,280,['Darkness'],I,['Grass'],[],2,False
-basic-box-m,Fezandipiti ex,0.0022108530495365914,210,['Darkness'],H,['Fighting'],[],2,False
-basic-box-m,Lillie's Clefairy ex,0.007243018572735552,190,['Psychic'],I,['Metal'],[],2,False
-basic-box-m,Mega Kangaskhan ex,0.024382079377650558,300,['Colorless'],I,['Fighting'],[],3,False
-basic-box-m,Teal Mask Ogerpon ex,0.023036868790793225,210,['Grass'],H,['Fire'],[],2,False
-basic-box-m,Wellspring Mask Ogerpon ex,0.00599240169844545,210,['Water'],H,['Lightning'],[],2,False
-slowking-scr,Kyurem,0.004755843614855661,130,['Dragon'],H,[],[],1,True
-slowking-scr,Mega Kangaskhan ex,0.00971502496146287,300,['Colorless'],I,['Fighting'],[],3,False
-slowking-scr,Metagross,0.007500902993501566,180,['Metal'],J,['Fire'],['Grass'],1,False
-slowking-scr,Slowking,0.03881993436797464,130,['Water'],H,['Lightning'],[],1,False
-alakazam-dudunsparce,Alakazam,0.059283694627709875,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
-dragapult-dusknoir,Dragapult ex,0.05871819038642809,320,['Dragon'],H,[],[],2,True
-mega-excadrill-ex,Mega Excadrill ex,0.04008273706597245,340,['Metal'],J,['Fire'],['Grass'],3,False
-mega-excadrill-ex,Metagross,0.009964388287467867,180,['Metal'],J,['Fire'],['Grass'],1,False
-dragapult-blaziken,Dragapult ex,0.04197386712006386,320,['Dragon'],H,[],[],2,True
-dragapult-blaziken,Munkidori,0.002323965113678001,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-dhelmise-pbl,Dhelmise,0.0322575976779015,140,['Psychic'],J,['Darkness'],['Fighting'],1,False
-dhelmise-pbl,Lillie's Clefairy ex,0.001672656799007133,190,['Psychic'],I,['Metal'],[],2,False
-crustle-dri,Crustle,0.025122431380342227,150,['Grass'],I,['Fire'],[],1,False
-crustle-dri,Mega Kangaskhan ex,0.008525070975925508,300,['Colorless'],I,['Fighting'],[],3,False
-ogerpon-meganium-hydrapple,Dipplin,0.009067287376966951,90,['Grass'],I,['Fire'],[],1,False
-ogerpon-meganium-hydrapple,Hydrapple ex,0.006932809921835134,330,['Grass'],H,['Fire'],[],2,False
-ogerpon-meganium-hydrapple,Teal Mask Ogerpon ex,0.01595089233362019,210,['Grass'],H,['Fire'],[],2,False
-festival-lead,Dipplin,0.030725730442978407,90,['Grass'],I,['Fire'],[],1,False
-lucario-hariyama,Hariyama,0.0025603869730343428,150,['Fighting'],I,['Psychic'],[],1,False
-lucario-hariyama,Mega Lucario ex,0.0228873038846471,340,['Fighting'],I,['Psychic'],[],3,False
-lopunny-dudunsparce,Mega Lopunny ex,0.01775124977919645,330,['Colorless'],I,['Fighting'],[],3,False
-lopunny-dudunsparce,Mew ex,0.002324150786307835,160,['Psychic'],J,['Darkness'],['Fighting'],2,False
-rockets-honchkrow,Team Rocket's Honchkrow,0.019886899151743687,130,['Darkness'],I,['Lightning'],['Fighting'],1,False
-sharpedo-toxtricity,Mega Sharpedo ex,0.016167052828092245,330,['Darkness'],I,['Grass'],[],3,False
-sharpedo-toxtricity,Munkidori,0.0006094722296304617,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-sharpedo-toxtricity,Toxtricity,0.0012253599564149282,130,['Lightning'],J,['Fighting'],[],1,False
-alakazam-dusknoir,Alakazam,0.016776625824693667,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
-lopunny-dusknoir,Mega Kangaskhan ex,0.004567514308329189,300,['Colorless'],I,['Fighting'],[],3,False
-lopunny-dusknoir,Mega Lopunny ex,0.011549356568202395,330,['Colorless'],I,['Fighting'],[],3,False
-cynthia-garchomp-ex,Cynthia's Garchomp ex,0.014043355325164937,330,['Fighting'],I,['Grass'],[],2,False
-mega-lucario-ex,Mega Lucario ex,0.011310084825636208,340,['Fighting'],I,['Psychic'],[],3,False
-grimmsnarl-froslass,Marnie's Grimmsnarl ex,0.010111339540528768,320,['Darkness'],I,['Grass'],[],2,False
-grimmsnarl-froslass,Munkidori,0.0010102438713468448,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-rocket-mewtwo-ex,Team Rocket's Mewtwo ex,0.007113466515614587,280,['Psychic'],I,['Darkness'],['Fighting'],2,False
-rocket-mewtwo-ex,Team Rocket's Spidops,0.0029713591205776536,130,['Grass'],I,['Fire'],[],1,False
-raging-bolt-ogerpon,Lillie's Clefairy ex,0.0005430373998375495,190,['Psychic'],I,['Metal'],[],2,False
-raging-bolt-ogerpon,Mega Kangaskhan ex,0.002158573664354259,300,['Colorless'],I,['Fighting'],[],3,False
-raging-bolt-ogerpon,Raging Bolt ex,0.005017665574498957,240,['Dragon'],H,[],[],2,True
-raging-bolt-ogerpon,Teal Mask Ogerpon ex,0.0018942954630999855,210,['Grass'],H,['Fire'],[],2,False
-mega-greninja-ex,Greninja ex,0.002724384911001296,300,['Water'],J,['Lightning'],[],2,False
-mega-greninja-ex,Mega Greninja ex,0.005286925173824297,350,['Water'],J,['Lightning'],[],3,False
-ethan-typhlosion,Ethan's Typhlosion,0.006126295947219541,170,['Fire'],I,['Water'],[],1,False
-mega-chandelure-ex,Mega Chandelure ex,0.005560791705937756,350,['Psychic'],J,['Darkness'],['Fighting'],3,False
-seaking-pre,Seaking,0.005372290292177161,110,['Water'],J,['Lightning'],[],1,False
-mega-venusaur-ex,Mega Venusaur ex,0.0036343703540119517,380,['Grass'],I,['Fire'],[],3,False
-mega-venusaur-ex,Teal Mask Ogerpon ex,0.0014551678175243165,210,['Grass'],H,['Fire'],[],2,False
-ogerpon-meganium-arboliva,Arboliva ex,0.001337798057740104,310,['Grass'],I,['Fire'],[],2,False
-ogerpon-meganium-arboliva,Teal Mask Ogerpon ex,0.0036574894069158676,210,['Grass'],H,['Fire'],[],2,False
-dragapult-dudunsparce,Dragapult ex,0.004730248867626091,320,['Dragon'],H,[],[],2,True
-dragapult-dudunsparce,Munkidori,0.00017078789014958302,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-beedrill-ex-cri,Beedrill ex,0.004524033930254484,310,['Grass'],J,['Fire'],[],2,False
-ceruledge-ex,Ceruledge ex,0.004524033930254484,270,['Fire'],H,['Water'],[],2,False
-hops-trevenant,Hop's Trevenant,0.004132110958192462,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
-hops-trevenant,Lillie's Clefairy ex,0.00020342155830142683,190,['Psychic'],I,['Metal'],[],2,False
-kangaskhan-bouffalant,Mega Kangaskhan ex,0.003911044600009998,300,['Colorless'],I,['Fighting'],[],3,False
-kangaskhan-bouffalant,Munkidori,0.00023598650272319344,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-greninja-ex,Greninja ex,0.003958529688972597,300,['Water'],J,['Lightning'],[],2,False
-starmie-froslass,Mega Froslass ex,0.0010205178048465597,310,['Water'],I,['Metal'],[],3,False
-starmie-froslass,Mega Starmie ex,0.002574844922997473,330,['Water'],J,['Lightning'],[],3,False
-starmie-froslass,Munkidori,0.00017466554736796886,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-mew-ex-30c,Fezandipiti ex,0.00010831691086167837,210,['Darkness'],H,['Fighting'],[],2,False
-mew-ex-30c,Lillie's Clefairy ex,0.00033463761079217713,190,['Psychic'],I,['Metal'],[],2,False
-mew-ex-30c,Mega Kangaskhan ex,0.001149216005483661,300,['Colorless'],I,['Fighting'],[],3,False
-mew-ex-30c,Mew ex,0.0016626205504621857,160,['Psychic'],J,['Darkness'],['Fighting'],2,False
-mew-ex-30c,Wellspring Mask Ogerpon ex,0.0002324850769714073,210,['Water'],H,['Lightning'],[],2,False
-toucannon-pbl,Toucannon,0.003204524033930217,150,['Colorless'],J,['Lightning'],['Fighting'],1,False
-mega-starmie-ex,Mega Froslass ex,0.0008815939481991426,310,['Water'],I,['Metal'],[],3,False
-mega-starmie-ex,Mega Starmie ex,0.0023229300857310745,330,['Water'],J,['Lightning'],[],3,False
-toxtricity-box,Fezandipiti ex,0.00015034740769308448,210,['Darkness'],H,['Fighting'],[],2,False
-toxtricity-box,Mega Absol ex,0.0006013896307723379,280,['Darkness'],I,['Grass'],[],3,False
-toxtricity-box,Munkidori,0.0002932702520433007,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-toxtricity-box,Toxtricity,0.001499761795259411,130,['Lightning'],J,['Fighting'],[],1,False
-starmie-dusknoir,Mega Starmie ex,0.001979264844486248,330,['Water'],J,['Lightning'],[],3,False
-manectric-eelektrik,Mega Manectric ex,0.0018850141376059505,330,['Lightning'],I,['Fighting'],[],3,False
-clefairy-ogerpon,Fezandipiti ex,7.503675095415727e-05,210,['Darkness'],H,['Fighting'],[],2,False
-clefairy-ogerpon,Lillie's Clefairy ex,0.0006935214860914535,190,['Psychic'],I,['Metal'],[],2,False
-clefairy-ogerpon,Mega Kangaskhan ex,0.0006548661901453726,300,['Colorless'],I,['Fighting'],[],3,False
-clefairy-ogerpon,Teal Mask Ogerpon ex,0.0003660883910187672,210,['Grass'],H,['Fire'],[],2,False
-clefairy-ogerpon,Wellspring Mask Ogerpon ex,9.550131939620017e-05,210,['Water'],H,['Lightning'],[],2,False
-mega-absol-box,Mega Absol ex,0.0010442303381213527,280,['Darkness'],I,['Grass'],[],3,False
-mega-absol-box,Mega Kangaskhan ex,0.00043280599540556063,300,['Colorless'],I,['Fighting'],[],3,False
-mega-absol-box,Munkidori,0.00012823881345349944,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-mega-absol-box,Yveltal,0.00018548828374524026,120,['Darkness'],J,['Lightning'],['Fighting'],1,False
-cinccino-ex,Metagross,0.0016965127238453555,180,['Metal'],J,['Fire'],['Grass'],1,False
-okidogi-barbaracle,Okidogi,0.0015080113100847602,140,['Fighting'],I,['Psychic'],[],1,False
-lillie-clefairy,Fezandipiti ex,9.477724714219861e-05,210,['Darkness'],H,['Fighting'],[],2,False
-lillie-clefairy,Lillie's Clefairy ex,0.0006318483142813241,190,['Psychic'],I,['Metal'],[],2,False
-lillie-clefairy,Mega Kangaskhan ex,0.0005788181879041415,300,['Colorless'],I,['Fighting'],[],3,False
-lillie-clefairy,Wellspring Mask Ogerpon ex,0.00010831685387679843,210,['Water'],H,['Lightning'],[],2,False
-doublade-por,Steven's Metagross ex,0.0014137606032044627,340,['Metal'],I,['Fire'],['Grass'],2,False
-metagross-cri,Metagross,0.0013195098963241655,180,['Metal'],J,['Fire'],['Grass'],1,False
-rocket-spidops,Team Rocket's Spidops,0.0011310084825635702,130,['Grass'],I,['Fire'],[],1,False
-stevens-metagross,Lillie's Clefairy ex,5.750890589306289e-05,190,['Psychic'],I,['Metal'],[],2,False
-stevens-metagross,Steven's Metagross ex,0.0010734995766705075,340,['Metal'],I,['Fire'],['Grass'],2,False
-diancie-dusknoir,Lillie's Clefairy ex,0.0009425070688029752,190,['Psychic'],I,['Metal'],[],2,False
-hop-zacian,Hop's Trevenant,0.0002028714766930171,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
-hop-zacian,Hop's Zacian ex,0.0007396355921099583,230,['Metal'],I,['Fire'],['Grass'],2,False
-yanmega-ex,Mega Kangaskhan ex,0.0008482563619226777,300,['Colorless'],I,['Fighting'],[],3,False
-tera-box,Fezandipiti ex,6.638528049829651e-05,210,['Darkness'],H,['Fighting'],[],2,False
-tera-box,Lillie's Clefairy ex,0.00017210998647706506,190,['Psychic'],I,['Metal'],[],2,False
-tera-box,Mega Kangaskhan ex,0.00022128426832765505,300,['Colorless'],I,['Fighting'],[],3,False
-tera-box,Teal Mask Ogerpon ex,0.00024095398106789106,210,['Grass'],H,['Fire'],[],2,False
-tera-box,Wellspring Mask Ogerpon ex,0.00014752284555177007,210,['Water'],H,['Lightning'],[],2,False
-ogerpon-meganium,Teal Mask Ogerpon ex,0.0007540056550423801,210,['Grass'],H,['Fire'],[],2,False
-flareon-noctowl,Lillie's Clefairy ex,0.0007540056550423801,190,['Psychic'],I,['Metal'],[],2,False
-toxtricity-pfl,Fezandipiti ex,2.7544441175752952e-05,210,['Darkness'],H,['Fighting'],[],2,False
-toxtricity-pfl,Mega Darkrai ex,0.00014690368627068244,280,['Darkness'],J,['Grass'],[],3,False
-toxtricity-pfl,Mega Sharpedo ex,0.000188876168062306,330,['Darkness'],I,['Grass'],[],3,False
-toxtricity-pfl,Munkidori,4.459576190360002e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-toxtricity-pfl,Toxtricity,0.0002518348907497413,130,['Lightning'],J,['Fighting'],[],1,False
-mega-darkrai-ex,Mega Darkrai ex,0.0005317136174817378,280,['Darkness'],J,['Grass'],[],3,False
-mega-darkrai-ex,Mega Kangaskhan ex,0.00011435752434809431,300,['Colorless'],I,['Fighting'],[],3,False
-mega-darkrai-ex,Munkidori,1.3683806332250607e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-mega-dragonite-ex,Mega Dragonite ex,0.0006597549481620827,370,['Dragon'],I,[],[],3,True
-joltik-box,Fezandipiti ex,8.198138409114637e-05,210,['Darkness'],H,['Fighting'],[],2,False
-joltik-box,Lillie's Clefairy ex,0.00015615501731646927,190,['Psychic'],I,['Metal'],[],2,False
-joltik-box,Mega Kangaskhan ex,0.00028107903116964466,300,['Colorless'],I,['Fighting'],[],3,False
-joltik-box,Wellspring Mask Ogerpon ex,0.00014053951558482239,210,['Water'],H,['Lightning'],[],2,False
-alakazam-meg,Alakazam,0.0005655042412817851,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
-archaludon-dudunsparce,Archaludon ex,0.0005655042412817851,300,['Metal'],H,['Fire'],['Grass'],2,False
-mega-abomasnow-ex,Mega Abomasnow ex,0.0005655042412817851,350,['Water'],I,['Metal'],[],3,False
-mega-froslass-ex,Mega Froslass ex,0.0004569731242681092,310,['Water'],I,['Metal'],[],3,False
-mega-froslass-ex,Munkidori,1.4280410133378413e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-decidueye-ex,Fezandipiti ex,0.0004712535344014876,210,['Darkness'],H,['Fighting'],[],2,False
-palafin-ex,Palafin ex,0.0004712535344014876,340,['Water'],H,['Lightning'],[],2,False
-mega-charizard-x-ex,Mega Charizard X ex,0.0004712535344014876,360,['Fire'],I,['Water'],[],3,False
-hydreigon-ex,Hydreigon ex,0.0004712535344014876,330,['Darkness'],I,['Grass'],[],2,False
-ursaluna-lunatone,Munkidori,0.00037700282752119006,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-archaludon-ex,Archaludon ex,0.00037700282752119006,300,['Metal'],H,['Fire'],['Grass'],2,False
-dragapult-froslass,Dragapult ex,0.00035022120589400167,320,['Dragon'],H,[],[],2,True
-dragapult-froslass,Fezandipiti ex,1.2360748443317705e-05,210,['Darkness'],H,['Fighting'],[],2,False
-dragapult-froslass,Munkidori,1.4420873183870658e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-mega-lopunny-ex,Lillie's Clefairy ex,2.026896922156936e-05,190,['Psychic'],I,['Metal'],[],2,False
-mega-lopunny-ex,Mega Lopunny ex,0.00029187315679059874,330,['Colorless'],I,['Fighting'],[],3,False
-mega-lopunny-ex,Mew ex,6.486070150902195e-05,160,['Psychic'],J,['Darkness'],['Fighting'],2,False
-wailord-ex-pbl,Wailord ex,0.00037700282752119006,380,['Water'],J,['Lightning'],[],2,False
-azumarill-ssp,Alakazam,0.00018850141376059503,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
-azumarill-ssp,Fezandipiti ex,3.534401508011156e-05,210,['Darkness'],H,['Fighting'],[],2,False
-azumarill-ssp,Lillie's Clefairy ex,5.8906691800185945e-05,190,['Psychic'],I,['Metal'],[],2,False
-marnie-grimmsnarl-ex,Marnie's Grimmsnarl ex,0.0002700915779256287,320,['Darkness'],I,['Grass'],[],2,False
-marnie-grimmsnarl-ex,Munkidori,1.2660542715263848e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-gengar-ex,Gengar ex,0.0001825843290237154,280,['Darkness'],J,['Fighting'],[],2,False
-gengar-ex,Mega Gengar ex,8.114859067720683e-05,350,['Darkness'],I,['Fighting'],[],3,False
-gengar-ex,Munkidori,6.339733646656785e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-gengar-ex,Toxtricity,1.267946729331357e-05,130,['Lightning'],J,['Fighting'],[],1,False
-sinistcha-ogerpon,Fezandipiti ex,2.7363108449118638e-05,210,['Darkness'],H,['Fighting'],[],2,False
-sinistcha-ogerpon,Teal Mask Ogerpon ex,0.0002553890121917739,210,['Grass'],H,['Fire'],[],2,False
-mega-camerupt-ex,Mega Camerupt ex,0.00028275212064089256,340,['Fire'],I,['Water'],[],3,False
-mega-manectric-ex-meg,Mega Manectric ex,0.00028275212064089256,330,['Lightning'],I,['Fighting'],[],3,False
-iono-bellibolt,Iono's Bellibolt ex,0.00028275212064089256,280,['Lightning'],I,['Fighting'],[],2,False
-jellicent-dusknoir,Lillie's Clefairy ex,0.00018850141376059503,190,['Psychic'],I,['Metal'],[],2,False
-mega-feraligatr-ex,Fezandipiti ex,7.068803016022313e-05,210,['Darkness'],H,['Fighting'],[],2,False
-mega-feraligatr-ex,Munkidori,0.00011781338360037189,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-okidogi-twm,Crustle,0.00018850141376059503,150,['Grass'],I,['Fire'],[],1,False
-zygarde-barbaracle,Mega Zygarde ex,0.00018850141376059503,310,['Fighting'],J,['Grass'],[],3,False
-dudunsparce-control,Dudunsparce,0.00018850141376059503,140,['Colorless'],H,['Fighting'],[],1,False
-eelektrik-blk,Fezandipiti ex,0.00018850141376059503,210,['Darkness'],H,['Fighting'],[],2,False
-bronzong-tef,Mega Froslass ex,0.00016755681223164004,310,['Water'],I,['Metal'],[],3,False
-bronzong-tef,Munkidori,2.0944601528955005e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-alolan-exeggutor-ex,Mega Starmie ex,0.00012064090480678082,330,['Water'],J,['Lightning'],[],3,False
-alolan-exeggutor-ex,Munkidori,1.5080113100847602e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-alolan-exeggutor-ex,Teal Mask Ogerpon ex,5.278039585296661e-05,210,['Grass'],H,['Fire'],[],2,False
-blaziken-ex-jtg,Blaziken ex,0.00018850141376059503,320,['Fire'],H,['Water'],[],2,False
-blaziken-zoroark,Fezandipiti ex,1.2293570462647502e-05,210,['Darkness'],H,['Fighting'],[],2,False
-blaziken-zoroark,Lillie's Clefairy ex,2.0489284104412505e-05,190,['Psychic'],I,['Metal'],[],2,False
-blaziken-zoroark,Munkidori,8.195713641765003e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-blaziken-zoroark,N's Reshiram,1.6391427283530006e-05,130,['Dragon'],I,[],[],1,True
-blaziken-zoroark,N's Zoroark ex,0.00013113141826824005,280,['Darkness'],I,['Grass'],[],2,False
-heatran-metang,Metagross,0.00018850141376059503,180,['Metal'],J,['Fire'],['Grass'],1,False
-flareon-ex,Fezandipiti ex,2.133978268987868e-05,210,['Darkness'],H,['Fighting'],[],2,False
-flareon-ex,Lillie's Clefairy ex,5.334945672469669e-05,190,['Psychic'],I,['Metal'],[],2,False
-flareon-ex,Toucannon,0.00011381217434601965,150,['Colorless'],J,['Lightning'],['Fighting'],1,False
-sylveon-pre,Munkidori,0.00018850141376059503,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-paldean-tauros-pfl,Paldean Tauros,0.00018850141376059503,130,['Fighting'],I,['Psychic'],[],1,False
-misty-gyarados,Misty's Gyarados,0.00018850141376059503,180,['Water'],I,['Lightning'],[],1,False
-ethan-magcargo,Fezandipiti ex,1.346438669718599e-05,210,['Darkness'],H,['Fighting'],[],2,False
-ethan-magcargo,Mega Kangaskhan ex,8.078632018311594e-05,300,['Colorless'],I,['Fighting'],[],3,False
-conkeldurr-twm,Bloodmoon Ursaluna ex,9.425070688030193e-05,260,['Colorless'],H,['Fighting'],[],2,False
-cornerstone-mask-ogerpon-ex,Cornerstone Mask Ogerpon ex,9.425070688030193e-05,210,['Fighting'],H,['Grass'],[],2,False
-blissey-ex,Fezandipiti ex,1.346438669718599e-05,210,['Darkness'],H,['Fighting'],[],2,False
-blissey-ex,Mega Lopunny ex,7.181006238499194e-05,330,['Colorless'],I,['Fighting'],[],3,False
-blissey-ex,Munkidori,8.976257798123992e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-dragonite-eelektrik,Fezandipiti ex,3.250024375182825e-06,210,['Darkness'],H,['Fighting'],[],2,False
-dragonite-eelektrik,Mega Dragonite ex,9.10006825051191e-05,370,['Dragon'],I,[],[],3,True
-greninja-froslass,Greninja ex,6.752289448141035e-05,300,['Water'],J,['Lightning'],[],2,False
-greninja-froslass,Mega Froslass ex,2.2507631493803446e-05,310,['Water'],I,['Metal'],[],3,False
-greninja-froslass,Munkidori,4.220180905088147e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-froslass-munkidori,Fezandipiti ex,3.490766921492663e-06,210,['Darkness'],H,['Fighting'],[],2,False
-froslass-munkidori,Mega Froslass ex,7.446969432517684e-05,310,['Water'],I,['Metal'],[],3,False
-froslass-munkidori,Munkidori,6.981533842985328e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-froslass-munkidori,Wellspring Mask Ogerpon ex,9.308711790647105e-06,210,['Water'],H,['Lightning'],[],2,False
-iron-thorns-ex,Iron Thorns ex,9.425070688030193e-05,230,['Lightning'],H,['Fighting'],[],2,False
-mega-gengar-ex,Fezandipiti ex,2.005334188942594e-06,210,['Darkness'],H,['Fighting'],[],2,False
-mega-gengar-ex,Gengar ex,4.278046269744201e-05,280,['Darkness'],J,['Fighting'],[],2,False
-mega-gengar-ex,Mega Gengar ex,4.278046269744201e-05,350,['Darkness'],I,['Fighting'],[],3,False
-mega-gengar-ex,Munkidori,1.3368894592950627e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-mega-gengar-ex,Toxtricity,5.347557837180251e-06,130,['Lightning'],J,['Fighting'],[],1,False
-mega-froslass-dudunsparce,Mega Froslass ex,9.425070688030193e-05,310,['Water'],I,['Metal'],[],3,False
-ogerpon-ex,Fezandipiti ex,4.635280666244357e-06,210,['Darkness'],H,['Fighting'],[],2,False
-ogerpon-ex,Mega Kangaskhan ex,1.3905841998733076e-05,300,['Colorless'],I,['Fighting'],[],3,False
-ogerpon-ex,Moltres,7.72546777707393e-06,120,['Fire'],J,['Water'],[],1,False
-ogerpon-ex,Teal Mask Ogerpon ex,4.3262619551614005e-05,210,['Grass'],H,['Fire'],[],2,False
-ogerpon-ex,Wellspring Mask Ogerpon ex,2.4721496886636572e-05,210,['Water'],H,['Lightning'],[],2,False
-slaking-ex,Fezandipiti ex,9.425070688030193e-05,210,['Darkness'],H,['Fighting'],[],2,False
-toxtricity-brute-bonnet,Fezandipiti ex,6.896393186363554e-06,210,['Darkness'],H,['Fighting'],[],2,False
-toxtricity-brute-bonnet,Munkidori,1.379278637272711e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
-toxtricity-brute-bonnet,Toxtricity,7.356152732121126e-05,130,['Lightning'],J,['Fighting'],[],1,False
+dragapult-ex,Dragapult ex,0.17607999712104896,320,['Dragon'],H,[],[],2,True
+dragapult-ex,Munkidori,0.006850610066064947,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+basic-box-m,Fezandipiti ex,0.002262074246211268,210,['Darkness'],H,['Fighting'],[],2,False
+basic-box-m,Lillie's Clefairy ex,0.007404468721091705,190,['Psychic'],I,['Metal'],[],2,False
+basic-box-m,Mega Kangaskhan ex,0.025018595474603136,300,['Colorless'],I,['Fighting'],[],3,False
+basic-box-m,Teal Mask Ogerpon ex,0.023419121607834294,210,['Grass'],H,['Fire'],[],2,False
+basic-box-m,Wellspring Mask Ogerpon ex,0.006177028673927849,210,['Water'],H,['Lightning'],[],2,False
+n-zoroark,Munkidori,0.0011982247579201046,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+n-zoroark,N's Zekrom,0.003232157641062525,130,['Dragon'],I,[],[],1,True
+n-zoroark,N's Zoroark ex,0.05977345898887398,280,['Darkness'],I,['Grass'],[],2,False
+slowking-scr,Kyurem,0.004941589130064589,130,['Dragon'],H,[],[],1,True
+slowking-scr,Mega Kangaskhan ex,0.010126712596545337,300,['Colorless'],I,['Fighting'],[],3,False
+slowking-scr,Metagross,0.007885580158892836,180,['Metal'],J,['Fire'],['Grass'],1,False
+slowking-scr,Slowking,0.04016569680099078,130,['Water'],H,['Lightning'],[],1,False
+alakazam-dudunsparce,Alakazam,0.056226765799256756,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
+dragapult-dusknoir,Dragapult ex,0.05560718711276362,320,['Dragon'],H,[],[],2,True
+mega-excadrill-ex,Mega Excadrill ex,0.03765777216157064,340,['Metal'],J,['Fire'],['Grass'],3,False
+mega-excadrill-ex,Metagross,0.00927531334028833,180,['Metal'],J,['Fire'],['Grass'],1,False
+dragapult-blaziken,Dragapult ex,0.042995499902171976,320,['Dragon'],H,[],[],2,True
+dragapult-blaziken,Munkidori,0.002388638883453998,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+dhelmise-pbl,Dhelmise,0.03585604471705855,140,['Psychic'],J,['Darkness'],['Fighting'],1,False
+dhelmise-pbl,Lillie's Clefairy ex,0.001938255159025941,190,['Psychic'],I,['Metal'],[],2,False
+festival-lead,Dipplin,0.034696406443618495,90,['Grass'],I,['Fire'],[],1,False
+ogerpon-meganium-hydrapple,Dipplin,0.009407012780737512,90,['Grass'],I,['Fire'],[],1,False
+ogerpon-meganium-hydrapple,Hydrapple ex,0.0071806492701304995,330,['Grass'],H,['Fire'],[],2,False
+ogerpon-meganium-hydrapple,Teal Mask Ogerpon ex,0.016559797676517482,210,['Grass'],H,['Fire'],[],2,False
+crustle-dri,Crustle,0.02287457189221764,150,['Grass'],I,['Fire'],[],1,False
+crustle-dri,Mega Kangaskhan ex,0.0077945730891951,300,['Colorless'],I,['Fighting'],[],3,False
+lucario-hariyama,Hariyama,0.0024756504696263767,150,['Fighting'],I,['Psychic'],[],1,False
+lucario-hariyama,Mega Lucario ex,0.022152602318477783,340,['Fighting'],I,['Psychic'],[],3,False
+lopunny-dudunsparce,Mega Lopunny ex,0.017377199957411077,330,['Colorless'],I,['Fighting'],[],3,False
+lopunny-dudunsparce,Mew ex,0.002294423338747571,160,['Psychic'],J,['Darkness'],['Fighting'],2,False
+sharpedo-toxtricity,Mega Sharpedo ex,0.017206022764185036,330,['Darkness'],I,['Grass'],[],3,False
+sharpedo-toxtricity,Munkidori,0.000640290551233637,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+sharpedo-toxtricity,Toxtricity,0.0012831786300584855,130,['Lightning'],J,['Fighting'],[],1,False
+alakazam-dusknoir,Alakazam,0.019052044609665503,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
+rockets-honchkrow,Team Rocket's Honchkrow,0.018897149938042195,130,['Darkness'],I,['Lightning'],['Fighting'],1,False
+lopunny-dusknoir,Mega Kangaskhan ex,0.004647234473841838,300,['Colorless'],I,['Fighting'],[],3,False
+lopunny-dusknoir,Mega Lopunny ex,0.011926495389850909,330,['Colorless'],I,['Fighting'],[],3,False
+cynthia-garchomp-ex,Cynthia's Garchomp ex,0.013630731102850062,330,['Fighting'],I,['Grass'],[],2,False
+mega-lucario-ex,Mega Lucario ex,0.01107496902106565,340,['Fighting'],I,['Psychic'],[],3,False
+grimmsnarl-froslass,Marnie's Grimmsnarl ex,0.009215218367667187,320,['Darkness'],I,['Grass'],[],2,False
+grimmsnarl-froslass,Munkidori,0.0009303826236587064,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+rocket-mewtwo-ex,Lillie's Clefairy ex,0.000557793365464357,190,['Psychic'],I,['Metal'],[],2,False
+rocket-mewtwo-ex,Team Rocket's Mewtwo ex,0.006323472104093492,280,['Psychic'],I,['Darkness'],['Fighting'],2,False
+rocket-mewtwo-ex,Team Rocket's Spidops,0.0026447568352749025,130,['Grass'],I,['Fire'],[],1,False
+raging-bolt-ogerpon,Lillie's Clefairy ex,0.0004824182568630723,190,['Psychic'],I,['Metal'],[],2,False
+raging-bolt-ogerpon,Mega Kangaskhan ex,0.0019571337589968023,300,['Colorless'],I,['Fighting'],[],3,False
+raging-bolt-ogerpon,Raging Bolt ex,0.004649027632292745,240,['Dragon'],H,[],[],2,True
+raging-bolt-ogerpon,Teal Mask Ogerpon ex,0.0017404166343752375,210,['Grass'],H,['Fire'],[],2,False
+mega-greninja-ex,Greninja ex,0.002529946303180493,300,['Water'],J,['Lightning'],[],2,False
+mega-greninja-ex,Mega Greninja ex,0.005059892606360986,350,['Water'],J,['Lightning'],[],3,False
+seaking-pre,Seaking,0.005963444857496928,110,['Water'],J,['Lightning'],[],1,False
+ethan-typhlosion,Ethan's Typhlosion,0.005885997521685272,170,['Fire'],I,['Water'],[],1,False
+ogerpon-meganium-arboliva,Arboliva ex,0.0015271934134122621,310,['Grass'],I,['Fire'],[],2,False
+ogerpon-meganium-arboliva,Teal Mask Ogerpon ex,0.0042039094366497,210,['Grass'],H,['Fire'],[],2,False
+mega-chandelure-ex,Mega Chandelure ex,0.005421313506815343,350,['Psychic'],J,['Darkness'],['Fighting'],3,False
+dragapult-dudunsparce,Dragapult ex,0.004555619229307803,320,['Dragon'],H,[],[],2,True
+dragapult-dudunsparce,Munkidori,0.00016866825520274565,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+mega-venusaur-ex,Mega Venusaur ex,0.003313921946448097,380,['Grass'],I,['Fire'],[],3,False
+mega-venusaur-ex,Teal Mask Ogerpon ex,0.0013329182022507968,210,['Grass'],H,['Fire'],[],2,False
+ceruledge-ex,Ceruledge ex,0.004337050805452274,270,['Fire'],H,['Water'],[],2,False
+hops-trevenant,Hop's Trevenant,0.004059125811904667,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
+hops-trevenant,Lillie's Clefairy ex,0.00020047765773595247,190,['Psychic'],I,['Metal'],[],2,False
+mew-ex-30c,Fezandipiti ex,0.00013342652937425037,210,['Darkness'],H,['Fighting'],[],2,False
+mew-ex-30c,Lillie's Clefairy ex,0.00040100869484064336,190,['Psychic'],I,['Metal'],[],2,False
+mew-ex-30c,Mega Kangaskhan ex,0.0013845736572770573,300,['Colorless'],I,['Fighting'],[],3,False
+mew-ex-30c,Mew ex,0.001971504565180181,160,['Psychic'],J,['Darkness'],['Fighting'],2,False
+mew-ex-30c,Wellspring Mask Ogerpon ex,0.0002916426871568315,210,['Water'],H,['Lightning'],[],2,False
+beedrill-ex-cri,Beedrill ex,0.004182156133828964,310,['Grass'],J,['Fire'],[],2,False
+greninja-ex,Greninja ex,0.004027261462205654,300,['Water'],J,['Lightning'],[],2,False
+kangaskhan-bouffalant,Mega Kangaskhan ex,0.003594067553366263,300,['Colorless'],I,['Fighting'],[],3,False
+kangaskhan-bouffalant,Munkidori,0.00020085190140442627,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+starmie-froslass,Mega Froslass ex,0.0009280497772153236,310,['Water'],I,['Metal'],[],3,False
+starmie-froslass,Mega Starmie ex,0.0023201244430383085,330,['Water'],J,['Lightning'],[],3,False
+starmie-froslass,Munkidori,0.00015950855545888371,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+toucannon-pbl,Toucannon,0.0032527881040892055,150,['Colorless'],J,['Lightning'],['Fighting'],1,False
+mega-starmie-ex,Mega Froslass ex,0.0009080221209294956,310,['Water'],I,['Metal'],[],3,False
+mega-starmie-ex,Mega Starmie ex,0.00234476598315971,330,['Water'],J,['Lightning'],[],3,False
+toxtricity-box,Fezandipiti ex,0.00014632116581388374,210,['Darkness'],H,['Fighting'],[],2,False
+toxtricity-box,Mega Absol ex,0.000585284663255535,280,['Darkness'],I,['Grass'],[],3,False
+toxtricity-box,Munkidori,0.0002834972587643998,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+toxtricity-box,Toxtricity,0.0014632116581388373,130,['Lightning'],J,['Fighting'],[],1,False
+mega-absol-box,Mega Absol ex,0.0011655895883192619,280,['Darkness'],I,['Grass'],[],3,False
+mega-absol-box,Mega Kangaskhan ex,0.00048753026049892204,300,['Colorless'],I,['Fighting'],[],3,False
+mega-absol-box,Munkidori,0.00014196283447478187,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+mega-absol-box,Yveltal,0.00021854804780986156,120,['Darkness'],J,['Lightning'],['Fighting'],1,False
+starmie-dusknoir,Mega Starmie ex,0.0019361833952911721,330,['Water'],J,['Lightning'],[],3,False
+clefairy-ogerpon,Fezandipiti ex,6.958159076827585e-05,210,['Darkness'],H,['Fighting'],[],2,False
+clefairy-ogerpon,Lillie's Clefairy ex,0.0006494281805039081,190,['Psychic'],I,['Metal'],[],2,False
+clefairy-ogerpon,Mega Kangaskhan ex,0.0006262343169144828,300,['Colorless'],I,['Fighting'],[],3,False
+clefairy-ogerpon,Teal Mask Ogerpon ex,0.0003506912174721104,210,['Grass'],H,['Fire'],[],2,False
+clefairy-ogerpon,Wellspring Mask Ogerpon ex,8.535341800908506e-05,210,['Water'],H,['Lightning'],[],2,False
+cinccino-ex,Metagross,0.0017038413878562072,180,['Metal'],J,['Fire'],['Grass'],1,False
+manectric-eelektrik,Mega Manectric ex,0.0017038413878562072,330,['Lightning'],I,['Fighting'],[],3,False
+okidogi-barbaracle,Okidogi,0.001471499380421242,140,['Fighting'],I,['Psychic'],[],1,False
+lillie-clefairy,Fezandipiti ex,8.702504471798699e-05,210,['Darkness'],H,['Fighting'],[],2,False
+lillie-clefairy,Lillie's Clefairy ex,0.0005895244964766862,190,['Psychic'],I,['Metal'],[],2,False
+lillie-clefairy,Mega Kangaskhan ex,0.0005389938253501131,300,['Colorless'],I,['Fighting'],[],3,False
+lillie-clefairy,Wellspring Mask Ogerpon ex,0.0001010613422531462,210,['Water'],H,['Lightning'],[],2,False
+metagross-cri,Metagross,0.0013166047087979323,180,['Metal'],J,['Fire'],['Grass'],1,False
+doublade-por,Steven's Metagross ex,0.0012391573729862771,340,['Metal'],I,['Fire'],['Grass'],2,False
+stevens-metagross,Lillie's Clefairy ex,6.628595135546479e-05,190,['Psychic'],I,['Metal'],[],2,False
+stevens-metagross,Steven's Metagross ex,0.0011728714216308123,340,['Metal'],I,['Fire'],['Grass'],2,False
+tera-box,Lillie's Clefairy ex,0.00023777690819365538,190,['Psychic'],I,['Metal'],[],2,False
+tera-box,Mega Kangaskhan ex,0.00032099882606143477,300,['Colorless'],I,['Fighting'],[],3,False
+tera-box,Teal Mask Ogerpon ex,0.00031624328789756155,210,['Grass'],H,['Fire'],[],2,False
+tera-box,Wellspring Mask Ogerpon ex,0.0002092436792104167,210,['Water'],H,['Lightning'],[],2,False
+rocket-spidops,Team Rocket's Spidops,0.0010842627013630684,130,['Grass'],I,['Fire'],[],1,False
+alakazam-meg,Alakazam,0.0009293680297397585,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
+hop-zacian,Hop's Trevenant,0.00016291710481493616,140,['Psychic'],I,['Darkness'],['Fighting'],1,False
+hop-zacian,Hop's Zacian ex,0.0006890035891131674,230,['Metal'],I,['Fire'],['Grass'],2,False
+mega-abomasnow-ex,Mega Abomasnow ex,0.0007744733581164486,350,['Water'],I,['Metal'],[],3,False
+yanmega-ex,Mega Kangaskhan ex,0.0007744733581164486,300,['Colorless'],I,['Fighting'],[],3,False
+toxtricity-pfl,Mega Darkrai ex,0.0001674536990522051,280,['Darkness'],J,['Grass'],[],3,False
+toxtricity-pfl,Mega Sharpedo ex,0.0002846712883887487,330,['Darkness'],I,['Grass'],[],3,False
+toxtricity-pfl,Munkidori,4.6049767239356404e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+toxtricity-pfl,Toxtricity,0.0002762986034361384,130,['Lightning'],J,['Fighting'],[],1,False
+diancie-dusknoir,Lillie's Clefairy ex,0.0007744733581164486,190,['Psychic'],I,['Metal'],[],2,False
+mega-dragonite-ex,Mega Dragonite ex,0.0006970260223047936,370,['Dragon'],I,[],[],3,True
+archaludon-dudunsparce,Archaludon ex,0.0006970260223047936,300,['Metal'],H,['Fire'],['Grass'],2,False
+flareon-noctowl,Lillie's Clefairy ex,0.0006195786864931386,190,['Psychic'],I,['Metal'],[],2,False
+mega-darkrai-ex,Mega Darkrai ex,0.0005009359592923248,280,['Darkness'],J,['Grass'],[],3,False
+mega-darkrai-ex,Mega Kangaskhan ex,0.00011864272720081377,300,['Colorless'],I,['Fighting'],[],3,False
+ogerpon-meganium,Teal Mask Ogerpon ex,0.0006195786864931386,210,['Grass'],H,['Fire'],[],2,False
+hydreigon-ex,Hydreigon ex,0.0005421313506814836,330,['Darkness'],I,['Grass'],[],2,False
+joltik-box,Fezandipiti ex,6.736543410835003e-05,210,['Darkness'],H,['Fighting'],[],2,False
+joltik-box,Lillie's Clefairy ex,0.00012831511258733338,190,['Psychic'],I,['Metal'],[],2,False
+joltik-box,Mega Kangaskhan ex,0.0002309672026572001,300,['Colorless'],I,['Fighting'],[],3,False
+joltik-box,Wellspring Mask Ogerpon ex,0.00011548360132860008,210,['Water'],H,['Lightning'],[],2,False
+mega-froslass-ex,Mega Froslass ex,0.0004525618231775722,310,['Water'],I,['Metal'],[],3,False
+mega-froslass-ex,Munkidori,1.2122191692256402e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+palafin-ex,Palafin ex,0.00046468401486982866,340,['Water'],H,['Lightning'],[],2,False
+mega-lopunny-ex,Lillie's Clefairy ex,2.7706883339768328e-05,190,['Psychic'],I,['Metal'],[],2,False
+mega-lopunny-ex,Mega Lopunny ex,0.0003546481067490345,330,['Colorless'],I,['Fighting'],[],3,False
+mega-lopunny-ex,Mew ex,8.232902478102587e-05,160,['Psychic'],J,['Darkness'],['Fighting'],2,False
+mega-charizard-x-ex,Mega Charizard X ex,0.00038723667905817363,360,['Fire'],I,['Water'],[],3,False
+decidueye-ex,Fezandipiti ex,0.00038723667905817363,210,['Darkness'],H,['Fighting'],[],2,False
+archaludon-ex,Archaludon ex,0.00038723667905817363,300,['Metal'],H,['Fire'],['Grass'],2,False
+dragapult-froslass,Dragapult ex,0.0002877824500104272,320,['Dragon'],H,[],[],2,True
+dragapult-froslass,Fezandipiti ex,1.0157027647426841e-05,210,['Darkness'],H,['Fighting'],[],2,False
+dragapult-froslass,Munkidori,1.184986558866465e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+gengar-ex,Gengar ex,0.0001864562818286257,280,['Darkness'],J,['Fighting'],[],2,False
+gengar-ex,Mega Gengar ex,0.00010876616440003163,350,['Darkness'],I,['Fighting'],[],3,False
+gengar-ex,Munkidori,4.855632339287127e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+gengar-ex,Toxtricity,9.711264678574253e-06,130,['Lightning'],J,['Fighting'],[],1,False
+marnie-grimmsnarl-ex,Marnie's Grimmsnarl ex,0.0002947185103318232,320,['Darkness'],I,['Grass'],[],2,False
+marnie-grimmsnarl-ex,Munkidori,1.5070832914695507e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+mega-camerupt-ex,Mega Camerupt ex,0.0003097893432465187,340,['Fire'],I,['Water'],[],3,False
+ursaluna-lunatone,Munkidori,0.0003097893432465187,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+azumarill-ssp,Lillie's Clefairy ex,0.0003097893432465187,190,['Psychic'],I,['Metal'],[],2,False
+wailord-ex-pbl,Wailord ex,0.0003097893432465187,380,['Water'],J,['Lightning'],[],2,False
+iono-bellibolt,Iono's Bellibolt ex,0.0002323420074348637,280,['Lightning'],I,['Fighting'],[],2,False
+eelektrik-blk,Mega Zeraora ex,0.0002323420074348637,270,['Lightning'],J,['Fighting'],[],3,False
+flareon-ex,Fezandipiti ex,7.210614023840597e-05,210,['Darkness'],H,['Fighting'],[],2,False
+flareon-ex,Lillie's Clefairy ex,0.00016023586719645774,190,['Psychic'],I,['Metal'],[],2,False
+paldean-tauros-pfl,Mew ex,0.0002323420074348637,160,['Psychic'],J,['Darkness'],['Fighting'],2,False
+sinistcha-ogerpon,Fezandipiti ex,2.2484710396922298e-05,210,['Darkness'],H,['Fighting'],[],2,False
+sinistcha-ogerpon,Teal Mask Ogerpon ex,0.00020985729703794142,210,['Grass'],H,['Fire'],[],2,False
+mega-manectric-ex-meg,Mega Manectric ex,0.0002323420074348637,330,['Lightning'],I,['Fighting'],[],3,False
+mega-froslass-dudunsparce,Mega Froslass ex,0.0002323420074348637,310,['Water'],I,['Metal'],[],3,False
+jellicent-dusknoir,Lillie's Clefairy ex,0.00015489467162320875,190,['Psychic'],I,['Metal'],[],2,False
+misty-gyarados,Misty's Gyarados,0.00015489467162320875,180,['Water'],I,['Lightning'],[],1,False
+zygarde-barbaracle,Mega Zygarde ex,0.00015489467162320875,310,['Fighting'],J,['Grass'],[],3,False
+mega-feraligatr-ex,Fezandipiti ex,5.8085501858703266e-05,210,['Darkness'],H,['Fighting'],[],2,False
+mega-feraligatr-ex,Munkidori,9.680916976450546e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+dudunsparce-control,Dudunsparce,0.00015489467162320875,140,['Colorless'],H,['Fighting'],[],1,False
+alolan-exeggutor-ex,Mega Starmie ex,9.91325898388536e-05,330,['Water'],J,['Lightning'],[],3,False
+alolan-exeggutor-ex,Munkidori,1.23915737298567e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+alolan-exeggutor-ex,Teal Mask Ogerpon ex,4.337050805449845e-05,210,['Grass'],H,['Fire'],[],2,False
+blaziken-zoroark,Fezandipiti ex,1.0101826410209266e-05,210,['Darkness'],H,['Fighting'],[],2,False
+blaziken-zoroark,Lillie's Clefairy ex,1.683637735034878e-05,190,['Psychic'],I,['Metal'],[],2,False
+blaziken-zoroark,Munkidori,6.734550940139511e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+blaziken-zoroark,N's Reshiram,1.3469101880279022e-05,130,['Dragon'],I,[],[],1,True
+blaziken-zoroark,N's Zoroark ex,0.00010775281504223217,280,['Darkness'],I,['Grass'],[],2,False
+blaziken-ex-jtg,Blaziken ex,0.00015489467162320875,320,['Fire'],H,['Water'],[],2,False
+bronzong-tef,Mega Froslass ex,0.00013768415255396334,310,['Water'],I,['Metal'],[],3,False
+bronzong-tef,Munkidori,1.7210519069245417e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+froslass-munkidori,Mega Froslass ex,0.00012818869375713827,310,['Water'],I,['Metal'],[],3,False
+froslass-munkidori,Munkidori,1.6023586719642284e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+froslass-munkidori,Wellspring Mask Ogerpon ex,1.0682391146428188e-05,210,['Water'],H,['Lightning'],[],2,False
+heatran-metang,Metagross,0.00015489467162320875,180,['Metal'],J,['Fire'],['Grass'],1,False
+hydrapple-ogerpon,Dipplin,5.936083223883449e-05,90,['Grass'],I,['Fire'],[],1,False
+hydrapple-ogerpon,Fezandipiti ex,2.7825390111953667e-06,210,['Darkness'],H,['Fighting'],[],2,False
+hydrapple-ogerpon,Hydrapple ex,6.678093626868879e-05,330,['Grass'],H,['Fire'],[],2,False
+hydrapple-ogerpon,Teal Mask Ogerpon ex,2.5970364104490085e-05,210,['Grass'],H,['Fire'],[],2,False
+sylveon-pre,Munkidori,0.00015489467162320875,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+okidogi-twm,Crustle,0.00015489467162320875,150,['Grass'],I,['Fire'],[],1,False
+cornerstone-mask-ogerpon-ex,Cornerstone Mask Ogerpon ex,7.744733581164855e-05,210,['Fighting'],H,['Grass'],[],2,False
+dragonite-eelektrik,Fezandipiti ex,2.6705977866085704e-06,210,['Darkness'],H,['Fighting'],[],2,False
+dragonite-eelektrik,Mega Dragonite ex,7.477673802503997e-05,370,['Dragon'],I,[],[],3,True
+conkeldurr-twm,Bloodmoon Ursaluna ex,7.744733581164855e-05,260,['Colorless'],H,['Fighting'],[],2,False
+archaludon-zoroark,N's Zoroark ex,7.744733581164855e-05,280,['Darkness'],I,['Grass'],[],2,False
+bloodmoon-ursaluna-sfa,Fezandipiti ex,9.293680297397826e-06,210,['Darkness'],H,['Fighting'],[],2,False
+bloodmoon-ursaluna-sfa,Mega Kangaskhan ex,5.5762081784386954e-05,300,['Colorless'],I,['Fighting'],[],3,False
+bloodmoon-ursaluna-sfa,Munkidori,1.2391573729863769e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+blissey-ex,Fezandipiti ex,1.1063905115949793e-05,210,['Darkness'],H,['Fighting'],[],2,False
+blissey-ex,Mega Lopunny ex,5.900749395173223e-05,330,['Colorless'],I,['Fighting'],[],3,False
+blissey-ex,Munkidori,7.375936743966529e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+greninja-froslass,Greninja ex,5.548465849192733e-05,300,['Water'],J,['Lightning'],[],2,False
+greninja-froslass,Mega Froslass ex,1.8494886163975773e-05,310,['Water'],I,['Metal'],[],3,False
+greninja-froslass,Munkidori,3.4677911557454583e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+ethan-magcargo,Fezandipiti ex,1.1063905115949793e-05,210,['Darkness'],H,['Fighting'],[],2,False
+ethan-magcargo,Mega Kangaskhan ex,6.638343069569876e-05,300,['Colorless'],I,['Fighting'],[],3,False
+iron-thorns-ex,Iron Thorns ex,7.744733581164855e-05,230,['Lightning'],H,['Fighting'],[],2,False
+mega-gengar-ex,Fezandipiti ex,1.6478156555669902e-06,210,['Darkness'],H,['Fighting'],[],2,False
+mega-gengar-ex,Gengar ex,3.51534006520958e-05,280,['Darkness'],J,['Fighting'],[],2,False
+mega-gengar-ex,Mega Gengar ex,3.51534006520958e-05,350,['Darkness'],I,['Fighting'],[],3,False
+mega-gengar-ex,Munkidori,1.0985437703779936e-06,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+mega-gengar-ex,Toxtricity,4.394175081511975e-06,130,['Lightning'],J,['Fighting'],[],1,False
+mimikyu-ogerpon,Cornerstone Mask Ogerpon ex,7.744733581164855e-05,210,['Fighting'],H,['Grass'],[],2,False
+ogerpon-ex,Fezandipiti ex,3.8088853677859945e-06,210,['Darkness'],H,['Fighting'],[],2,False
+ogerpon-ex,Mega Kangaskhan ex,1.1426656103357986e-05,300,['Colorless'],I,['Fighting'],[],3,False
+ogerpon-ex,Moltres,6.348142279643324e-06,120,['Fire'],J,['Water'],[],1,False
+ogerpon-ex,Teal Mask Ogerpon ex,3.5549596766002616e-05,210,['Grass'],H,['Fire'],[],2,False
+ogerpon-ex,Wellspring Mask Ogerpon ex,2.031405529485864e-05,210,['Water'],H,['Lightning'],[],2,False
+slaking-ex,Fezandipiti ex,7.744733581164855e-05,210,['Darkness'],H,['Fighting'],[],2,False
+toxtricity-brute-bonnet,Fezandipiti ex,5.666878230120625e-06,210,['Darkness'],H,['Fighting'],[],2,False
+toxtricity-brute-bonnet,Munkidori,1.1333756460241252e-05,110,['Psychic'],H,['Darkness'],['Fighting'],1,False
+toxtricity-brute-bonnet,Toxtricity,6.044670112128667e-05,130,['Lightning'],J,['Fighting'],[],1,False

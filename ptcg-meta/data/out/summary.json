@@ -32,12 +32,18 @@
      "city": "Louisville",
      "date": "October 9\u201311, 2026",
      "players": 2927
+    },
+    {
+     "tid": "0077",
+     "city": "Nice",
+     "date": "October 17\u201318, 2026",
+     "players": 2336
     }
    ],
-   "players": 10733,
-   "day2": 1958,
-   "topcut": 51,
-   "archetypes": 110
+   "players": 13069,
+   "day2": 2387,
+   "topcut": 65,
+   "archetypes": 114
   },
   "WORLDS": {
    "label": "World Championship 2026",
@@ -127,5 +133,5 @@
    "archetypes": 99
   }
  },
- "field_rotating_copies_avg": 20.17783168501586
+ "field_rotating_copies_avg": 20.341814837522993
 }

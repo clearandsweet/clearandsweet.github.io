@@ -1,0 +1,60 @@
+{
+ "focus": "0073",
+ "event": "Brisbane",
+ "window": "CUR",
+ "family": "dragapult-ex",
+ "family_name": "Dragapult",
+ "players": 817,
+ "rounds": 16,
+ "fam": {
+  "tid": "0073",
+  "event": "Brisbane",
+  "players": 817,
+  "fam_players": 198,
+  "field_share": 0.2423500611995104,
+  "day2_share": 0.35135135135135137,
+  "day2_rate": 0.26262626262626265,
+  "field_day2_rate": 0.18115055079559364,
+  "top64": 24,
+  "top64_expected": 15.510403916768666,
+  "top64_share": 0.375,
+  "top64_p": 0.018706024000056172,
+  "top16": 9,
+  "top8": 6,
+  "wr_nonmirror": 0.5585062240663901,
+  "games_nonmirror": 1205,
+  "winner_deck": "Dragapult",
+  "focus": 1
+ },
+ "rest_top64": 118,
+ "rest_top64_expected": 94.00332226624509,
+ "rest_top64_oe": 1.2552747834357305,
+ "focus_top64_oe": 1.5473484848484849,
+ "focus_top64_if_rest_conversion": 19.469818917622494,
+ "matchups": {
+  "actual_focus": 0.5585062240663901,
+  "expected_focus_from_rest": 0.504503447492085,
+  "actual_rest": 0.5036695764629809,
+  "games_focus": 1205,
+  "games_rest": 20620
+ },
+ "by_day": {
+  "focus_day1": {
+   "wr": 0.5648406066233365,
+   "games": 1077
+  },
+  "focus_day2": {
+   "wr": 0.4973544973544973,
+   "games": 126
+  },
+  "rest_day1": {
+   "wr": 0.5062106703146375,
+   "games": 18275
+  },
+  "rest_day2": {
+   "wr": 0.48457963667089143,
+   "games": 2367
+  }
+ },
+ "top64_ratio_p": 0.33615333752873156
+}

@@ -15,7 +15,7 @@ python3 -I "$S/models.py" "$D" CUR 250 day2 > "$D/out/models_CUR_day2.log"
 python3 -I "$S/damage_model.py" "$D" CUR > "$D/out/damage_CUR.log"
 python3 -I "$S/power.py" "$D" > "$D/out/power.log"                    # Card / Deck Power for every list
 python3 -I "$S/power_eval.py" "$D" CUR > "$D/out/power_eval.log"      # Power tables + validation vs results
-python3 -I "$S/event_compare.py" "$D" latest dragapult-ex > "$D/out/event_compare.log"   # newest event vs the rest of its format
+python3 -I "$S/event_compare.py" "$D" all dragapult-ex > "$D/out/event_compare.log"      # each current event vs the rest of its format
 python3 -I "$S/rotation_analysis.py" "$D" CUR > "$D/out/rotation_CUR.log"
 python3 -I "$S/rankings.py" "$D" CUR > /dev/null
 python3 -I "$S/jp_analysis.py" "$D" CUR > "$D/out/jp.log"

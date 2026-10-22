@@ -1,7 +1,8 @@
 """One event against the rest of its format window: who made Day 2 / top 64 / top cut, how a deck family's share
 grew round by round, whether its result came from the field it faced or from how it played, pilot skill, and list changes.
-Usage: python3 -I event_compare.py DATADIR [FOCUS_TID=latest] [FAMILY_SUP_ID=dragapult-ex]
-Writes DATADIR/out/event_*.csv and event_compare.json
+Usage: python3 -I event_compare.py DATADIR [FOCUS_TID=latest|all] [FAMILY_SUP_ID=dragapult-ex]
+Writes DATADIR/out/event_*.csv and event_compare.json for the latest (or given) event, and with "all" one folder
+DATADIR/out/event/<tid>/ per event of the latest event's format window (the report's event selector).
 """
 import os, sys, json
 import numpy as np, pandas as pd
@@ -11,6 +12,16 @@ FOCUS = sys.argv[2] if len(sys.argv) > 2 else "latest"
 FAM = sys.argv[3] if len(sys.argv) > 3 else "dragapult-ex"
 O, P = os.path.join(D, "out"), os.path.join(D, "processed")
 ev = pd.read_csv(os.path.join(O, "events_windows.csv"), dtype={"tid": str})
+OUTD = O
+if FOCUS == "all":
+    import subprocess
+    w = ev.loc[ev["tid"] == ev["tid"].max(), "window"].iloc[0]
+    for t in ev.loc[ev["window"] == w, "tid"]:
+        subprocess.run([sys.executable, "-I", os.path.abspath(__file__), D, t, FAM, "per-event"], check=True, stdout=subprocess.DEVNULL)
+    FOCUS = "latest"
+if len(sys.argv) > 4 and sys.argv[4] == "per-event":
+    OUTD = os.path.join(O, "event", FOCUS)
+    os.makedirs(OUTD, exist_ok=True)
 if FOCUS == "latest":
     FOCUS = ev["tid"].max()
 WIN = ev.loc[ev["tid"] == FOCUS, "window"].iloc[0]
@@ -40,7 +51,7 @@ for tid, g in list(W.groupby("tid")) + [("rest", W[W["tid"] != FOCUS])]:
                 rows.append({"tid": tid, "event": city.get(tid, "Other events"), "level": level, "key": k, "name": names.get(k, k),
                              "phase": ph, "count": int(c), "n_phase": int(len(sub)), "share": c / len(sub)})
 SH = pd.DataFrame(rows)
-SH.to_csv(os.path.join(O, "event_phase_shares.csv"), index=False)
+SH.to_csv(os.path.join(OUTD, "event_phase_shares.csv"), index=False)
 
 # ---------- B. the family at every event in the window ----------
 fam_rows = []
@@ -62,7 +73,7 @@ rest = {"top64": int(r["top64"].sum()), "top64_expected": float(r["top64_expecte
 f0 = FB[FB["focus"] == 1].iloc[0]
 # Louisville's top-64 count vs what the other events' conversion (observed / expected) would predict
 oe_rest = rest["top64"] / rest["top64_expected"]
-FB.to_csv(os.path.join(O, "event_family_by_event.csv"), index=False)
+FB.to_csv(os.path.join(OUTD, "event_family_by_event.csv"), index=False)
 
 # ---------- C. conversion by archetype at the focus event vs the rest ----------
 def conv(g, games):
@@ -85,7 +96,7 @@ CV["top64_oe"] = CV["top64"] / CV["top64_expected"].replace(0, np.nan)
 CV["top64_oe_rest"] = CV["top64_rest"] / CV["top64_expected_rest"].replace(0, np.nan)
 CV["top64_p"] = [binomtest(int(k), 64, s).pvalue for k, s in zip(CV["top64"], CV["share"])]
 CV = CV.sort_values("players", ascending=False)
-CV.to_csv(os.path.join(O, "event_conversion.csv"))
+CV.to_csv(os.path.join(OUTD, "event_conversion.csv"))
 
 # ---------- D. round by round: family share among the top 64 by match points ----------
 prog = []
@@ -110,7 +121,7 @@ for tid in TIDS:
         prog.append({"tid": tid, "event": city[tid], "round": int(rnd), "active": len(s),
                      "share_active": float(fm.mean()), "share_top64": float(fam64), "cut_points": int(cut)})
 PR = pd.DataFrame(prog)
-PR.to_csv(os.path.join(O, "event_round_progress.csv"), index=False)
+PR.to_csv(os.path.join(OUTD, "event_round_progress.csv"), index=False)
 
 # ---------- E. the family's matchups: field mix vs performance ----------
 G = pm[pm["tid"].isin(TIDS)].copy()
@@ -128,7 +139,7 @@ MX["wr_rest_shrunk"] = MX["wr_rest_shrunk"].fillna(overall_rest)
 MX["name"] = [names.get(k, k) for k in MX.index]
 actual_focus = (mf["w"].sum() + mf["t"].sum() / 3) / mf["games"].sum()
 expected_focus = float((MX["mix_focus"].fillna(0) * MX["wr_rest_shrunk"]).sum())
-MX.sort_values("games_focus", ascending=False).to_csv(os.path.join(O, "event_family_matchups.csv"))
+MX.sort_values("games_focus", ascending=False).to_csv(os.path.join(OUTD, "event_family_matchups.csv"))
 
 # ---------- F. pilot skill (results at OTHER events, all formats) ----------
 pl["arch_mean"] = pl.groupby(["deck_id", "window"])["wr"].transform("mean")
@@ -149,7 +160,7 @@ for tid in TIDS:
                         "coverage": len(sub) / max(1, len(a[a["fam"]] if grp.startswith("family") else a[~a["fam"]])),
                         "mean_skill_pts": sub["skill"].mean() * 100, "se_pts": sub["skill"].std() / np.sqrt(max(len(sub), 1)) * 100})
 SK = pd.DataFrame(sk_rows)
-SK.to_csv(os.path.join(O, "event_pilot_skill.csv"), index=False)
+SK.to_csv(os.path.join(OUTD, "event_pilot_skill.csv"), index=False)
 
 # ---------- G. list changes in the family's main archetype ----------
 lc = pd.read_csv(os.path.join(P, "list_cards.csv"), dtype={"tid": str, "number": str})
@@ -167,7 +178,7 @@ LC["n_focus"], LC["n_rest"], LC["n_focus_top64"] = int(grp["focus"].sum()), int(
 LC["d_incl"] = LC["incl_focus"] - LC["incl_rest"]; LC["d_copies"] = LC["copies_focus"] - LC["copies_rest"]
 LC["d_incl_top64"] = LC["incl_focus_top64"] - LC["incl_focus_other"]
 LC = LC[(LC[["incl_focus", "incl_rest"]].max(axis=1) >= 0.05)]
-LC.sort_values("d_copies", key=abs, ascending=False).to_csv(os.path.join(O, "event_list_changes.csv"))
+LC.sort_values("d_copies", key=abs, ascending=False).to_csv(os.path.join(OUTD, "event_list_changes.csv"))
 
 # ---------- summary ----------
 fs = W[W["tid"] == FOCUS]
@@ -191,7 +202,7 @@ summary["by_day"] = {f"{a}_{b}": {"wr": float((r.w + r.t / 3) / (r.w + r.l + r.t
 # conditional on the total: O_focus ~ Binomial(O_focus + O_rest, E_focus / (E_focus + E_rest)))
 O1, E1 = int(f0["top64"]), float(f0["top64_expected"])
 summary["top64_ratio_p"] = float(binomtest(O1, O1 + rest["top64"], E1 / (E1 + rest["top64_expected"])).pvalue)
-json.dump(summary, open(os.path.join(O, "event_compare.json"), "w"), indent=1, default=float)
+json.dump(summary, open(os.path.join(OUTD, "event_compare.json"), "w"), indent=1, default=float)
 pd.set_option("display.width", 250)
 print(json.dumps(summary, indent=1, default=float))
 print(FB.round(3).to_string())

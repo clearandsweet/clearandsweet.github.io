@@ -1,0 +1,60 @@
+{
+ "focus": "0075",
+ "event": "Recife",
+ "window": "CUR",
+ "family": "dragapult-ex",
+ "family_name": "Dragapult",
+ "players": 1074,
+ "rounds": 17,
+ "fam": {
+  "tid": "0075",
+  "event": "Recife",
+  "players": 1074,
+  "fam_players": 358,
+  "field_share": 0.3333333333333333,
+  "day2_share": 0.2717948717948718,
+  "day2_rate": 0.14804469273743018,
+  "field_day2_rate": 0.18156424581005587,
+  "top64": 22,
+  "top64_expected": 21.333333333333332,
+  "top64_share": 0.34375,
+  "top64_p": 0.8946933429461339,
+  "top16": 4,
+  "top8": 3,
+  "wr_nonmirror": 0.4922815945716709,
+  "games_nonmirror": 1965,
+  "winner_deck": "Ogerpon Meganium Arboliva",
+  "focus": 1
+ },
+ "rest_top64": 120,
+ "rest_top64_expected": 88.18039284968043,
+ "rest_top64_oe": 1.3608467383963905,
+ "focus_top64_oe": 1.03125,
+ "focus_top64_if_rest_conversion": 29.031397085789663,
+ "matchups": {
+  "actual_focus": 0.49184505606523954,
+  "expected_focus_from_rest": 0.5008686313899637,
+  "actual_rest": 0.5081642585040863,
+  "games_focus": 1962,
+  "games_rest": 19863
+ },
+ "by_day": {
+  "focus_day1": {
+   "wr": 0.4878453038674033,
+   "games": 1810
+  },
+  "focus_day2": {
+   "wr": 0.5452538631346578,
+   "games": 151
+  },
+  "rest_day1": {
+   "wr": 0.5117052407555202,
+   "games": 17542
+  },
+  "rest_day2": {
+   "wr": 0.4813549672644463,
+   "games": 2342
+  }
+ },
+ "top64_ratio_p": 0.28857201888580697
+}

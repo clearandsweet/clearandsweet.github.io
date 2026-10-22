@@ -1,60 +1,60 @@
 {
- "focus": "0076",
- "event": "Louisville",
+ "focus": "0077",
+ "event": "Nice",
  "window": "CUR",
  "family": "dragapult-ex",
  "family_name": "Dragapult",
- "players": 2927,
+ "players": 2336,
  "rounds": 18,
  "fam": {
-  "tid": "0076",
-  "event": "Louisville",
-  "players": 2927,
-  "fam_players": 785,
-  "field_share": 0.26819268875982233,
-  "day2_share": 0.33941605839416056,
-  "day2_rate": 0.23694267515923567,
-  "field_day2_rate": 0.18722241202596515,
-  "top64": 32,
-  "top64_expected": 17.16433208062863,
-  "top64_share": 0.5,
-  "top64_p": 9.467202064565061e-05,
-  "top16": 7,
-  "top8": 4,
-  "wr_nonmirror": 0.5145261617270398,
-  "games_nonmirror": 4555,
-  "winner_deck": "Dragapult",
+  "tid": "0077",
+  "event": "Nice",
+  "players": 2336,
+  "fam_players": 679,
+  "field_share": 0.2906678082191781,
+  "day2_share": 0.35664335664335667,
+  "day2_rate": 0.22533136966126657,
+  "field_day2_rate": 0.1836472602739726,
+  "top64": 29,
+  "top64_expected": 18.602739726027398,
+  "top64_share": 0.453125,
+  "top64_p": 0.005701592229856851,
+  "top16": 4,
+  "top8": 2,
+  "wr_nonmirror": 0.5088020961270777,
+  "games_nonmirror": 4071,
+  "winner_deck": "Basic Box",
   "focus": 1
  },
- "rest_top64": 81,
- "rest_top64_expected": 73.74665437635774,
- "rest_top64_oe": 1.0983549109445105,
- "focus_top64_oe": 1.864331210191083,
- "focus_top64_if_rest_conversion": 18.852528433840863,
+ "rest_top64": 113,
+ "rest_top64_expected": 90.91098645698636,
+ "rest_top64_oe": 1.2429740827140274,
+ "focus_top64_oe": 1.5589101620029455,
+ "focus_top64_if_rest_conversion": 23.1227233469267,
  "matchups": {
-  "actual_focus": 0.5146173057147054,
-  "expected_focus_from_rest": 0.4946356372931886,
-  "actual_rest": 0.5032630332350644,
-  "games_focus": 4538,
-  "games_rest": 13229
+  "actual_focus": 0.509035649745359,
+  "expected_focus_from_rest": 0.5007831313506925,
+  "actual_rest": 0.5061631113862779,
+  "games_focus": 4058,
+  "games_rest": 17767
  },
  "by_day": {
   "focus_day1": {
-   "wr": 0.5166666666666667,
-   "games": 3960
+   "wr": 0.5090266145542527,
+   "games": 3582
   },
   "focus_day2": {
-   "wr": 0.49858996051889454,
-   "games": 591
+   "wr": 0.5092402464065708,
+   "games": 487
   },
   "rest_day1": {
-   "wr": 0.5071972904318375,
-   "games": 11810
+   "wr": 0.509575142675967,
+   "games": 15770
   },
   "rest_day2": {
-   "wr": 0.4713780918727915,
-   "games": 1415
+   "wr": 0.4793951478896643,
+   "games": 2006
   }
  },
- "top64_ratio_p": 0.015496685383948347
+ "top64_ratio_p": 0.2648913521537495
 }

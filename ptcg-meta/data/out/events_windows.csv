@@ -14,3 +14,4 @@ tid,type,city,date,players,rounds,n_lists,window,set_presence
 0074,regional,Frankfurt,"September 26–27, 2026",2793,18,2793,CUR,"{'POR': 0.981, 'CRI': 0.684, 'PBL': 0.235, '30C': 0.116}"
 0075,regional,Recife,"October 3–4, 2026",1074,17,1072,CUR,"{'POR': 0.981, 'CRI': 0.66, 'PBL': 0.214, '30C': 0.104}"
 0076,regional,Louisville,"October 9–11, 2026",2927,18,2918,CUR,"{'POR': 0.982, 'CRI': 0.632, 'PBL': 0.237, '30C': 0.143}"
+0077,regional,Nice,"October 17–18, 2026",2336,18,2330,CUR,"{'POR': 0.989, 'CRI': 0.581, 'PBL': 0.278, '30C': 0.133}"

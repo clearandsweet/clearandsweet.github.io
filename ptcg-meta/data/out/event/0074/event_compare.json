@@ -1,0 +1,60 @@
+{
+ "focus": "0074",
+ "event": "Frankfurt",
+ "window": "CUR",
+ "family": "dragapult-ex",
+ "family_name": "Dragapult",
+ "players": 2793,
+ "rounds": 18,
+ "fam": {
+  "tid": "0074",
+  "event": "Frankfurt",
+  "players": 2793,
+  "fam_players": 757,
+  "field_share": 0.27103472968134623,
+  "day2_share": 0.297244094488189,
+  "day2_rate": 0.19947159841479525,
+  "field_day2_rate": 0.18188327962764053,
+  "top64": 15,
+  "top64_expected": 17.34622269960616,
+  "top64_share": 0.234375,
+  "top64_p": 0.5755756076770066,
+  "top16": 6,
+  "top8": 3,
+  "wr_nonmirror": 0.4921643371452774,
+  "games_nonmirror": 4722,
+  "winner_deck": "Alakazam Dusknoir",
+  "focus": 1
+ },
+ "rest_top64": 127,
+ "rest_top64_expected": 92.1675034834076,
+ "rest_top64_oe": 1.3779260064569623,
+ "focus_top64_oe": 0.8647415785997358,
+ "focus_top64_if_rest_conversion": 23.90181137158142,
+ "matchups": {
+  "actual_focus": 0.4921643371452774,
+  "expected_focus_from_rest": 0.5107210476100013,
+  "actual_rest": 0.5107096220935898,
+  "games_focus": 4722,
+  "games_rest": 17103
+ },
+ "by_day": {
+  "focus_day1": {
+   "wr": 0.496551724137931,
+   "games": 4205
+  },
+  "focus_day2": {
+   "wr": 0.4580896686159844,
+   "games": 513
+  },
+  "rest_day1": {
+   "wr": 0.5130608921458595,
+   "games": 15147
+  },
+  "rest_day2": {
+   "wr": 0.4922558922558922,
+   "games": 1980
+  }
+ },
+ "top64_ratio_p": 0.10628091810157397
+}

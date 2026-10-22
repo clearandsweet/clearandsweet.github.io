@@ -17,7 +17,7 @@ Open `index.html` for the report. Everything in it is generated from the data an
 
 ## Data sources
 
-* **Limitless Labs** (`labs.limitlesstcg.com`, via its JSON API at `mew.limitlesstcg.com/labs/data/tcg/…`): standings, Day 2 / top-cut flags, pairings for every round, and the full decklist of every player at each Regional, International, Special Event and Worlds from Prague (Apr 2026) to Louisville (Oct 2026).
+* **Limitless Labs** (`labs.limitlesstcg.com`, via its JSON API at `mew.limitlesstcg.com/labs/data/tcg/…`): standings, Day 2 / top-cut flags, pairings for every round, and the full decklist of every player at each Regional, International, Special Event and Worlds from Prague (Apr 2026) to Nice (Oct 2026).
 * **Limitless TCG** (`limitlesstcg.com`): card pages with every international and Japanese print (used for regulation marks and reprint legality); Champions League Yokohama, Japan Championships 2026 and Champions League Aichi top lists; current-season Japanese City League top-16 lists.
 * **pokemon-tcg-data** (GitHub): structured card text (HP, types, attacks, abilities, Weakness, retreat) through 30th Celebration.
 * **Trainer Hill**: archetype counts across in-person and online events, used as a cross-check.
@@ -26,7 +26,7 @@ Open `index.html` for the report. Everything in it is generated from the data an
 
 | Window | Events |
 |---|---|
-| `CUR` (current format) | Baltimore, Brisbane, Frankfurt, Recife, Louisville (2027 season; Pitch Black legal, 30th Celebration from Brisbane) |
+| `CUR` (current format) | Baltimore, Brisbane, Frankfurt, Recife, Louisville, Nice (2027 season; Pitch Black legal, 30th Celebration from Brisbane) |
 | `WORLDS` | World Championship 2026, San Francisco |
 | `CRI` | Turin, NAIC 2026 |
 | `POR` | Prague → Indianapolis (first events after the G rotation) |
@@ -52,7 +52,7 @@ python3 -I scripts/models.py data CUR 250 day2                  # same on the Da
 python3 -I scripts/damage_model.py data CUR
 python3 -I scripts/power.py data                                # Card / Deck Power for every list
 python3 -I scripts/power_eval.py data CUR                       # Power tables + validation
-python3 -I scripts/event_compare.py data latest dragapult-ex    # newest event vs the rest of its format
+python3 -I scripts/event_compare.py data all dragapult-ex       # every current event vs the rest of its format
 python3 -I scripts/rotation_analysis.py data CUR
 python3 -I scripts/rankings.py data CUR
 python3 -I scripts/jp_analysis.py data CUR
@@ -105,12 +105,13 @@ The card pool JSON (`data/cards/*.json`) comes from `raw.githubusercontent.com/P
 
 ## Event breakdown (round 4)
 
-* `event_compare.py DATADIR [FOCUS_TID|latest] [FAMILY]` compares one event with the rest of its format window:
+* `event_compare.py DATADIR [FOCUS_TID|latest|all] [FAMILY]` compares one event with the rest of its format window:
   family and archetype shares at each stage (field, Day 2, top 64, top 16, top 8), top-64 observed vs expected from
   field share (binomial test per event; rate-ratio test against the other events), the family's share of the top 64
   by match points after every Swiss round, its matchups (actual win rate vs the other events' matchups re-weighted to
   this event's opponent mix), pilot skill from players' other events, and list changes in the main archetype.
-  Outputs `event_*.csv` and `event_compare.json`. `run_all.sh` runs it on the newest event with the Dragapult family.
+  Outputs `event_*.csv` and `event_compare.json` for the newest event; with `all` it also writes `data/out/event/<tid>/`
+  for every event in the current window, which the report's event selector reads. `run_all.sh` runs it with `all`.
 
 ## Units
 

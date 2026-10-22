@@ -1,0 +1,60 @@
+{
+ "focus": "0076",
+ "event": "Louisville",
+ "window": "CUR",
+ "family": "dragapult-ex",
+ "family_name": "Dragapult",
+ "players": 2927,
+ "rounds": 18,
+ "fam": {
+  "tid": "0076",
+  "event": "Louisville",
+  "players": 2927,
+  "fam_players": 785,
+  "field_share": 0.26819268875982233,
+  "day2_share": 0.33941605839416056,
+  "day2_rate": 0.23694267515923567,
+  "field_day2_rate": 0.18722241202596515,
+  "top64": 32,
+  "top64_expected": 17.16433208062863,
+  "top64_share": 0.5,
+  "top64_p": 9.467202064565061e-05,
+  "top16": 7,
+  "top8": 4,
+  "wr_nonmirror": 0.5145261617270398,
+  "games_nonmirror": 4555,
+  "winner_deck": "Dragapult",
+  "focus": 1
+ },
+ "rest_top64": 110,
+ "rest_top64_expected": 92.34939410238513,
+ "rest_top64_oe": 1.1911285511851453,
+ "focus_top64_oe": 1.864331210191083,
+ "focus_top64_if_rest_conversion": 20.444926003259887,
+ "matchups": {
+  "actual_focus": 0.5146173057147054,
+  "expected_focus_from_rest": 0.4975188972738167,
+  "actual_rest": 0.5046181138042074,
+  "games_focus": 4538,
+  "games_rest": 17287
+ },
+ "by_day": {
+  "focus_day1": {
+   "wr": 0.5166666666666667,
+   "games": 3960
+  },
+  "focus_day2": {
+   "wr": 0.49858996051889454,
+   "games": 591
+  },
+  "rest_day1": {
+   "wr": 0.5076230076230076,
+   "games": 15392
+  },
+  "rest_day2": {
+   "wr": 0.4810725552050473,
+   "games": 1902
+  }
+ },
+ "top64_ratio_p": 0.028275921749071224
+}

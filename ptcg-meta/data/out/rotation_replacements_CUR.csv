@@ -1,43 +1,43 @@
 rotating_card,type,inclusion_now,avg_copies,day2_inclusion,function_tags,legal_alternatives
-Night Stretcher,Item,0.8647135659637992,2.117608977125593,0.8778742973939704,recover,Sacred Ash (12% now); Energy Recycler (6% now); Energy Retrieval (2% now); Great Haul Net (0% now)
-Buddy-Buddy Poffin,Item,0.6907072214965478,3.609212481426449,0.6796116504854369,"bench_from_deck,search_pokemon",Ultra Ball (85% now); Poké Pad (81% now); Hop's Bag (1% now); Poké Ball (0% now)
-Crispin,Supporter,0.3920507557380108,2.3510233222275105,0.4414920797138477,"accel_deck,search_energy",Misty's Vitality (0% now); Hilda (22% now); Ethan's Adventure (1% now); Firebreather (0% now)
-Unfair Stamp,"ACE SPEC,Item",0.3711513342041426,1.0,0.4271844660194174,"draw,hand_disruption",No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Secret Box,"ACE SPEC,Item",0.1737264415002799,1.0,0.1962187020950434,search_trainer,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Ciphermaniac's Codebreaking,"Future,Supporter",0.1708341108415749,1.9688694702348444,0.2069494123658661,,none found in I/J pool
-Cyrano,Supporter,0.1468557566710207,1.9720457433290977,0.1814001021972406,search_pokemon,Hilda (22% now); Dawn (21% now); Brock's Scouting (5% now); Canari (0% now)
-Lana's Aid,Supporter,0.1347266281022578,1.0380886426592797,0.1093510475217169,recover,Tarragon (1% now)
-Xerosic's Machinations,Supporter,0.1168128382160851,1.1829073482428114,0.1057741440981093,hand_disruption,Judge (40% now); Team Rocket's Archer (3% now); Harlequin (0% now); Emma (0% now)
-Hero's Cape,"ACE SPEC,Pokémon Tool",0.1163463332711326,1.0,0.1052631578947368,hp_boost,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Jamming Tower,Stadium,0.1113080798656465,1.1316010058675607,0.0991313234542667,,none found in I/J pool
-Area Zero Underdepths,Stadium,0.0985258443739503,2.9744318181818183,0.1108840061318344,,none found in I/J pool
-Enriching Energy,"ACE SPEC,Special",0.0924612800895689,1.0,0.0751149718957588,draw,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Kieran,Supporter,0.0909684642657212,1.0646153846153843,0.0746039856923863,"damage_boost,switch",Gladion's Final Battle (3% now); AZ's Tranquility (1% now)
-Eri,Supporter,0.0847172980033588,1.5572687224669604,0.0776699029126213,hand_disruption,Judge (40% now); Team Rocket's Archer (3% now); Harlequin (0% now); Emma (0% now)
-Mist Energy,Special,0.0830378802015301,3.5258426966292133,0.0817577925396014,,none found in I/J pool
-Binding Mochi,Pokémon Tool,0.0807986564657585,1.97459584295612,0.0914665304036791,damage_boost,Brave Bangle (8% now); Hop's Choice Band (1% now); Light Ball (0% now)
-Bug Catching Set,Item,0.0806120544877775,3.2939814814814814,0.0710270822687787,,none found in I/J pool
-Black Belt's Training,Supporter,0.0799589475648441,1.102683780630105,0.0929994890137966,damage_boost,Gladion's Final Battle (3% now)
-Prime Catcher,"ACE SPEC,Item",0.0796790445978727,1.0,0.0940214614205416,"gust,switch",No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Gravity Mountain,Stadium,0.0759470050382534,1.4864864864864864,0.0567194685743484,,none found in I/J pool
-Handheld Fan,Pokémon Tool,0.0679231199850718,1.425824175824176,0.0546755237608584,,none found in I/J pool
-Glass Trumpet,Item,0.0632580705355476,1.3023598820058997,0.0700051098620337,accel_discard,Wondrous Patch (9% now); N's PP Up (7% now)
-Academy at Night,Stadium,0.0609255458107855,3.946401225114855,0.0781808891159938,,none found in I/J pool
-Lucky Helmet,Pokémon Tool,0.0575667102071282,1.2495948136142625,0.0654062340316811,draw,Adversity Policy (0% now)
-Enhanced Hammer,Item,0.0560738943832804,1.6622296173044926,0.0306591722023505,energy_removal,Crushing Hammer (20% now); Super Potion (0% now)
-Festival Grounds,Stadium,0.0559805933942899,2.828333333333333,0.062340316811446,,none found in I/J pool
-Boomerang Energy,Special,0.0534614666915469,1.904013961605585,0.0715380684721512,,none found in I/J pool
-Legacy Energy,"ACE SPEC,Special",0.0380668035081171,1.0,0.0275932549821154,,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Janine's Secret Art,Supporter,0.0351744728494122,1.1618037135278514,0.0403679100664282,"accel_deck,search_energy",Misty's Vitality (0% now); Hilda (22% now); Ethan's Adventure (1% now); Firebreather (0% now)
-Briar,Supporter,0.0337749580145549,1.0,0.0357690342360756,,none found in I/J pool
-Surfer,Supporter,0.0317223362567643,1.008823529411765,0.0398569238630557,"draw,switch",Lillie's Determination (81% now); Gwynn (7% now); Team Rocket's Ariana (3% now); Team Rocket's Archer (3% now)
-Precious Trolley,"ACE SPEC,Item",0.0252845680164209,1.0,0.0143076136944302,bench_from_deck,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Neo Upper Energy,"ACE SPEC,Special",0.0244448591155066,1.0,0.0132856412876852,,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Miracle Headset,"ACE SPEC,Item",0.019499906699011,1.0,0.0204394481349003,recover,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Roto-Stick,Item,0.01931330472103,3.642512077294686,0.0204394481349003,,none found in I/J pool
-Explorer's Guidance,"Ancient,Supporter",0.0190334017540585,2.7598039215686274,0.0173735309146653,,none found in I/J pool
-Bianca's Devotion,Supporter,0.0184735958201156,1.005050505050505,0.0235053653551354,heal,Wally's Compassion (7% now); Pokémon Center Lady (3% now); AZ's Tranquility (1% now); Jacinthe (0% now)
-Maximum Belt,"ACE SPEC,Pokémon Tool",0.0177271879081918,1.0,0.0076647930505876,damage_boost,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
-Salvatore,Supporter,0.0145549542825153,1.2243589743589745,0.0076647930505876,,none found in I/J pool
-Colress's Tenacity,Supporter,0.0140884493375629,1.5496688741721854,0.0045988758303525,"search_energy,search_trainer",Hilda (22% now); Team Rocket's Petrel (21% now); Ethan's Adventure (1% now); Misty's Vitality (0% now)
-Brilliant Blender,"ACE SPEC,Item",0.0111961186788579,1.0,0.0056208482370975,,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Night Stretcher,Item,0.8705548743102391,2.123074214279426,0.8893545683151718,recover,Sacred Ash (12% now); Energy Recycler (5% now); Energy Retrieval (2% now); Great Haul Net (0% now)
+Buddy-Buddy Poffin,Item,0.6839362354383813,3.627297176154191,0.680637049455155,"bench_from_deck,search_pokemon",Ultra Ball (85% now); Poké Pad (82% now); Hop's Bag (1% now); Poké Ball (0% now)
+Crispin,Supporter,0.3923973022685469,2.36015625,0.4467728415758591,"accel_deck,search_energy",Misty's Vitality (0% now); Hilda (22% now); Ethan's Adventure (1% now); Firebreather (0% now)
+Unfair Stamp,"ACE SPEC,Item",0.3776824034334764,1.0,0.4362950544844928,"draw,hand_disruption",No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Ciphermaniac's Codebreaking,"Future,Supporter",0.1748927038626609,1.9824715162138475,0.2070410729253981,,none found in I/J pool
+Secret Box,"ACE SPEC,Item",0.173743102391171,1.0,0.1986588432523051,search_trainer,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Cyrano,Supporter,0.1452329858982219,1.9519788918205805,0.1827326068734283,search_pokemon,Hilda (22% now); Dawn (22% now); Brock's Scouting (5% now); Canari (0% now)
+Lana's Aid,Supporter,0.1376456161863887,1.0350779510022272,0.1102263202011735,recover,Tarragon (1% now)
+Hero's Cape,"ACE SPEC,Pokémon Tool",0.1123543838136112,1.0,0.1010058675607711,hp_boost,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Xerosic's Machinations,Supporter,0.107832618025751,1.1727078891257996,0.0947191953059513,hand_disruption,Judge (41% now); Team Rocket's Archer (3% now); Harlequin (0% now); Emma (0% now)
+Jamming Tower,Stadium,0.1059932556713672,1.1323210412147506,0.0943000838222967,,none found in I/J pool
+Area Zero Underdepths,Stadium,0.0978694052728387,3.0352388410336726,0.1123218776194467,,none found in I/J pool
+Kieran,Supporter,0.0924279583077866,1.0621890547263682,0.0792120704107292,"damage_boost,switch",Gladion's Final Battle (4% now); AZ's Tranquility (1% now)
+Enriching Energy,"ACE SPEC,Special",0.0891324340895156,1.0,0.067476948868399,draw,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Prime Catcher,"ACE SPEC,Item",0.0830778663396689,1.0,0.0972338642078793,"gust,switch",No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Mist Energy,Special,0.0808553034947884,3.492890995260664,0.0796311818943839,,none found in I/J pool
+Bug Catching Set,Item,0.0803954629061925,3.3164918970448047,0.0733445096395641,,none found in I/J pool
+Black Belt's Training,Supporter,0.078632740649908,1.1101364522417154,0.0930427493713327,damage_boost,Gladion's Final Battle (4% now)
+Binding Mochi,Pokémon Tool,0.0782495401594114,2.0176297747306564,0.0905280804694048,damage_boost,Brave Bangle (9% now); Hop's Choice Band (1% now); Light Ball (0% now)
+Eri,Supporter,0.0780196198651134,1.5559921414538311,0.0712489522212908,hand_disruption,Judge (41% now); Team Rocket's Archer (3% now); Harlequin (0% now); Emma (0% now)
+Gravity Mountain,Stadium,0.0754138565297363,1.4695121951219512,0.0557418273260687,,none found in I/J pool
+Glass Trumpet,Item,0.0636112814224402,1.2903614457831325,0.0716680637049455,accel_discard,Wondrous Patch (10% now); N's PP Up (6% now)
+Academy at Night,Stadium,0.0631514408338442,3.951456310679612,0.0762782900251466,,none found in I/J pool
+Handheld Fan,Pokémon Tool,0.0624616799509503,1.4404907975460122,0.0502933780385582,,none found in I/J pool
+Festival Grounds,Stadium,0.0595493562231759,2.9472329472329477,0.0691533948030176,,none found in I/J pool
+Lucky Helmet,Pokémon Tool,0.0564837522992029,1.2564450474898237,0.0641240569991617,draw,Adversity Policy (0% now)
+Boomerang Energy,Special,0.0561005518087063,1.894808743169399,0.0695725062866722,,none found in I/J pool
+Enhanced Hammer,Item,0.0534181483752299,1.6556671449067433,0.027661357921207,energy_removal,Crushing Hammer (20% now); Super Potion (0% now)
+Legacy Energy,"ACE SPEC,Special",0.0416922133660331,1.0,0.0301760268231349,,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Briar,Supporter,0.0363274064990803,1.0,0.0393964794635373,,none found in I/J pool
+Janine's Secret Art,Supporter,0.0344114040465971,1.178173719376392,0.0393964794635373,"accel_deck,search_energy",Misty's Vitality (0% now); Hilda (22% now); Ethan's Adventure (1% now); Firebreather (0% now)
+Surfer,Supporter,0.0302728387492336,1.0075949367088608,0.0343671416596814,"draw,switch",Lillie's Determination (81% now); Gwynn (7% now); Team Rocket's Ariana (3% now); Team Rocket's Archer (3% now)
+Neo Upper Energy,"ACE SPEC,Special",0.0233752299202942,1.0,0.0125733445096395,,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Precious Trolley,"ACE SPEC,Item",0.0232985898221949,1.0,0.0142497904442581,bench_from_deck,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Explorer's Guidance,"Ancient,Supporter",0.0230686695278969,2.6777408637873754,0.0196982397317686,,none found in I/J pool
+Miracle Headset,"ACE SPEC,Item",0.0186235438381361,1.0,0.0184409052808046,recover,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Roto-Stick,Item,0.0183936235438381,3.6375,0.0184409052808046,,none found in I/J pool
+Bianca's Devotion,Supporter,0.0175505824647455,1.0087336244541485,0.0222129086336965,heal,Wally's Compassion (7% now); Pokémon Center Lady (3% now); AZ's Tranquility (1% now); Jacinthe (0% now)
+Maximum Belt,"ACE SPEC,Pokémon Tool",0.0175505824647455,1.0,0.007124895222129,damage_boost,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones
+Salvatore,Supporter,0.0151747394236664,1.2272727272727273,0.0067057837384744,,none found in I/J pool
+Colress's Tenacity,Supporter,0.0135652973635806,1.576271186440678,0.0058675607711651,"search_energy,search_trainer",Hilda (22% now); Team Rocket's Petrel (20% now); Ethan's Adventure (1% now); Misty's Vitality (0% now)
+Brilliant Blender,"ACE SPEC,Item",0.0106529736358062,1.0,0.0050293378038558,,No ACE SPEC has an I/J print: the ACE SPEC slot disappears unless K adds new ones

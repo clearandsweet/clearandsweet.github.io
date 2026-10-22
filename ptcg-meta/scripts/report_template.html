@@ -319,6 +319,7 @@ footer { color: var(--ink-3); font-size: var(--step--1); border-top: 1px solid v
 
     <section id="event">
       <div class="eyebrow">09 · Event breakdown</div>
+      <div class="tbar"><label class="small muted" for="evSel">Event</label><select id="evSel"></select></div>
       <h2 id="evH"></h2>
       <p class="muted" id="evIntro"></p>
       <div class="figs" id="evFigs"></div>
@@ -934,15 +935,15 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
   })();
 
   // ---- event breakdown
-  (function eventCmp() {
-    const E = D.event_cmp || {}, S = E.summary;
-    if (!S) { $("#event").hidden = true; $("#navEvent").hidden = true; return; }
+  let evConvT = null, evQ = "";
+  function renderEvent(E) {
+    const S = (E || {}).summary;
+    if (!S) return;
     const F = S.fam, fam = S.family_name, ev = S.event, M = S.matchups || {};
     const sgn = (v, d = 1) => v == null ? "–" : `${v >= 0 ? "+" : "−"}${Math.abs(v).toFixed(d)}`;
-    $("#navEvent").textContent = ev;
     const FE = E.fam_by_event || [], others = FE.filter(r => !r.focus);
     $("#evH").textContent = `${ev} against the other ${S.window === "CUR" ? "2027-season Regionals" : "events in its format"}`;
-    $("#evIntro").innerHTML = `${int(S.players)} players and ${S.rounds} rounds including top cut. "${esc(fam)}" means the whole family: every archetype built on ${esc(fam)} ex (the plain build plus the Dusknoir, Blaziken and Dudunsparce variants). Top 64 is by final placement. The rest of the report now includes ${esc(ev)} in the current-format numbers.`;
+    $("#evIntro").innerHTML = `${int(S.players)} players and ${S.rounds} rounds including top cut. "${esc(fam)}" means the whole family: every archetype built on ${esc(fam)} ex (the plain build plus the Dusknoir, Blaziken and Dudunsparce variants). Top 64 is by final placement. Pick another event above to compare it the same way.`;
     const rng = k => `${pct(Math.min(...others.map(r => r[k])), 0)}–${pct(Math.max(...others.map(r => r[k])), 0)}`;
     $("#evFigs").innerHTML = [
       [pct(F.field_share, 0), `of the field played ${esc(fam)} (other events ${rng("field_share")})`],
@@ -1000,7 +1001,7 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
       `Re-weighting the other events' matchups to the opponents it met at ${esc(ev)} predicts <b>${pct(M.expected_focus_from_rest)}</b>. The field mix accounts for ${sgn((M.expected_focus_from_rest - M.actual_rest) * 100)} points and the remaining ${sgn((M.actual_focus - M.expected_focus_from_rest) * 100)} points came from how the games went: lists, pilots or variance.`,
       shifts.length ? `It saw more ${shifts.slice(-2).reverse().map(mtxt).join(" and ")}, and less ${shifts.slice(0, 2).map(mtxt).join(" and ")}.` : "",
       `Day 2: ${pct(F.day2_rate)} of ${esc(fam)} players made it, against ${pct(F.field_day2_rate)} of the field.`,
-      S.by_day ? `Non-mirror win rate by day: Day 1 ${pct(S.by_day.focus_day1.wr)} (other events ${pct(S.by_day.rest_day1.wr)}), Day 2 ${pct(S.by_day.focus_day2.wr)} over ${int(S.by_day.focus_day2.games)} games (other events ${pct(S.by_day.rest_day2.wr)}). ${esc(fam)} usually gives ground in the stronger Day 2 field; at ${esc(ev)} it gave much less.` : "",
+      S.by_day ? `Non-mirror win rate by day: Day 1 ${pct(S.by_day.focus_day1.wr)} (other events ${pct(S.by_day.rest_day1.wr)}), Day 2 ${pct(S.by_day.focus_day2.wr)} over ${int(S.by_day.focus_day2.games)} games (other events ${pct(S.by_day.rest_day2.wr)}). ${(() => { const d2 = S.by_day.focus_day2.wr - S.by_day.rest_day2.wr; return d2 > 0.015 ? `It held up in the stronger Day 2 field better than it usually does.` : d2 < -0.015 ? `It lost more ground in Day 2 than it usually does.` : `Its Day 2 results were in line with the other events.`; })()}` : "",
     ].filter(Boolean).map(x => `<li>${x}</li>`).join("");
     const SK = E.skill || [];
     const skv = (t, g) => (SK.find(r => r.tid === t && r.group === g) || {});
@@ -1032,8 +1033,7 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
       { k: "winner_deck", l: "Winner" },
     ], { sort: "tid", dir: 1 });
     $("#evConvH").textContent = `Who converted at ${ev}`;
-    let evQ = "";
-    const cvT = table($("#evConvTable"), E.conversion || [], [
+    evConvT = table($("#evConvTable"), E.conversion || [], [
       { k: "#", l: "#", n: 1 },
       { k: "name", l: "Archetype", nm: 1, f: (v, r) => r.family ? `<b>${esc(v)}</b>` : esc(v) },
       { k: "players", l: "Players", n: 1, f: int },
@@ -1044,7 +1044,6 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
       { k: "top64_p", l: "p", n: 1, f: v => v != null && v < 0.001 ? "<0.001" : fx(v, 3) },
       { k: "wr_nonmirror", l: "Win % (non-mirror)", n: 1, f: (v, r) => `${pct(v)} <span class="muted small">${pct(r.wr_nonmirror_rest)}</span>` },
     ], { sort: "players", filter: r => !evQ || String(r.name).toLowerCase().includes(evQ), onCount: n => $("#evCount").textContent = `${n} archetypes` });
-    $("#evQ").addEventListener("input", e => { evQ = e.target.value.toLowerCase(); cvT.render(); });
     $("#evMuH").textContent = `${fam}'s matchups: ${ev} vs other events`;
     table($("#evMuTable"), MU.filter(r => r.games_focus >= 20), [
       { k: "name", l: "Opponent", nm: 1 },
@@ -1060,6 +1059,17 @@ document.addEventListener("scroll", () => { tip.hidden = true; }, { passive: tru
       { k: "d_copies", l: "Change", n: 1, f: v => sgn(v, 2) },
       { k: "copies_focus_top64", l: "Top-64 lists", n: 1, f: v => fx(v, 2) },
     ]);
+  }
+  (function () {
+    if (!D.event_cmp) { $("#event").hidden = true; $("#navEvent").hidden = true; return; }
+    const all = D.event_cmp_all || {}, ids = Object.keys(all).sort(), sel = $("#evSel");
+    if (ids.length > 1) {
+      sel.innerHTML = ids.map(t => `<option value="${t}">${esc(all[t].summary.event)}</option>`).join("");
+      sel.value = D.event_cmp.summary.focus;
+      sel.addEventListener("change", () => renderEvent(all[sel.value]));
+    } else sel.parentElement.hidden = true;
+    $("#evQ").addEventListener("input", e => { evQ = e.target.value.toLowerCase(); if (evConvT) evConvT.render(); });
+    renderEvent(D.event_cmp);
   })();
 
   // ---- damage

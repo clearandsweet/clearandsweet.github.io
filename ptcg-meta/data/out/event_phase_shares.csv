@@ -1348,395 +1348,698 @@ tid,event,level,key,name,phase,count,n_phase,share
 0076,Louisville,archetype,dhelmise-pbl,Dhelmise,top8,1,8,0.125
 0076,Louisville,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top8,1,8,0.125
 0076,Louisville,archetype,mew-ex-30c,Mew Box,top8,1,8,0.125
-rest,Other events,family,dragapult-ex,Dragapult,field,2267,7806,0.29041762746605176
-rest,Other events,family,alakazam-meg,Alakazam,field,569,7806,0.07289264668203946
-rest,Other events,family,n-zoroark,N's Zoroark,field,564,7806,0.0722521137586472
-rest,Other events,family,basic-box-m,Basic Box,field,444,7806,0.0568793235972329
-rest,Other events,family,slowking-scr,Slowking,field,440,7806,0.05636689725851909
-rest,Other events,family,mega-excadrill-ex,Mega Excadrill,field,384,7806,0.04919292851652575
-rest,Other events,family,mega-lucario-ex,Mega Lucario,field,298,7806,0.03817576223417884
-rest,Other events,family,crustle-dri,Crustle,field,288,7806,0.03689469638739431
-rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,field,263,7806,0.033692031770433
-rest,Other events,family,festival-lead,Festival Lead,field,253,7806,0.03241096592364848
-rest,Other events,family,dhelmise-pbl,Dhelmise,field,246,7806,0.03151421983089931
-rest,Other events,family,mega-lopunny-ex,Mega Lopunny,field,245,7806,0.031386113246220856
-rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,field,150,7806,0.01921598770176787
-rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,field,116,7806,0.014860363822700487
-rest,Other events,family,cynthia-garchomp-ex,Cynthia's Garchomp,field,106,7806,0.013579297975915961
-rest,Other events,family,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,field,102,7806,0.013066871637202153
-rest,Other events,family,rocket-mewtwo-ex,Rocket's Mewtwo,field,80,7806,0.010248526774276198
-rest,Other events,family,other,Other,field,80,7806,0.010248526774276198
-rest,Other events,family,raging-bolt-ex,Raging Bolt,field,78,7806,0.009992313604919293
-rest,Other events,family,mega-starmie-ex,Mega Starmie,field,77,7806,0.00986420702024084
-rest,Other events,family,mega-greninja-ex,Mega Greninja,field,60,7806,0.007686395080707148
-rest,Other events,family,ethan-typhlosion,Ethan's Typhlosion,field,47,7806,0.006021009479887266
-rest,Other events,family,mega-chandelure-ex,Mega Chandelure,field,46,7806,0.0058929028952088135
-rest,Other events,family,mega-venusaur-ex,Mega Venusaur,field,46,7806,0.0058929028952088135
-rest,Other events,family,seaking-pre,Seaking Festival Lead,field,43,7806,0.005508583141173457
-rest,Other events,family,beedrill-ex-cri,Beedrill,field,37,7806,0.004739943633102741
-rest,Other events,family,hops-trevenant,Hop's Trevenant,field,35,7806,0.004483730463745837
-rest,Other events,family,kangaskhan-bouffalant,Kangaskhan Bouffalant,field,34,7806,0.004355623879067384
-rest,Other events,family,greninja-ex,Greninja,field,34,7806,0.004355623879067384
-rest,Other events,family,toxtricity-pfl,Toxtricity,field,30,7806,0.003843197540353574
-rest,Other events,family,ceruledge-ex,Ceruledge,field,30,7806,0.003843197540353574
-rest,Other events,family,lillie-clefairy,Lillie's Clefairy,field,28,7806,0.0035869843709966692
-rest,Other events,family,toucannon-pbl,Toucannon,field,23,7806,0.0029464514476044068
-rest,Other events,family,mega-manectric-ex-meg,Mega Manectric,field,19,7806,0.002434025108890597
-rest,Other events,family,mew-ex-30c,Mew Box,field,19,7806,0.002434025108890597
-rest,Other events,family,mega-absol-box,Mega Absol Box,field,14,7806,0.0017934921854983346
-rest,Other events,family,okidogi-twm,Okidogi,field,14,7806,0.0017934921854983346
-rest,Other events,family,doublade-por,Doublade,field,13,7806,0.001665385600819882
-rest,Other events,family,cinccino-ex,Cinccino,field,12,7806,0.0015372790161414297
-rest,Other events,family,metagross-cri,Metagross,field,11,7806,0.001409172431462977
-rest,Other events,family,rocket-spidops,Rocket's Spidops,field,10,7806,0.0012810658467845247
-rest,Other events,family,mega-diancie-ex,Mega Diancie,field,9,7806,0.0011529592621060721
-rest,Other events,family,stevens-metagross,Steven's Metagross,field,9,7806,0.0011529592621060721
-rest,Other events,family,tera-box,Tera Box,field,8,7806,0.0010248526774276198
-rest,Other events,family,flareon-ex,Flareon,field,8,7806,0.0010248526774276198
-rest,Other events,family,hop-zacian,Hop's Zacian,field,8,7806,0.0010248526774276198
-rest,Other events,family,archaludon-ex,Archaludon,field,8,7806,0.0010248526774276198
-rest,Other events,family,yanmega-ex,Yanmega,field,7,7806,0.0008967460927491673
-rest,Other events,family,mega-darkrai-ex,Mega Darkrai,field,7,7806,0.0008967460927491673
-rest,Other events,family,mega-dragonite-ex,Mega Dragonite,field,6,7806,0.0007686395080707148
-rest,Other events,family,joltik-box,Joltik Box,field,6,7806,0.0007686395080707148
-rest,Other events,family,hydreigon-ex,Hydreigon,field,5,7806,0.0006405329233922624
-rest,Other events,family,mega-abomasnow-ex,Mega Abomasnow,field,5,7806,0.0006405329233922624
-rest,Other events,family,palafin-ex,Palafin,field,4,7806,0.0005124263387138099
-rest,Other events,family,mega-froslass-ex,Mega Froslass,field,4,7806,0.0005124263387138099
-rest,Other events,family,sinistcha-ogerpon,Sinistcha Ogerpon,field,3,7806,0.0003843197540353574
-rest,Other events,family,bloodmoon-ursaluna-sfa,Bloodmoon Ursaluna,field,3,7806,0.0003843197540353574
-rest,Other events,family,azumarill-ssp,Azumarill,field,3,7806,0.0003843197540353574
-rest,Other events,family,iono-bellibolt,Iono's Bellibolt,field,3,7806,0.0003843197540353574
-rest,Other events,family,decidueye-ex,Decidueye,field,3,7806,0.0003843197540353574
-rest,Other events,family,wailord-ex-pbl,Wailord,field,3,7806,0.0003843197540353574
-rest,Other events,family,mega-charizard-x-ex,Mega Charizard X,field,2,7806,0.00025621316935690495
-rest,Other events,family,mega-zygarde-ex,Mega Zygarde,field,2,7806,0.00025621316935690495
-rest,Other events,family,paldean-tauros-pfl,Paldean Tauros,field,2,7806,0.00025621316935690495
-rest,Other events,family,bronzong-tef,Bronzong,field,2,7806,0.00025621316935690495
-rest,Other events,family,blaziken-ex-jtg,Blaziken,field,2,7806,0.00025621316935690495
-rest,Other events,family,dudunsparce-control,Dudunsparce Control,field,2,7806,0.00025621316935690495
-rest,Other events,family,alolan-exeggutor-ex,Alolan Exeggutor ex,field,2,7806,0.00025621316935690495
-rest,Other events,family,mega-feraligatr-ex,Mega Feraligatr,field,2,7806,0.00025621316935690495
-rest,Other events,family,sylveon-pre,Sylveon,field,2,7806,0.00025621316935690495
-rest,Other events,family,gengar-ex,Gengar,field,2,7806,0.00025621316935690495
-rest,Other events,family,misty-gyarados,Misty's Gyarados,field,2,7806,0.00025621316935690495
-rest,Other events,family,eelektrik-blk,Eelektrik,field,2,7806,0.00025621316935690495
-rest,Other events,family,mega-camerupt-ex,Mega Camerupt,field,2,7806,0.00025621316935690495
-rest,Other events,family,froslass-munkidori,Froslass Munkidori,field,1,7806,0.00012810658467845247
-rest,Other events,family,ethan-magcargo,Ethan's Magcargo,field,1,7806,0.00012810658467845247
-rest,Other events,family,conkeldurr-twm,Conkeldurr,field,1,7806,0.00012810658467845247
-rest,Other events,family,jellicent-dusknoir,Jellicent Dusknoir,field,1,7806,0.00012810658467845247
-rest,Other events,family,heatran-metang,Heatran Metang,field,1,7806,0.00012810658467845247
-rest,Other events,family,cornerstone-mask-ogerpon-ex,Cornerstone Mask Ogerpon,field,1,7806,0.00012810658467845247
-rest,Other events,family,slaking-ex,Slaking,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,dragapult-ex,Dragapult,field,1360,7806,0.17422495516269537
-rest,Other events,archetype,n-zoroark,N's Zoroark,field,564,7806,0.0722521137586472
-rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,field,510,7806,0.06533435818601076
-rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,field,467,7806,0.059825775044837305
-rest,Other events,archetype,basic-box-m,Basic Box,field,444,7806,0.0568793235972329
-rest,Other events,archetype,slowking-scr,Slowking,field,440,7806,0.05636689725851909
-rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,field,384,7806,0.04919292851652575
-rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,field,358,7806,0.045862157314885986
-rest,Other events,archetype,crustle-dri,Crustle,field,288,7806,0.03689469638739431
-rest,Other events,archetype,festival-lead,Festival Lead,field,253,7806,0.03241096592364848
-rest,Other events,archetype,dhelmise-pbl,Dhelmise,field,246,7806,0.03151421983089931
-rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,field,226,7806,0.02895208813733026
-rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,field,205,7806,0.026261849859082757
-rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,field,150,7806,0.01921598770176787
-rest,Other events,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,field,139,7806,0.017806815270304893
-rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,field,116,7806,0.014860363822700487
-rest,Other events,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,field,106,7806,0.013579297975915961
-rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,field,104,7806,0.013323084806559056
-rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,field,99,7806,0.012682551883166795
-rest,Other events,archetype,grimmsnarl-froslass,Grimmsnarl Froslass,field,99,7806,0.012682551883166795
-rest,Other events,archetype,mega-lucario-ex,Mega Lucario,field,93,7806,0.01191391237509608
-rest,Other events,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,field,80,7806,0.010248526774276198
-rest,Other events,archetype,other,Other,field,80,7806,0.010248526774276198
-rest,Other events,archetype,raging-bolt-ogerpon,Raging Bolt Ogerpon,field,78,7806,0.009992313604919293
-rest,Other events,archetype,mega-greninja-ex,Mega Greninja,field,60,7806,0.007686395080707148
-rest,Other events,archetype,ethan-typhlosion,Ethan's Typhlosion,field,47,7806,0.006021009479887266
-rest,Other events,archetype,mega-chandelure-ex,Mega Chandelure,field,46,7806,0.0058929028952088135
-rest,Other events,archetype,mega-venusaur-ex,Mega Venusaur,field,46,7806,0.0058929028952088135
-rest,Other events,archetype,seaking-pre,Seaking Festival Lead,field,43,7806,0.005508583141173457
-rest,Other events,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,field,37,7806,0.004739943633102741
-rest,Other events,archetype,beedrill-ex-cri,Beedrill,field,37,7806,0.004739943633102741
-rest,Other events,archetype,hops-trevenant,Hop's Trevenant,field,35,7806,0.004483730463745837
-rest,Other events,archetype,kangaskhan-bouffalant,Kangaskhan Bouffalant,field,34,7806,0.004355623879067384
-rest,Other events,archetype,starmie-froslass,Starmie Froslass,field,34,7806,0.004355623879067384
-rest,Other events,archetype,greninja-ex,Greninja,field,33,7806,0.004227517294388932
-rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,field,32,7806,0.004099410709710479
-rest,Other events,archetype,ceruledge-ex,Ceruledge,field,30,7806,0.003843197540353574
-rest,Other events,archetype,mega-starmie-ex,Mega Starmie,field,23,7806,0.0029464514476044068
-rest,Other events,archetype,toxtricity-box,Toxtricity Box,field,23,7806,0.0029464514476044068
-rest,Other events,archetype,toucannon-pbl,Toucannon,field,23,7806,0.0029464514476044068
-rest,Other events,archetype,starmie-dusknoir,Starmie Dusknoir,field,20,7806,0.0025621316935690495
-rest,Other events,archetype,mew-ex-30c,Mew Box,field,19,7806,0.002434025108890597
-rest,Other events,archetype,manectric-eelektrik,Manectric Eelektrik,field,16,7806,0.0020497053548552396
-rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,field,14,7806,0.0017934921854983346
-rest,Other events,archetype,lillie-clefairy,Lillie's Clefairy,field,14,7806,0.0017934921854983346
-rest,Other events,archetype,mega-absol-box,Mega Absol Box,field,14,7806,0.0017934921854983346
-rest,Other events,archetype,doublade-por,Doublade,field,13,7806,0.001665385600819882
-rest,Other events,archetype,cinccino-ex,Cinccino,field,12,7806,0.0015372790161414297
-rest,Other events,archetype,okidogi-barbaracle,Okidogi Barbaracle,field,12,7806,0.0015372790161414297
-rest,Other events,archetype,metagross-cri,Metagross,field,11,7806,0.001409172431462977
-rest,Other events,archetype,rocket-spidops,Rocket's Spidops,field,10,7806,0.0012810658467845247
-rest,Other events,archetype,diancie-dusknoir,Diancie Dusknoir,field,9,7806,0.0011529592621060721
-rest,Other events,archetype,stevens-metagross,Steven's Metagross,field,9,7806,0.0011529592621060721
-rest,Other events,archetype,tera-box,Tera Box,field,8,7806,0.0010248526774276198
-rest,Other events,archetype,hop-zacian,Hop's Zacian,field,8,7806,0.0010248526774276198
-rest,Other events,archetype,yanmega-ex,Yanmega,field,7,7806,0.0008967460927491673
-rest,Other events,archetype,mega-darkrai-ex,Mega Darkrai,field,7,7806,0.0008967460927491673
-rest,Other events,archetype,flareon-noctowl,Flareon Noctowl,field,6,7806,0.0007686395080707148
-rest,Other events,archetype,joltik-box,Joltik Box,field,6,7806,0.0007686395080707148
-rest,Other events,archetype,toxtricity-pfl,Toxtricity,field,6,7806,0.0007686395080707148
-rest,Other events,archetype,ogerpon-meganium,Ogerpon Meganium,field,5,7806,0.0006405329233922624
-rest,Other events,archetype,hydreigon-ex,Hydreigon,field,5,7806,0.0006405329233922624
-rest,Other events,archetype,mega-dragonite-ex,Mega Dragonite,field,5,7806,0.0006405329233922624
-rest,Other events,archetype,mega-abomasnow-ex,Mega Abomasnow,field,5,7806,0.0006405329233922624
-rest,Other events,archetype,palafin-ex,Palafin,field,4,7806,0.0005124263387138099
-rest,Other events,archetype,archaludon-ex,Archaludon,field,4,7806,0.0005124263387138099
-rest,Other events,archetype,archaludon-dudunsparce,Archaludon Dudunsparce,field,4,7806,0.0005124263387138099
-rest,Other events,archetype,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,sinistcha-ogerpon,Sinistcha Ogerpon,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,ursaluna-lunatone,Ursaluna Lunatone,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,azumarill-ssp,Azumarill,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,mega-froslass-ex,Mega Froslass,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,mega-manectric-ex-meg,Mega Manectric,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,iono-bellibolt,Iono's Bellibolt,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,alakazam-meg,Alakazam,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,decidueye-ex,Decidueye,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,wailord-ex-pbl,Wailord,field,3,7806,0.0003843197540353574
-rest,Other events,archetype,dragapult-froslass,Dragapult Froslass,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,mega-charizard-x-ex,Mega Charizard X,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,zygarde-barbaracle,Zygarde Barbaracle,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,flareon-ex,Flareon,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,paldean-tauros-pfl,Paldean Tauros,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,bronzong-tef,Bronzong,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,dudunsparce-control,Dudunsparce Control,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,alolan-exeggutor-ex,Alolan Exeggutor ex,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,mega-feraligatr-ex,Mega Feraligatr,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,sylveon-pre,Sylveon,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,gengar-ex,Gengar,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,okidogi-twm,Okidogi,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,misty-gyarados,Misty's Gyarados,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,eelektrik-blk,Eelektrik,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,mega-lopunny-ex,Mega Lopunny,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,mega-camerupt-ex,Mega Camerupt,field,2,7806,0.00025621316935690495
-rest,Other events,archetype,froslass-munkidori,Froslass Munkidori,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,ethan-magcargo,Ethan's Magcargo,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,blaziken-ex-jtg,Blaziken,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,mega-froslass-dudunsparce,Froslass Dudunsparce,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,toxtricity-brute-bonnet,Toxtricity Brute Bonnet,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,conkeldurr-twm,Conkeldurr,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,jellicent-dusknoir,Jellicent Dusknoir,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,blaziken-zoroark,Blaziken Zoroark,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,heatran-metang,Heatran Metang,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,greninja-froslass,Greninja Froslass,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,cornerstone-mask-ogerpon-ex,Cornerstone Mask Ogerpon,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,slaking-ex,Slaking,field,1,7806,0.00012810658467845247
-rest,Other events,archetype,dragonite-eelektrik,Dragonite Eelektrik,field,1,7806,0.00012810658467845247
-rest,Other events,family,dragapult-ex,Dragapult,day2,459,1410,0.32553191489361705
-rest,Other events,family,n-zoroark,N's Zoroark,day2,131,1410,0.09290780141843971
-rest,Other events,family,basic-box-m,Basic Box,day2,113,1410,0.08014184397163121
-rest,Other events,family,slowking-scr,Slowking,day2,107,1410,0.07588652482269503
-rest,Other events,family,alakazam-meg,Alakazam,day2,83,1410,0.058865248226950356
-rest,Other events,family,festival-lead,Festival Lead,day2,54,1410,0.03829787234042553
-rest,Other events,family,crustle-dri,Crustle,day2,54,1410,0.03829787234042553
-rest,Other events,family,mega-excadrill-ex,Mega Excadrill,day2,53,1410,0.0375886524822695
-rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,day2,49,1410,0.03475177304964539
-rest,Other events,family,mega-lopunny-ex,Mega Lopunny,day2,42,1410,0.029787234042553193
-rest,Other events,family,dhelmise-pbl,Dhelmise,day2,37,1410,0.02624113475177305
-rest,Other events,family,mega-lucario-ex,Mega Lucario,day2,36,1410,0.02553191489361702
-rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,day2,30,1410,0.02127659574468085
-rest,Other events,family,cynthia-garchomp-ex,Cynthia's Garchomp,day2,20,1410,0.014184397163120567
-rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,day2,20,1410,0.014184397163120567
-rest,Other events,family,rocket-mewtwo-ex,Rocket's Mewtwo,day2,11,1410,0.007801418439716312
-rest,Other events,family,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,day2,11,1410,0.007801418439716312
-rest,Other events,family,seaking-pre,Seaking Festival Lead,day2,11,1410,0.007801418439716312
-rest,Other events,family,lillie-clefairy,Lillie's Clefairy,day2,10,1410,0.0070921985815602835
-rest,Other events,family,raging-bolt-ex,Raging Bolt,day2,10,1410,0.0070921985815602835
-rest,Other events,family,mega-starmie-ex,Mega Starmie,day2,7,1410,0.004964539007092199
-rest,Other events,family,hops-trevenant,Hop's Trevenant,day2,7,1410,0.004964539007092199
-rest,Other events,family,mega-chandelure-ex,Mega Chandelure,day2,7,1410,0.004964539007092199
-rest,Other events,family,mew-ex-30c,Mew Box,day2,6,1410,0.00425531914893617
-rest,Other events,family,kangaskhan-bouffalant,Kangaskhan Bouffalant,day2,5,1410,0.0035460992907801418
-rest,Other events,family,mega-greninja-ex,Mega Greninja,day2,3,1410,0.002127659574468085
-rest,Other events,family,mega-venusaur-ex,Mega Venusaur,day2,3,1410,0.002127659574468085
-rest,Other events,family,greninja-ex,Greninja,day2,3,1410,0.002127659574468085
-rest,Other events,family,tera-box,Tera Box,day2,3,1410,0.002127659574468085
-rest,Other events,family,ceruledge-ex,Ceruledge,day2,3,1410,0.002127659574468085
-rest,Other events,family,beedrill-ex-cri,Beedrill,day2,3,1410,0.002127659574468085
-rest,Other events,family,metagross-cri,Metagross,day2,2,1410,0.0014184397163120568
-rest,Other events,family,toxtricity-pfl,Toxtricity,day2,2,1410,0.0014184397163120568
-rest,Other events,family,other,Other,day2,2,1410,0.0014184397163120568
-rest,Other events,family,mega-absol-box,Mega Absol Box,day2,2,1410,0.0014184397163120568
-rest,Other events,family,ethan-typhlosion,Ethan's Typhlosion,day2,2,1410,0.0014184397163120568
-rest,Other events,family,toucannon-pbl,Toucannon,day2,2,1410,0.0014184397163120568
-rest,Other events,family,stevens-metagross,Steven's Metagross,day2,2,1410,0.0014184397163120568
-rest,Other events,family,mega-diancie-ex,Mega Diancie,day2,1,1410,0.0007092198581560284
-rest,Other events,family,mega-manectric-ex-meg,Mega Manectric,day2,1,1410,0.0007092198581560284
-rest,Other events,family,okidogi-twm,Okidogi,day2,1,1410,0.0007092198581560284
-rest,Other events,family,mega-darkrai-ex,Mega Darkrai,day2,1,1410,0.0007092198581560284
-rest,Other events,family,cinccino-ex,Cinccino,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,dragapult-ex,Dragapult,day2,301,1410,0.21347517730496454
-rest,Other events,archetype,n-zoroark,N's Zoroark,day2,131,1410,0.09290780141843971
-rest,Other events,archetype,basic-box-m,Basic Box,day2,113,1410,0.08014184397163121
-rest,Other events,archetype,slowking-scr,Slowking,day2,107,1410,0.07588652482269503
-rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,day2,90,1410,0.06382978723404255
-rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,day2,62,1410,0.04397163120567376
-rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,day2,57,1410,0.04042553191489362
-rest,Other events,archetype,festival-lead,Festival Lead,day2,54,1410,0.03829787234042553
-rest,Other events,archetype,crustle-dri,Crustle,day2,54,1410,0.03829787234042553
-rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,day2,53,1410,0.0375886524822695
-rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,day2,42,1410,0.029787234042553193
-rest,Other events,archetype,dhelmise-pbl,Dhelmise,day2,37,1410,0.02624113475177305
-rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,day2,30,1410,0.02127659574468085
-rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,day2,26,1410,0.018439716312056736
-rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,day2,26,1410,0.018439716312056736
-rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,day2,23,1410,0.016312056737588652
-rest,Other events,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,day2,20,1410,0.014184397163120567
-rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,day2,20,1410,0.014184397163120567
-rest,Other events,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,day2,19,1410,0.01347517730496454
-rest,Other events,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,day2,11,1410,0.007801418439716312
-rest,Other events,archetype,seaking-pre,Seaking Festival Lead,day2,11,1410,0.007801418439716312
-rest,Other events,archetype,grimmsnarl-froslass,Grimmsnarl Froslass,day2,10,1410,0.0070921985815602835
-rest,Other events,archetype,raging-bolt-ogerpon,Raging Bolt Ogerpon,day2,10,1410,0.0070921985815602835
-rest,Other events,archetype,mega-lucario-ex,Mega Lucario,day2,10,1410,0.0070921985815602835
-rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,day2,7,1410,0.004964539007092199
-rest,Other events,archetype,hops-trevenant,Hop's Trevenant,day2,7,1410,0.004964539007092199
-rest,Other events,archetype,mega-chandelure-ex,Mega Chandelure,day2,7,1410,0.004964539007092199
-rest,Other events,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,day2,6,1410,0.00425531914893617
-rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,day2,6,1410,0.00425531914893617
-rest,Other events,archetype,mew-ex-30c,Mew Box,day2,6,1410,0.00425531914893617
-rest,Other events,archetype,kangaskhan-bouffalant,Kangaskhan Bouffalant,day2,5,1410,0.0035460992907801418
-rest,Other events,archetype,starmie-dusknoir,Starmie Dusknoir,day2,4,1410,0.0028368794326241137
-rest,Other events,archetype,mega-greninja-ex,Mega Greninja,day2,3,1410,0.002127659574468085
-rest,Other events,archetype,lillie-clefairy,Lillie's Clefairy,day2,3,1410,0.002127659574468085
-rest,Other events,archetype,mega-venusaur-ex,Mega Venusaur,day2,3,1410,0.002127659574468085
-rest,Other events,archetype,greninja-ex,Greninja,day2,3,1410,0.002127659574468085
-rest,Other events,archetype,tera-box,Tera Box,day2,3,1410,0.002127659574468085
-rest,Other events,archetype,ceruledge-ex,Ceruledge,day2,3,1410,0.002127659574468085
-rest,Other events,archetype,beedrill-ex-cri,Beedrill,day2,3,1410,0.002127659574468085
-rest,Other events,archetype,mega-starmie-ex,Mega Starmie,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,metagross-cri,Metagross,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,toxtricity-box,Toxtricity Box,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,other,Other,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,mega-absol-box,Mega Absol Box,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,ethan-typhlosion,Ethan's Typhlosion,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,toucannon-pbl,Toucannon,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,stevens-metagross,Steven's Metagross,day2,2,1410,0.0014184397163120568
-rest,Other events,archetype,ogerpon-meganium,Ogerpon Meganium,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,diancie-dusknoir,Diancie Dusknoir,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,manectric-eelektrik,Manectric Eelektrik,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,okidogi-barbaracle,Okidogi Barbaracle,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,starmie-froslass,Starmie Froslass,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,mega-darkrai-ex,Mega Darkrai,day2,1,1410,0.0007092198581560284
-rest,Other events,archetype,cinccino-ex,Cinccino,day2,1,1410,0.0007092198581560284
-rest,Other events,family,dragapult-ex,Dragapult,top64,81,256,0.31640625
-rest,Other events,family,n-zoroark,N's Zoroark,top64,27,256,0.10546875
-rest,Other events,family,basic-box-m,Basic Box,top64,25,256,0.09765625
-rest,Other events,family,alakazam-meg,Alakazam,top64,22,256,0.0859375
-rest,Other events,family,slowking-scr,Slowking,top64,18,256,0.0703125
-rest,Other events,family,festival-lead,Festival Lead,top64,13,256,0.05078125
-rest,Other events,family,mega-lopunny-ex,Mega Lopunny,top64,12,256,0.046875
-rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,top64,11,256,0.04296875
-rest,Other events,family,crustle-dri,Crustle,top64,11,256,0.04296875
-rest,Other events,family,mega-excadrill-ex,Mega Excadrill,top64,6,256,0.0234375
-rest,Other events,family,mega-lucario-ex,Mega Lucario,top64,5,256,0.01953125
-rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,top64,4,256,0.015625
-rest,Other events,family,lillie-clefairy,Lillie's Clefairy,top64,3,256,0.01171875
-rest,Other events,family,dhelmise-pbl,Dhelmise,top64,3,256,0.01171875
-rest,Other events,family,seaking-pre,Seaking Festival Lead,top64,3,256,0.01171875
-rest,Other events,family,cynthia-garchomp-ex,Cynthia's Garchomp,top64,3,256,0.01171875
-rest,Other events,family,rocket-mewtwo-ex,Rocket's Mewtwo,top64,2,256,0.0078125
-rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,top64,2,256,0.0078125
-rest,Other events,family,mega-starmie-ex,Mega Starmie,top64,1,256,0.00390625
-rest,Other events,family,ethan-typhlosion,Ethan's Typhlosion,top64,1,256,0.00390625
-rest,Other events,family,toxtricity-pfl,Toxtricity,top64,1,256,0.00390625
-rest,Other events,family,greninja-ex,Greninja,top64,1,256,0.00390625
-rest,Other events,family,ceruledge-ex,Ceruledge,top64,1,256,0.00390625
-rest,Other events,archetype,dragapult-ex,Dragapult,top64,63,256,0.24609375
-rest,Other events,archetype,n-zoroark,N's Zoroark,top64,27,256,0.10546875
-rest,Other events,archetype,basic-box-m,Basic Box,top64,25,256,0.09765625
-rest,Other events,archetype,slowking-scr,Slowking,top64,18,256,0.0703125
-rest,Other events,archetype,festival-lead,Festival Lead,top64,13,256,0.05078125
-rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,top64,12,256,0.046875
-rest,Other events,archetype,crustle-dri,Crustle,top64,11,256,0.04296875
-rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top64,10,256,0.0390625
-rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,top64,10,256,0.0390625
-rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,top64,10,256,0.0390625
-rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,top64,9,256,0.03515625
-rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,top64,7,256,0.02734375
-rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,top64,6,256,0.0234375
-rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,top64,4,256,0.015625
-rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,top64,3,256,0.01171875
-rest,Other events,archetype,dhelmise-pbl,Dhelmise,top64,3,256,0.01171875
-rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,top64,3,256,0.01171875
-rest,Other events,archetype,seaking-pre,Seaking Festival Lead,top64,3,256,0.01171875
-rest,Other events,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,top64,3,256,0.01171875
-rest,Other events,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,top64,2,256,0.0078125
-rest,Other events,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,top64,2,256,0.0078125
-rest,Other events,archetype,mega-lucario-ex,Mega Lucario,top64,2,256,0.0078125
-rest,Other events,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,top64,2,256,0.0078125
-rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,top64,2,256,0.0078125
-rest,Other events,archetype,mega-starmie-ex,Mega Starmie,top64,1,256,0.00390625
-rest,Other events,archetype,ethan-typhlosion,Ethan's Typhlosion,top64,1,256,0.00390625
-rest,Other events,archetype,toxtricity-box,Toxtricity Box,top64,1,256,0.00390625
-rest,Other events,archetype,greninja-ex,Greninja,top64,1,256,0.00390625
-rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,top64,1,256,0.00390625
-rest,Other events,archetype,ceruledge-ex,Ceruledge,top64,1,256,0.00390625
-rest,Other events,family,dragapult-ex,Dragapult,top16,24,64,0.375
-rest,Other events,family,basic-box-m,Basic Box,top16,10,64,0.15625
-rest,Other events,family,slowking-scr,Slowking,top16,6,64,0.09375
-rest,Other events,family,alakazam-meg,Alakazam,top16,5,64,0.078125
-rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,top16,4,64,0.0625
-rest,Other events,family,mega-lopunny-ex,Mega Lopunny,top16,4,64,0.0625
-rest,Other events,family,n-zoroark,N's Zoroark,top16,3,64,0.046875
-rest,Other events,family,mega-lucario-ex,Mega Lucario,top16,2,64,0.03125
-rest,Other events,family,festival-lead,Festival Lead,top16,2,64,0.03125
-rest,Other events,family,mega-excadrill-ex,Mega Excadrill,top16,2,64,0.03125
-rest,Other events,family,lillie-clefairy,Lillie's Clefairy,top16,1,64,0.015625
-rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,top16,1,64,0.015625
-rest,Other events,archetype,dragapult-ex,Dragapult,top16,18,64,0.28125
-rest,Other events,archetype,basic-box-m,Basic Box,top16,10,64,0.15625
-rest,Other events,archetype,slowking-scr,Slowking,top16,6,64,0.09375
-rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,top16,4,64,0.0625
-rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top16,3,64,0.046875
-rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,top16,3,64,0.046875
-rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,top16,3,64,0.046875
-rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,top16,3,64,0.046875
-rest,Other events,archetype,n-zoroark,N's Zoroark,top16,3,64,0.046875
-rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,top16,2,64,0.03125
-rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,top16,2,64,0.03125
-rest,Other events,archetype,festival-lead,Festival Lead,top16,2,64,0.03125
-rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,top16,2,64,0.03125
-rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,top16,1,64,0.015625
-rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,top16,1,64,0.015625
-rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,top16,1,64,0.015625
-rest,Other events,family,dragapult-ex,Dragapult,top8,14,32,0.4375
-rest,Other events,family,basic-box-m,Basic Box,top8,3,32,0.09375
-rest,Other events,family,slowking-scr,Slowking,top8,3,32,0.09375
-rest,Other events,family,alakazam-meg,Alakazam,top8,3,32,0.09375
-rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,top8,2,32,0.0625
-rest,Other events,family,mega-lopunny-ex,Mega Lopunny,top8,2,32,0.0625
-rest,Other events,family,mega-lucario-ex,Mega Lucario,top8,1,32,0.03125
-rest,Other events,family,festival-lead,Festival Lead,top8,1,32,0.03125
-rest,Other events,family,n-zoroark,N's Zoroark,top8,1,32,0.03125
-rest,Other events,family,mega-excadrill-ex,Mega Excadrill,top8,1,32,0.03125
-rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,top8,1,32,0.03125
-rest,Other events,archetype,dragapult-ex,Dragapult,top8,10,32,0.3125
-rest,Other events,archetype,basic-box-m,Basic Box,top8,3,32,0.09375
-rest,Other events,archetype,slowking-scr,Slowking,top8,3,32,0.09375
-rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,top8,2,32,0.0625
-rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,top8,2,32,0.0625
-rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,top8,2,32,0.0625
-rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,top8,2,32,0.0625
-rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top8,1,32,0.03125
-rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,top8,1,32,0.03125
-rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,top8,1,32,0.03125
-rest,Other events,archetype,festival-lead,Festival Lead,top8,1,32,0.03125
-rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,top8,1,32,0.03125
-rest,Other events,archetype,n-zoroark,N's Zoroark,top8,1,32,0.03125
-rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,top8,1,32,0.03125
-rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,top8,1,32,0.03125
+0077,Nice,family,dragapult-ex,Dragapult,field,679,2336,0.2906678082191781
+0077,Nice,family,alakazam-meg,Alakazam,field,171,2336,0.07320205479452055
+0077,Nice,family,slowking-scr,Slowking,field,170,2336,0.07277397260273973
+0077,Nice,family,basic-box-m,Basic Box,field,163,2336,0.06977739726027397
+0077,Nice,family,dhelmise-pbl,Dhelmise,field,128,2336,0.0547945205479452
+0077,Nice,family,festival-lead,Festival Lead,field,122,2336,0.052226027397260275
+0077,Nice,family,n-zoroark,N's Zoroark,field,115,2336,0.04922945205479452
+0077,Nice,family,ogerpon-meganium,Ogerpon Meganium,field,110,2336,0.04708904109589041
+0077,Nice,family,mega-lopunny-ex,Mega Lopunny,field,86,2336,0.036815068493150686
+0077,Nice,family,mega-excadrill-ex,Mega Excadrill,field,75,2336,0.03210616438356165
+0077,Nice,family,mega-lucario-ex,Mega Lucario,field,71,2336,0.030393835616438356
+0077,Nice,family,mega-sharpedo-ex,Mega Sharpedo,field,56,2336,0.023972602739726026
+0077,Nice,family,crustle-dri,Crustle,field,39,2336,0.016695205479452056
+0077,Nice,family,rockets-honchkrow,Rocket's Honchkrow,field,33,2336,0.014126712328767123
+0077,Nice,family,other,Other,field,28,2336,0.011986301369863013
+0077,Nice,family,cynthia-garchomp-ex,Cynthia's Garchomp,field,27,2336,0.011558219178082191
+0077,Nice,family,seaking-pre,Seaking Festival Lead,field,20,2336,0.008561643835616438
+0077,Nice,family,mew-ex-30c,Mew Box,field,17,2336,0.007277397260273972
+0077,Nice,family,rocket-mewtwo-ex,Rocket's Mewtwo,field,16,2336,0.00684931506849315
+0077,Nice,family,mega-starmie-ex,Mega Starmie,field,16,2336,0.00684931506849315
+0077,Nice,family,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,field,14,2336,0.0059931506849315065
+0077,Nice,family,mega-greninja-ex,Mega Greninja,field,13,2336,0.005565068493150685
+0077,Nice,family,raging-bolt-ex,Raging Bolt,field,12,2336,0.005136986301369863
+0077,Nice,family,mega-chandelure-ex,Mega Chandelure,field,11,2336,0.004708904109589041
+0077,Nice,family,ethan-typhlosion,Ethan's Typhlosion,field,11,2336,0.004708904109589041
+0077,Nice,family,greninja-ex,Greninja,field,10,2336,0.004280821917808219
+0077,Nice,family,hops-trevenant,Hop's Trevenant,field,9,2336,0.003852739726027397
+0077,Nice,family,toxtricity-pfl,Toxtricity,field,8,2336,0.003424657534246575
+0077,Nice,family,toucannon-pbl,Toucannon,field,8,2336,0.003424657534246575
+0077,Nice,family,ceruledge-ex,Ceruledge,field,8,2336,0.003424657534246575
+0077,Nice,family,mega-absol-box,Mega Absol Box,field,7,2336,0.0029965753424657533
+0077,Nice,family,beedrill-ex-cri,Beedrill,field,6,2336,0.0025684931506849314
+0077,Nice,family,mega-venusaur-ex,Mega Venusaur,field,6,2336,0.0025684931506849314
+0077,Nice,family,archaludon-ex,Archaludon,field,5,2336,0.0021404109589041095
+0077,Nice,family,kangaskhan-bouffalant,Kangaskhan Bouffalant,field,5,2336,0.0021404109589041095
+0077,Nice,family,lillie-clefairy,Lillie's Clefairy,field,5,2336,0.0021404109589041095
+0077,Nice,family,tera-box,Tera Box,field,5,2336,0.0021404109589041095
+0077,Nice,family,stevens-metagross,Steven's Metagross,field,4,2336,0.0017123287671232876
+0077,Nice,family,mega-abomasnow-ex,Mega Abomasnow,field,4,2336,0.0017123287671232876
+0077,Nice,family,cinccino-ex,Cinccino,field,4,2336,0.0017123287671232876
+0077,Nice,family,okidogi-twm,Okidogi,field,3,2336,0.0012842465753424657
+0077,Nice,family,metagross-cri,Metagross,field,3,2336,0.0012842465753424657
+0077,Nice,family,mega-froslass-ex,Mega Froslass,field,3,2336,0.0012842465753424657
+0077,Nice,family,mega-manectric-ex-meg,Mega Manectric,field,2,2336,0.0008561643835616438
+0077,Nice,family,rocket-spidops,Rocket's Spidops,field,2,2336,0.0008561643835616438
+0077,Nice,family,hydrapple-ex,Hydrapple,field,2,2336,0.0008561643835616438
+0077,Nice,family,mega-dragonite-ex,Mega Dragonite,field,2,2336,0.0008561643835616438
+0077,Nice,family,hydreigon-ex,Hydreigon,field,2,2336,0.0008561643835616438
+0077,Nice,family,yanmega-ex,Yanmega,field,1,2336,0.0004280821917808219
+0077,Nice,family,hop-zacian,Hop's Zacian,field,1,2336,0.0004280821917808219
+0077,Nice,family,palafin-ex,Palafin,field,1,2336,0.0004280821917808219
+0077,Nice,family,mega-darkrai-ex,Mega Darkrai,field,1,2336,0.0004280821917808219
+0077,Nice,family,azumarill-ssp,Azumarill,field,1,2336,0.0004280821917808219
+0077,Nice,family,doublade-por,Doublade,field,1,2336,0.0004280821917808219
+0077,Nice,family,mega-camerupt-ex,Mega Camerupt,field,1,2336,0.0004280821917808219
+0077,Nice,family,flareon-ex,Flareon,field,1,2336,0.0004280821917808219
+0077,Nice,family,froslass-munkidori,Froslass Munkidori,field,1,2336,0.0004280821917808219
+0077,Nice,family,eelektrik-blk,Eelektrik,field,1,2336,0.0004280821917808219
+0077,Nice,family,bloodmoon-ursaluna-sfa,Bloodmoon Ursaluna,field,1,2336,0.0004280821917808219
+0077,Nice,family,mimikyu-ogerpon,Mimikyu Ogerpon,field,1,2336,0.0004280821917808219
+0077,Nice,family,paldean-tauros-pfl,Paldean Tauros,field,1,2336,0.0004280821917808219
+0077,Nice,family,gengar-ex,Gengar,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,dragapult-ex,Dragapult,field,459,2336,0.19648972602739725
+0077,Nice,archetype,slowking-scr,Slowking,field,170,2336,0.07277397260273973
+0077,Nice,archetype,basic-box-m,Basic Box,field,163,2336,0.06977739726027397
+0077,Nice,archetype,dhelmise-pbl,Dhelmise,field,128,2336,0.0547945205479452
+0077,Nice,archetype,festival-lead,Festival Lead,field,122,2336,0.052226027397260275
+0077,Nice,archetype,dragapult-blaziken,Dragapult Blaziken,field,116,2336,0.04965753424657534
+0077,Nice,archetype,n-zoroark,N's Zoroark,field,115,2336,0.04922945205479452
+0077,Nice,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,field,97,2336,0.041523972602739725
+0077,Nice,archetype,dragapult-dusknoir,Dragapult Dusknoir,field,95,2336,0.040667808219178085
+0077,Nice,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,field,89,2336,0.03809931506849315
+0077,Nice,archetype,mega-excadrill-ex,Mega Excadrill,field,75,2336,0.03210616438356165
+0077,Nice,archetype,alakazam-dusknoir,Alakazam Dusknoir,field,68,2336,0.02910958904109589
+0077,Nice,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,field,56,2336,0.023972602739726026
+0077,Nice,archetype,lucario-hariyama,Lucario Hariyama,field,48,2336,0.02054794520547945
+0077,Nice,archetype,lopunny-dusknoir,Lopunny Dusknoir,field,43,2336,0.018407534246575343
+0077,Nice,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,field,41,2336,0.0175513698630137
+0077,Nice,archetype,crustle-dri,Crustle,field,39,2336,0.016695205479452056
+0077,Nice,archetype,rockets-honchkrow,Rocket's Honchkrow,field,33,2336,0.014126712328767123
+0077,Nice,archetype,other,Other,field,28,2336,0.011986301369863013
+0077,Nice,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,field,27,2336,0.011558219178082191
+0077,Nice,archetype,mega-lucario-ex,Mega Lucario,field,23,2336,0.009845890410958904
+0077,Nice,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,field,21,2336,0.00898972602739726
+0077,Nice,archetype,seaking-pre,Seaking Festival Lead,field,20,2336,0.008561643835616438
+0077,Nice,archetype,mew-ex-30c,Mew Box,field,17,2336,0.007277397260273972
+0077,Nice,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,field,16,2336,0.00684931506849315
+0077,Nice,archetype,grimmsnarl-froslass,Grimmsnarl Froslass,field,13,2336,0.005565068493150685
+0077,Nice,archetype,mega-greninja-ex,Mega Greninja,field,13,2336,0.005565068493150685
+0077,Nice,archetype,raging-bolt-ogerpon,Raging Bolt Ogerpon,field,12,2336,0.005136986301369863
+0077,Nice,archetype,mega-chandelure-ex,Mega Chandelure,field,11,2336,0.004708904109589041
+0077,Nice,archetype,ethan-typhlosion,Ethan's Typhlosion,field,11,2336,0.004708904109589041
+0077,Nice,archetype,greninja-ex,Greninja,field,10,2336,0.004280821917808219
+0077,Nice,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,field,9,2336,0.003852739726027397
+0077,Nice,archetype,hops-trevenant,Hop's Trevenant,field,9,2336,0.003852739726027397
+0077,Nice,archetype,mega-starmie-ex,Mega Starmie,field,8,2336,0.003424657534246575
+0077,Nice,archetype,toucannon-pbl,Toucannon,field,8,2336,0.003424657534246575
+0077,Nice,archetype,ceruledge-ex,Ceruledge,field,8,2336,0.003424657534246575
+0077,Nice,archetype,mega-absol-box,Mega Absol Box,field,7,2336,0.0029965753424657533
+0077,Nice,archetype,beedrill-ex-cri,Beedrill,field,6,2336,0.0025684931506849314
+0077,Nice,archetype,mega-venusaur-ex,Mega Venusaur,field,6,2336,0.0025684931506849314
+0077,Nice,archetype,alakazam-meg,Alakazam,field,6,2336,0.0025684931506849314
+0077,Nice,archetype,toxtricity-box,Toxtricity Box,field,5,2336,0.0021404109589041095
+0077,Nice,archetype,kangaskhan-bouffalant,Kangaskhan Bouffalant,field,5,2336,0.0021404109589041095
+0077,Nice,archetype,tera-box,Tera Box,field,5,2336,0.0021404109589041095
+0077,Nice,archetype,stevens-metagross,Steven's Metagross,field,4,2336,0.0017123287671232876
+0077,Nice,archetype,starmie-dusknoir,Starmie Dusknoir,field,4,2336,0.0017123287671232876
+0077,Nice,archetype,starmie-froslass,Starmie Froslass,field,4,2336,0.0017123287671232876
+0077,Nice,archetype,mega-abomasnow-ex,Mega Abomasnow,field,4,2336,0.0017123287671232876
+0077,Nice,archetype,cinccino-ex,Cinccino,field,4,2336,0.0017123287671232876
+0077,Nice,archetype,archaludon-dudunsparce,Archaludon Dudunsparce,field,3,2336,0.0012842465753424657
+0077,Nice,archetype,clefairy-ogerpon,Clefairy Ogerpon,field,3,2336,0.0012842465753424657
+0077,Nice,archetype,toxtricity-pfl,Toxtricity,field,3,2336,0.0012842465753424657
+0077,Nice,archetype,okidogi-barbaracle,Okidogi Barbaracle,field,3,2336,0.0012842465753424657
+0077,Nice,archetype,metagross-cri,Metagross,field,3,2336,0.0012842465753424657
+0077,Nice,archetype,manectric-eelektrik,Manectric Eelektrik,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,rocket-spidops,Rocket's Spidops,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,hydrapple-ogerpon,Hydrapple Ogerpon,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,mega-lopunny-ex,Mega Lopunny,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,mega-dragonite-ex,Mega Dragonite,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,lillie-clefairy,Lillie's Clefairy,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,hydreigon-ex,Hydreigon,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,mega-froslass-dudunsparce,Froslass Dudunsparce,field,2,2336,0.0008561643835616438
+0077,Nice,archetype,archaludon-zoroark,Archaludon Zoroark,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,yanmega-ex,Yanmega,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,hop-zacian,Hop's Zacian,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,palafin-ex,Palafin,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,mega-darkrai-ex,Mega Darkrai,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,azumarill-ssp,Azumarill,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,doublade-por,Doublade,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,mega-froslass-ex,Mega Froslass,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,mega-camerupt-ex,Mega Camerupt,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,flareon-ex,Flareon,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,froslass-munkidori,Froslass Munkidori,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,eelektrik-blk,Eelektrik,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,bloodmoon-ursaluna-sfa,Bloodmoon Ursaluna,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,archaludon-ex,Archaludon,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,mimikyu-ogerpon,Mimikyu Ogerpon,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,paldean-tauros-pfl,Paldean Tauros,field,1,2336,0.0004280821917808219
+0077,Nice,archetype,gengar-ex,Gengar,field,1,2336,0.0004280821917808219
+0077,Nice,family,dragapult-ex,Dragapult,day2,153,429,0.35664335664335667
+0077,Nice,family,basic-box-m,Basic Box,day2,42,429,0.0979020979020979
+0077,Nice,family,festival-lead,Festival Lead,day2,31,429,0.07226107226107226
+0077,Nice,family,n-zoroark,N's Zoroark,day2,31,429,0.07226107226107226
+0077,Nice,family,slowking-scr,Slowking,day2,29,429,0.0675990675990676
+0077,Nice,family,dhelmise-pbl,Dhelmise,day2,21,429,0.04895104895104895
+0077,Nice,family,ogerpon-meganium,Ogerpon Meganium,day2,21,429,0.04895104895104895
+0077,Nice,family,alakazam-meg,Alakazam,day2,17,429,0.039627039627039624
+0077,Nice,family,crustle-dri,Crustle,day2,12,429,0.027972027972027972
+0077,Nice,family,mega-sharpedo-ex,Mega Sharpedo,day2,10,429,0.023310023310023312
+0077,Nice,family,mega-lopunny-ex,Mega Lopunny,day2,9,429,0.02097902097902098
+0077,Nice,family,mega-excadrill-ex,Mega Excadrill,day2,8,429,0.018648018648018648
+0077,Nice,family,seaking-pre,Seaking Festival Lead,day2,7,429,0.016317016317016316
+0077,Nice,family,mega-lucario-ex,Mega Lucario,day2,6,429,0.013986013986013986
+0077,Nice,family,mew-ex-30c,Mew Box,day2,6,429,0.013986013986013986
+0077,Nice,family,cynthia-garchomp-ex,Cynthia's Garchomp,day2,4,429,0.009324009324009324
+0077,Nice,family,rockets-honchkrow,Rocket's Honchkrow,day2,4,429,0.009324009324009324
+0077,Nice,family,other,Other,day2,2,429,0.004662004662004662
+0077,Nice,family,greninja-ex,Greninja,day2,2,429,0.004662004662004662
+0077,Nice,family,archaludon-ex,Archaludon,day2,2,429,0.004662004662004662
+0077,Nice,family,hops-trevenant,Hop's Trevenant,day2,1,429,0.002331002331002331
+0077,Nice,family,rocket-mewtwo-ex,Rocket's Mewtwo,day2,1,429,0.002331002331002331
+0077,Nice,family,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,day2,1,429,0.002331002331002331
+0077,Nice,family,raging-bolt-ex,Raging Bolt,day2,1,429,0.002331002331002331
+0077,Nice,family,beedrill-ex-cri,Beedrill,day2,1,429,0.002331002331002331
+0077,Nice,family,mega-venusaur-ex,Mega Venusaur,day2,1,429,0.002331002331002331
+0077,Nice,family,stevens-metagross,Steven's Metagross,day2,1,429,0.002331002331002331
+0077,Nice,family,mega-chandelure-ex,Mega Chandelure,day2,1,429,0.002331002331002331
+0077,Nice,family,mega-starmie-ex,Mega Starmie,day2,1,429,0.002331002331002331
+0077,Nice,family,mega-manectric-ex-meg,Mega Manectric,day2,1,429,0.002331002331002331
+0077,Nice,family,mega-absol-box,Mega Absol Box,day2,1,429,0.002331002331002331
+0077,Nice,family,yanmega-ex,Yanmega,day2,1,429,0.002331002331002331
+0077,Nice,archetype,dragapult-ex,Dragapult,day2,109,429,0.2540792540792541
+0077,Nice,archetype,basic-box-m,Basic Box,day2,42,429,0.0979020979020979
+0077,Nice,archetype,festival-lead,Festival Lead,day2,31,429,0.07226107226107226
+0077,Nice,archetype,n-zoroark,N's Zoroark,day2,31,429,0.07226107226107226
+0077,Nice,archetype,slowking-scr,Slowking,day2,29,429,0.0675990675990676
+0077,Nice,archetype,dragapult-blaziken,Dragapult Blaziken,day2,24,429,0.055944055944055944
+0077,Nice,archetype,dhelmise-pbl,Dhelmise,day2,21,429,0.04895104895104895
+0077,Nice,archetype,dragapult-dusknoir,Dragapult Dusknoir,day2,18,429,0.04195804195804196
+0077,Nice,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,day2,16,429,0.037296037296037296
+0077,Nice,archetype,crustle-dri,Crustle,day2,12,429,0.027972027972027972
+0077,Nice,archetype,alakazam-dusknoir,Alakazam Dusknoir,day2,11,429,0.02564102564102564
+0077,Nice,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,day2,10,429,0.023310023310023312
+0077,Nice,archetype,mega-excadrill-ex,Mega Excadrill,day2,8,429,0.018648018648018648
+0077,Nice,archetype,seaking-pre,Seaking Festival Lead,day2,7,429,0.016317016317016316
+0077,Nice,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,day2,6,429,0.013986013986013986
+0077,Nice,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,day2,6,429,0.013986013986013986
+0077,Nice,archetype,mew-ex-30c,Mew Box,day2,6,429,0.013986013986013986
+0077,Nice,archetype,lucario-hariyama,Lucario Hariyama,day2,5,429,0.011655011655011656
+0077,Nice,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,day2,5,429,0.011655011655011656
+0077,Nice,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,day2,4,429,0.009324009324009324
+0077,Nice,archetype,rockets-honchkrow,Rocket's Honchkrow,day2,4,429,0.009324009324009324
+0077,Nice,archetype,lopunny-dusknoir,Lopunny Dusknoir,day2,3,429,0.006993006993006993
+0077,Nice,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,day2,2,429,0.004662004662004662
+0077,Nice,archetype,other,Other,day2,2,429,0.004662004662004662
+0077,Nice,archetype,greninja-ex,Greninja,day2,2,429,0.004662004662004662
+0077,Nice,archetype,hops-trevenant,Hop's Trevenant,day2,1,429,0.002331002331002331
+0077,Nice,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,day2,1,429,0.002331002331002331
+0077,Nice,archetype,grimmsnarl-froslass,Grimmsnarl Froslass,day2,1,429,0.002331002331002331
+0077,Nice,archetype,raging-bolt-ogerpon,Raging Bolt Ogerpon,day2,1,429,0.002331002331002331
+0077,Nice,archetype,beedrill-ex-cri,Beedrill,day2,1,429,0.002331002331002331
+0077,Nice,archetype,mega-venusaur-ex,Mega Venusaur,day2,1,429,0.002331002331002331
+0077,Nice,archetype,archaludon-zoroark,Archaludon Zoroark,day2,1,429,0.002331002331002331
+0077,Nice,archetype,stevens-metagross,Steven's Metagross,day2,1,429,0.002331002331002331
+0077,Nice,archetype,mega-chandelure-ex,Mega Chandelure,day2,1,429,0.002331002331002331
+0077,Nice,archetype,mega-lucario-ex,Mega Lucario,day2,1,429,0.002331002331002331
+0077,Nice,archetype,archaludon-dudunsparce,Archaludon Dudunsparce,day2,1,429,0.002331002331002331
+0077,Nice,archetype,starmie-dusknoir,Starmie Dusknoir,day2,1,429,0.002331002331002331
+0077,Nice,archetype,manectric-eelektrik,Manectric Eelektrik,day2,1,429,0.002331002331002331
+0077,Nice,archetype,mega-absol-box,Mega Absol Box,day2,1,429,0.002331002331002331
+0077,Nice,archetype,yanmega-ex,Yanmega,day2,1,429,0.002331002331002331
+0077,Nice,family,dragapult-ex,Dragapult,top64,29,64,0.453125
+0077,Nice,family,basic-box-m,Basic Box,top64,6,64,0.09375
+0077,Nice,family,festival-lead,Festival Lead,top64,5,64,0.078125
+0077,Nice,family,n-zoroark,N's Zoroark,top64,5,64,0.078125
+0077,Nice,family,dhelmise-pbl,Dhelmise,top64,4,64,0.0625
+0077,Nice,family,slowking-scr,Slowking,top64,4,64,0.0625
+0077,Nice,family,ogerpon-meganium,Ogerpon Meganium,top64,3,64,0.046875
+0077,Nice,family,alakazam-meg,Alakazam,top64,3,64,0.046875
+0077,Nice,family,seaking-pre,Seaking Festival Lead,top64,2,64,0.03125
+0077,Nice,family,other,Other,top64,1,64,0.015625
+0077,Nice,family,mega-sharpedo-ex,Mega Sharpedo,top64,1,64,0.015625
+0077,Nice,family,mega-lucario-ex,Mega Lucario,top64,1,64,0.015625
+0077,Nice,archetype,dragapult-ex,Dragapult,top64,22,64,0.34375
+0077,Nice,archetype,basic-box-m,Basic Box,top64,6,64,0.09375
+0077,Nice,archetype,festival-lead,Festival Lead,top64,5,64,0.078125
+0077,Nice,archetype,n-zoroark,N's Zoroark,top64,5,64,0.078125
+0077,Nice,archetype,dhelmise-pbl,Dhelmise,top64,4,64,0.0625
+0077,Nice,archetype,slowking-scr,Slowking,top64,4,64,0.0625
+0077,Nice,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top64,3,64,0.046875
+0077,Nice,archetype,dragapult-blaziken,Dragapult Blaziken,top64,3,64,0.046875
+0077,Nice,archetype,dragapult-dusknoir,Dragapult Dusknoir,top64,3,64,0.046875
+0077,Nice,archetype,seaking-pre,Seaking Festival Lead,top64,2,64,0.03125
+0077,Nice,archetype,alakazam-dusknoir,Alakazam Dusknoir,top64,2,64,0.03125
+0077,Nice,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,top64,1,64,0.015625
+0077,Nice,archetype,other,Other,top64,1,64,0.015625
+0077,Nice,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,top64,1,64,0.015625
+0077,Nice,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,top64,1,64,0.015625
+0077,Nice,archetype,lucario-hariyama,Lucario Hariyama,top64,1,64,0.015625
+0077,Nice,family,basic-box-m,Basic Box,top16,4,16,0.25
+0077,Nice,family,dragapult-ex,Dragapult,top16,4,16,0.25
+0077,Nice,family,ogerpon-meganium,Ogerpon Meganium,top16,2,16,0.125
+0077,Nice,family,dhelmise-pbl,Dhelmise,top16,1,16,0.0625
+0077,Nice,family,seaking-pre,Seaking Festival Lead,top16,1,16,0.0625
+0077,Nice,family,other,Other,top16,1,16,0.0625
+0077,Nice,family,slowking-scr,Slowking,top16,1,16,0.0625
+0077,Nice,family,alakazam-meg,Alakazam,top16,1,16,0.0625
+0077,Nice,family,festival-lead,Festival Lead,top16,1,16,0.0625
+0077,Nice,archetype,basic-box-m,Basic Box,top16,4,16,0.25
+0077,Nice,archetype,dragapult-ex,Dragapult,top16,3,16,0.1875
+0077,Nice,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top16,2,16,0.125
+0077,Nice,archetype,dhelmise-pbl,Dhelmise,top16,1,16,0.0625
+0077,Nice,archetype,seaking-pre,Seaking Festival Lead,top16,1,16,0.0625
+0077,Nice,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,top16,1,16,0.0625
+0077,Nice,archetype,other,Other,top16,1,16,0.0625
+0077,Nice,archetype,slowking-scr,Slowking,top16,1,16,0.0625
+0077,Nice,archetype,alakazam-dusknoir,Alakazam Dusknoir,top16,1,16,0.0625
+0077,Nice,archetype,festival-lead,Festival Lead,top16,1,16,0.0625
+0077,Nice,family,ogerpon-meganium,Ogerpon Meganium,top8,2,8,0.25
+0077,Nice,family,dragapult-ex,Dragapult,top8,2,8,0.25
+0077,Nice,family,basic-box-m,Basic Box,top8,1,8,0.125
+0077,Nice,family,dhelmise-pbl,Dhelmise,top8,1,8,0.125
+0077,Nice,family,seaking-pre,Seaking Festival Lead,top8,1,8,0.125
+0077,Nice,family,other,Other,top8,1,8,0.125
+0077,Nice,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top8,2,8,0.25
+0077,Nice,archetype,basic-box-m,Basic Box,top8,1,8,0.125
+0077,Nice,archetype,dhelmise-pbl,Dhelmise,top8,1,8,0.125
+0077,Nice,archetype,seaking-pre,Seaking Festival Lead,top8,1,8,0.125
+0077,Nice,archetype,dragapult-ex,Dragapult,top8,1,8,0.125
+0077,Nice,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,top8,1,8,0.125
+0077,Nice,archetype,other,Other,top8,1,8,0.125
+rest,Other events,family,dragapult-ex,Dragapult,field,3052,10733,0.28435665703903845
+rest,Other events,family,alakazam-meg,Alakazam,field,813,10733,0.07574769402776484
+rest,Other events,family,n-zoroark,N's Zoroark,field,714,10733,0.0665238050871145
+rest,Other events,family,basic-box-m,Basic Box,field,667,10733,0.0621447871051896
+rest,Other events,family,slowking-scr,Slowking,field,645,10733,0.0600950340072673
+rest,Other events,family,mega-excadrill-ex,Mega Excadrill,field,531,10733,0.04947358613621541
+rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,field,400,10733,0.03726823814404174
+rest,Other events,family,mega-lucario-ex,Mega Lucario,field,390,10733,0.036336532190440696
+rest,Other events,family,mega-lopunny-ex,Mega Lopunny,field,388,10733,0.036150190999720486
+rest,Other events,family,dhelmise-pbl,Dhelmise,field,360,10733,0.033541414329637566
+rest,Other events,family,crustle-dri,Crustle,field,357,10733,0.03326190254355725
+rest,Other events,family,festival-lead,Festival Lead,field,326,10733,0.03037361408739402
+rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,field,211,10733,0.019658995620982018
+rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,field,191,10733,0.01779558371377993
+rest,Other events,family,cynthia-garchomp-ex,Cynthia's Garchomp,field,149,10733,0.013882418708655548
+rest,Other events,family,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,field,121,10733,0.011273642038572626
+rest,Other events,family,other,Other,field,108,10733,0.01006242429889127
+rest,Other events,family,rocket-mewtwo-ex,Rocket's Mewtwo,field,107,10733,0.009969253703531165
+rest,Other events,family,raging-bolt-ex,Raging Bolt,field,102,10733,0.009503400726730643
+rest,Other events,family,mega-starmie-ex,Mega Starmie,field,95,10733,0.008851206559209913
+rest,Other events,family,mega-greninja-ex,Mega Greninja,field,85,10733,0.00791950060560887
+rest,Other events,family,ethan-typhlosion,Ethan's Typhlosion,field,65,10733,0.006056088698406783
+rest,Other events,family,mega-chandelure-ex,Mega Chandelure,field,59,10733,0.0054970651262461565
+rest,Other events,family,seaking-pre,Seaking Festival Lead,field,57,10733,0.005310723935525948
+rest,Other events,family,mega-venusaur-ex,Mega Venusaur,field,54,10733,0.005031212149445635
+rest,Other events,family,ceruledge-ex,Ceruledge,field,48,10733,0.004472188577285009
+rest,Other events,family,beedrill-ex-cri,Beedrill,field,48,10733,0.004472188577285009
+rest,Other events,family,hops-trevenant,Hop's Trevenant,field,46,10733,0.0042858473865648
+rest,Other events,family,kangaskhan-bouffalant,Kangaskhan Bouffalant,field,44,10733,0.004099506195844592
+rest,Other events,family,greninja-ex,Greninja,field,43,10733,0.004006335600484487
+rest,Other events,family,mew-ex-30c,Mew Box,field,37,10733,0.003447312028323861
+rest,Other events,family,lillie-clefairy,Lillie's Clefairy,field,35,10733,0.0032609708376036524
+rest,Other events,family,toxtricity-pfl,Toxtricity,field,35,10733,0.0032609708376036524
+rest,Other events,family,toucannon-pbl,Toucannon,field,34,10733,0.003167800242243548
+rest,Other events,family,mega-manectric-ex-meg,Mega Manectric,field,23,10733,0.0021429236932824
+rest,Other events,family,mega-absol-box,Mega Absol Box,field,19,10733,0.0017702413118419827
+rest,Other events,family,cinccino-ex,Cinccino,field,18,10733,0.0016770707164818783
+rest,Other events,family,okidogi-twm,Okidogi,field,18,10733,0.0016770707164818783
+rest,Other events,family,doublade-por,Doublade,field,15,10733,0.0013975589304015652
+rest,Other events,family,metagross-cri,Metagross,field,14,10733,0.001304388335041461
+rest,Other events,family,rocket-spidops,Rocket's Spidops,field,12,10733,0.0011180471443212523
+rest,Other events,family,stevens-metagross,Steven's Metagross,field,12,10733,0.0011180471443212523
+rest,Other events,family,mega-diancie-ex,Mega Diancie,field,10,10733,0.0009317059536010435
+rest,Other events,family,flareon-ex,Flareon,field,10,10733,0.0009317059536010435
+rest,Other events,family,hop-zacian,Hop's Zacian,field,10,10733,0.0009317059536010435
+rest,Other events,family,archaludon-ex,Archaludon,field,10,10733,0.0009317059536010435
+rest,Other events,family,tera-box,Tera Box,field,9,10733,0.0008385353582409391
+rest,Other events,family,yanmega-ex,Yanmega,field,9,10733,0.0008385353582409391
+rest,Other events,family,mega-dragonite-ex,Mega Dragonite,field,8,10733,0.0007453647628808348
+rest,Other events,family,mega-darkrai-ex,Mega Darkrai,field,7,10733,0.0006521941675207305
+rest,Other events,family,joltik-box,Joltik Box,field,7,10733,0.0006521941675207305
+rest,Other events,family,mega-froslass-ex,Mega Froslass,field,6,10733,0.0005590235721606261
+rest,Other events,family,mega-abomasnow-ex,Mega Abomasnow,field,6,10733,0.0005590235721606261
+rest,Other events,family,mega-charizard-x-ex,Mega Charizard X,field,5,10733,0.00046585297680052176
+rest,Other events,family,palafin-ex,Palafin,field,5,10733,0.00046585297680052176
+rest,Other events,family,hydreigon-ex,Hydreigon,field,5,10733,0.00046585297680052176
+rest,Other events,family,decidueye-ex,Decidueye,field,5,10733,0.00046585297680052176
+rest,Other events,family,bloodmoon-ursaluna-sfa,Bloodmoon Ursaluna,field,4,10733,0.0003726823814404174
+rest,Other events,family,blaziken-ex-jtg,Blaziken,field,4,10733,0.0003726823814404174
+rest,Other events,family,wailord-ex-pbl,Wailord,field,4,10733,0.0003726823814404174
+rest,Other events,family,sinistcha-ogerpon,Sinistcha Ogerpon,field,3,10733,0.00027951178608031307
+rest,Other events,family,azumarill-ssp,Azumarill,field,3,10733,0.00027951178608031307
+rest,Other events,family,iono-bellibolt,Iono's Bellibolt,field,3,10733,0.00027951178608031307
+rest,Other events,family,gengar-ex,Gengar,field,3,10733,0.00027951178608031307
+rest,Other events,family,mega-camerupt-ex,Mega Camerupt,field,3,10733,0.00027951178608031307
+rest,Other events,family,mega-zygarde-ex,Mega Zygarde,field,2,10733,0.0001863411907202087
+rest,Other events,family,paldean-tauros-pfl,Paldean Tauros,field,2,10733,0.0001863411907202087
+rest,Other events,family,bronzong-tef,Bronzong,field,2,10733,0.0001863411907202087
+rest,Other events,family,dudunsparce-control,Dudunsparce Control,field,2,10733,0.0001863411907202087
+rest,Other events,family,alolan-exeggutor-ex,Alolan Exeggutor ex,field,2,10733,0.0001863411907202087
+rest,Other events,family,mega-feraligatr-ex,Mega Feraligatr,field,2,10733,0.0001863411907202087
+rest,Other events,family,sylveon-pre,Sylveon,field,2,10733,0.0001863411907202087
+rest,Other events,family,jellicent-dusknoir,Jellicent Dusknoir,field,2,10733,0.0001863411907202087
+rest,Other events,family,misty-gyarados,Misty's Gyarados,field,2,10733,0.0001863411907202087
+rest,Other events,family,heatran-metang,Heatran Metang,field,2,10733,0.0001863411907202087
+rest,Other events,family,eelektrik-blk,Eelektrik,field,2,10733,0.0001863411907202087
+rest,Other events,family,froslass-munkidori,Froslass Munkidori,field,1,10733,9.317059536010435e-05
+rest,Other events,family,ethan-magcargo,Ethan's Magcargo,field,1,10733,9.317059536010435e-05
+rest,Other events,family,conkeldurr-twm,Conkeldurr,field,1,10733,9.317059536010435e-05
+rest,Other events,family,cornerstone-mask-ogerpon-ex,Cornerstone Mask Ogerpon,field,1,10733,9.317059536010435e-05
+rest,Other events,family,slaking-ex,Slaking,field,1,10733,9.317059536010435e-05
+rest,Other events,family,mega-gengar-ex,Mega Gengar,field,1,10733,9.317059536010435e-05
+rest,Other events,family,blissey-ex,Blissey,field,1,10733,9.317059536010435e-05
+rest,Other events,family,ogerpon-ex,Ogerpon,field,1,10733,9.317059536010435e-05
+rest,Other events,family,iron-thorns-ex,Iron Thorns,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,dragapult-ex,Dragapult,field,1903,10733,0.1773036429702786
+rest,Other events,archetype,n-zoroark,N's Zoroark,field,714,10733,0.0665238050871145
+rest,Other events,archetype,basic-box-m,Basic Box,field,667,10733,0.0621447871051896
+rest,Other events,archetype,slowking-scr,Slowking,field,645,10733,0.0600950340072673
+rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,field,629,10733,0.05860430448150564
+rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,field,623,10733,0.058045280909345014
+rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,field,531,10733,0.04947358613621541
+rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,field,470,10733,0.04379017981924904
+rest,Other events,archetype,dhelmise-pbl,Dhelmise,field,360,10733,0.033541414329637566
+rest,Other events,archetype,crustle-dri,Crustle,field,357,10733,0.03326190254355725
+rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,field,339,10733,0.031584831827075374
+rest,Other events,archetype,festival-lead,Festival Lead,field,326,10733,0.03037361408739402
+rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,field,270,10733,0.025156060747228176
+rest,Other events,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,field,213,10733,0.019845336811702228
+rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,field,211,10733,0.019658995620982018
+rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,field,191,10733,0.01779558371377993
+rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,field,178,10733,0.016584365974098573
+rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,field,171,10733,0.015932171806577845
+rest,Other events,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,field,149,10733,0.013882418708655548
+rest,Other events,archetype,mega-lucario-ex,Mega Lucario,field,120,10733,0.011180471443212521
+rest,Other events,archetype,grimmsnarl-froslass,Grimmsnarl Froslass,field,118,10733,0.010994130252492313
+rest,Other events,archetype,other,Other,field,108,10733,0.01006242429889127
+rest,Other events,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,field,107,10733,0.009969253703531165
+rest,Other events,archetype,raging-bolt-ogerpon,Raging Bolt Ogerpon,field,102,10733,0.009503400726730643
+rest,Other events,archetype,mega-greninja-ex,Mega Greninja,field,85,10733,0.00791950060560887
+rest,Other events,archetype,ethan-typhlosion,Ethan's Typhlosion,field,65,10733,0.006056088698406783
+rest,Other events,archetype,mega-chandelure-ex,Mega Chandelure,field,59,10733,0.0054970651262461565
+rest,Other events,archetype,seaking-pre,Seaking Festival Lead,field,57,10733,0.005310723935525948
+rest,Other events,archetype,mega-venusaur-ex,Mega Venusaur,field,54,10733,0.005031212149445635
+rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,field,53,10733,0.004938041554085531
+rest,Other events,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,field,52,10733,0.0048448709587254266
+rest,Other events,archetype,ceruledge-ex,Ceruledge,field,48,10733,0.004472188577285009
+rest,Other events,archetype,beedrill-ex-cri,Beedrill,field,48,10733,0.004472188577285009
+rest,Other events,archetype,hops-trevenant,Hop's Trevenant,field,46,10733,0.0042858473865648
+rest,Other events,archetype,kangaskhan-bouffalant,Kangaskhan Bouffalant,field,44,10733,0.004099506195844592
+rest,Other events,archetype,greninja-ex,Greninja,field,42,10733,0.003913165005124382
+rest,Other events,archetype,starmie-froslass,Starmie Froslass,field,40,10733,0.003726823814404174
+rest,Other events,archetype,mew-ex-30c,Mew Box,field,37,10733,0.003447312028323861
+rest,Other events,archetype,mega-starmie-ex,Mega Starmie,field,34,10733,0.003167800242243548
+rest,Other events,archetype,toucannon-pbl,Toucannon,field,34,10733,0.003167800242243548
+rest,Other events,archetype,toxtricity-box,Toxtricity Box,field,27,10733,0.0025156060747228174
+rest,Other events,archetype,starmie-dusknoir,Starmie Dusknoir,field,21,10733,0.001956582502562191
+rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,field,20,10733,0.001863411907202087
+rest,Other events,archetype,manectric-eelektrik,Manectric Eelektrik,field,20,10733,0.001863411907202087
+rest,Other events,archetype,mega-absol-box,Mega Absol Box,field,19,10733,0.0017702413118419827
+rest,Other events,archetype,cinccino-ex,Cinccino,field,18,10733,0.0016770707164818783
+rest,Other events,archetype,okidogi-barbaracle,Okidogi Barbaracle,field,16,10733,0.0014907295257616695
+rest,Other events,archetype,lillie-clefairy,Lillie's Clefairy,field,15,10733,0.0013975589304015652
+rest,Other events,archetype,doublade-por,Doublade,field,15,10733,0.0013975589304015652
+rest,Other events,archetype,metagross-cri,Metagross,field,14,10733,0.001304388335041461
+rest,Other events,archetype,rocket-spidops,Rocket's Spidops,field,12,10733,0.0011180471443212523
+rest,Other events,archetype,stevens-metagross,Steven's Metagross,field,12,10733,0.0011180471443212523
+rest,Other events,archetype,diancie-dusknoir,Diancie Dusknoir,field,10,10733,0.0009317059536010435
+rest,Other events,archetype,hop-zacian,Hop's Zacian,field,10,10733,0.0009317059536010435
+rest,Other events,archetype,tera-box,Tera Box,field,9,10733,0.0008385353582409391
+rest,Other events,archetype,yanmega-ex,Yanmega,field,9,10733,0.0008385353582409391
+rest,Other events,archetype,ogerpon-meganium,Ogerpon Meganium,field,8,10733,0.0007453647628808348
+rest,Other events,archetype,flareon-noctowl,Flareon Noctowl,field,8,10733,0.0007453647628808348
+rest,Other events,archetype,mega-dragonite-ex,Mega Dragonite,field,7,10733,0.0006521941675207305
+rest,Other events,archetype,mega-darkrai-ex,Mega Darkrai,field,7,10733,0.0006521941675207305
+rest,Other events,archetype,joltik-box,Joltik Box,field,7,10733,0.0006521941675207305
+rest,Other events,archetype,toxtricity-pfl,Toxtricity,field,7,10733,0.0006521941675207305
+rest,Other events,archetype,alakazam-meg,Alakazam,field,6,10733,0.0005590235721606261
+rest,Other events,archetype,mega-abomasnow-ex,Mega Abomasnow,field,6,10733,0.0005590235721606261
+rest,Other events,archetype,archaludon-dudunsparce,Archaludon Dudunsparce,field,6,10733,0.0005590235721606261
+rest,Other events,archetype,mega-charizard-x-ex,Mega Charizard X,field,5,10733,0.00046585297680052176
+rest,Other events,archetype,palafin-ex,Palafin,field,5,10733,0.00046585297680052176
+rest,Other events,archetype,mega-froslass-ex,Mega Froslass,field,5,10733,0.00046585297680052176
+rest,Other events,archetype,hydreigon-ex,Hydreigon,field,5,10733,0.00046585297680052176
+rest,Other events,archetype,decidueye-ex,Decidueye,field,5,10733,0.00046585297680052176
+rest,Other events,archetype,dragapult-froslass,Dragapult Froslass,field,4,10733,0.0003726823814404174
+rest,Other events,archetype,ursaluna-lunatone,Ursaluna Lunatone,field,4,10733,0.0003726823814404174
+rest,Other events,archetype,archaludon-ex,Archaludon,field,4,10733,0.0003726823814404174
+rest,Other events,archetype,mega-lopunny-ex,Mega Lopunny,field,4,10733,0.0003726823814404174
+rest,Other events,archetype,wailord-ex-pbl,Wailord,field,4,10733,0.0003726823814404174
+rest,Other events,archetype,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,field,3,10733,0.00027951178608031307
+rest,Other events,archetype,sinistcha-ogerpon,Sinistcha Ogerpon,field,3,10733,0.00027951178608031307
+rest,Other events,archetype,azumarill-ssp,Azumarill,field,3,10733,0.00027951178608031307
+rest,Other events,archetype,mega-manectric-ex-meg,Mega Manectric,field,3,10733,0.00027951178608031307
+rest,Other events,archetype,iono-bellibolt,Iono's Bellibolt,field,3,10733,0.00027951178608031307
+rest,Other events,archetype,gengar-ex,Gengar,field,3,10733,0.00027951178608031307
+rest,Other events,archetype,mega-camerupt-ex,Mega Camerupt,field,3,10733,0.00027951178608031307
+rest,Other events,archetype,zygarde-barbaracle,Zygarde Barbaracle,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,flareon-ex,Flareon,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,paldean-tauros-pfl,Paldean Tauros,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,bronzong-tef,Bronzong,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,blaziken-ex-jtg,Blaziken,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,dudunsparce-control,Dudunsparce Control,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,alolan-exeggutor-ex,Alolan Exeggutor ex,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,mega-feraligatr-ex,Mega Feraligatr,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,sylveon-pre,Sylveon,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,jellicent-dusknoir,Jellicent Dusknoir,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,blaziken-zoroark,Blaziken Zoroark,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,okidogi-twm,Okidogi,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,misty-gyarados,Misty's Gyarados,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,heatran-metang,Heatran Metang,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,eelektrik-blk,Eelektrik,field,2,10733,0.0001863411907202087
+rest,Other events,archetype,froslass-munkidori,Froslass Munkidori,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,ethan-magcargo,Ethan's Magcargo,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,mega-froslass-dudunsparce,Froslass Dudunsparce,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,toxtricity-brute-bonnet,Toxtricity Brute Bonnet,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,conkeldurr-twm,Conkeldurr,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,greninja-froslass,Greninja Froslass,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,cornerstone-mask-ogerpon-ex,Cornerstone Mask Ogerpon,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,slaking-ex,Slaking,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,dragonite-eelektrik,Dragonite Eelektrik,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,mega-gengar-ex,Mega Gengar,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,blissey-ex,Blissey,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,ogerpon-ex,Ogerpon,field,1,10733,9.317059536010435e-05
+rest,Other events,archetype,iron-thorns-ex,Iron Thorns,field,1,10733,9.317059536010435e-05
+rest,Other events,family,dragapult-ex,Dragapult,day2,645,1958,0.329417773237998
+rest,Other events,family,n-zoroark,N's Zoroark,day2,164,1958,0.08375893769152196
+rest,Other events,family,basic-box-m,Basic Box,day2,156,1958,0.07967313585291114
+rest,Other events,family,slowking-scr,Slowking,day2,153,1958,0.07814096016343207
+rest,Other events,family,alakazam-meg,Alakazam,day2,125,1958,0.06384065372829417
+rest,Other events,family,festival-lead,Festival Lead,day2,72,1958,0.03677221654749745
+rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,day2,71,1958,0.03626149131767109
+rest,Other events,family,crustle-dri,Crustle,day2,70,1958,0.03575076608784474
+rest,Other events,family,mega-excadrill-ex,Mega Excadrill,day2,68,1958,0.03472931562819203
+rest,Other events,family,mega-lopunny-ex,Mega Lopunny,day2,63,1958,0.032175689479060264
+rest,Other events,family,dhelmise-pbl,Dhelmise,day2,59,1958,0.03013278855975485
+rest,Other events,family,mega-lucario-ex,Mega Lucario,day2,51,1958,0.026046986721144024
+rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,day2,41,1958,0.02093973442288049
+rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,day2,31,1958,0.015832482124616958
+rest,Other events,family,cynthia-garchomp-ex,Cynthia's Garchomp,day2,24,1958,0.012257405515832482
+rest,Other events,family,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,day2,17,1958,0.008682328907048007
+rest,Other events,family,seaking-pre,Seaking Festival Lead,day2,16,1958,0.008171603677221655
+rest,Other events,family,rocket-mewtwo-ex,Rocket's Mewtwo,day2,13,1958,0.006639427987742594
+rest,Other events,family,lillie-clefairy,Lillie's Clefairy,day2,12,1958,0.006128702757916241
+rest,Other events,family,mew-ex-30c,Mew Box,day2,12,1958,0.006128702757916241
+rest,Other events,family,raging-bolt-ex,Raging Bolt,day2,11,1958,0.0056179775280898875
+rest,Other events,family,hops-trevenant,Hop's Trevenant,day2,9,1958,0.004596527068437181
+rest,Other events,family,mega-starmie-ex,Mega Starmie,day2,8,1958,0.0040858018386108275
+rest,Other events,family,kangaskhan-bouffalant,Kangaskhan Bouffalant,day2,7,1958,0.003575076608784474
+rest,Other events,family,mega-chandelure-ex,Mega Chandelure,day2,7,1958,0.003575076608784474
+rest,Other events,family,ceruledge-ex,Ceruledge,day2,6,1958,0.0030643513789581204
+rest,Other events,family,mega-greninja-ex,Mega Greninja,day2,4,1958,0.0020429009193054137
+rest,Other events,family,greninja-ex,Greninja,day2,4,1958,0.0020429009193054137
+rest,Other events,family,beedrill-ex-cri,Beedrill,day2,4,1958,0.0020429009193054137
+rest,Other events,family,metagross-cri,Metagross,day2,3,1958,0.0015321756894790602
+rest,Other events,family,toxtricity-pfl,Toxtricity,day2,3,1958,0.0015321756894790602
+rest,Other events,family,mega-venusaur-ex,Mega Venusaur,day2,3,1958,0.0015321756894790602
+rest,Other events,family,other,Other,day2,3,1958,0.0015321756894790602
+rest,Other events,family,tera-box,Tera Box,day2,3,1958,0.0015321756894790602
+rest,Other events,family,ethan-typhlosion,Ethan's Typhlosion,day2,3,1958,0.0015321756894790602
+rest,Other events,family,toucannon-pbl,Toucannon,day2,3,1958,0.0015321756894790602
+rest,Other events,family,mega-absol-box,Mega Absol Box,day2,2,1958,0.0010214504596527069
+rest,Other events,family,mega-manectric-ex-meg,Mega Manectric,day2,2,1958,0.0010214504596527069
+rest,Other events,family,okidogi-twm,Okidogi,day2,2,1958,0.0010214504596527069
+rest,Other events,family,stevens-metagross,Steven's Metagross,day2,2,1958,0.0010214504596527069
+rest,Other events,family,mega-diancie-ex,Mega Diancie,day2,1,1958,0.0005107252298263534
+rest,Other events,family,mega-darkrai-ex,Mega Darkrai,day2,1,1958,0.0005107252298263534
+rest,Other events,family,cinccino-ex,Cinccino,day2,1,1958,0.0005107252298263534
+rest,Other events,family,flareon-ex,Flareon,day2,1,1958,0.0005107252298263534
+rest,Other events,family,jellicent-dusknoir,Jellicent Dusknoir,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,dragapult-ex,Dragapult,day2,442,1958,0.2257405515832482
+rest,Other events,archetype,n-zoroark,N's Zoroark,day2,164,1958,0.08375893769152196
+rest,Other events,archetype,basic-box-m,Basic Box,day2,156,1958,0.07967313585291114
+rest,Other events,archetype,slowking-scr,Slowking,day2,153,1958,0.07814096016343207
+rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,day2,107,1958,0.054647599591419814
+rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,day2,90,1958,0.045965270684371805
+rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,day2,83,1958,0.042390194075587334
+rest,Other events,archetype,festival-lead,Festival Lead,day2,72,1958,0.03677221654749745
+rest,Other events,archetype,crustle-dri,Crustle,day2,70,1958,0.03575076608784474
+rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,day2,68,1958,0.03472931562819203
+rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,day2,60,1958,0.030643513789581207
+rest,Other events,archetype,dhelmise-pbl,Dhelmise,day2,59,1958,0.03013278855975485
+rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,day2,42,1958,0.021450459652706845
+rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,day2,41,1958,0.02093973442288049
+rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,day2,40,1958,0.020429009193054137
+rest,Other events,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,day2,32,1958,0.01634320735444331
+rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,day2,31,1958,0.015832482124616958
+rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,day2,31,1958,0.015832482124616958
+rest,Other events,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,day2,24,1958,0.012257405515832482
+rest,Other events,archetype,grimmsnarl-froslass,Grimmsnarl Froslass,day2,16,1958,0.008171603677221655
+rest,Other events,archetype,seaking-pre,Seaking Festival Lead,day2,16,1958,0.008171603677221655
+rest,Other events,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,day2,13,1958,0.006639427987742594
+rest,Other events,archetype,mew-ex-30c,Mew Box,day2,12,1958,0.006128702757916241
+rest,Other events,archetype,raging-bolt-ogerpon,Raging Bolt Ogerpon,day2,11,1958,0.0056179775280898875
+rest,Other events,archetype,mega-lucario-ex,Mega Lucario,day2,11,1958,0.0056179775280898875
+rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,day2,10,1958,0.005107252298263534
+rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,day2,9,1958,0.004596527068437181
+rest,Other events,archetype,hops-trevenant,Hop's Trevenant,day2,9,1958,0.004596527068437181
+rest,Other events,archetype,kangaskhan-bouffalant,Kangaskhan Bouffalant,day2,7,1958,0.003575076608784474
+rest,Other events,archetype,mega-chandelure-ex,Mega Chandelure,day2,7,1958,0.003575076608784474
+rest,Other events,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,day2,6,1958,0.0030643513789581204
+rest,Other events,archetype,ceruledge-ex,Ceruledge,day2,6,1958,0.0030643513789581204
+rest,Other events,archetype,mega-greninja-ex,Mega Greninja,day2,4,1958,0.0020429009193054137
+rest,Other events,archetype,starmie-dusknoir,Starmie Dusknoir,day2,4,1958,0.0020429009193054137
+rest,Other events,archetype,greninja-ex,Greninja,day2,4,1958,0.0020429009193054137
+rest,Other events,archetype,beedrill-ex-cri,Beedrill,day2,4,1958,0.0020429009193054137
+rest,Other events,archetype,mega-starmie-ex,Mega Starmie,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,lillie-clefairy,Lillie's Clefairy,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,metagross-cri,Metagross,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,toxtricity-box,Toxtricity Box,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,mega-venusaur-ex,Mega Venusaur,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,other,Other,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,tera-box,Tera Box,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,ethan-typhlosion,Ethan's Typhlosion,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,toucannon-pbl,Toucannon,day2,3,1958,0.0015321756894790602
+rest,Other events,archetype,mega-absol-box,Mega Absol Box,day2,2,1958,0.0010214504596527069
+rest,Other events,archetype,manectric-eelektrik,Manectric Eelektrik,day2,2,1958,0.0010214504596527069
+rest,Other events,archetype,okidogi-barbaracle,Okidogi Barbaracle,day2,2,1958,0.0010214504596527069
+rest,Other events,archetype,stevens-metagross,Steven's Metagross,day2,2,1958,0.0010214504596527069
+rest,Other events,archetype,ogerpon-meganium,Ogerpon Meganium,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,marnie-grimmsnarl-ex,Marnie's Grimmsnarl,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,diancie-dusknoir,Diancie Dusknoir,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,starmie-froslass,Starmie Froslass,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,mega-darkrai-ex,Mega Darkrai,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,cinccino-ex,Cinccino,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,flareon-noctowl,Flareon Noctowl,day2,1,1958,0.0005107252298263534
+rest,Other events,archetype,jellicent-dusknoir,Jellicent Dusknoir,day2,1,1958,0.0005107252298263534
+rest,Other events,family,dragapult-ex,Dragapult,top64,113,320,0.353125
+rest,Other events,family,basic-box-m,Basic Box,top64,29,320,0.090625
+rest,Other events,family,n-zoroark,N's Zoroark,top64,27,320,0.084375
+rest,Other events,family,alakazam-meg,Alakazam,top64,25,320,0.078125
+rest,Other events,family,slowking-scr,Slowking,top64,21,320,0.065625
+rest,Other events,family,festival-lead,Festival Lead,top64,16,320,0.05
+rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,top64,14,320,0.04375
+rest,Other events,family,mega-lopunny-ex,Mega Lopunny,top64,12,320,0.0375
+rest,Other events,family,crustle-dri,Crustle,top64,12,320,0.0375
+rest,Other events,family,dhelmise-pbl,Dhelmise,top64,8,320,0.025
+rest,Other events,family,mega-excadrill-ex,Mega Excadrill,top64,8,320,0.025
+rest,Other events,family,mega-lucario-ex,Mega Lucario,top64,7,320,0.021875
+rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,top64,5,320,0.015625
+rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,top64,4,320,0.0125
+rest,Other events,family,lillie-clefairy,Lillie's Clefairy,top64,3,320,0.009375
+rest,Other events,family,seaking-pre,Seaking Festival Lead,top64,3,320,0.009375
+rest,Other events,family,cynthia-garchomp-ex,Cynthia's Garchomp,top64,3,320,0.009375
+rest,Other events,family,rocket-mewtwo-ex,Rocket's Mewtwo,top64,2,320,0.00625
+rest,Other events,family,mega-starmie-ex,Mega Starmie,top64,1,320,0.003125
+rest,Other events,family,ethan-typhlosion,Ethan's Typhlosion,top64,1,320,0.003125
+rest,Other events,family,toxtricity-pfl,Toxtricity,top64,1,320,0.003125
+rest,Other events,family,greninja-ex,Greninja,top64,1,320,0.003125
+rest,Other events,family,ceruledge-ex,Ceruledge,top64,1,320,0.003125
+rest,Other events,family,mew-ex-30c,Mew Box,top64,1,320,0.003125
+rest,Other events,family,toucannon-pbl,Toucannon,top64,1,320,0.003125
+rest,Other events,family,raging-bolt-ex,Raging Bolt,top64,1,320,0.003125
+rest,Other events,archetype,dragapult-ex,Dragapult,top64,91,320,0.284375
+rest,Other events,archetype,basic-box-m,Basic Box,top64,29,320,0.090625
+rest,Other events,archetype,n-zoroark,N's Zoroark,top64,27,320,0.084375
+rest,Other events,archetype,slowking-scr,Slowking,top64,21,320,0.065625
+rest,Other events,archetype,festival-lead,Festival Lead,top64,16,320,0.05
+rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,top64,14,320,0.04375
+rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top64,13,320,0.040625
+rest,Other events,archetype,crustle-dri,Crustle,top64,12,320,0.0375
+rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,top64,11,320,0.034375
+rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,top64,10,320,0.03125
+rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,top64,10,320,0.03125
+rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,top64,10,320,0.03125
+rest,Other events,archetype,dhelmise-pbl,Dhelmise,top64,8,320,0.025
+rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,top64,8,320,0.025
+rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,top64,5,320,0.015625
+rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,top64,5,320,0.015625
+rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,top64,4,320,0.0125
+rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,top64,3,320,0.009375
+rest,Other events,archetype,seaking-pre,Seaking Festival Lead,top64,3,320,0.009375
+rest,Other events,archetype,cynthia-garchomp-ex,Cynthia's Garchomp,top64,3,320,0.009375
+rest,Other events,archetype,rocket-mewtwo-ex,Rocket's Mewtwo,top64,2,320,0.00625
+rest,Other events,archetype,dragapult-dudunsparce,Dragapult Dudunsparce,top64,2,320,0.00625
+rest,Other events,archetype,mega-lucario-ex,Mega Lucario,top64,2,320,0.00625
+rest,Other events,archetype,lopunny-dudunsparce,Lopunny Dudunsparce,top64,2,320,0.00625
+rest,Other events,archetype,mega-starmie-ex,Mega Starmie,top64,1,320,0.003125
+rest,Other events,archetype,ethan-typhlosion,Ethan's Typhlosion,top64,1,320,0.003125
+rest,Other events,archetype,toxtricity-box,Toxtricity Box,top64,1,320,0.003125
+rest,Other events,archetype,greninja-ex,Greninja,top64,1,320,0.003125
+rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,top64,1,320,0.003125
+rest,Other events,archetype,ceruledge-ex,Ceruledge,top64,1,320,0.003125
+rest,Other events,archetype,mew-ex-30c,Mew Box,top64,1,320,0.003125
+rest,Other events,archetype,toucannon-pbl,Toucannon,top64,1,320,0.003125
+rest,Other events,archetype,raging-bolt-ogerpon,Raging Bolt Ogerpon,top64,1,320,0.003125
+rest,Other events,family,dragapult-ex,Dragapult,top16,31,80,0.3875
+rest,Other events,family,basic-box-m,Basic Box,top16,11,80,0.1375
+rest,Other events,family,slowking-scr,Slowking,top16,8,80,0.1
+rest,Other events,family,alakazam-meg,Alakazam,top16,6,80,0.075
+rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,top16,5,80,0.0625
+rest,Other events,family,mega-lopunny-ex,Mega Lopunny,top16,4,80,0.05
+rest,Other events,family,mega-lucario-ex,Mega Lucario,top16,3,80,0.0375
+rest,Other events,family,n-zoroark,N's Zoroark,top16,3,80,0.0375
+rest,Other events,family,festival-lead,Festival Lead,top16,2,80,0.025
+rest,Other events,family,mega-excadrill-ex,Mega Excadrill,top16,2,80,0.025
+rest,Other events,family,lillie-clefairy,Lillie's Clefairy,top16,1,80,0.0125
+rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,top16,1,80,0.0125
+rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,top16,1,80,0.0125
+rest,Other events,family,dhelmise-pbl,Dhelmise,top16,1,80,0.0125
+rest,Other events,family,mew-ex-30c,Mew Box,top16,1,80,0.0125
+rest,Other events,archetype,dragapult-ex,Dragapult,top16,24,80,0.3
+rest,Other events,archetype,basic-box-m,Basic Box,top16,11,80,0.1375
+rest,Other events,archetype,slowking-scr,Slowking,top16,8,80,0.1
+rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top16,4,80,0.05
+rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,top16,4,80,0.05
+rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,top16,4,80,0.05
+rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,top16,3,80,0.0375
+rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,top16,3,80,0.0375
+rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,top16,3,80,0.0375
+rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,top16,3,80,0.0375
+rest,Other events,archetype,n-zoroark,N's Zoroark,top16,3,80,0.0375
+rest,Other events,archetype,festival-lead,Festival Lead,top16,2,80,0.025
+rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,top16,2,80,0.025
+rest,Other events,archetype,clefairy-ogerpon,Clefairy Ogerpon,top16,1,80,0.0125
+rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,top16,1,80,0.0125
+rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,top16,1,80,0.0125
+rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,top16,1,80,0.0125
+rest,Other events,archetype,dhelmise-pbl,Dhelmise,top16,1,80,0.0125
+rest,Other events,archetype,mew-ex-30c,Mew Box,top16,1,80,0.0125
+rest,Other events,family,dragapult-ex,Dragapult,top8,18,40,0.45
+rest,Other events,family,basic-box-m,Basic Box,top8,3,40,0.075
+rest,Other events,family,ogerpon-meganium,Ogerpon Meganium,top8,3,40,0.075
+rest,Other events,family,slowking-scr,Slowking,top8,3,40,0.075
+rest,Other events,family,alakazam-meg,Alakazam,top8,3,40,0.075
+rest,Other events,family,mega-lopunny-ex,Mega Lopunny,top8,2,40,0.05
+rest,Other events,family,mega-lucario-ex,Mega Lucario,top8,1,40,0.025
+rest,Other events,family,festival-lead,Festival Lead,top8,1,40,0.025
+rest,Other events,family,n-zoroark,N's Zoroark,top8,1,40,0.025
+rest,Other events,family,mega-excadrill-ex,Mega Excadrill,top8,1,40,0.025
+rest,Other events,family,rockets-honchkrow,Rocket's Honchkrow,top8,1,40,0.025
+rest,Other events,family,mega-sharpedo-ex,Mega Sharpedo,top8,1,40,0.025
+rest,Other events,family,dhelmise-pbl,Dhelmise,top8,1,40,0.025
+rest,Other events,family,mew-ex-30c,Mew Box,top8,1,40,0.025
+rest,Other events,archetype,dragapult-ex,Dragapult,top8,13,40,0.325
+rest,Other events,archetype,basic-box-m,Basic Box,top8,3,40,0.075
+rest,Other events,archetype,slowking-scr,Slowking,top8,3,40,0.075
+rest,Other events,archetype,dragapult-blaziken,Dragapult Blaziken,top8,3,40,0.075
+rest,Other events,archetype,ogerpon-meganium-hydrapple,Ogerpon Meganium Hydrapple,top8,2,40,0.05
+rest,Other events,archetype,dragapult-dusknoir,Dragapult Dusknoir,top8,2,40,0.05
+rest,Other events,archetype,lopunny-dusknoir,Lopunny Dusknoir,top8,2,40,0.05
+rest,Other events,archetype,alakazam-dusknoir,Alakazam Dusknoir,top8,2,40,0.05
+rest,Other events,archetype,alakazam-dudunsparce,Alakazam Dudunsparce,top8,1,40,0.025
+rest,Other events,archetype,lucario-hariyama,Lucario Hariyama,top8,1,40,0.025
+rest,Other events,archetype,festival-lead,Festival Lead,top8,1,40,0.025
+rest,Other events,archetype,ogerpon-meganium-arboliva,Ogerpon Meganium Arboliva,top8,1,40,0.025
+rest,Other events,archetype,n-zoroark,N's Zoroark,top8,1,40,0.025
+rest,Other events,archetype,mega-excadrill-ex,Mega Excadrill,top8,1,40,0.025
+rest,Other events,archetype,rockets-honchkrow,Rocket's Honchkrow,top8,1,40,0.025
+rest,Other events,archetype,sharpedo-toxtricity,Sharpedo Toxtricity,top8,1,40,0.025
+rest,Other events,archetype,dhelmise-pbl,Dhelmise,top8,1,40,0.025
+rest,Other events,archetype,mew-ex-30c,Mew Box,top8,1,40,0.025
